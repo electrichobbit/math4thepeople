@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Correlation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math for the PeopleReferences">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.787a04695534ef1e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-r' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-r",
+  "linked": true,
+  "linkKey": "linked-r",
+  "autoeval": false,
+  "languages": [
+    "r"
+  ],
+  "evalButtonText": "Evaluate (R)"
+});
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://web.stevenson.edu/mbranson/math-for-the-people.html"><img src="external/images/Math_Fist.PNG" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="math-for-the-people.html"><span class="title">Math for the PeopleReferences</span></a></h1>
+<p class="byline">Mark Branson (Editor), Whitney George (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="payday-loans-risk.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="payday-loans.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="payday-loans-solving-for-change.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="math-for-the-people-front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="instructors-note.html" class="internal"><span class="title">A Note for Instructors</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="students-note.html" class="internal"><span class="title">A Note for Students</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="abortion.html" class="internal"><span class="codenumber">1</span> <span class="title">Abortion Access Throughout the United States</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-objectives.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-background.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-cui-bono.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-big-problem.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Big Problem: Restricting Abortion Access</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-simple-logic.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Simple Logic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Negating and Combining Statements with "and" and "or"</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation-2" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Negations</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-and-or" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">And &amp; Or</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-equivalent-statements" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Equivalent Statements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-if-then" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Implications (If-Then Statements)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-quantifiers.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Quantifiers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-arguments.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Arguments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-valid-arguments" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Valid Arguments</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-sound-arguments" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Sound Arguments</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Definitions, Assumptions, and Fallacies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Case Study 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion_case-study-1-argument" class="internal"><span class="codenumber">1.8.1.1</span> <span class="title">Case Study 1: The Argument</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-discussion" class="internal"><span class="codenumber">1.8.1.2</span> <span class="title">Case Study 1: Discussion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-Refuting" class="internal"><span class="codenumber">1.8.1.3</span> <span class="title">Case Study 1: Refuting the Argument</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Case Study 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2-discussion" class="internal"><span class="codenumber">1.8.2.1</span> <span class="title">Case Study 2: Discussion</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-solving-for-change.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="abortion-reflection.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="abortion-exercises.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-references.html" class="internal"><span class="codenumber">1.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="payday-loans.html" class="internal"><span class="codenumber">2</span> <span class="title">Payday Loans</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-objectives.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-background.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-interest-and-risk" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Interest and Risk</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Types of Loans and Lenders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-payday" class="internal"><span class="codenumber">2.2.2.1</span> <span class="title">Payday Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-bank" class="internal"><span class="codenumber">2.2.2.2</span> <span class="title">Bank Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-government" class="internal"><span class="codenumber">2.2.2.3</span> <span class="title">Government Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-pawn" class="internal"><span class="codenumber">2.2.2.4</span> <span class="title">Pawn</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-discriminatory-lending" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Discriminatory Lending</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-cui-bono.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-big-problem.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Big Problem: Predatory Lending</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-interest.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Simple and Compound Interest</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-simple-interest" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Simple Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-compound-interest" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-solving-for-apr" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Finding the Interest Rate</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-risk.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Risk and Credit Scores</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-probability" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Introduction to Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-expected-value" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Expected Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-lending-decisions" class="internal"><span class="codenumber">2.6.3</span> <span class="title">How Banks Make Lending Decisions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="payday-loans-correlation.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Correlation</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-definition" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Defining the Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-4" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Computing Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-5" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Using Correlation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-solving-for-change.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-3" class="internal"><span class="codenumber">2.8.1</span> <span class="title">If people are willing to pay...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-4" class="internal"><span class="codenumber">2.8.2</span> <span class="title">We have to charge those rates, because of the risk!</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-5" class="internal"><span class="codenumber">2.8.3</span> <span class="title">If we don’t lend to them, who will?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-6" class="internal"><span class="codenumber">2.8.4</span> <span class="title">What Can We Do?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="payday-loan-reflection.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="payday-loans-exercises.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-exercises.html#payday-loans-exercises-22" class="internal"><span class="codenumber">2.10.1</span> <span class="title">Generative AI Prompts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-references.html" class="internal"><span class="codenumber">2.11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-2" class="internal"><span class="codenumber">2.11.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-3" class="internal"><span class="codenumber">2.11.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="math-for-the-people-bibliography.html" class="internal"><span class="codenumber">1</span> <span class="title">Bibliography</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="payday-loans-correlation"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.7</span><span class="space"> </span><span class="title">Correlation</span>
+</h2>
+<section class="introduction" id="payday-loans-correlation-2"><div class="para" id="payday-loans-correlation-2-1">Our final mathematical topic for this module will be correlation.  When we looked at the background of payday lenders, we talked about the fact that they are more likely to be located in majority Black and Latinx neighborhoods.  We’ll look at analyzing this mathematically through the lens of correlation.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="payday-loans-correlation-definition"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.7.1</span><span class="space"> </span><span class="title">Defining the Correlation</span>
+</h3>
+<div class="para logical" id="payday-loans-correlation-definition-2">
+<div class="para">Suppose we have two sets of numbers:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{1,2,5,6,12}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{2,4,10,12,24}
+\end{equation*}
+</div>
+<div class="para">If someone told you that the next number in the first set was 30, what would you expect the next number in the second set to be?  You would probably guess 60, because there’s a clear pattern here - the number in the second series is always exactly double the corresponding number in the first series.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-definition-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="payday-loans-correlation-definition-3">
+<div class="para">In practice, when we look at two sets of data, the relationship between them is rarely this exact.  For example, look at these two sets of data:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{1,2,5,6,12}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{2,5,9,14,21}
+\end{equation*}
+</div>
+<div class="para">The values in the second set are just a little bit off from two times as much as the first set.  If someone told you the next number in the first set was 30, though, you would still probably expect the next number in the second set to be approximately 60 - maybe not exactly 60, but something close.  Even though one number doesn’t exactly predict the other, it comes pretty close.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-definition-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-correlation-definition-4">The correlation is a way of measuring how closely one set of numbers predict another.  The correlation gives a number between 1 and -1.  A correlation of 0 means that there is absolutely no relationship between the two sets of numbers - when one changes, you can’t predict what will happen to the other.  A correlation of 1 means that there is a perfect relationship between the numbers - when the values in the first data set increase, the values in the second data set increases in a way that exactly corresponds.  Our first two sets of numbers would have a correlation of 1.  Our second pair would have a correlation close to 1, but not exactly 1.  A correlation of -1 also indicates a perfect relationship, but when one of the values in one set increases, the values in the second set will <em class="emphasis">decrease</em> in a way that exactly corresponds.  So the pattern is still perfect, but it works in reverse.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-definition-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-correlation-definition-5">Computing the correlation is tricky.  We’ll go through the process of computing it, which takes multiple steps, but in general we’ll do it using software.  The R programming language lets us easily find the correlation between two sets of numbers.  Here, you’ll see the two data sets we looked at above.  The cor function in R calculates the correlation between two sets of numbers - hit "Evaluate R" to calculate.  You can try different values in the exercise below - just hit "Evaluate R" to find the correlation.  You’ll see that when we look at the first pair of data sets, the correlation is exactly 1: <div id="payday-loans-correlation-definition-5-1" class="ptx-sagecell sagecell-r"><script type="text/x-sage">x <- c(1,2,5,6,12)
+y <- c(2,4,10,12,24)
+cor(x,y)
+</script></div> If we look at the second pair, though, the correlation is a little less than 1. <div id="payday-loans-correlation-definition-5-2" class="ptx-sagecell sagecell-r"><script type="text/x-sage">x <- c(1,2,5,6,12)
+y <- c(2,5,9,14,21)
+cor(x,y)
+</script></div> 0.9812022 is still very close to 1, though, because these numbers still mostly fit the pattern - just not perfectly.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-definition-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-correlation-definition-6">If we have numbers that are completely unrelated, though - where there is no pattern between how much one increases by and the other - we’ll see very low correlation: <div id="payday-loans-correlation-definition-6-1" class="ptx-sagecell sagecell-r"><script type="text/x-sage">x <- c(1,2,3,4,5)
+y <- c(7,-4,-3,-45,27)
+cor(x,y)
+</script></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-definition-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.7.1: Defining the Correlation"><a href="#payday-loans-correlation-definition" title="Copy heading and permalink for Subsection 2.7.1: Defining the Correlation" aria-label="Copy heading and permalink for Subsection 2.7.1: Defining the Correlation">🔗</a></div></section><section class="subsection" id="payday-loans-correlation-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.7.2</span><span class="space"> </span><span class="title">Computing Correlation</span>
+</h3>
+<div class="para" id="payday-loans-correlation-4-2">Computing the correlation is a little complicated, and is easiest done in multiple steps. While it’s not crucial that you can go through all of these steps on your own, we’ll explain how the correlation is defined to help understand why it computes how related two sets of data are.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="payday-loans-correlation-4-3"><h4 class="heading"><span class="title">Correlation.</span></h4>
+<div class="para logical" id="payday-loans-correlation-4-3-2">
+<div class="para">If we have two sets of data <span class="process-math">\(x = {x_1,x_2,\ldots,x_n}\)</span> and <span class="process-math">\(y = {y_1,y_2,\ldots,y_n}\)</span> with the same number of values, the correlation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+cor(x,y) = \frac{(x_1-\overline{x})(y_1-\overline{y})+(x_2-\overline{x})(y_2-\overline{y})+\cdots+(x_n-\overline{x})(y_n-\overline{y})}{(n-1)s_x s_y}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\overline{x}\)</span> and <span class="process-math">\(\overline{y}\)</span> are the means of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(s_x\)</span> and <span class="process-math">\(s_y\)</span> are the sample standard deviations of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="payday-loans-correlation-4-3-3">
+<div class="para">You can compute the mean by adding up all the values and dividing by <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{x} = \frac{x_1+x_2+\cdots + x_n}{n}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="payday-loans-correlation-4-3-4">
+<div class="para">You can compute the sample standard deviation by subtracting the mean from each value, squaring that, adding them all up, dividing by <span class="process-math">\((n-1)\text{,}\)</span> and taking the square root.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+s_x = \sqrt{\frac{(x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \cdots + (x_n - \overline{x})^2}{(n-1)}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Correlation"><a href="#payday-loans-correlation-4-3" title="Copy heading and permalink for Assemblage: Correlation" aria-label="Copy heading and permalink for Assemblage: Correlation">🔗</a></div></article><div class="para logical" id="payday-loans-correlation-4-4">
+<div class="para">This is a pretty complicated formula, but it turns out it’s pretty easy to break it down into steps.</div>
+<ol class="decimal" id="payday-loans-correlation-4-4-1">
+<li id="payday-loans-correlation-4-4-1-1">
+<div class="para" id="p-derived-payday-loans-correlation-4-4-1-1">Compute the means <span class="process-math">\(\overline{x}\)</span> and <span class="process-math">\(\overline{y}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#payday-loans-correlation-4-4-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="payday-loans-correlation-4-4-1-2">
+<div class="para" id="p-derived-payday-loans-correlation-4-4-1-2">Compute the sample standard deviations <span class="process-math">\(s_x\)</span> and <span class="process-math">\(s_y\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#payday-loans-correlation-4-4-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="payday-loans-correlation-4-4-1-3">
+<div class="para" id="p-derived-payday-loans-correlation-4-4-1-3">Subtract the mean <span class="process-math">\(\overline{x}\)</span> from each value in <span class="process-math">\(x\text{,}\)</span> and the mean <span class="process-math">\(\overline{y}\)</span> from each value in <span class="process-math">\(y\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#payday-loans-correlation-4-4-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="payday-loans-correlation-4-4-1-4">
+<div class="para" id="p-derived-payday-loans-correlation-4-4-1-4">Multiply the corresponding differences from <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> together.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#payday-loans-correlation-4-4-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="payday-loans-correlation-4-4-1-5">
+<div class="para" id="p-derived-payday-loans-correlation-4-4-1-5">Add them all up.</div>
+<div class="autopermalink" data-description="Item 5"><a href="#payday-loans-correlation-4-4-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="payday-loans-correlation-4-4-1-6">
+<div class="para" id="p-derived-payday-loans-correlation-4-4-1-6">Divide the whole thing by <span class="process-math">\((n-1)s_x s_y\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#payday-loans-correlation-4-4-1-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-correlation-4-5">Let’s see how this works with the second data set above:<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x = {1,2,5,6,12}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y = {2,5,9,14,21}
+\end{equation*}
+</div>
+<div class="para" id="payday-loans-correlation-4-8">First we’ll compute the means and sample standard deviations of each data set:<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{x} = \frac{1+2+5+6+12}{5} = 5.2
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{y} = \frac{2+5+9+14+21}{5} = 10.2
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+s_x = \sqrt{\frac{(1-5.2)^2 + (2-5.2)^2 + (5-5.2)^2 + (6-5.2)^2 + (12-5.2)^2}{5-1}} = 4.3244
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+s_y = \sqrt{\frac{(2-10.2)^2 + (5-10.2)^2 + (9-10.2)^2 + (14-10.2)^2 + (21-10.2)^2}{5-1}} = 7.5299
+\end{equation*}
+</div>
+<div class="para" id="payday-loans-correlation-4-13">Now that we have all of these, let’s get down to the work of calculating the correlation.  Our next step is to subtract the mean from each data value in <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="payday-loans-correlation-4-14">
+\begin{gather*}
+(x - \overline{x}) = \lbrace (1-5.2),(2-5.2),(5-5.2),(6-5.2),(12-5.2)\rbrace \\
+= \lbrace -4.2,-3.2,-0.2,0.8,6.8\rbrace
+\end{gather*}
+</div>
+<div class="displaymath process-math" id="payday-loans-correlation-4-15">
+\begin{gather*}
+(y - \overline{y}) = \lbrace (2-10.2),(5-10.2),(9-10.2),(14-10.2),(21-10.2)\rbrace\\
+= \lbrace -8.2,-5.2,-1.2,3.8,10.8\rbrace
+\end{gather*}
+</div>
+<div class="para" id="payday-loans-correlation-4-16">Now we’ll multiply each corresponding pair together:<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="payday-loans-correlation-4-17">
+\begin{gather*}
+(x - \overline{x})*(y-\overline{y}) = \lbrace -4.2*-8.2,-3.2*-5.2,-0.2*-1.2,0.8*3.8,6.8*10.8\rbrace \\
+= \lbrace 34.44, 16.64, 0.24, 3.04, 73.44\rbrace
+\end{gather*}
+</div>
+<div class="para" id="payday-loans-correlation-4-18">Now we’ll add up all the values:<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+34.44 + 16.64 + 0.24 + 3.04 + 73.44 = 127.8
+\end{equation*}
+</div>
+<div class="para" id="payday-loans-correlation-4-20">And finally, we divide by <span class="process-math">\((n-1)s_x s_y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+cor(x,y) = \frac{127.8}{(5-1)*4.3244*7.5299} = 0.9811
+\end{equation*}
+</div>
+<div class="para" id="payday-loans-correlation-4-22">This is the same value we got from R above, up to 3 decimal places (the difference comes because we rounded <span class="process-math">\(s_x\)</span> and <span class="process-math">\(s_y\)</span>)<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-4-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.7.2: Computing Correlation"><a href="#payday-loans-correlation-4" title="Copy heading and permalink for Subsection 2.7.2: Computing Correlation" aria-label="Copy heading and permalink for Subsection 2.7.2: Computing Correlation">🔗</a></div></section><section class="subsection" id="payday-loans-correlation-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.7.3</span><span class="space"> </span><span class="title">Using Correlation</span>
+</h3>
+<div class="para" id="payday-loans-correlation-5-2">Ok, so we’ve defined this correlation, which tells us how one set of numbers is related to another.  But why does it matter?<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-correlation-5-3">An old adage says that "correlation does not imply causation," meaning that just because two things are correlated doesn’t mean that change to one causes the change in another.  Two things could be correlated that are completely unrelated.  For example, there is a strong correlation (0.9039) between the number of bee colonies in the US and the divorce rate in South Carolina:<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="payday-loans-correlation-5-4"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/payday-lending/images/honey-producing-bee-colonies-us_divorce-rate-in-south-carolina.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.7.1<span class="period">.</span></span><span class="space"> </span>The number of honey-producing bee colonies in the US correlates with the divorce rate in South Carolina<a href="payday-loans-references.html#biblio-spurious-correlations" class="internal" title="Bibliographic Entry 2.11.1.21: Spurious Correlations.">[2.11.1.21]</a><div class="autopermalink" data-description="Figure 2.7.1"><a href="#payday-loans-correlation-5-4" title="Copy heading and permalink for Figure 2.7.1" aria-label="Copy heading and permalink for Figure 2.7.1">🔗</a></div></figcaption></figure><div class="para" id="payday-loans-correlation-5-5">Does this mean that bees are breaking up marriages in South Carolina, or that new divorcees are running out to start beekeeping? Of course not (or at least, probably not).  We don’t have any other reason to believe that one of these variables is causing the other.  But when there is some reason why we might believe that one thing is causing another, the correlation can give us evidence to support that theory.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="payday-loans-correlation-5-6"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/payday-lending/images/correlation.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.7.2<span class="period">.</span></span><span class="space"> </span>Correlation does not imply causation. <a href="payday-loans-references.html#biblio-correlation-comic" class="internal" title="Bibliographic Entry 2.11.1.22: Correlation.">[2.11.1.22]</a><div class="autopermalink" data-description="Figure 2.7.2"><a href="#payday-loans-correlation-5-6" title="Copy heading and permalink for Figure 2.7.2" aria-label="Copy heading and permalink for Figure 2.7.2">🔗</a></div></figcaption></figure><div class="para" id="payday-loans-correlation-5-7">For example, because of the legacy of systemic racism and intentional exclusion of Black Americans from the financial system, we could theorize that there are fewer banks - and more payday lenders - in majority Black neighborhoods.  We could use correlation to see if there is evidence for this theory - by looking at the racial makeup of a neighborhood and seeing if there is a correlation with the number of financial institutions.  This doesn’t prove that banks are intentionally avoiding Black neighborhoods (though other evidence may support that claim) - it just provides evidence to support that theory.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-correlation-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.7.3: Using Correlation"><a href="#payday-loans-correlation-5" title="Copy heading and permalink for Subsection 2.7.3: Using Correlation" aria-label="Copy heading and permalink for Subsection 2.7.3: Using Correlation">🔗</a></div></section><div class="autopermalink" data-description="Section 2.7: Correlation"><a href="#payday-loans-correlation" title="Copy heading and permalink for Section 2.7: Correlation" aria-label="Copy heading and permalink for Section 2.7: Correlation">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="payday-loans-risk.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="payday-loans-solving-for-change.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

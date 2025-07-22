@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Understanding the Issue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math for the PeopleReferences">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.787a04695534ef1e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://web.stevenson.edu/mbranson/math-for-the-people.html"><img src="external/images/Math_Fist.PNG" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="math-for-the-people.html"><span class="title">Math for the PeopleReferences</span></a></h1>
+<p class="byline">Mark Branson (Editor), Whitney George (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="payday-loans-objectives.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="payday-loans.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="payday-loans-cui-bono.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="math-for-the-people-front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="instructors-note.html" class="internal"><span class="title">A Note for Instructors</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="students-note.html" class="internal"><span class="title">A Note for Students</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="abortion.html" class="internal"><span class="codenumber">1</span> <span class="title">Abortion Access Throughout the United States</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-objectives.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-background.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-cui-bono.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-big-problem.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Big Problem: Restricting Abortion Access</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-simple-logic.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Simple Logic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Negating and Combining Statements with "and" and "or"</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation-2" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Negations</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-and-or" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">And &amp; Or</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-equivalent-statements" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Equivalent Statements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-if-then" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Implications (If-Then Statements)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-quantifiers.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Quantifiers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-arguments.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Arguments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-valid-arguments" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Valid Arguments</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-sound-arguments" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Sound Arguments</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Definitions, Assumptions, and Fallacies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Case Study 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion_case-study-1-argument" class="internal"><span class="codenumber">1.8.1.1</span> <span class="title">Case Study 1: The Argument</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-discussion" class="internal"><span class="codenumber">1.8.1.2</span> <span class="title">Case Study 1: Discussion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-Refuting" class="internal"><span class="codenumber">1.8.1.3</span> <span class="title">Case Study 1: Refuting the Argument</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Case Study 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2-discussion" class="internal"><span class="codenumber">1.8.2.1</span> <span class="title">Case Study 2: Discussion</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-solving-for-change.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="abortion-reflection.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="abortion-exercises.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-references.html" class="internal"><span class="codenumber">1.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="payday-loans.html" class="internal"><span class="codenumber">2</span> <span class="title">Payday Loans</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-objectives.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="payday-loans-background.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-interest-and-risk" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Interest and Risk</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Types of Loans and Lenders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-payday" class="internal"><span class="codenumber">2.2.2.1</span> <span class="title">Payday Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-bank" class="internal"><span class="codenumber">2.2.2.2</span> <span class="title">Bank Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-government" class="internal"><span class="codenumber">2.2.2.3</span> <span class="title">Government Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-pawn" class="internal"><span class="codenumber">2.2.2.4</span> <span class="title">Pawn</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-discriminatory-lending" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Discriminatory Lending</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-cui-bono.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-big-problem.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Big Problem: Predatory Lending</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-interest.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Simple and Compound Interest</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-simple-interest" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Simple Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-compound-interest" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-solving-for-apr" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Finding the Interest Rate</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-risk.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Risk and Credit Scores</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-probability" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Introduction to Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-expected-value" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Expected Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-lending-decisions" class="internal"><span class="codenumber">2.6.3</span> <span class="title">How Banks Make Lending Decisions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-correlation.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Correlation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-definition" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Defining the Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-4" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Computing Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-5" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Using Correlation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-solving-for-change.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-3" class="internal"><span class="codenumber">2.8.1</span> <span class="title">If people are willing to pay...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-4" class="internal"><span class="codenumber">2.8.2</span> <span class="title">We have to charge those rates, because of the risk!</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-5" class="internal"><span class="codenumber">2.8.3</span> <span class="title">If we don’t lend to them, who will?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-6" class="internal"><span class="codenumber">2.8.4</span> <span class="title">What Can We Do?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="payday-loan-reflection.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="payday-loans-exercises.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-exercises.html#payday-loans-exercises-22" class="internal"><span class="codenumber">2.10.1</span> <span class="title">Generative AI Prompts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-references.html" class="internal"><span class="codenumber">2.11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-2" class="internal"><span class="codenumber">2.11.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-3" class="internal"><span class="codenumber">2.11.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="math-for-the-people-bibliography.html" class="internal"><span class="codenumber">1</span> <span class="title">Bibliography</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="payday-loans-background"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Understanding the Issue</span>
+</h2>
+<section class="subsection" id="payday-loans-background-interest-and-risk"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="space"> </span><span class="title">Interest and Risk</span>
+</h3>
+<article class="definition definition-like" id="predatory-lending-interest"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Interest.</span>
+</h4>
+<div class="para" id="predatory-lending-interest-2">An amount of money, usually a percentage of the amount owed, which is added on to a debt which has not been paid.  Usually interest is added on once a month or once a year. The percentage is called the <em class="emphasis">interest rate</em>.<div class="autopermalink" data-description="Paragraph"><a href="#predatory-lending-interest-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.2.1: Interest"><a href="#predatory-lending-interest" title="Copy heading and permalink for Definition 2.2.1: Interest" aria-label="Copy heading and permalink for Definition 2.2.1: Interest">🔗</a></div></article><div class="para" id="payday-loans-background-interest-and-risk-3">Banks charge different interest rates in different situations.  For example, if you already have a lot of money borrowed from other banks, a bank may charge you a higher interest rate.  They do this because they are less confident that you will be able to pay the loaned money back, an idea called <em class="emphasis">risk</em>.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-interest-and-risk-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="predatory-lending-risk"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Risk.</span>
+</h4>
+<div class="para" id="predatory-lending-risk-2">The probability that the amount of money a bank makes on a loan or other investment is less than the amount of money that they loaned out.<div class="autopermalink" data-description="Paragraph"><a href="#predatory-lending-risk-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.2.2: Risk"><a href="#predatory-lending-risk" title="Copy heading and permalink for Definition 2.2.2: Risk" aria-label="Copy heading and permalink for Definition 2.2.2: Risk">🔗</a></div></article><div class="para" id="payday-loans-background-interest-and-risk-5">The risk of a loan is determined using a number of factors - the two most important are the borrower’s <em class="emphasis">credit score</em> and whether the loan is <em class="emphasis">secured</em> or not.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-interest-and-risk-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="payday-loans-background-interest-and-risk-6"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Credit Score.</span>
+</h4>
+<div class="para" id="payday-loans-background-interest-and-risk-6-2">A credit score is a number, used in the United States and a number of other countries, which assigns a number (between 300 and 850) to a person’s credit risk.  Higher numbers indicate lower risk.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-interest-and-risk-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.2.3: Credit Score"><a href="#payday-loans-background-interest-and-risk-6" title="Copy heading and permalink for Definition 2.2.3: Credit Score" aria-label="Copy heading and permalink for Definition 2.2.3: Credit Score">🔗</a></div></article><figure class="figure figure-like" id="payday-loans-background-interest-and-risk-7"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/payday-lending/images/credit-score.jpeg" class="contained" alt="A bar with credit scores ranging from Very Bad to Excellent. Image Description available."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.4<span class="period">.</span></span><span class="space"> </span>"FICO Credit Score Range" by cafecredit is licensed with <a class="external" href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a><details class="ptx-footnote" aria-live="polite" id="payday-loans-background-interest-and-risk-7-2-2"><summary class="ptx-footnote__number" title="Footnote 2.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="payday-loans-background-interest-and-risk-7-2-2"><code class="code-inline tex2jax_ignore">creativecommons.org/licenses/by/2.0/</code></div></details>. <a href="payday-loans-references.html#image-description-credit-score" class="internal" title="Item 1">Image Description 1</a>.<div class="autopermalink" data-description="Figure 2.2.4"><a href="#payday-loans-background-interest-and-risk-7" title="Copy heading and permalink for Figure 2.2.4" aria-label="Copy heading and permalink for Figure 2.2.4">🔗</a></div></figcaption></figure><div class="para" id="payday-loans-background-interest-and-risk-8">Credit scores are determined by mathematical algorithms, and are based on many different factors.  We’ll look at how they’re determined in <a href="payday-loans-risk.html" class="internal" title="Section 2.6: Risk and Credit Scores">Section 2.6</a>.  The general principle of credit scores is that you are more likely to repay a loan if you have repaid other loans in the past.  While this may seem like a reasonable system at face-value, it can create huge problems for people who haven’t had access to loans in the past.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-interest-and-risk-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-background-interest-and-risk-9">The other main factor that affects risk is whether the loan is <em class="emphasis">secured</em>.  When you secure a loan, that means that you offer up something of value to guarantee that you will pay back the loan.  If you fail to pay back the loan, the lender can <em class="emphasis">reposess</em> whatever you offered up.  Large purchases - like cars or homes - are generally made on secured loans.  If you fail to pay back the loan, the lending agency will take back the car or home which you borrowed the money for.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-interest-and-risk-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.2.1: Interest and Risk"><a href="#payday-loans-background-interest-and-risk" title="Copy heading and permalink for Subsection 2.2.1: Interest and Risk" aria-label="Copy heading and permalink for Subsection 2.2.1: Interest and Risk">🔗</a></div></section><section class="subsection" id="payday-loans-types-of-loans"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="space"> </span><span class="title">Types of Loans and Lenders</span>
+</h3>
+<section class="introduction" id="payday-loans-types-of-loans-2"><div class="para" id="payday-loans-types-of-loans-2-1">This module is primarily concerned with understanding how payday loans work.  On the surface, payday loans may seem like a pretty good deal - but when carefully compared with other types of loans, we’ll see that they can actually end up costing the borrower a lot of money.  We’ll look at how they compare to other types of loans that are available to people with better credit scores<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-types-of-loans-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsubsection" id="payday-loans-types-of-loans-payday"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.2.1</span><span class="space"> </span><span class="title">Payday Loans</span>
+</h4>
+<figure class="figure figure-like" id="payday-loans-types-of-loans-payday-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/payday-lending/images/payday-loan-window.jpeg" class="contained" alt="Window of a payday lender advertising loans of $50 to $500 with no credit check."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.5<span class="period">.</span></span><span class="space"> </span>"Payday Loan Place Window Graphics" by taberandrew is licensed with <a class="external" href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a><details class="ptx-footnote" aria-live="polite" id="payday-loans-types-of-loans-payday-2-2-2"><summary class="ptx-footnote__number" title="Footnote 2.2.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="payday-loans-types-of-loans-payday-2-2-2"><code class="code-inline tex2jax_ignore">creativecommons.org/licenses/by/2.0/</code></div></details>.<div class="autopermalink" data-description="Figure 2.2.5"><a href="#payday-loans-types-of-loans-payday-2" title="Copy heading and permalink for Figure 2.2.5" aria-label="Copy heading and permalink for Figure 2.2.5">🔗</a></div></figcaption></figure><div class="para" id="payday-loans-types-of-loans-payday-3">Payday loans are a type of loan often called a "loan of last resort." Anyone can take out a payday loan - the lender does not check their credit score to determine risk.  Therefore, the lender must assume that everyone taking out a payday loan is high risk - even though that may not be true.  Payday loans are generally made for a short term, usually two weeks (the name comes from taking a loan until the next payday, when it can be paid back). At the end of the two weeks, the borrower must pay back the amount they borrowed plus a fee.  Payday loans are usually for small amounts - up to $1000 - and charge a fee of $10-$30 for each $100 borrowed [<a href="payday-loans-references.html#biblio-payday-loan-cfpb" class="internal" title="Bibliographic Entry 2.11.1.11: Consumer Financial Protection Bureau: What is a Payday Loan">[2.11.1.11]</a>].  So you might borrow $200 and pay it back two weeks later, plus a $30 fee.  While this may not seem like much, this is equivalent to an annual interest rate of 360% - almost 20 times what a credit card might charge!  In <a href="payday-loans-interest.html" class="internal" title="Section 2.5: Simple and Compound Interest">Section 2.5</a> we’ll see how to compute how much interest a payday loan is charging.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-types-of-loans-payday-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="payday-loans-types-of-loans-payday-4"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/3rOVmUnUM7A?&amp;modestbranding=1&amp;rel=0" id="payday-loans-types-of-loans-payday-4-1"></iframe></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.6<span class="period">.</span></span><span class="space"> </span>A short explanation of how payday lending works from the Pew Charitable Trust.<div class="autopermalink" data-description="Figure 2.2.6"><a href="#payday-loans-types-of-loans-payday-4" title="Copy heading and permalink for Figure 2.2.6" aria-label="Copy heading and permalink for Figure 2.2.6">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Subsubsection 2.2.2.1: Payday Loans"><a href="#payday-loans-types-of-loans-payday" title="Copy heading and permalink for Subsubsection 2.2.2.1: Payday Loans" aria-label="Copy heading and permalink for Subsubsection 2.2.2.1: Payday Loans">🔗</a></div></section><section class="subsubsection" id="payday-loans-types-of-loans-bank"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.2.2</span><span class="space"> </span><span class="title">Bank Loans</span>
+</h4>
+<div class="para" id="payday-loans-types-of-loans-bank-2">Traditional bank loans are very different than a payday loan.  The interest rate is determined by risk (credit score), the type of loan, and what kind of security the borrower can offer for the loan.  Bank loans will have much lower interest rates than payday loans, but are not available to everyone.  Many people get their first loan - when they don’t have a credit history - by having someone else <em class="emphasis">cosign</em> it.  A cosigner is someone, usually a parent or other relative, who agrees to pay back the loan if the borrower cannot.  Student loans are an example of a type of loan that often has a cosigner - if the borrower is a student, they may not have the credit history or security to borrow on their own.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-types-of-loans-bank-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-types-of-loans-bank-3">One popular type of bank loan, used by many consumers, is the credit card.  A credit card is effectively an agreement between the bank and the cardholder to loan any amount of money on a short-term basis, up to a certain amount - called the <em class="emphasis">credit limit</em>.  The cardholder agrees to pay back at least the interest on the loan each month, or pay a penalty.  If the cardholder doesn’t make their minimum payment each month, in addition to the penalty fees, the bank can cancel the credit card.  Falling behind on paying a credit card can quickly add up - both in fees and in damage to your credit rating.  If you have a high credit score, banks will usually agree to give you a credit card with a low interest rate.  If your credit score isn’t as good, though, they will either deny you a card entirely, offer you one with a high interest rate, or require you to secure the card (pay a deposit to cover any missed payments).<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-types-of-loans-bank-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-types-of-loans-bank-4">Many people take out bank loans to make major purchases, like homes or cars.  A <em class="emphasis">mortgage</em> is a bank loan which uses a home or piece of property as a security.  Many people use a mortgage to borrow money to buy a home.  If they fail to repay the loan, the bank gets to take the security - in this case, their home.  When the bank takes the security from the loan, it is called a <em class="emphasis">foreclosure</em> (usually used with homes and property) or a <em class="emphasis">reposession</em> (usually used with vehicles like cars or boats).  The result is the same - the bank takes the property which was used to secure the loan.  They are then able to sell that property to earn back the money that they loaned out.  Interest rates for these types of loans tend to be much lower, because the opportunity to foreclose on the property gives the bank a way to earn their money back even if the borrower does not repay the loan.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-types-of-loans-bank-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 2.2.2.2: Bank Loans"><a href="#payday-loans-types-of-loans-bank" title="Copy heading and permalink for Subsubsection 2.2.2.2: Bank Loans" aria-label="Copy heading and permalink for Subsubsection 2.2.2.2: Bank Loans">🔗</a></div></section><section class="subsubsection" id="payday-loans-types-of-loans-government"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.2.3</span><span class="space"> </span><span class="title">Government Loans</span>
+</h4>
+<div class="para" id="payday-loans-types-of-loans-government-2">The government - both state and federal governments in the US - is also an important provider of loans.  These loans are either provided directly by the government or secured by the government (a private bank makes the loan, and the government provides the security for the borrower). In some cases - like subsidized student loans - the government may even pay part of the interest.  Government loans provide access to money for people in need, but the process for getting one can be complicated and take time.  In addition, many government loans are restricted to particular groups, like veterans, small businesses, or first-time college students.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-types-of-loans-government-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-types-of-loans-government-3">Some government loans can be <em class="emphasis">forgiven</em>, meaning that the government does not require the loan to be paid back in exchange for some form of service from the borrower.  For example, government student loans can be forgiven after ten years of work in public service, as long as certain requirements are met.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-types-of-loans-government-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 2.2.2.3: Government Loans"><a href="#payday-loans-types-of-loans-government" title="Copy heading and permalink for Subsubsection 2.2.2.3: Government Loans" aria-label="Copy heading and permalink for Subsubsection 2.2.2.3: Government Loans">🔗</a></div></section><section class="subsubsection" id="payday-loans-types-of-loans-pawn"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">2.2.2.4</span><span class="space"> </span><span class="title">Pawn</span>
+</h4>
+<div class="para" id="payday-loans-types-of-loans-pawn-2">A pawn is a short-term secured loan, usually made to someone with a low or no credit score.  In a pawn, the borrower brings a valuable object (usually something small, like jewelry or electronics) to a pawn shop.  The pawnbroker pays them some percentage of the value of the item, generally less than half.  The borrower must then repay the amount, plus interest.  If the borrower doesn’t pay the money back, the pawnbroker can sell their item to recoup their investment.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-types-of-loans-pawn-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-types-of-loans-pawn-3">Pawns generally offer more favorable interest rates than payday loans, since the loan is secured.  However, the borrower loses the ability to use whatever they have pawned while the money is borrowed.  For something like jewelry, that can mean living with the anxiety of losing a valuable or sentimental item.  For something like electronics, it could impact their ability to communicate or work.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-types-of-loans-pawn-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 2.2.2.4: Pawn"><a href="#payday-loans-types-of-loans-pawn" title="Copy heading and permalink for Subsubsection 2.2.2.4: Pawn" aria-label="Copy heading and permalink for Subsubsection 2.2.2.4: Pawn">🔗</a></div></section><div class="autopermalink" data-description="Subsection 2.2.2: Types of Loans and Lenders"><a href="#payday-loans-types-of-loans" title="Copy heading and permalink for Subsection 2.2.2: Types of Loans and Lenders" aria-label="Copy heading and permalink for Subsection 2.2.2: Types of Loans and Lenders">🔗</a></div></section><section class="subsection" id="payday-loans-background-discriminatory-lending"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="space"> </span><span class="title">Discriminatory Lending</span>
+</h3>
+<div class="para logical" id="payday-loans-background-discriminatory-lending-2">
+<div class="para">The Equal Credit Opportunity Act (ECOA) is a federal law in the United States which prohibits discrimination in the loaning of money and other credit transactions <a href="payday-loans-references.html#biblio-fair-lending" class="internal" title="Bibliographic Entry 2.11.1.10: FDIC Consumer Compliance Examination Manual">[2.11.1.10]</a>.  The ECOA prohibits discrimination on the basis of</div>
+<ul class="disc" id="payday-loans-background-discriminatory-lending-2-2">
+<li id="payday-loans-background-discriminatory-lending-2-2-1">
+<div class="para" id="p-derived-payday-loans-background-discriminatory-lending-2-2-1">Race or color;</div>
+<div class="autopermalink" data-description="Item"><a href="#payday-loans-background-discriminatory-lending-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="payday-loans-background-discriminatory-lending-2-2-2">
+<div class="para" id="p-derived-payday-loans-background-discriminatory-lending-2-2-2">Religion;</div>
+<div class="autopermalink" data-description="Item"><a href="#payday-loans-background-discriminatory-lending-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="payday-loans-background-discriminatory-lending-2-2-3">
+<div class="para" id="p-derived-payday-loans-background-discriminatory-lending-2-2-3">National origin;</div>
+<div class="autopermalink" data-description="Item"><a href="#payday-loans-background-discriminatory-lending-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="payday-loans-background-discriminatory-lending-2-2-4">
+<div class="para" id="p-derived-payday-loans-background-discriminatory-lending-2-2-4">Sex;</div>
+<div class="autopermalink" data-description="Item"><a href="#payday-loans-background-discriminatory-lending-2-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="payday-loans-background-discriminatory-lending-2-2-5">
+<div class="para" id="p-derived-payday-loans-background-discriminatory-lending-2-2-5">Marital Status;</div>
+<div class="autopermalink" data-description="Item"><a href="#payday-loans-background-discriminatory-lending-2-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="payday-loans-background-discriminatory-lending-2-2-6">
+<div class="para" id="p-derived-payday-loans-background-discriminatory-lending-2-2-6">Age;</div>
+<div class="autopermalink" data-description="Item"><a href="#payday-loans-background-discriminatory-lending-2-2-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="payday-loans-background-discriminatory-lending-2-2-7">
+<div class="para" id="p-derived-payday-loans-background-discriminatory-lending-2-2-7">Source of income;</div>
+<div class="autopermalink" data-description="Item"><a href="#payday-loans-background-discriminatory-lending-2-2-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="payday-loans-background-discriminatory-lending-2-2-8">
+<div class="para" id="p-derived-payday-loans-background-discriminatory-lending-2-2-8">Excercise of consumer credit rights.</div>
+<div class="autopermalink" data-description="Item"><a href="#payday-loans-background-discriminatory-lending-2-2-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-discriminatory-lending-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-background-discriminatory-lending-3">So if the ECOA exists, banks are unable to discriminate against different types of people, right? Unfortunately, no. While the ECOA makes it illegal to discriminate in mortgage lending, enforcement of the law is very challenging.  It is very difficult to prove, in a situation where so many different factors are involved, that race or national origin influenced the lenders decision.  Many lenders use complex computer algorithms to decide whether to lend to a particular borrower.  Frequently, these algorithms are <em class="emphasis">trained</em> in a process called <em class="emphasis">machine learning</em>, where the computer studies data from past loans.  The computer finds patterns in the data, and uses those patterns to make decision about whether to lend and what terms to offer.  Because that data is based on past lending decisions made by human beings, it can (and does) contain biased decisions made by those human beings.  Research has shown that these algorithms replicate the patterns of racial and ethnic discrimination that were made in the data they are trained on.<a href="payday-loans-references.html#biblio-mortgage-discrimination" class="internal" title="Bibliographic Entry 2.11.1.14: Disparity in home lending costs minorities millions, researchers find.">[2.11.1.14]</a>  Therefore, although overt discrimination is forbidden in lending, it still occurs.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-discriminatory-lending-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-background-discriminatory-lending-4">In addition to the discrimination that occurs through implicit bias (both in humans and in algorithms), the ECOA, and other similar laws in different countries, still allow banks and other lenders to discriminate on the basis of risk.  Banks can choose whether or not they want to lend someone money based on how likely that person is to pay it back.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-discriminatory-lending-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-background-discriminatory-lending-5">We’ve talked about how banks, the government, and other entities make decisions about who they will loan money to.  Those decisions are made primarily on the basis of two things: credit history and access to security.  If someone has a strong credit history - they have borrowed money and paid it back on time - or if they have access to property or someone with credit history to secure their loan - then they can obtain favorable terms for a loan.  If they do not have either of those things, then they are left to borrow money from lenders who demand much higher interest payments.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-discriminatory-lending-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-background-discriminatory-lending-6">This brings us to the question, then, of which groups of people have access to those things.  Although the ECOA banned discrimination in the loaning of money in 1974, access to credit tends to be passed down through generations.  If your grandparents did not have access to credit, they may not have been able to support your parents when they needed to borrow money for education or a first home - in which case, your parents would be unable to offer the same opportunities to you.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-discriminatory-lending-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-background-discriminatory-lending-7">Thus, the question of who has access to affordable credit can become a question of who has access to generational wealth.  Wealth is defined as the value of a family’s assets - both money saved in bank accounts and investments as well as property like homes and cars - minus their debt.  Studies have shown that Black Americans (as well as other people of color) have far less wealth than white Americans.  In 2016, a study found that the median wealth of Black households was less than 10% of that of similar white households <a href="payday-loans-references.html#biblio-mortgage-discrimination" class="internal" title="Bibliographic Entry 2.11.1.14: Disparity in home lending costs minorities millions, researchers find.">[2.11.1.14]</a>.  Wealth tends to accumulate in families over time.  This can be direct, like inheritance, where one generation receives wealth (money or property) directly from the previous one.  It can also be indirect.  For example, a college student may indirectly inherit generational wealth when their parents pay for part or all of their college, or when they win a scholarship from opportunities provided by their parents.  This allows them to avoid taking on debt to pay for college, which would decrease their overall wealth.  This accumulated wealth, then, gives them greater opportunities to credit in their future.  The effect of generational wealth can be seen in the paradoxical relationship between wealth and debt in America.  Even though they have 10 times the median wealth, white households have median debt which is more than twice as high as Black households <a href="payday-loans-references.html#biblio-mortgage-discrimination" class="internal" title="Bibliographic Entry 2.11.1.14: Disparity in home lending costs minorities millions, researchers find.">[2.11.1.14]</a>.  The debt held by white households, though, tends to be less costly than that held by Black households.  Much of this discrepancy is due to access to cheaper forms of debt like home mortgages, home equity loans, and student loans.  Black households tend to hold more of their debt in more expensive forms of credit like credit card debt and installment loans.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-discriminatory-lending-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-background-discriminatory-lending-8">On the surface, payday loans are available to anyone.  Because wealthier and white households tend to have access to other forms of credit, payday loans tend to be used primarily by poorer households and people of color.  People who do not own their own home are 57% more likely to use payday loans than homeowners.  People without a 4-year college degree are 82% more likely to use payday loans than those with degrees.  Race, though, was the greatest predictor of whether someone had used a payday loan - Blacks were more than twice as likely (105% more likely) to have used a payday loan as individuals of other races and ethnicities, even after controlling for other factors like income level and homeownership <a href="payday-loans-references.html#biblio-race-and-payday-lending" class="internal" title="Bibliographic Entry 2.11.1.16">[2.11.1.16]</a>.  If access to credit were only determined by risk - factors like income and access to security - we could expect the percentage of white and Black borrowers to be similar.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-discriminatory-lending-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-background-discriminatory-lending-9">In addition to the obstacles imposed by lending discrimination and lack of generational wealth, there are other reasons why people would turn to predatory forms of lending. One very simple reason is where they live.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-discriminatory-lending-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-background-discriminatory-lending-10">A study in 2019 found that there are simply fewer banks in majority Black neighborhoods.  In areas where the majority of residents were white, there was an average of 41 banks &amp; other financial institutions per 100,000 people.  In majority non-white neighborhoods, that number fell to 27 per 100,000.  Furthermore, banks in majority Black neighborhoods tended to charge higher fees than those in majority white neighborhoods <a href="payday-loans-references.html#biblio-race-and-banking" class="internal" title="Bibliographic Entry 2.11.1.17: African Americans underserved by U.S. banks: study">[2.11.1.17]</a>.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-discriminatory-lending-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-background-discriminatory-lending-11">The lack of banks in majority Black neighborhoods is mirrored by a greater concentration of payday lenders.  A 2016 study in California found that the neighborhoods where payday lenders were concentrated were much more likely to be majority Black or Latinx <a href="payday-loans-references.html#biblio-payday-lending-in-black-neighborhoods" class="internal" title="Bibliographic Entry 2.11.1.18: The Demographics of California Payday Lending: A Zip Code Analysis of Storefront Locations">[2.11.1.18]</a>.  A 2020 survey found that Black respondents were more than twice as likely to say that they lived within one mile of a payday lender <a href="payday-loans-references.html#biblio-payday-lending-race-survey" class="internal" title="Bibliographic Entry 2.11.1.19: ‘It’s What We Call Reverse Redlining’: Measuring the Proximity of Payday Lenders, Pawn Shops to Black Adults">[2.11.1.19]</a>. This lack of access to low-interest lenders, coupled with easy access to high-interest lenders, is called <em class="emphasis">reverse redlining</em>.  Redlining was the (now illegal) practice of singling out minority neighborhoods for mortgage discrimination, denying loans to people buying homes in those neighborhoods.  Redlining is considered a major contributor to the generational wealth gap between Black and white americans.  Similarly, reverse redlining creates neighborhoods without access to low-interest credit - not because of bank policies, per se, but because of physical proximity to lending institutions.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-discriminatory-lending-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.2.3: Discriminatory Lending"><a href="#payday-loans-background-discriminatory-lending" title="Copy heading and permalink for Subsection 2.2.3: Discriminatory Lending" aria-label="Copy heading and permalink for Subsection 2.2.3: Discriminatory Lending">🔗</a></div></section><section class="conclusion" id="payday-loans-background-5"><div class="para" id="payday-loans-background-5-1">We’ve learned a lot about payday lenders - how they operate, why people use them, where they are, and what they do.  Now that we understand the sociological aspects of the issue, let’s dive into the mathematics.  Mathematics can help us understand just how unfair payday lending is, how these lenders turn a profit, and study the inequity in where payday lenders are located.  We’ll learn the mathematics we need to analyze these issues, and then dive into some deeper exploration of the inequity of payday lending.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-background-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Section 2.2: Understanding the Issue"><a href="#payday-loans-background" title="Copy heading and permalink for Section 2.2: Understanding the Issue" aria-label="Copy heading and permalink for Section 2.2: Understanding the Issue">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="payday-loans-objectives.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="payday-loans-cui-bono.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>References</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math for the PeopleReferences">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.787a04695534ef1e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://web.stevenson.edu/mbranson/math-for-the-people.html"><img src="external/images/Math_Fist.PNG" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="math-for-the-people.html"><span class="title">Math for the PeopleReferences</span></a></h1>
+<p class="byline">Mark Branson (Editor), Whitney George (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="payday-loans-exercises.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="payday-loans.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="math-for-the-people-front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="instructors-note.html" class="internal"><span class="title">A Note for Instructors</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="students-note.html" class="internal"><span class="title">A Note for Students</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="abortion.html" class="internal"><span class="codenumber">1</span> <span class="title">Abortion Access Throughout the United States</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-objectives.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-background.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-cui-bono.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-big-problem.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Big Problem: Restricting Abortion Access</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-simple-logic.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Simple Logic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Negating and Combining Statements with "and" and "or"</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation-2" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Negations</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-and-or" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">And &amp; Or</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-equivalent-statements" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Equivalent Statements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-if-then" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Implications (If-Then Statements)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-quantifiers.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Quantifiers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-arguments.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Arguments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-valid-arguments" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Valid Arguments</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-sound-arguments" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Sound Arguments</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Definitions, Assumptions, and Fallacies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Case Study 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion_case-study-1-argument" class="internal"><span class="codenumber">1.8.1.1</span> <span class="title">Case Study 1: The Argument</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-discussion" class="internal"><span class="codenumber">1.8.1.2</span> <span class="title">Case Study 1: Discussion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-Refuting" class="internal"><span class="codenumber">1.8.1.3</span> <span class="title">Case Study 1: Refuting the Argument</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Case Study 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2-discussion" class="internal"><span class="codenumber">1.8.2.1</span> <span class="title">Case Study 2: Discussion</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-solving-for-change.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="abortion-reflection.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="abortion-exercises.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-references.html" class="internal"><span class="codenumber">1.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="payday-loans.html" class="internal"><span class="codenumber">2</span> <span class="title">Payday Loans</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-objectives.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-background.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-interest-and-risk" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Interest and Risk</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Types of Loans and Lenders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-payday" class="internal"><span class="codenumber">2.2.2.1</span> <span class="title">Payday Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-bank" class="internal"><span class="codenumber">2.2.2.2</span> <span class="title">Bank Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-government" class="internal"><span class="codenumber">2.2.2.3</span> <span class="title">Government Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-pawn" class="internal"><span class="codenumber">2.2.2.4</span> <span class="title">Pawn</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-discriminatory-lending" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Discriminatory Lending</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-cui-bono.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-big-problem.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Big Problem: Predatory Lending</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-interest.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Simple and Compound Interest</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-simple-interest" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Simple Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-compound-interest" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-solving-for-apr" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Finding the Interest Rate</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-risk.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Risk and Credit Scores</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-probability" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Introduction to Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-expected-value" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Expected Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-lending-decisions" class="internal"><span class="codenumber">2.6.3</span> <span class="title">How Banks Make Lending Decisions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-correlation.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Correlation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-definition" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Defining the Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-4" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Computing Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-5" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Using Correlation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-solving-for-change.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-3" class="internal"><span class="codenumber">2.8.1</span> <span class="title">If people are willing to pay...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-4" class="internal"><span class="codenumber">2.8.2</span> <span class="title">We have to charge those rates, because of the risk!</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-5" class="internal"><span class="codenumber">2.8.3</span> <span class="title">If we don’t lend to them, who will?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-6" class="internal"><span class="codenumber">2.8.4</span> <span class="title">What Can We Do?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="payday-loan-reflection.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="payday-loans-exercises.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-exercises.html#payday-loans-exercises-22" class="internal"><span class="codenumber">2.10.1</span> <span class="title">Generative AI Prompts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="payday-loans-references.html" class="internal"><span class="codenumber">2.11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-2" class="internal"><span class="codenumber">2.11.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-3" class="internal"><span class="codenumber">2.11.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="math-for-the-people-bibliography.html" class="internal"><span class="codenumber">1</span> <span class="title">Bibliography</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="payday-loans-references"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.11</span><span class="space"> </span><span class="title">References</span>
+</h2>
+<section class="subsection" id="payday-loans-references-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.11.1</span><span class="space"> </span><span class="title">Bibliography</span>
+</h3>
+<article class="bib" id="biblio-fair-lending"><div class="bibitem">[10]</div>
+<div class="bibentry">, <i>FDIC Consumer Compliance Examination Manual</i><a class="external" href="https://www.fdic.gov/regulations/compliance/manual/4/iv-1.1.pdf" target="_blank">https://www.fdic.gov/regulations/compliance/manual/4/iv-1.1.pdf</a><details class="ptx-footnote" aria-live="polite" id="biblio-fair-lending-3"><summary class="ptx-footnote__number" title="Footnote 2.11.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="biblio-fair-lending-3"><code class="code-inline tex2jax_ignore">www.fdic.gov/regulations/compliance/manual/4/iv-1.1.pdf</code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.10: FDIC Consumer Compliance Examination Manual"><a href="#biblio-fair-lending" title="Copy heading and permalink for Bibliographic Entry 2.11.1.10: FDIC Consumer Compliance Examination Manual" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.10: FDIC Consumer Compliance Examination Manual">🔗</a></div></article><article class="bib" id="biblio-payday-loan-cfpb"><div class="bibitem">[11]</div>
+<div class="bibentry">, <i>Consumer Financial Protection Bureau: What is a Payday Loan</i><a class="external" href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-payday-loan-en-1567/" target="_blank">https://www.consumerfinance.gov/ask-cfpb/what-is-a-payday-loan-en-1567/</a><details class="ptx-footnote" aria-live="polite" id="biblio-payday-loan-cfpb-3"><summary class="ptx-footnote__number" title="Footnote 2.11.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="biblio-payday-loan-cfpb-3"><code class="code-inline tex2jax_ignore">www.consumerfinance.gov/ask-cfpb/what-is-a-payday-loan-en-1567/</code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.11: Consumer Financial Protection Bureau: What is a Payday Loan"><a href="#biblio-payday-loan-cfpb" title="Copy heading and permalink for Bibliographic Entry 2.11.1.11: Consumer Financial Protection Bureau: What is a Payday Loan" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.11: Consumer Financial Protection Bureau: What is a Payday Loan">🔗</a></div></article><article class="bib" id="biblio-public-accountability-initiative"><div class="bibitem">[12]</div>
+<div class="bibentry">, <i>The Predator’s Creditors: How the Biggest Banks are Bankrolling the Payday Loan Industry</i><a class="external" href="" target="_blank">https://public-accountability.org/wp-content/uploads/2011/09/payday-final-091410.pdf</a><details class="ptx-footnote" aria-live="polite" id="biblio-public-accountability-initiative-3"><summary class="ptx-footnote__number" title="Footnote 2.11.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="biblio-public-accountability-initiative-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.12: The Predator’s Creditors: How the Biggest Banks are Bankrolling the Payday Loan Industry"><a href="#biblio-public-accountability-initiative" title="Copy heading and permalink for Bibliographic Entry 2.11.1.12: The Predator’s Creditors: How the Biggest Banks are Bankrolling the Payday Loan Industry" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.12: The Predator’s Creditors: How the Biggest Banks are Bankrolling the Payday Loan Industry">🔗</a></div></article><article class="bib" id="biblio-ibis"><div class="bibitem">[13]</div>
+<div class="bibentry">, <i>Check Cashing &amp; Payday Loan Services in the US Market Size 2003-2025</i><a class="external" href="" target="_blank">https://www.ibisworld.com/industry-statistics/market-size/check-cashing-payday-loan-services-united-states/</a><details class="ptx-footnote" aria-live="polite" id="biblio-ibis-3"><summary class="ptx-footnote__number" title="Footnote 2.11.4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="biblio-ibis-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.13: Check Cashing &amp; Payday Loan Services in the US Market Size 2003-2025"><a href="#biblio-ibis" title="Copy heading and permalink for Bibliographic Entry 2.11.1.13: Check Cashing &amp; Payday Loan Services in the US Market Size 2003-2025" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.13: Check Cashing &amp; Payday Loan Services in the US Market Size 2003-2025">🔗</a></div></article><article class="bib" id="biblio-mortgage-discrimination"><div class="bibitem">[14]</div>
+<div class="bibentry">, <i>Disparity in home lending costs minorities millions, researchers find.</i><a class="external" href="" target="_blank">https://www.cbsnews.com/news/mortgage-discrimination-black-and-latino-paying-millions-more-in-interest-study-shows/</a><details class="ptx-footnote" aria-live="polite" id="biblio-mortgage-discrimination-3"><summary class="ptx-footnote__number" title="Footnote 2.11.5"><sup> 5 </sup></summary><div class="ptx-footnote__contents" id="biblio-mortgage-discrimination-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.14: Disparity in home lending costs minorities millions, researchers find."><a href="#biblio-mortgage-discrimination" title="Copy heading and permalink for Bibliographic Entry 2.11.1.14: Disparity in home lending costs minorities millions, researchers find." aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.14: Disparity in home lending costs minorities millions, researchers find.">🔗</a></div></article><article class="bib" id="biblio-systematic-inequality"><div class="bibitem">[15]</div>
+<div class="bibentry">, <i>Systemic Inequality: How America’s Structural Racism Helped Creaate the Black-White Wealth Gap</i><a class="external" href="" target="_blank">https://www.americanprogress.org/issues/race/reports/2018/02/21/447051/systematic-inequality/</a><details class="ptx-footnote" aria-live="polite" id="biblio-systematic-inequality-3"><summary class="ptx-footnote__number" title="Footnote 2.11.6"><sup> 6 </sup></summary><div class="ptx-footnote__contents" id="biblio-systematic-inequality-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.15: Systemic Inequality: How America’s Structural Racism Helped Creaate the Black-White Wealth Gap"><a href="#biblio-systematic-inequality" title="Copy heading and permalink for Bibliographic Entry 2.11.1.15: Systemic Inequality: How America’s Structural Racism Helped Creaate the Black-White Wealth Gap" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.15: Systemic Inequality: How America’s Structural Racism Helped Creaate the Black-White Wealth Gap">🔗</a></div></article><article class="bib" id="biblio-race-and-payday-lending"><div class="bibitem">[16]</div>
+<div class="bibentry">
+<a class="external" href="" target="_blank">https://www.pewtrusts.org/~/media/legacy/uploadedfiles/pcs_assets/2012/pewpaydaylendingreportpdf.pdf</a><details class="ptx-footnote" aria-live="polite" id="biblio-race-and-payday-lending-2"><summary class="ptx-footnote__number" title="Footnote 2.11.7"><sup> 7 </sup></summary><div class="ptx-footnote__contents" id="biblio-race-and-payday-lending-2"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.16"><a href="#biblio-race-and-payday-lending" title="Copy heading and permalink for Bibliographic Entry 2.11.1.16" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.16">🔗</a></div></article><article class="bib" id="biblio-race-and-banking"><div class="bibitem">[17]</div>
+<div class="bibentry">, <i>African Americans underserved by U.S. banks: study</i><a class="external" href="" target="_blank">https://www.reuters.com/article/us-usa-banks-race/african-americans-underserved-by-u-s-banks-study-idUSKCN1V3081</a><details class="ptx-footnote" aria-live="polite" id="biblio-race-and-banking-3"><summary class="ptx-footnote__number" title="Footnote 2.11.8"><sup> 8 </sup></summary><div class="ptx-footnote__contents" id="biblio-race-and-banking-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.17: African Americans underserved by U.S. banks: study"><a href="#biblio-race-and-banking" title="Copy heading and permalink for Bibliographic Entry 2.11.1.17: African Americans underserved by U.S. banks: study" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.17: African Americans underserved by U.S. banks: study">🔗</a></div></article><article class="bib" id="biblio-payday-lending-in-black-neighborhoods"><div class="bibitem">[18]</div>
+<div class="bibentry">, <i>The Demographics of California Payday Lending: A Zip Code Analysis of Storefront Locations</i><a class="external" href="" target="_blank">https://dfpi.ca.gov/wp-content/uploads/sites/337/2019/02/The-Demographics-of-CA-Payday-Lending-A-Zip-Code-Analysis-of-Storefront-Locations.pdf</a><details class="ptx-footnote" aria-live="polite" id="biblio-payday-lending-in-black-neighborhoods-3"><summary class="ptx-footnote__number" title="Footnote 2.11.9"><sup> 9 </sup></summary><div class="ptx-footnote__contents" id="biblio-payday-lending-in-black-neighborhoods-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.18: The Demographics of California Payday Lending: A Zip Code Analysis of Storefront Locations"><a href="#biblio-payday-lending-in-black-neighborhoods" title="Copy heading and permalink for Bibliographic Entry 2.11.1.18: The Demographics of California Payday Lending: A Zip Code Analysis of Storefront Locations" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.18: The Demographics of California Payday Lending: A Zip Code Analysis of Storefront Locations">🔗</a></div></article><article class="bib" id="biblio-payday-lending-race-survey"><div class="bibitem">[19]</div>
+<div class="bibentry">, <i>‘It’s What We Call Reverse Redlining’: Measuring the Proximity of Payday Lenders, Pawn Shops to Black Adults</i><a class="external" href="" target="_blank">https://morningconsult.com/2020/07/23/black-consumers-payday-loan-banking-services/</a><details class="ptx-footnote" aria-live="polite" id="biblio-payday-lending-race-survey-3"><summary class="ptx-footnote__number" title="Footnote 2.11.10"><sup> 10 </sup></summary><div class="ptx-footnote__contents" id="biblio-payday-lending-race-survey-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.19: ‘It’s What We Call Reverse Redlining’: Measuring the Proximity of Payday Lenders, Pawn Shops to Black Adults"><a href="#biblio-payday-lending-race-survey" title="Copy heading and permalink for Bibliographic Entry 2.11.1.19: ‘It’s What We Call Reverse Redlining’: Measuring the Proximity of Payday Lenders, Pawn Shops to Black Adults" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.19: ‘It’s What We Call Reverse Redlining’: Measuring the Proximity of Payday Lenders, Pawn Shops to Black Adults">🔗</a></div></article><article class="bib" id="biblio-not-paying-loan"><div class="bibitem">[20]</div>
+<div class="bibentry">, <i>What Will Happen If I Default on My Credit Cards?</i><a class="external" href="" target="_blank">https://www.thebalance.com/what-will-happen-if-i-stop-paying-my-credit-card-960284</a><details class="ptx-footnote" aria-live="polite" id="biblio-not-paying-loan-3"><summary class="ptx-footnote__number" title="Footnote 2.11.11"><sup> 11 </sup></summary><div class="ptx-footnote__contents" id="biblio-not-paying-loan-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.20: What Will Happen If I Default on My Credit Cards?"><a href="#biblio-not-paying-loan" title="Copy heading and permalink for Bibliographic Entry 2.11.1.20: What Will Happen If I Default on My Credit Cards?" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.20: What Will Happen If I Default on My Credit Cards?">🔗</a></div></article><article class="bib" id="biblio-spurious-correlations"><div class="bibitem">[21]</div>
+<div class="bibentry">, <i>Spurious Correlations.</i><a class="external" href="" target="_blank">https://tylervigen.com/view_correlation?id=75</a><details class="ptx-footnote" aria-live="polite" id="biblio-spurious-correlations-3"><summary class="ptx-footnote__number" title="Footnote 2.11.12"><sup> 12 </sup></summary><div class="ptx-footnote__contents" id="biblio-spurious-correlations-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.21: Spurious Correlations."><a href="#biblio-spurious-correlations" title="Copy heading and permalink for Bibliographic Entry 2.11.1.21: Spurious Correlations." aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.21: Spurious Correlations.">🔗</a></div></article><article class="bib" id="biblio-correlation-comic"><div class="bibitem">[22]</div>
+<div class="bibentry">, <i>Correlation.</i><a class="external" href="" target="_blank">https://xkcd.com/552/</a><details class="ptx-footnote" aria-live="polite" id="biblio-correlation-comic-3"><summary class="ptx-footnote__number" title="Footnote 2.11.13"><sup> 13 </sup></summary><div class="ptx-footnote__contents" id="biblio-correlation-comic-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.22: Correlation."><a href="#biblio-correlation-comic" title="Copy heading and permalink for Bibliographic Entry 2.11.1.22: Correlation." aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.22: Correlation.">🔗</a></div></article><article class="bib" id="biblio-crl-payday-rates"><div class="bibitem">[23]</div>
+<div class="bibentry">, <i>Map of U.S. Payday Interest Rates.</i><a class="external" href="" target="_blank">https://www.responsiblelending.org/research-publication/map-us-payday-interest-rates</a><details class="ptx-footnote" aria-live="polite" id="biblio-crl-payday-rates-3"><summary class="ptx-footnote__number" title="Footnote 2.11.14"><sup> 14 </sup></summary><div class="ptx-footnote__contents" id="biblio-crl-payday-rates-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.23: Map of U.S. Payday Interest Rates."><a href="#biblio-crl-payday-rates" title="Copy heading and permalink for Bibliographic Entry 2.11.1.23: Map of U.S. Payday Interest Rates." aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.23: Map of U.S. Payday Interest Rates.">🔗</a></div></article><article class="bib" id="biblio-census"><div class="bibitem">[24]</div>
+<div class="bibentry">, <i>United States Census CEDSCI.</i><a class="external" href="" target="_blank">https://data.census.gov/cedsci/</a><details class="ptx-footnote" aria-live="polite" id="biblio-census-3"><summary class="ptx-footnote__number" title="Footnote 2.11.15"><sup> 15 </sup></summary><div class="ptx-footnote__contents" id="biblio-census-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.24: United States Census CEDSCI."><a href="#biblio-census" title="Copy heading and permalink for Bibliographic Entry 2.11.1.24: United States Census CEDSCI." aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.24: United States Census CEDSCI.">🔗</a></div></article><article class="bib" id="biblio-crl-defaults"><div class="bibitem">[25]</div>
+<div class="bibentry">, <i>Payday Mayday:Visible and Invisible Payday Lending Defaults</i><a class="external" href="" target="_blank">https://www.responsiblelending.org/payday-lending/research-analysis/finalpaydaymayday_defaults.pdf</a><details class="ptx-footnote" aria-live="polite" id="biblio-crl-defaults-3"><summary class="ptx-footnote__number" title="Footnote 2.11.16"><sup> 16 </sup></summary><div class="ptx-footnote__contents" id="biblio-crl-defaults-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.25: Payday Mayday:Visible and Invisible Payday Lending Defaults"><a href="#biblio-crl-defaults" title="Copy heading and permalink for Bibliographic Entry 2.11.1.25: Payday Mayday:Visible and Invisible Payday Lending Defaults" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.25: Payday Mayday:Visible and Invisible Payday Lending Defaults">🔗</a></div></article><article class="bib" id="biblio-cfpb-payday-lending-report"><div class="bibitem">[26]</div>
+<div class="bibentry">, <i>CFPB Data Point: Payday Lending</i><a class="external" href="" target="_blank">https://files.consumerfinance.gov/f/201403_cfpb_report_payday-lending.pdf</a><details class="ptx-footnote" aria-live="polite" id="biblio-cfpb-payday-lending-report-3"><summary class="ptx-footnote__number" title="Footnote 2.11.17"><sup> 17 </sup></summary><div class="ptx-footnote__contents" id="biblio-cfpb-payday-lending-report-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.26: CFPB Data Point: Payday Lending"><a href="#biblio-cfpb-payday-lending-report" title="Copy heading and permalink for Bibliographic Entry 2.11.1.26: CFPB Data Point: Payday Lending" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.26: CFPB Data Point: Payday Lending">🔗</a></div></article><article class="bib" id="biblio-shark-free-waters"><div class="bibitem">[27]</div>
+<div class="bibentry">, <i>Shark‐Free Waters: States are Better Off without Payday Lending.</i><a class="external" href="" target="_blank">https://www.responsiblelending.org/sites/default/files/nodes/files/research-publication/crl_shark_free_waters_aug2016.pdf</a><details class="ptx-footnote" aria-live="polite" id="biblio-shark-free-waters-3"><summary class="ptx-footnote__number" title="Footnote 2.11.18"><sup> 18 </sup></summary><div class="ptx-footnote__contents" id="biblio-shark-free-waters-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.27: Shark‐Free Waters: States are Better Off without Payday Lending."><a href="#biblio-shark-free-waters" title="Copy heading and permalink for Bibliographic Entry 2.11.1.27: Shark‐Free Waters: States are Better Off without Payday Lending." aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.27: Shark‐Free Waters: States are Better Off without Payday Lending.">🔗</a></div></article><article class="bib" id="biblio-payday-lending-naics-522390"><div class="bibitem">[28]</div>
+<div class="bibentry">, <i>522390 - Other Activities Related to Credit Intermediation</i><a class="external" href="" target="_blank">https://www.naics.com/naics-code-description/?v=2017&amp;code=522390</a><details class="ptx-footnote" aria-live="polite" id="biblio-payday-lending-naics-522390-3"><summary class="ptx-footnote__number" title="Footnote 2.11.19"><sup> 19 </sup></summary><div class="ptx-footnote__contents" id="biblio-payday-lending-naics-522390-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.28: 522390 - Other Activities Related to Credit Intermediation"><a href="#biblio-payday-lending-naics-522390" title="Copy heading and permalink for Bibliographic Entry 2.11.1.28: 522390 - Other Activities Related to Credit Intermediation" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.28: 522390 - Other Activities Related to Credit Intermediation">🔗</a></div></article><article class="bib" id="biblio-payday-lending-crl-factsheet"><div class="bibitem">[29]</div>
+<div class="bibentry">, <i>Predatory Payday Lending Traps Borrowers</i><a class="external" href="" target="_blank">https://www.responsiblelending.org/payday-lending/tools-resources/2b002-payday2005.pdf</a><details class="ptx-footnote" aria-live="polite" id="biblio-payday-lending-crl-factsheet-3"><summary class="ptx-footnote__number" title="Footnote 2.11.20"><sup> 20 </sup></summary><div class="ptx-footnote__contents" id="biblio-payday-lending-crl-factsheet-3"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.29: Predatory Payday Lending Traps Borrowers"><a href="#biblio-payday-lending-crl-factsheet" title="Copy heading and permalink for Bibliographic Entry 2.11.1.29: Predatory Payday Lending Traps Borrowers" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.29: Predatory Payday Lending Traps Borrowers">🔗</a></div></article><article class="bib" id="biblio-payday-lending-chatgpt"><div class="bibitem">[30]</div>
+<div class="bibentry">
+<a class="external" href="" target="_blank">https://chat.openai.com</a><details class="ptx-footnote" aria-live="polite" id="biblio-payday-lending-chatgpt-2"><summary class="ptx-footnote__number" title="Footnote 2.11.21"><sup> 21 </sup></summary><div class="ptx-footnote__contents" id="biblio-payday-lending-chatgpt-2"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 2.11.1.30"><a href="#biblio-payday-lending-chatgpt" title="Copy heading and permalink for Bibliographic Entry 2.11.1.30" aria-label="Copy heading and permalink for Bibliographic Entry 2.11.1.30">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.11.1: Bibliography"><a href="#payday-loans-references-2" title="Copy heading and permalink for Subsection 2.11.1: Bibliography" aria-label="Copy heading and permalink for Subsection 2.11.1: Bibliography">🔗</a></div></section><section class="subsection" id="payday-loans-references-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.11.2</span><span class="space"> </span><span class="title">Image Descriptions</span>
+</h3>
+<ol class="decimal" id="payday-loans-references-3-2">
+<li id="image-description-credit-score">
+<div class="para" id="p-derived-image-description-credit-score">A bar showing credit scores categorized as Very Bad (300-599), Poor (600-649), Fair (650-699), Good (700-749), Very Good (750-799), and Excellent (800-850).  Only secured loans are available for people with scores in the very bad or poor range.  People with Fair or Good scores should be able to secure credit with good rates, while people with very good or excellent credit receive the best interest rates.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#image-description-credit-score" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="image-descriptions-payday-rates">A map of the United states with states shaded according to the typical payday loan rate in that state. Only states which allow predatory payday lending are labeled. Typical rates for those states are shown in the table below. <figure class="table table-like" id="image-descriptions-payday-rates-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.11.1<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Table 2.11.1"><a href="#image-descriptions-payday-rates-1" title="Copy heading and permalink for Table 2.11.1" aria-label="Copy heading and permalink for Table 2.11.1">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">State</td>
+<td class="l m b0 r0 l0 t0 lines">Typical Payday Loan APR</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Oregon</td>
+<td class="l m b0 r0 l0 t0 lines">140%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Oklahoma</td>
+<td class="l m b0 r0 l0 t0 lines">424%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Maine</td>
+<td class="l m b0 r0 l0 t0 lines">228%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Rhode Island</td>
+<td class="l m b0 r0 l0 t0 lines">261%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Wyoming</td>
+<td class="l m b0 r0 l0 t0 lines">316%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Florida</td>
+<td class="l m b0 r0 l0 t0 lines">293%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Iowa</td>
+<td class="l m b0 r0 l0 t0 lines">247%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Michigan</td>
+<td class="l m b0 r0 l0 t0 lines">356%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Indiana</td>
+<td class="l m b0 r0 l0 t0 lines">372%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Delaware</td>
+<td class="l m b0 r0 l0 t0 lines">639%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Kansas</td>
+<td class="l m b0 r0 l0 t0 lines">391%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Washington</td>
+<td class="l m b0 r0 l0 t0 lines">391%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">South Carolina</td>
+<td class="l m b0 r0 l0 t0 lines">391%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Alaska</td>
+<td class="l m b0 r0 l0 t0 lines">424%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Alabama</td>
+<td class="l m b0 r0 l0 t0 lines">456%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">California</td>
+<td class="l m b0 r0 l0 t0 lines">460%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Tennessee</td>
+<td class="l m b0 r0 l0 t0 lines">460%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Kentucky</td>
+<td class="l m b0 r0 l0 t0 lines">450%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Louisiana</td>
+<td class="l m b0 r0 l0 t0 lines">410%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Wisconsin</td>
+<td class="l m b0 r0 l0 t0 lines">537%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Mississippi</td>
+<td class="l m b0 r0 l0 t0 lines">572%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">North Dakota</td>
+<td class="l m b0 r0 l0 t0 lines">521%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Missouri</td>
+<td class="l m b0 r0 l0 t0 lines">652%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Idaho</td>
+<td class="l m b0 r0 l0 t0 lines">475%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Nevada</td>
+<td class="l m b0 r0 l0 t0 lines">548%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Utah</td>
+<td class="l m b0 r0 l0 t0 lines">543%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Texas</td>
+<td class="l m b0 r0 l0 t0 lines">662%</td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Item 2"><a href="#image-descriptions-payday-rates" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Subsection 2.11.2: Image Descriptions"><a href="#payday-loans-references-3" title="Copy heading and permalink for Subsection 2.11.2: Image Descriptions" aria-label="Copy heading and permalink for Subsection 2.11.2: Image Descriptions">🔗</a></div></section><div class="autopermalink" data-description="Section 2.11: References"><a href="#payday-loans-references" title="Copy heading and permalink for Section 2.11: References" aria-label="Copy heading and permalink for Section 2.11: References">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="payday-loans-exercises.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

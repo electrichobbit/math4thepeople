@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* div with class 'sagecell-r' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-r",
+  "linked": true,
+  "linkKey": "linked-r",
+  "autoeval": false,
+  "languages": [
+    "r"
+  ],
+  "evalButtonText": "Evaluate (R)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">18<span class="period">.</span></span>
+</h3>
+<div class="para logical">
+<div class="para">The file <a class="external" href="payday-lending/Data_Files/county-lender-data.csv" target="_blank">county-lender-data.csv</a><details class="ptx-footnote" aria-live="polite" id="exercise-payday-lending-county-data-1-2"><summary class="ptx-footnote__number" title="Footnote 1.10.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="exercise-payday-lending-county-data-1-2"><code class="code-inline tex2jax_ignore">payday-lending/Data_Files/county-lender-data.csv</code></div></details> contains data similar to what we looked at in the previous problem, but for every county in the United States of America (all data is from the 2021 County Business Patterns (CBP) and 2021 American Community Survey (ACS) of the US Census <a href="payday-loans-references.html#biblio-census" class="xref" data-knowl="./knowl/xref/biblio-census.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 1.11.1.15: United States Census CEDSCI.">[1.11.1.15]</a>).  This file contains:</div>
+<ul class="disc" id="exercise-payday-lending-county-data-1-4">
+<li>
+<div class="para">County Name</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-payday-lending-county-data-1-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">State Name</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-payday-lending-county-data-1-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">The number of payday lenders or similar businesses (more accurately, these are businesses classified as NAICS code 522390 <a href="payday-loans-references.html#biblio-payday-lending-naics-522390" class="xref" data-knowl="./knowl/xref/biblio-payday-lending-naics-522390.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 1.11.1.19: 522390 - Other Activities Related to Credit Intermediation">[1.11.1.19]</a>, which includes check-cashing and money-wiring services, in addition to payday lending) in that county.</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-payday-lending-county-data-1-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">The population of the county.</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-payday-lending-county-data-1-4-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">The percentage of the county which is white.</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-payday-lending-county-data-1-4-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">The percentage of the county which is Black.</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-payday-lending-county-data-1-4-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">The percentage of the county who identify as Hispanic (note that as this is a cultural identity, individuals who identify as Hispanic can be white, Black, or neither).</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-payday-lending-county-data-1-4-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">The median household income in the county.</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-payday-lending-county-data-1-4-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">The percentage of people in the county over age 18 who have a high school diploma (or equivalent) or higher degree.</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-payday-lending-county-data-1-4-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">The number of payday lenders (NAICS code 522390) per 100,000 people in each county.</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-payday-lending-county-data-1-4-10" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-payday-lending-county-data-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Choose a state to examine.  Using the code window below, a calculator, or a spreadsheet program, calculate the correlation between the number of payday lenders and population, percentage white, percentage Black, percentage Hispanic, median income, and percentage of people with a high school diploma or equivalent.  Which of these correlations are strongest for your state? Which are weakest? Explain what this tells you about where payday lenders are located.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-payday-lending-county-data-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Now repeat the exercise above, but use the number of payday lenders per 100,000 people.  Which correlations are strongest for your state? Which are weakest? Explain what this tells you about where payday lenders are located.  Why is this more useful than what you uncovered above?<div class="autopermalink" data-description="Paragraph"><a href="#exercise-payday-lending-county-data-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="exercise-payday-lending-county-data-4" class="ptx-sagecell sagecell-r"><script type="text/x-sage">
+</script></div>
+<div class="autopermalink" data-description="Exercise 1.10.18"><a href="#exercise-payday-lending-county-data" title="Copy heading and permalink for Exercise 1.10.18" aria-label="Copy heading and permalink for Exercise 1.10.18">🔗</a></div></article><span class="incontext"><a class="internal" href="payday-loans-exercises.html#exercise-payday-lending-county-data">in-context</a></span>
+</body>
+</html>

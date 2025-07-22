@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Definitions, Assumptions, and Fallacies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math for the PeopleReferences">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.787a04695534ef1e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://web.stevenson.edu/mbranson/math-for-the-people.html"><img src="external/images/Math_Fist.PNG" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="math-for-the-people.html"><span class="title">Math for the PeopleReferences</span></a></h1>
+<p class="byline">Mark Branson (Editor), Whitney George (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="abortion-arguments.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="abortion.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="abortion-solving-for-change.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="math-for-the-people-front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="instructors-note.html" class="internal"><span class="title">A Note for Instructors</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="students-note.html" class="internal"><span class="title">A Note for Students</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="abortion.html" class="internal"><span class="codenumber">1</span> <span class="title">Abortion Access Throughout the United States</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-objectives.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-background.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-cui-bono.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-big-problem.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Big Problem: Restricting Abortion Access</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-simple-logic.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Simple Logic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Negating and Combining Statements with "and" and "or"</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation-2" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Negations</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-and-or" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">And &amp; Or</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-equivalent-statements" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Equivalent Statements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-if-then" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Implications (If-Then Statements)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-quantifiers.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Quantifiers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-arguments.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Arguments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-valid-arguments" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Valid Arguments</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-sound-arguments" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Sound Arguments</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Definitions, Assumptions, and Fallacies</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Case Study 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion_case-study-1-argument" class="internal"><span class="codenumber">1.8.1.1</span> <span class="title">Case Study 1: The Argument</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-discussion" class="internal"><span class="codenumber">1.8.1.2</span> <span class="title">Case Study 1: Discussion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-Refuting" class="internal"><span class="codenumber">1.8.1.3</span> <span class="title">Case Study 1: Refuting the Argument</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Case Study 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2-discussion" class="internal"><span class="codenumber">1.8.2.1</span> <span class="title">Case Study 2: Discussion</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-solving-for-change.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="abortion-reflection.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="abortion-exercises.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-references.html" class="internal"><span class="codenumber">1.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="payday-loans.html" class="internal"><span class="codenumber">2</span> <span class="title">Payday Loans</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-objectives.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-background.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-interest-and-risk" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Interest and Risk</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Types of Loans and Lenders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-payday" class="internal"><span class="codenumber">2.2.2.1</span> <span class="title">Payday Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-bank" class="internal"><span class="codenumber">2.2.2.2</span> <span class="title">Bank Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-government" class="internal"><span class="codenumber">2.2.2.3</span> <span class="title">Government Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-pawn" class="internal"><span class="codenumber">2.2.2.4</span> <span class="title">Pawn</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-discriminatory-lending" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Discriminatory Lending</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-cui-bono.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-big-problem.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Big Problem: Predatory Lending</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-interest.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Simple and Compound Interest</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-simple-interest" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Simple Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-compound-interest" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-solving-for-apr" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Finding the Interest Rate</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-risk.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Risk and Credit Scores</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-probability" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Introduction to Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-expected-value" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Expected Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-lending-decisions" class="internal"><span class="codenumber">2.6.3</span> <span class="title">How Banks Make Lending Decisions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-correlation.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Correlation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-definition" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Defining the Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-4" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Computing Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-5" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Using Correlation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-solving-for-change.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-3" class="internal"><span class="codenumber">2.8.1</span> <span class="title">If people are willing to pay...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-4" class="internal"><span class="codenumber">2.8.2</span> <span class="title">We have to charge those rates, because of the risk!</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-5" class="internal"><span class="codenumber">2.8.3</span> <span class="title">If we don’t lend to them, who will?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-6" class="internal"><span class="codenumber">2.8.4</span> <span class="title">What Can We Do?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="payday-loan-reflection.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="payday-loans-exercises.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-exercises.html#payday-loans-exercises-22" class="internal"><span class="codenumber">2.10.1</span> <span class="title">Generative AI Prompts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-references.html" class="internal"><span class="codenumber">2.11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-2" class="internal"><span class="codenumber">2.11.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-3" class="internal"><span class="codenumber">2.11.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="math-for-the-people-bibliography.html" class="internal"><span class="codenumber">1</span> <span class="title">Bibliography</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="abortion-defs-assumptions-fallacies"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.8</span><span class="space"> </span><span class="title">Definitions, Assumptions, and Fallacies</span>
+</h2>
+<section class="introduction" id="abortion-defs-assumptions-fallacies-2"><div class="para" id="abortion-defs-assumptions-fallacies-2-1">As we navigate arguments there are several special language features that we need to be aware of to help us communicate clearly and effectively. These features are definitions, assumptions, and logical fallacies. These features will be discussed below.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-defs-assumptions-fallacies-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-defs-assumptions-fallacies-2-2">A <dfn class="terminology">definition</dfn> is a common meaning for a term that is held by a group. For example, if you asked various people to define the term dog, you would get similar answers from almost everyone that you asked. That is because the definition has many commonly experienced attributes such as being a pet or companion. One thing to be mindful about with definitions is that not all groups hold common definitions for the same term. One example would be the definition of abortion held by different groups. Some consider any termination of a pregnancy, no matter the reason, to be an abortion. Other groups consider abortion to be any elective termination of a pregnancy. This slight difference in how the groups define the common term can make discussions between individuals contentious.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-defs-assumptions-fallacies-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-defs-assumptions-fallacies-2-3">An <dfn class="terminology">assumption</dfn> is a sentence that is accepted in an argument as true. Some assumptions are understood, or what we call tacit assumptions. An example of a tacit assumption would be the mental image that you generate from the sentence, "Those not yet born have been dehumanized, and so many of those born have faced increasing marginalization due to their age, ability, or perceived value". You most likely imagine a fetus and not a robot or rock. That is because we have a tacit assumption that robots cannot be born. This sentence is part of the mission statement of the pro life advocacy group <a class="external" href="https://aul.org/mission/" target="_blank">Americans United for Life</a><details class="ptx-footnote" aria-live="polite" id="abortion-defs-assumptions-fallacies-2-3-3"><summary class="ptx-footnote__number" title="Footnote 1.8.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="abortion-defs-assumptions-fallacies-2-3-3"><code class="code-inline tex2jax_ignore">aul.org/mission/</code></div></details><div class="autopermalink" data-description="Paragraph"><a href="#abortion-defs-assumptions-fallacies-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-defs-assumptions-fallacies-2-4">Other assumptions are stated more directly. This means that the assumptions are made explicit. When we make explicit assumptions, we speak them directly. An example of a directly spoken assumption would be the following quote,"We see that criminalization is not as much about the behavior of the individual, but the individual itself and the identities that they hold. We know that Black and Latinx and other folks of color are more likely to be criminalized by our criminal legal system. We know the same thing is true for young people, LGBTQ folks, undocumented communities. So the risks are high for criminalization overall. We are seeing this play out in the reproductive health care space right now and it’s going to get worse."-Jamila Perritt, MD, MPH, FACOG—President &amp; CEO of Physicians for Reproductive Health <a href="abortion-references.html#abortion-equity" class="internal" title="Bibliographic Entry 1.12.7">[1.12.7]</a><div class="autopermalink" data-description="Paragraph"><a href="#abortion-defs-assumptions-fallacies-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-defs-assumptions-fallacies-2-5">This statement directly addresses that specific groups will face potentially punitive consequences when navigating the reproductive health system, if they are able to navigate it at all. Pause for a moment to think about internal and external features that might limit access to reproductive health for certain groups.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-defs-assumptions-fallacies-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-defs-assumptions-fallacies-2-6">An assumption can sometimes be indicated by the presence of words like let, suppose, and assume in regular speech and writing. This particular type of language invites a listener or reader to engage with the possibilities that follow from an initial claim that is assumed to be true.It is important to be aware that not all assumptions are true. For social issues this is especially true. Assuming that certain parts of an argument are true, without proper investigation or consideration, can lead to false conclusions. One example of an assumption that can lead to false conclusions is using a non-shared definition.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-defs-assumptions-fallacies-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-defs-assumptions-fallacies-2-7">For example, the Merriam-Webster Dictionary defines abortion as the "termination of a pregnancy after, accompanied by, resulting in, or closely follow by the death of the embryo or fetus" <a href="abortion-references.html#abortion-def-abortion" class="internal" title="Bibliographic Entry 1.12.1">[1.12.1]</a>. However when Catherin Glenn Foster, the President and CEO of Americans United for Life was asked if an abortion occurred in the scenario of a 10-year old rape victim who became pregnant, and terminated the pregnancy, Foster replied that an abortion did not occur because “it would probably impact [the girl’s] life, and so, therefore, it would fall under any exception and would not be an abortion.” Foster later clarified that “If a 10-year old became pregnant as a result of rape and it was threatening her life, then that’s not an abortion”.  <a href="abortion-references.html#abortion-Maddow" class="internal" title="Bibliographic Entry 1.12.8">[1.12.8]</a><div class="autopermalink" data-description="Paragraph"><a href="#abortion-defs-assumptions-fallacies-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-defs-assumptions-fallacies-2-8">A <dfn class="terminology">logical fallacy</dfn> is a flawed, deceptive, or false argument that can be proven wrong with proper reasoning. Arguments, as we have learned, are an important part of social interactions. This is especially true when dealing with controversial topics. Logical fallacies tend to arise commonly with controversial topics because of the presence of tacit assumptions and unshared definitions. In this section, we are going to learn to identify and refute logical fallacies.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-defs-assumptions-fallacies-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-defs-assumptions-fallacies-2-9">If you look online, you will see long lists of specific false arguments. It is less important to know the names of the false arguments and have memorized strategies to win arguments than it is to be able to recognize that an argument, in general, is a bad argument. Let’s look at the following case studies.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-defs-assumptions-fallacies-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="abortion-case-study-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.8.1</span><span class="space"> </span><span class="title">Case Study 1</span>
+</h3>
+<section class="introduction" id="abortion-case-study-1-2"><div class="para" id="abortion-case-study-1-2-1">In this case study, an <a class="external" href="https://abort73.com/abortion/common_objections/" target="_blank">anti-abortion blog</a><details class="ptx-footnote" aria-live="polite" id="abortion-case-study-1-2-1-2"><summary class="ptx-footnote__number" title="Footnote 1.8.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="abortion-case-study-1-2-1-2"><code class="code-inline tex2jax_ignore">abort73.com/abortion/common_objections/</code></div></details> discusses supposed fallacies and misinformation about abortion. For this specific case analysis, we are focusing on the section titled “What if the Baby is Deformed?” Read this section carefully, and then we will discuss the argument presented by the author.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-case-study-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="abortion-case-study-1-2-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/abortion-access/images/case_study_1.JPG" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.8.1<span class="period">.</span></span><span class="space"> </span>A snippet from the website abort73.com with the argument about when babies are deformed.<div class="autopermalink" data-description="Figure 1.8.1"><a href="#abortion-case-study-1-2-2" title="Copy heading and permalink for Figure 1.8.1" aria-label="Copy heading and permalink for Figure 1.8.1">🔗</a></div></figcaption></figure><figure class="figure figure-like" id="abortion-case-study-1-2-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/abortion-access/images/case_study_11.JPG" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.8.2<span class="period">.</span></span><span class="space"> </span>A snippet from the website abort73.com with the argument about when babies are deformed.<div class="autopermalink" data-description="Figure 1.8.2"><a href="#abortion-case-study-1-2-3" title="Copy heading and permalink for Figure 1.8.2" aria-label="Copy heading and permalink for Figure 1.8.2">🔗</a></div></figcaption></figure></section><section class="subsubsection" id="abortion_case-study-1-argument"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">1.8.1.1</span><span class="space"> </span><span class="title">Case Study 1: The Argument</span>
+</h4>
+<div class="para logical" id="abortion_case-study-1-argument-2">
+<div class="para">The author of the blog post makes a very decisive claim. The claim that the author is making is that: If a parent is an abortion supporter and a child is diagnosed with an disability before birth, then the parent will abort the child. If the child is diagnosed with a disability before birth and the parent aborts the child, then the parents do not support people with disabilities. Therefore, abortion supporters do not support people with disabilities. We can assign each statement in the following way:</div>
+<ol class="decimal" id="abortion_case-study-1-argument-2-1">
+<li id="abortion_case-study-1-argument-2-1-1">
+<div class="para" id="p-derived-abortion_case-study-1-argument-2-1-1">
+<span class="process-math">\(p\text{:}\)</span> A parent is an abortion supporter.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion_case-study-1-argument-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion_case-study-1-argument-2-1-2">
+<div class="para" id="p-derived-abortion_case-study-1-argument-2-1-2">
+<span class="process-math">\(q\text{:}\)</span> A child is diagnosed with a disability before birth.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion_case-study-1-argument-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="abortion_case-study-1-argument-2-1-3">
+<div class="para" id="p-derived-abortion_case-study-1-argument-2-1-3">
+<span class="process-math">\(r\text{:}\)</span> The parent will abort the child.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#abortion_case-study-1-argument-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="abortion_case-study-1-argument-2-1-4">
+<div class="para" id="p-derived-abortion_case-study-1-argument-2-1-4">
+<span class="process-math">\(s\text{:}\)</span> Aboftion supporters do not support people with disabilities.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#abortion_case-study-1-argument-2-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="para">This can be represented by the following: <span class="process-math">\([((p\wedge q)\implies r)\wedge ((q\wedge r)\implies s)]\implies(p\implies s)\text{.}\)</span> Use the truth table generator to determine if this is a valid argument.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion_case-study-1-argument-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 1.8.1.1: Case Study 1: The Argument"><a href="#abortion_case-study-1-argument" title="Copy heading and permalink for Subsubsection 1.8.1.1: Case Study 1: The Argument" aria-label="Copy heading and permalink for Subsubsection 1.8.1.1: Case Study 1: The Argument">🔗</a></div></section><section class="subsubsection" id="abortion-case-study-1-discussion"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">1.8.1.2</span><span class="space"> </span><span class="title">Case Study 1: Discussion</span>
+</h4>
+<div class="para" id="abortion-case-study-1-discussion-2">It is clear that the author of the blog post does not support abortion. They also propose that supporters of abortion believe that children with disabilities that are diagnosable during pregnancy should be aborted, and therefore people that support abortion do not support members of the disabled community. One tacit assumption that the author makes is the claim that abortion is not an appropriate treatment for a physical or mental disability. The fallacy happens when the author states that making the choice to abort a child with a diagnosed disability is the same as not being a supporter of the disabled community. This type of fallacy is specifically called an equivocation because the author claims that two different things are in fact the same.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-case-study-1-discussion-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 1.8.1.2: Case Study 1: Discussion"><a href="#abortion-case-study-1-discussion" title="Copy heading and permalink for Subsubsection 1.8.1.2: Case Study 1: Discussion" aria-label="Copy heading and permalink for Subsubsection 1.8.1.2: Case Study 1: Discussion">🔗</a></div></section><section class="subsubsection" id="abortion-case-study-1-Refuting"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">1.8.1.3</span><span class="space"> </span><span class="title">Case Study 1: Refuting the Argument</span>
+</h4>
+<div class="para" id="abortion-case-study-1-Refuting-2">No matter which side of the argument for or against abortion you may fall on, you have an obligation to present an accurate argument. The largest flaw in the argument was the claim that mental disabilities can be diagnosed during pregnancy, which in some cases is true for genetic disorders like Downs Syndrome; however, not all mental disabilities can be diagnosed during pregnancy. One strategy to address this flaw is to look at data. If someone claims that a disability diagnosis justifies getting an abortion, we should check on data about children with disabilities. One place that might give us this information is the <a class="external" href="https://www.census.gov/library/publications/2021/acs/acsbr-006.html" target="_blank">US Census, specifically the report on childhood disability</a><details class="ptx-footnote" aria-live="polite" id="abortion-case-study-1-Refuting-2-2"><summary class="ptx-footnote__number" title="Footnote 1.8.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="abortion-case-study-1-Refuting-2-2"><code class="code-inline tex2jax_ignore">www.census.gov/library/publications/2021/acs/acsbr-006.html</code></div></details>. The report shows that nationally, from 2008 to 2019, the percentage of children that were reported as disabled increased during the time period. This is a neutral fact that participants on either side of the abortion debate can use to better defend a position. If someone is anti-abortion, then they can claim that an increase in children with disabilities means that more parents are being educated about options besides abortion and selecting those options for themselves and their unborn child. If someone is an abortion supporter, they can use the increase in children with disabilities to defend themselves against claims that they believe that unborn children with diagnosable birth defects deserve to be terminated. This is one strategy to refute this type of argument.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-case-study-1-Refuting-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-case-study-1-Refuting-3">Another strategy is to ask specific questions that relate to why you personally have issues with the argument, and why you believe it to contain a fallacy. If you have questions about the diagnosis of mental disability during pregnancy, as an example, asking questions can help clarify meaning for both parties. You can get information about the meaning of mental disability from the other party because perhaps they have a different definition than what you have. This clarification is something that you could not have gained without having a productive discussion with another person. That is why it is a general strategy for exploring and refuting arguments.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-case-study-1-Refuting-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 1.8.1.3: Case Study 1: Refuting the Argument"><a href="#abortion-case-study-1-Refuting" title="Copy heading and permalink for Subsubsection 1.8.1.3: Case Study 1: Refuting the Argument" aria-label="Copy heading and permalink for Subsubsection 1.8.1.3: Case Study 1: Refuting the Argument">🔗</a></div></section><div class="autopermalink" data-description="Subsection 1.8.1: Case Study 1"><a href="#abortion-case-study-1" title="Copy heading and permalink for Subsection 1.8.1: Case Study 1" aria-label="Copy heading and permalink for Subsection 1.8.1: Case Study 1">🔗</a></div></section><section class="subsection" id="abortion-case-study-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.8.2</span><span class="space"> </span><span class="title">Case Study 2</span>
+</h3>
+<section class="introduction" id="abortion-case-study-2-2"><div class="para" id="abortion-case-study-2-2-1">In this next case study, we examine the argument that “life begins at conception”. Many pro life groups claim that life begins at conception. One such group is <a class="external" href="https://www.prolifewi.org/about-us" target="_blank">Pro-Life Wisconsin</a><details class="ptx-footnote" aria-live="polite" id="abortion-case-study-2-2-1-2"><summary class="ptx-footnote__number" title="Footnote 1.8.4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="abortion-case-study-2-2-1-2"><code class="code-inline tex2jax_ignore">www.prolifewi.org/about-us</code></div></details>. On this organization’s  <a class="external" href="https://www.prolifewi.org/when-does-human-life-begin" target="_blank">webpage</a><details class="ptx-footnote" aria-live="polite" id="abortion-case-study-2-2-1-4"><summary class="ptx-footnote__number" title="Footnote 1.8.5"><sup> 5 </sup></summary><div class="ptx-footnote__contents" id="abortion-case-study-2-2-1-4"><code class="code-inline tex2jax_ignore">www.prolifewi.org/when-does-human-life-begin</code></div></details>, they write: <figure class="figure figure-like" id="abortion-case-study-2-2-1-5"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/abortion-access/images/case_study_2.JPG" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.8.3<span class="period">.</span></span><span class="space"> </span>A snippet from the Pro-Life Wisconsin’s website.<div class="autopermalink" data-description="Figure 1.8.3"><a href="#abortion-case-study-2-2-1-5" title="Copy heading and permalink for Figure 1.8.3" aria-label="Copy heading and permalink for Figure 1.8.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#abortion-case-study-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="abortion-case-study-2-2-2">
+<div class="para">The argument can be summarized by the following argument: Scientists agree that a human embryo is a human being immediate at conception. If you are a human being then you are alive. Thus, human life begins at conception.</div>
+<ol class="decimal" id="abortion-case-study-2-2-2-1">
+<li id="abortion-case-study-2-2-2-1-1">
+<div class="para" id="p-derived-abortion-case-study-2-2-2-1-1">
+<span class="process-math">\(p\text{:}\)</span> A human embryo is created immediately after fertilization.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion-case-study-2-2-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion-case-study-2-2-2-1-2">
+<div class="para" id="p-derived-abortion-case-study-2-2-2-1-2">
+<span class="process-math">\(q\text{:}\)</span> A human embryo is alive.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion-case-study-2-2-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para">This can be represented by the following: <span class="process-math">\((p \wedge q ) \implies q\text{.}\)</span> Use the truth table generator to determine if this is a valid argument.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-case-study-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-case-study-2-2-3">We can see that this argument is valid using a truth table. However, it is not a sound argument. With no definition of “alive” given, this is an example of the fallacy Begging the Question, where a premise of an argument assumes the truth of the conclusion. Another example of begging the question can be found in the article, <dfn class="terminology">Familiar flaws in pro-life argument</dfn>, published in the <a class="external" href="https://www.montgomeryadvertiser.com/story/opinion/columnists/2016/04/21/familiar-flaws-pro-life-argument/83307426/" target="_blank">Montgomery Advertiser</a><details class="ptx-footnote" aria-live="polite" id="abortion-case-study-2-2-3-3"><summary class="ptx-footnote__number" title="Footnote 1.8.6"><sup> 6 </sup></summary><div class="ptx-footnote__contents" id="abortion-case-study-2-2-3-3"><code class="code-inline tex2jax_ignore">www.montgomeryadvertiser.com/story/opinion/columnists/2016/04/21/familiar-flaws-pro-life-argument/83307426/</code></div></details>.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-case-study-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsubsection" id="abortion-case-study-2-discussion"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">1.8.2.1</span><span class="space"> </span><span class="title">Case Study 2: Discussion</span>
+</h4>
+<div class="para" id="abortion-case-study-2-discussion-2">It turns out that trying to determine when life begins is a very difficult task particularly because there is no agreed upon definition of the word “life”. Nevertheless, since  the US Supreme Court eliminated the federal right to abortion, state legislators have been trying to codify the definition of life oftentimes without input from medical professionals. The codification of “life” would impact abortion rights, birth control, and assisted reproduction <a href="abortion-references.html#abortion-NPR" class="internal" title="Bibliographic Entry 1.12.9">[1.12.9]</a>.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-case-study-2-discussion-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="abortion-case-study-2-discussion-3">
+<div class="para">Some common definitions of beginning of life include at conception, with a heartbeat, at first breath, or the ability to live outside of a womb with the help of the latest technology <a href="abortion-references.html#abortion-NPR" class="internal" title="Bibliographic Entry 1.12.9">[1.12.9]</a>. It turns out that when more technology is available, the harder this definition becomes. For example, before ultrasounds it was assumed that life began with “quickening”, or when the woman first felt a fetus move. However, this is often before a fetus can survive outside of a womb. Additionally, heart beats can be heard much earlier than feeling a fetus move. For more information regarding this topic, please refer to</div>
+<ol class="decimal" id="abortion-case-study-2-discussion-3-2">
+<li id="abortion-case-study-2-discussion-3-2-1">
+<div class="para" id="p-derived-abortion-case-study-2-discussion-3-2-1">
+<a class="external" href="https://www.wired.com/2015/10/science-cant-say-babys-life-begins/" target="_blank">https://www.wired.com/2015/10/science-cant-say-babys-life-begins/</a><details class="ptx-footnote" aria-live="polite" id="abortion-case-study-2-discussion-3-2-1-2"><summary class="ptx-footnote__number" title="Footnote 1.8.7"><sup> 7 </sup></summary><div class="ptx-footnote__contents" id="abortion-case-study-2-discussion-3-2-1-2"><code class="code-inline tex2jax_ignore">www.wired.com/2015/10/science-cant-say-babys-life-begins/</code></div></details>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion-case-study-2-discussion-3-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion-case-study-2-discussion-3-2-2">
+<div class="para" id="p-derived-abortion-case-study-2-discussion-3-2-2">
+<a class="external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7245522/" target="_blank">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7245522/</a><details class="ptx-footnote" aria-live="polite" id="abortion-case-study-2-discussion-3-2-2-2"><summary class="ptx-footnote__number" title="Footnote 1.8.8"><sup> 8 </sup></summary><div class="ptx-footnote__contents" id="abortion-case-study-2-discussion-3-2-2-2"><code class="code-inline tex2jax_ignore">www.ncbi.nlm.nih.gov/pmc/articles/PMC7245522/</code></div></details>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion-case-study-2-discussion-3-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="abortion-case-study-2-discussion-3-2-3">
+<div class="para" id="p-derived-abortion-case-study-2-discussion-3-2-3">
+<a class="external" href="https://www.npr.org/sections/health-shots/2022/08/27/1119684376/when-does-life-begin-as-state-laws-define-it-science-politics-and-religion-clash" target="_blank">https://www.npr.org/sections/health-shots/2022/08/27/1119684376/when-does-life-begin-as-state-laws-define-it-science-politics-and-religion-clash</a><details class="ptx-footnote" aria-live="polite" id="abortion-case-study-2-discussion-3-2-3-2"><summary class="ptx-footnote__number" title="Footnote 1.8.9"><sup> 9 </sup></summary><div class="ptx-footnote__contents" id="abortion-case-study-2-discussion-3-2-3-2"><code class="code-inline tex2jax_ignore">www.npr.org/sections/health-shots/2022/08/27/1119684376/when-does-life-begin-as-state-laws-define-it-science-politics-and-religion-clash</code></div></details>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#abortion-case-study-2-discussion-3-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-case-study-2-discussion-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 1.8.2.1: Case Study 2: Discussion"><a href="#abortion-case-study-2-discussion" title="Copy heading and permalink for Subsubsection 1.8.2.1: Case Study 2: Discussion" aria-label="Copy heading and permalink for Subsubsection 1.8.2.1: Case Study 2: Discussion">🔗</a></div></section><div class="autopermalink" data-description="Subsection 1.8.2: Case Study 2"><a href="#abortion-case-study-2" title="Copy heading and permalink for Subsection 1.8.2: Case Study 2" aria-label="Copy heading and permalink for Subsection 1.8.2: Case Study 2">🔗</a></div></section><div class="autopermalink" data-description="Section 1.8: Definitions, Assumptions, and Fallacies"><a href="#abortion-defs-assumptions-fallacies" title="Copy heading and permalink for Section 1.8: Definitions, Assumptions, and Fallacies" aria-label="Copy heading and permalink for Section 1.8: Definitions, Assumptions, and Fallacies">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="abortion-arguments.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="abortion-solving-for-change.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

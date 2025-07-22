@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Risk and Credit Scores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math for the PeopleReferences">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.787a04695534ef1e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://web.stevenson.edu/mbranson/math-for-the-people.html"><img src="external/images/Math_Fist.PNG" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="math-for-the-people.html"><span class="title">Math for the PeopleReferences</span></a></h1>
+<p class="byline">Mark Branson (Editor), Whitney George (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="payday-loans-interest.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="payday-loans.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="payday-loans-correlation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="math-for-the-people-front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="instructors-note.html" class="internal"><span class="title">A Note for Instructors</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="students-note.html" class="internal"><span class="title">A Note for Students</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="abortion.html" class="internal"><span class="codenumber">1</span> <span class="title">Abortion Access Throughout the United States</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-objectives.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-background.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-cui-bono.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-big-problem.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Big Problem: Restricting Abortion Access</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-simple-logic.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Simple Logic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Negating and Combining Statements with "and" and "or"</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation-2" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Negations</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-and-or" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">And &amp; Or</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-equivalent-statements" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Equivalent Statements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-if-then" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Implications (If-Then Statements)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-quantifiers.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Quantifiers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-arguments.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Arguments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-valid-arguments" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Valid Arguments</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-sound-arguments" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Sound Arguments</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Definitions, Assumptions, and Fallacies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Case Study 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion_case-study-1-argument" class="internal"><span class="codenumber">1.8.1.1</span> <span class="title">Case Study 1: The Argument</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-discussion" class="internal"><span class="codenumber">1.8.1.2</span> <span class="title">Case Study 1: Discussion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-Refuting" class="internal"><span class="codenumber">1.8.1.3</span> <span class="title">Case Study 1: Refuting the Argument</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Case Study 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2-discussion" class="internal"><span class="codenumber">1.8.2.1</span> <span class="title">Case Study 2: Discussion</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-solving-for-change.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="abortion-reflection.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="abortion-exercises.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-references.html" class="internal"><span class="codenumber">1.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="payday-loans.html" class="internal"><span class="codenumber">2</span> <span class="title">Payday Loans</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-objectives.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-background.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-interest-and-risk" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Interest and Risk</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Types of Loans and Lenders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-payday" class="internal"><span class="codenumber">2.2.2.1</span> <span class="title">Payday Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-bank" class="internal"><span class="codenumber">2.2.2.2</span> <span class="title">Bank Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-government" class="internal"><span class="codenumber">2.2.2.3</span> <span class="title">Government Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-pawn" class="internal"><span class="codenumber">2.2.2.4</span> <span class="title">Pawn</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-discriminatory-lending" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Discriminatory Lending</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-cui-bono.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-big-problem.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Big Problem: Predatory Lending</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-interest.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Simple and Compound Interest</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-simple-interest" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Simple Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-compound-interest" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-solving-for-apr" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Finding the Interest Rate</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="payday-loans-risk.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Risk and Credit Scores</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-probability" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Introduction to Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-expected-value" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Expected Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-lending-decisions" class="internal"><span class="codenumber">2.6.3</span> <span class="title">How Banks Make Lending Decisions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-correlation.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Correlation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-definition" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Defining the Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-4" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Computing Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-5" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Using Correlation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-solving-for-change.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-3" class="internal"><span class="codenumber">2.8.1</span> <span class="title">If people are willing to pay...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-4" class="internal"><span class="codenumber">2.8.2</span> <span class="title">We have to charge those rates, because of the risk!</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-5" class="internal"><span class="codenumber">2.8.3</span> <span class="title">If we don’t lend to them, who will?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-6" class="internal"><span class="codenumber">2.8.4</span> <span class="title">What Can We Do?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="payday-loan-reflection.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="payday-loans-exercises.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-exercises.html#payday-loans-exercises-22" class="internal"><span class="codenumber">2.10.1</span> <span class="title">Generative AI Prompts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-references.html" class="internal"><span class="codenumber">2.11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-2" class="internal"><span class="codenumber">2.11.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-3" class="internal"><span class="codenumber">2.11.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="math-for-the-people-bibliography.html" class="internal"><span class="codenumber">1</span> <span class="title">Bibliography</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="payday-loans-risk"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.6</span><span class="space"> </span><span class="title">Risk and Credit Scores</span>
+</h2>
+<section class="introduction" id="payday-loans-risk-2"><div class="para" id="payday-loans-risk-2-1">When we talked about lending in the introduction, we discussed the <em class="emphasis">credit score</em>.  Your credit score is a number - usually between 300 and 850 in the United States - which tells a lender how likely you are to repay borrowed money.  We can think of a credit score in terms of probability.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-risk-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="payday-loans-probability"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.6.1</span><span class="space"> </span><span class="title">Introduction to Probability</span>
+</h3>
+<div class="para" id="payday-loans-probability-2">The <em class="emphasis">probability</em> of a particular event occurring is a number between 0 and 1 (or, equivalently, between 0% and 100%) which measures how likely that event is to occur.  If something has a probability of 0, that means it will never happen.  If it has a probability of 1, then it will always happen, no matter what.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-probability-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-probability-3">Usually, when we study probability, we talk about simple situations where it’s easy to determine the probability.  For example, if you roll a 6-sided die, the probability that you get a 6 is <span class="process-math">\(\frac{1}{6}\)</span> because you’re looking at 1 possibility out of 6 total.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-probability-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-probability-4">However, in the real world, probabilities are usually much more complicated to determine.  To calculate your credit score, credit reporting agencies use many different factors - how long you’ve had loans or credit cards, how many times you have been late paying your bills, and the types of loans and credit cards that you have. There is no simple formula to calculate how likely you are to repay a loan.  The credit score summarizes the complicated calculations that have gone into determining the likelihood of you paying back money that you borrow.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-probability-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="payday-loans-probability-5">
+<div class="para">Although it is an oversimplification of the actual situation, we’ll use the credit score as a simple measure of probability so that we can see an example of how it works.  We’ll treat a score of 300 - the lowest score - as meaning that the probability you pay back a loan is 0%.  We’ll say that a credit score of 850 means that there is a 100% chance that you pay back the loan on time.  We’ll treat every score between as a number between 0 and 100% using the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{credit score - 300}{850-300}
+\end{equation*}
+</div>
+<div class="para">So a credit score of 700, in our simplification would mean a <span class="process-math">\(\frac{700-300}{850-300} = 0.73 = 73\%\)</span> chance of repaying the loan on time.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-probability-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.6.1: Introduction to Probability"><a href="#payday-loans-probability" title="Copy heading and permalink for Subsection 2.6.1: Introduction to Probability" aria-label="Copy heading and permalink for Subsection 2.6.1: Introduction to Probability">🔗</a></div></section><section class="subsection" id="payday-loans-expected-value"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.6.2</span><span class="space"> </span><span class="title">Expected Value</span>
+</h3>
+<div class="para" id="payday-loans-expected-value-2">Once banks determine how likely you are to repay a loan, they can make a decision about whether they will loan you money, whether that’s as a student loan, credit card, or something else.  They use the credit score to determine the amount of money they can expect to make off of the loan.  If you don’t repay the loan, they will lose all of the money that they loaned you.  If you do repay the loan, then they make money - in the form of the interest that you pay back on the loan.  This is called the <em class="emphasis">expected value</em> of the loan.  It depends on both the probability that a borrower will pay back the loan, the amount of money being borrowed, and the amount of interest that the bank will make off of the loan.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-expected-value-3">Before we look at the expected value of a loan, let’s define the expected value in general.  Expected value works by using the probability to weight the reward of different events happening.  Consider this example: Say a friend makes you an offer.  They’ll flip a coin.  If the coin comes up heads, they’ll pay you $1.  If the coin comes up tails, you pay them $1.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-expected-value-4">If you play the game just once, you’ll end up either $1 richer or $1 poorer - there’s a 50% chance of either.  If you play it twice, you either win both, win the first and lose the second, lose the first and win the second, or lose both - so there are 4 possibilities.  If you win both times, you’re $2 richer.  If you win one and lose one (either of the middle two situations) you’re back where you started - $0 richer.  If you lose both, you’re $2 poorer.  If you average out the different scenarios, you end up exactly where you started - there’s exactly the same chance of winning money as losing.  So we say the expected value is $0 - on average, we don’t expect to end up with any more money than we started with.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-expected-value-5">Expected value depends on probability - so it certainly isn’t saying that if you play that game with your friend, you won’t win any money! You could play 10 times and win every time...it just isn’t very likely (the chance of that happening is a little less than 1/1000)<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="payday-loans-expected-value-6"><h4 class="heading"><span class="title">Expected Value.</span></h4>
+<div class="para logical" id="payday-loans-expected-value-6-2">
+<div class="para">Suppose you have multiple different possible events, each with some probability of occurring, and each with some "reward" our "benefit" (penalties or losses are represented as negative rewards).  Then the expected value is found by taking the probability of each event times the reward of that event, and adding them up:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(event 1)*R(event 1) + P(event 2)*R(event 2)
+\end{equation*}
+</div>
+<div class="para">where P(event) is the probability of the event, and R(event) is the reward.  You can continue this for more than 2 events - just multiply the probability times the reward and add it on.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-expected-value-6-3">The expected value tells you, on average, how much you can expect to "win" each time an event happens, by averaging out the wins and losses.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Expected Value"><a href="#payday-loans-expected-value-6" title="Copy heading and permalink for Assemblage: Expected Value" aria-label="Copy heading and permalink for Assemblage: Expected Value">🔗</a></div></article><div class="para" id="payday-loans-expected-value-7">Let’s look at an example of how this works, using insurance as an example.  When an insurance company sells you insurance, they calculate the probability that you will use it - and how much they’ll have to pay you if you do use it.  If you don’t use the insurance, they "win" the amount of money that you pay for the insurance - if you do use it, they lose whatever they have to pay out for the claim (minus whatever you paid them).  On average, over lots and lots of customers, they’ll earn the expected value from each customer. Let’s look at an example.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-expected-value-8">An insurance company calculates that there is a 1% chance that a driver has a car accident each year, and that on average they will have to pay $15,000 per accident.  They charge $600 a year for insurance.  How much can they expect to earn, on average, from each customer?<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="payday-loans-expected-value-9">
+<div class="para">The probability of having an accident is 1% (0.01), which means that the probability of not having an accident is 99% (0.99).  If you have an accident, the insurance company loses $15,000, minus the $600 you paid them, for a net "reward" of <span class="process-math">\(\$600 - \$15,000 = -\$14,400\text{.}\)</span>  If you don’t have an accident, they earn a "reward" of $600 - the amount you paid for your insurance.  The expected value, then is:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.01*(-14,400) + 0.99(600) = \$450
+\end{equation*}
+</div>
+<div class="para">On average, they can expect to earn $450 per customer that they sell insurance to.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-expected-value-10">Give it a try yourself - here are some examples to work out.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="payday-loans-expected-value-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.1</span><span class="period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="payday-loans-expected-value-11-1-1">An insurance company charges $2000 a year for home insurance. There is a 2% chance each year that a homeowner will make a claim, and the insurance company will need to pay them $23,000.  What is the expected value?<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="payday-loans-expected-value-11-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="payday-loans-expected-value-11-2-1">What is the probability that they have to pay money out? How much will they lose if they do (remember they get to keep the money that was paid for the insurance policy)?<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.6.1.1"><a href="#payday-loans-expected-value-11-2" title="Copy heading and permalink for Hint 2.6.1.1" aria-label="Copy heading and permalink for Hint 2.6.1.1">🔗</a></div>
+</div></details><details id="payday-loans-expected-value-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="payday-loans-expected-value-11-3-1">
+<div class="para">The probability that they will have to pay is 2% = 0.02.  If they do have to pay, they will lose $23,000 minus the $2000 they charged the customer, for a total of $21,000.  There is a 98% = 0.98 chance that they don’t have to pay, in which case they’ll earn $2000 from the customer’s premium. The expected value for the insurance company is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.02*(21,000)+0.98(2000) = \$1540 
+\end{equation*}
+</div>
+<div class="para">On average, they can expect to earn $1540 per customer.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.6.1.1"><a href="#payday-loans-expected-value-11-3" title="Copy heading and permalink for Solution 2.6.1.1" aria-label="Copy heading and permalink for Solution 2.6.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.6.1"><a href="#payday-loans-expected-value-11" title="Copy heading and permalink for Example 2.6.1" aria-label="Copy heading and permalink for Example 2.6.1">🔗</a></div></article></details><div class="para" id="payday-loans-expected-value-12">Let’s look at example explicitly about how payday lenders operate.  Most payday lenders make their money because people renew their loans week after week, paying larger fees to borrow the money for a longer period of time.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="payday-loans-expected-value-13" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.2</span><span class="period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="payday-loans-expected-value-13-1-1">A payday lender loans you $200 with a $30 fee, to be paid back in 2 weeks.  If you don’t pay it back in 2 weeks, you’ll be charged another $30 fee, and another $30 for each 2 weeks after that.  They think that there is a 10% chance you’ll pay it back in 2 weeks, a 20% chance you’ll pay it back in 4 weeks, a 60% chance you’ll pay it back in 6 weeks, and a 10% chance you won’t pay it back at all.  What is the expected value of the loan for the lender?<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="payday-loans-expected-value-13-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="payday-loans-expected-value-13-2-1">Think about how much the payday lender earns (or loses) in each case.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.6.2.1"><a href="#payday-loans-expected-value-13-2" title="Copy heading and permalink for Hint 2.6.2.1" aria-label="Copy heading and permalink for Hint 2.6.2.1">🔗</a></div>
+</div></details><details id="payday-loans-expected-value-13-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="payday-loans-expected-value-13-3-1">
+<div class="para">There are 4 different situations here.  If you pay the loan back in 2 weeks (10% chance), the lender earns $30.  If you pay it back in 4 weeks (20% chance), they earn $60.  If you pay it back in 6 weeks (60% chance), they earn $90.  If you don’t pay it back (10% chance), they lose $200.  The expected value is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.10*30 + 0.20*60 + 0.60*90 + 0.10*(-200) = \$49
+\end{equation*}
+</div>
+<div class="para">On average, they can expect to earn $49 per customer.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-expected-value-13-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.6.2.1"><a href="#payday-loans-expected-value-13-3" title="Copy heading and permalink for Solution 2.6.2.1" aria-label="Copy heading and permalink for Solution 2.6.2.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.6.2"><a href="#payday-loans-expected-value-13" title="Copy heading and permalink for Example 2.6.2" aria-label="Copy heading and permalink for Example 2.6.2">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.6.2: Expected Value"><a href="#payday-loans-expected-value" title="Copy heading and permalink for Subsection 2.6.2: Expected Value" aria-label="Copy heading and permalink for Subsection 2.6.2: Expected Value">🔗</a></div></section><section class="subsection" id="payday-loans-lending-decisions"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.6.3</span><span class="space"> </span><span class="title">How Banks Make Lending Decisions</span>
+</h3>
+<div class="para" id="payday-loans-lending-decisions-2">Banks use the idea of risk to make decisions about how much money they will lend.  We’ll look at a simplified example of how this works, though the reality is, of course, more complicated.  This will still give you an idea, fundamentally of how it works.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-lending-decisions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-lending-decisions-3">Say that you want to borrow $1000 from a bank via an unsecured loan. If the loan were secured, and you didn’t pay it back, the bank could seize your house or car or whatever you had secured the loan with.  Since it’s unsecured, the bank will lose all of the money that they loaned you if you don’t pay it back.  Therefore, they want to make the expected value of loaning you money positive (for them) - that is, they want to ensure that on average the money that you pay them in interest makes up for the risk of you not paying the loan back.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-lending-decisions-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="payday-loans-lending-decisions-4">Let’s look at the situation where the bank loans you $1000 for 1 year, simple interest, and let’s assume that they decide there’s a 10% chance you don’t pay the loan off.  If the interest rate is <em class="emphasis">r</em>, the expected value calculations look like this: <figure class="table table-like" id="payday-loans-lending-decisions-4-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.6.3<span class="period">.</span></span><span class="space"> </span>Expected Value for a $1000 loan for 1 year with 10% risk of default<div class="autopermalink" data-description="Table 2.6.3: Expected Value for a $1000 loan for 1 year with 10% risk of default"><a href="#payday-loans-lending-decisions-4-2" title="Copy heading and permalink for Table 2.6.3: Expected Value for a $1000 loan for 1 year with 10% risk of default" aria-label="Copy heading and permalink for Table 2.6.3: Expected Value for a $1000 loan for 1 year with 10% risk of default">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r0 l0 t0 lines">Rate (r)</td>
+<td class="l m b2 r0 l0 t0 lines">Amount of Interest</td>
+<td class="l m b2 r0 l0 t0 lines">Expected Value</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.02</td>
+<td class="l m b0 r0 l0 t0 lines">$20</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.1*(-1000)+0.9*(20) = -82\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.03</td>
+<td class="l m b0 r0 l0 t0 lines">$30</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.1*(-1000)+0.9*(30) = -73\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.04</td>
+<td class="l m b0 r0 l0 t0 lines">$40</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.1*(-1000)+0.9*(40) = -64\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.05</td>
+<td class="l m b0 r0 l0 t0 lines">$50</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.1*(-1000)+0.9*(50) = -55\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.06</td>
+<td class="l m b0 r0 l0 t0 lines">$60</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.1*(-1000)+0.9*(60) = -46\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.07</td>
+<td class="l m b0 r0 l0 t0 lines">$70</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.1*(-1000)+0.9*(70) = -37\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.08</td>
+<td class="l m b0 r0 l0 t0 lines">$80</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.1*(-1000)+0.9*(80) = -28\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.09</td>
+<td class="l m b0 r0 l0 t0 lines">$90</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.1*(-1000)+0.9*(90) = -19\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.10</td>
+<td class="l m b0 r0 l0 t0 lines">$100</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.1*(-1000)+0.9*(100) = -10\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.11</td>
+<td class="l m b0 r0 l0 t0 lines">$110</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.1*(-1000)+0.9*(110) = -1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.12</td>
+<td class="l m b0 r0 l0 t0 lines">$120</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.1*(-1000)+0.9*(120) = 8\)</span></td>
+</tr>
+</table></div></figure> The bank would need to charge at least 12% interest to be guaranteed to make money.  In practice, a bank would charge considerably more interest for an unsecured loan if there were such a large chance they would get none of the money back - if they would loan it at all.  If you don’t pay back your loan, your bank will sell the debt to a debt collector - who will pay them what they think the loan is worth, usually a fraction of the loan.  The debt collector will then attempt to get the money back through legal actions like lawsuits and garnished wages.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-lending-decisions-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="payday-loans-lending-decisions-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.4</span><span class="period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="payday-loans-lending-decisions-5-1-1">You apply for a loan of $10,000 from a bank.  They compute that there is a 1% chance that you won’t pay the loan back, in which case they’ll sell it to a debt collector for $5000.  What is the expected value for the bank if they charge you 4.25% interest, simple interest, and you pay the loan back in 2 years?<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-lending-decisions-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="payday-loans-lending-decisions-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="payday-loans-lending-decisions-5-2-1">What does the bank gain if you pay the loan back? What do they lose if you don’t?<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-lending-decisions-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.6.4.1"><a href="#payday-loans-lending-decisions-5-2" title="Copy heading and permalink for Hint 2.6.4.1" aria-label="Copy heading and permalink for Hint 2.6.4.1">🔗</a></div>
+</div></details><details id="payday-loans-lending-decisions-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="payday-loans-lending-decisions-5-3-1">
+<div class="para">There are 2 different situations here - either you don’t pay the loan back in 2 years, or you do.  If you don’t (1% chance), then the bank loses $5000 (they loaned you $10,000, and the debt collector only paid them $5,000). If you do pay it back (99% chance), then the bank gains the interest you paid back. After 2 years of 4.25% simple interest, you pay the bank back</div>
+<div class="displaymath process-math">
+\begin{equation*}
+10000 + 10000*0.0425*2 = \$10,850
+\end{equation*}
+</div>
+<div class="para">The bank earned $850 (they loaned you $10,000, and got $10,850 back).  The expected value for the bank is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.01*(-5000) + 0.99*(850) = \$791.50
+\end{equation*}
+</div>
+<div class="para">If they made many loans like this, on average, they would earn $791.50 per customer.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-lending-decisions-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.6.4.1"><a href="#payday-loans-lending-decisions-5-3" title="Copy heading and permalink for Solution 2.6.4.1" aria-label="Copy heading and permalink for Solution 2.6.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.6.4"><a href="#payday-loans-lending-decisions-5" title="Copy heading and permalink for Example 2.6.4" aria-label="Copy heading and permalink for Example 2.6.4">🔗</a></div></article></details><div class="para" id="payday-loans-lending-decisions-6">Let’s do a more complicated example, with compound interest.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-lending-decisions-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="payday-loans-lending-decisions-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.5</span><span class="period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="payday-loans-lending-decisions-7-1-1">The bank is considering loaning you $5,000, at a rate of 8.75%, compounded monthly, to be paid back after 3 years.  They calculate that there is a 2% chance you won’t pay the loan back, and they’ll have to sell the debt to a debt collector for $3000.  What is the expected value for the bank?<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-lending-decisions-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="payday-loans-lending-decisions-7-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="payday-loans-lending-decisions-7-2-1">Figure out how much the bank will earn on the loan if you pay it back in full, with interest, after 3 years.<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-lending-decisions-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.6.5.1"><a href="#payday-loans-lending-decisions-7-2" title="Copy heading and permalink for Hint 2.6.5.1" aria-label="Copy heading and permalink for Hint 2.6.5.1">🔗</a></div>
+</div></details><details id="payday-loans-lending-decisions-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="payday-loans-lending-decisions-7-3-1">
+<div class="para">If you pay the loan back, you’ll pay the bank</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = 5000*\left(1 + \frac{0.0875}{12}\right)^{12*3} = \$6494.69
+\end{equation*}
+</div>
+<div class="para">This is $1494.69 more than the bank loaned you, so in this situation, they "win" $1494.69.  If you don’t pay the loan back, they lose $2000, because they can only sell the loan to a debt collector for $3000.  Thus, the expected value is:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.02*(-2000)+0.98*(1494.69) = \$1424.80
+\end{equation*}
+</div>
+<div class="para">The bank can expect to earn, on average, $1424.80 on each loan like this.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#payday-loans-lending-decisions-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.6.5.1"><a href="#payday-loans-lending-decisions-7-3" title="Copy heading and permalink for Solution 2.6.5.1" aria-label="Copy heading and permalink for Solution 2.6.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.6.5"><a href="#payday-loans-lending-decisions-7" title="Copy heading and permalink for Example 2.6.5" aria-label="Copy heading and permalink for Example 2.6.5">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.6.3: How Banks Make Lending Decisions"><a href="#payday-loans-lending-decisions" title="Copy heading and permalink for Subsection 2.6.3: How Banks Make Lending Decisions" aria-label="Copy heading and permalink for Subsection 2.6.3: How Banks Make Lending Decisions">🔗</a></div></section><div class="autopermalink" data-description="Section 2.6: Risk and Credit Scores"><a href="#payday-loans-risk" title="Copy heading and permalink for Section 2.6: Risk and Credit Scores" aria-label="Copy heading and permalink for Section 2.6: Risk and Credit Scores">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="payday-loans-interest.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="payday-loans-correlation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Simple Logic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math for the PeopleReferences">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.787a04695534ef1e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://web.stevenson.edu/mbranson/math-for-the-people.html"><img src="external/images/Math_Fist.PNG" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="math-for-the-people.html"><span class="title">Math for the PeopleReferences</span></a></h1>
+<p class="byline">Mark Branson (Editor), Whitney George (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="abortion-big-problem.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="abortion.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="abortion-quantifiers.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="math-for-the-people-front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="instructors-note.html" class="internal"><span class="title">A Note for Instructors</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="students-note.html" class="internal"><span class="title">A Note for Students</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="abortion.html" class="internal"><span class="codenumber">1</span> <span class="title">Abortion Access Throughout the United States</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-objectives.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-background.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-cui-bono.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-big-problem.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Big Problem: Restricting Abortion Access</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="abortion-simple-logic.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Simple Logic</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Negating and Combining Statements with "and" and "or"</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation-2" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Negations</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-and-or" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">And &amp; Or</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-equivalent-statements" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Equivalent Statements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-if-then" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Implications (If-Then Statements)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-quantifiers.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Quantifiers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-arguments.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Arguments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-valid-arguments" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Valid Arguments</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-sound-arguments" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Sound Arguments</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Definitions, Assumptions, and Fallacies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Case Study 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion_case-study-1-argument" class="internal"><span class="codenumber">1.8.1.1</span> <span class="title">Case Study 1: The Argument</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-discussion" class="internal"><span class="codenumber">1.8.1.2</span> <span class="title">Case Study 1: Discussion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-Refuting" class="internal"><span class="codenumber">1.8.1.3</span> <span class="title">Case Study 1: Refuting the Argument</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Case Study 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2-discussion" class="internal"><span class="codenumber">1.8.2.1</span> <span class="title">Case Study 2: Discussion</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-solving-for-change.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="abortion-reflection.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="abortion-exercises.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-references.html" class="internal"><span class="codenumber">1.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="payday-loans.html" class="internal"><span class="codenumber">2</span> <span class="title">Payday Loans</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-objectives.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-background.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-interest-and-risk" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Interest and Risk</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Types of Loans and Lenders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-payday" class="internal"><span class="codenumber">2.2.2.1</span> <span class="title">Payday Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-bank" class="internal"><span class="codenumber">2.2.2.2</span> <span class="title">Bank Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-government" class="internal"><span class="codenumber">2.2.2.3</span> <span class="title">Government Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-pawn" class="internal"><span class="codenumber">2.2.2.4</span> <span class="title">Pawn</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-discriminatory-lending" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Discriminatory Lending</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-cui-bono.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-big-problem.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Big Problem: Predatory Lending</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-interest.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Simple and Compound Interest</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-simple-interest" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Simple Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-compound-interest" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-solving-for-apr" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Finding the Interest Rate</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-risk.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Risk and Credit Scores</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-probability" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Introduction to Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-expected-value" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Expected Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-lending-decisions" class="internal"><span class="codenumber">2.6.3</span> <span class="title">How Banks Make Lending Decisions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-correlation.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Correlation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-definition" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Defining the Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-4" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Computing Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-5" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Using Correlation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-solving-for-change.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-3" class="internal"><span class="codenumber">2.8.1</span> <span class="title">If people are willing to pay...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-4" class="internal"><span class="codenumber">2.8.2</span> <span class="title">We have to charge those rates, because of the risk!</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-5" class="internal"><span class="codenumber">2.8.3</span> <span class="title">If we don’t lend to them, who will?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-6" class="internal"><span class="codenumber">2.8.4</span> <span class="title">What Can We Do?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="payday-loan-reflection.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="payday-loans-exercises.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-exercises.html#payday-loans-exercises-22" class="internal"><span class="codenumber">2.10.1</span> <span class="title">Generative AI Prompts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-references.html" class="internal"><span class="codenumber">2.11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-2" class="internal"><span class="codenumber">2.11.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-3" class="internal"><span class="codenumber">2.11.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="math-for-the-people-bibliography.html" class="internal"><span class="codenumber">1</span> <span class="title">Bibliography</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="abortion-simple-logic"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.5</span><span class="space"> </span><span class="title">Simple Logic</span>
+</h2>
+<section class="introduction" id="abortion-simple-logic-2"><div class="para logical" id="abortion-simple-logic-2-1">
+<div class="para">A <dfn class="terminology">mathematical statement</dfn> is a sentence that is either true or false, but not both at the same time. For example, consider the following sentences:</div>
+<ol class="decimal" id="abortion-simple-logic-2-1-2">
+<li id="abortion-simple-logic-2-1-2-1">
+<div class="para" id="p-derived-abortion-simple-logic-2-1-2-1">The Supreme Court’s ruling on Roe v. Wade on January 22, 1973 gave people the right to access abortion legally all across the country</div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion-simple-logic-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion-simple-logic-2-1-2-2">
+<div class="para" id="p-derived-abortion-simple-logic-2-1-2-2">The Supreme Court ruled to overturn Roe v. Wade in 2022 making abortion a federal crime within the United States.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion-simple-logic-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="abortion-simple-logic-2-1-2-3">
+<div class="para" id="p-derived-abortion-simple-logic-2-1-2-3">Abortion should be illegal.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#abortion-simple-logic-2-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-simple-logic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-simple-logic-2-2">The first sentence is a sentence which is true, making the sentence a mathematical statement. The second sentence is false which also means that it is a mathematical statement. Lastly, the third sentence is an opinion which is neither true nor false. Therefore, the third sentence is not a mathematical statement. Determining if a sentence is a statement can be challenging as this causes us to challenge the difference between our individual belief systems and factual information. We will discuss this in further detail in our last section of this module.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-simple-logic-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-simple-logic-2-3">Mathematical statements, or simply <dfn class="terminology">statements</dfn>, are the building blocks to mathematical logic. While mathematicians primarily focus on statements that involve mathematics such as, "The number 2 is greater than 0", the methods used by mathematicians to make sense of their discipline can be applied to other topics which use critical thinking.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-simple-logic-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-simple-logic-2-4">There are a series of operations that we can perform on statements to get new statements. This is analogous to taking two numbers and adding, subtracting, or multiplying to get a new number. In algebra, the letters <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(z\)</span> are often used to represent numbers. These are called <dfn class="terminology">variables</dfn>. In logic we typically use the variables <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(q\text{,}\)</span> and <span class="process-math">\(r\)</span> to represent a statement. When we perform an operation on one or more statements, we will call the result a <dfn class="terminology">compound statement</dfn>. It is important to note that the resulting statement is, in fact, a statement. This means that a compound statement must either be true or false, but not both at the same time.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-simple-logic-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="abortion-negation"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="space"> </span><span class="title">Negating and Combining Statements with "and" and "or"</span>
+</h3>
+<section class="subsubsection" id="abortion-negation-2"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">1.5.1.1</span><span class="space"> </span><span class="title">Negations</span>
+</h4>
+<div class="para" id="abortion-negation-2-2">The negation of a given statement switches the truth value of the original statement. For example, the negation of "Abortion is a federal crime" is "Abortion is not a federal crime". Many times, a statement can be negated by inserting the word "not", or an equivalent word into the original statement. There are many ways to symbolically represent the negation of a statement. For this module, if we represent a statement by the variable <span class="process-math">\(p\text{,}\)</span> we represent the <dfn class="terminology">negation</dfn> of <span class="process-math">\(p\)</span> by <span class="process-math">\(\neg p\text{.}\)</span> We can use a logic calculator to see how the value of <span class="process-math">\(p\)</span> and <span class="process-math">\(\neg p\)</span> are related. <div id="abortion-negation-2-2-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f = propcalc.formula(" ~p ")
+f.truthtable()
+</script></div> In the calculation above, the left most column represents the values for <span class="process-math">\(p\)</span> and the column under "value" represents the corresponding values for <span class="process-math">\(\neg p\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#abortion-negation-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 1.5.1.1: Negations"><a href="#abortion-negation-2" title="Copy heading and permalink for Subsubsection 1.5.1.1: Negations" aria-label="Copy heading and permalink for Subsubsection 1.5.1.1: Negations">🔗</a></div></section><section class="subsubsection" id="abortion-and-or"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber">1.5.1.2</span><span class="space"> </span><span class="title">And &amp; Or</span>
+</h4>
+<div class="para" id="abortion-and-or-2">As we can see, when <span class="process-math">\(p\)</span> is true, <span class="process-math">\(~p\)</span> is false and vice versa.The calculator used above generated a truth table. A <dfn class="terminology">truth table</dfn> is a table that will produce the truth values for compound statements based off of the statement variable which are typically placed to the left of the table and the truth values for the compound statement which are typically to the right in the table. We will use this truth table generator for the remainder of this module.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-and-or-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="abortion-and-or-3">
+<div class="para">Two more common ways to make a compound statement is by taking two simple statements and combining them with either the word "or" or "and". For example, consider the two statements " In August 2022, abortion is legal with not gestational limit in the state of New Jersey"and "In August 2022, abortion was banned with no exception for rape or incest in the state of Alabama"<a href="abortion-references.html#abortion-nj" class="internal" title="Bibliographic Entry 1.12.2">[1.12.2]</a>. We can combine these statements in the following two ways:</div>
+<ol class="decimal" id="abortion-and-or-3-2">
+<li id="abortion-and-or-3-2-1">
+<div class="para" id="p-derived-abortion-and-or-3-2-1">In August 2022, abortion is legal with no gestational limit in the state of New Jersey <dfn class="terminology">or</dfn> in August 2022, abortion was banned with no exception for rape or incest in the state of Alabama.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion-and-or-3-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion-and-or-3-2-2">
+<div class="para" id="p-derived-abortion-and-or-3-2-2">In August 2022, abortion is legal with no gestational limit in the state of New Jersey <dfn class="terminology">and</dfn> in August 2022, abortion was banned with no exception for rape or incest in the state of Alabama.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion-and-or-3-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para">These statements are a bit awkward and can be rewritten without losing their meaning as simply:</div>
+<ol class="decimal" id="abortion-and-or-3-3">
+<li id="abortion-and-or-3-3-1">
+<div class="para" id="p-derived-abortion-and-or-3-3-1">In August 2022, abortion is legal with not gestational limit in the state of New Jersey <dfn class="terminology">or</dfn> was banned with no exception for rape or incest in the state of Alabama.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion-and-or-3-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion-and-or-3-3-2">
+<div class="para" id="p-derived-abortion-and-or-3-3-2">In August 2022, abortion is legal with not gestational limit in the state of New Jersey <dfn class="terminology">and</dfn> was banned with no exception for rape or incest in the state of Alabama.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion-and-or-3-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para">Both of these compound statements are true statements because the original simple statements are both true. The truth table for an "or" statement, more formally known as a <dfn class="terminology">disjunction</dfn> is given below: <div id="abortion-and-or-3-5" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f = propcalc.formula(" p | q ")
+f.truthtable()
+</script></div> The truth table for an "and" statement, more formally known as a <dfn class="terminology">conjunction</dfn> is given next: <div id="abortion-and-or-3-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f = propcalc.formula(" p & q ")
+f.truthtable()
+</script></div> The columns on the far left represent all possible truth values of the simple statements <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> used in the compound statement. The entries on the far left of each row represent the different truth value of the simple statements used in the compound statement. The final column on the far right represents the truth value of the compound statement for the given simple statement truth values. For example the second row in the truth table above reads "When <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is false, <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> is false".</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-and-or-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection 1.5.1.2: And &amp; Or"><a href="#abortion-and-or" title="Copy heading and permalink for Subsubsection 1.5.1.2: And &amp; Or" aria-label="Copy heading and permalink for Subsubsection 1.5.1.2: And &amp; Or">🔗</a></div></section><div class="autopermalink" data-description='Subsection 1.5.1: Negating and Combining Statements with "and" and "or"'><a href="#abortion-negation" title='Copy heading and permalink for Subsection 1.5.1: Negating and Combining Statements with "and" and "or"' aria-label='Copy heading and permalink for Subsection 1.5.1: Negating and Combining Statements with "and" and "or"'>🔗</a></div></section><section class="subsection" id="abortion-equivalent-statements"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="space"> </span><span class="title">Equivalent Statements</span>
+</h3>
+<div class="para logical" id="abortion-equivalent-statements-2">
+<div class="para">Given a statement <span class="process-math">\(p\text{,}\)</span> we say that a statement <span class="process-math">\(q\)</span> is equivalent to <span class="process-math">\(p\)</span> if they have the same truth value. We denote equivalent statements, <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{,}\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p \equiv q\text{.}
+\end{equation*}
+</div>
+<div class="para">For example, <span class="process-math">\(\neg(p\vee q)\equiv \neg p\wedge \neg q\)</span> because for corresponding values of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{,}\)</span> these compound statements have the same truth results. This can be seen by examining the truth tables below: <div id="abortion-equivalent-statements-2-10" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f = propcalc.formula(" ~(p | q) ")
+f.truthtable()
+</script></div> <div id="abortion-equivalent-statements-2-11" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f = propcalc.formula(" ~p&  ~q ")
+f.truthtable()
+</script></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-equivalent-statements-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-equivalent-statements-3">Because equivalent statements have the same truth value, we can interchange one for the other without losing the meaning of a statement. Let’s try the following example. You may find the following website helpful for entering in the symbols used in these calculators <a class="external" href="https://doc.sagemath.org/html/en/reference/logic/sage/logic/propcalc.html" target="_blank">Propositional Calculus</a><details class="ptx-footnote" aria-live="polite" id="abortion-equivalent-statements-3-2"><summary class="ptx-footnote__number" title="Footnote 1.5.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="abortion-equivalent-statements-3-2"><code class="code-inline tex2jax_ignore">doc.sagemath.org/html/en/reference/logic/sage/logic/propcalc.html</code></div></details>.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-equivalent-statements-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="abortion-equivalent-statements-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="abortion-equivalent-statements-4-1-1">
+<div class="para">Determine which of the following statements is equivalent to <span class="process-math">\(\neg(p\wedge q)\text{:}\)</span>
+</div>
+<ol class="decimal" id="abortion-equivalent-statements-4-1-1-2">
+<li id="abortion-equivalent-statements-4-1-1-2-1">
+<div class="para" id="p-derived-abortion-equivalent-statements-4-1-1-2-1"><span class="process-math">\(\displaystyle \neg(p\vee q)\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion-equivalent-statements-4-1-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion-equivalent-statements-4-1-1-2-2">
+<div class="para" id="p-derived-abortion-equivalent-statements-4-1-1-2-2"><span class="process-math">\(\displaystyle \neg p\vee \neg q\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion-equivalent-statements-4-1-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="abortion-equivalent-statements-4-1-1-2-3">
+<div class="para" id="p-derived-abortion-equivalent-statements-4-1-1-2-3"><span class="process-math">\(\displaystyle \neg p\wedge \neg q\)</span></div>
+<div class="autopermalink" data-description="Item 3"><a href="#abortion-equivalent-statements-4-1-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-equivalent-statements-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="abortion-equivalent-statements-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="abortion-equivalent-statements-4-2-1">
+<ol class="decimal" id="abortion-equivalent-statements-4-2-1-1">
+<li id="abortion-equivalent-statements-4-2-1-1-1">
+<div class="para" id="p-derived-abortion-equivalent-statements-4-2-1-1-1">Not equivalent</div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion-equivalent-statements-4-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion-equivalent-statements-4-2-1-1-2">
+<div class="para" id="p-derived-abortion-equivalent-statements-4-2-1-1-2">Equivalent</div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion-equivalent-statements-4-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="abortion-equivalent-statements-4-2-1-1-3">
+<div class="para" id="p-derived-abortion-equivalent-statements-4-2-1-1-3">not equivalent</div>
+<div class="autopermalink" data-description="Item 3"><a href="#abortion-equivalent-statements-4-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-equivalent-statements-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.5.1.1"><a href="#abortion-equivalent-statements-4-2" title="Copy heading and permalink for Solution 1.5.1.1" aria-label="Copy heading and permalink for Solution 1.5.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.5.1"><a href="#abortion-equivalent-statements-4" title="Copy heading and permalink for Example 1.5.1" aria-label="Copy heading and permalink for Example 1.5.1">🔗</a></div></article></details><div class="para logical" id="abortion-equivalent-statements-5">
+<div class="para">The examples above are called DeMorgan’s Laws. Summarizing DeMorgan’s Laws:</div>
+<ol class="decimal" id="abortion-equivalent-statements-5-1">
+<li id="abortion-equivalent-statements-5-1-1">
+<div class="para" id="p-derived-abortion-equivalent-statements-5-1-1"><span class="process-math">\(\displaystyle \neg(p\vee q)\equiv \neg p\wedge \neg q\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion-equivalent-statements-5-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion-equivalent-statements-5-1-2">
+<div class="para" id="p-derived-abortion-equivalent-statements-5-1-2"><span class="process-math">\(\displaystyle \neg(p\wedge q)\equiv \neg p\vee \neg q\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion-equivalent-statements-5-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="para">There are many other equivalent statements, as we will see in the next section.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-equivalent-statements-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.5.2: Equivalent Statements"><a href="#abortion-equivalent-statements" title="Copy heading and permalink for Subsection 1.5.2: Equivalent Statements" aria-label="Copy heading and permalink for Subsection 1.5.2: Equivalent Statements">🔗</a></div></section><section class="subsection" id="abortion-if-then"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="space"> </span><span class="title">Implications (If-Then Statements)</span>
+</h3>
+<div class="para" id="abortion-if-then-2">An <dfn class="terminology">implication</dfn> is a statement that has a premise and a conclusion such as, "If I take birth control, then I can’t get pregnant". In this implication, the premise is the statement "I take birth control" and the conclusion is the statement "I can’t get pregnant". With an implication, the truth value of the premise and conclusion determine the truth value of the actual implication. Given two statements <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{,}\)</span> the statement: if <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(q\)</span> can be represented by <span class="process-math">\(p\rightarrow q\)</span> and read as "if <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(q\)</span>", "<span class="process-math">\(p\)</span> implies <span class="process-math">\(q\)</span>", "<span class="process-math">\(p\)</span> only if <span class="process-math">\(q\)</span>", and "<span class="process-math">\(q\text{,}\)</span> if <span class="process-math">\(p\)</span>". Below is the truth table for the implication "if <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(q\)</span>": <div id="abortion-if-then-2-17" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f = propcalc.formula(" p -> q ")
+f.truthtable()
+</script></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-if-then-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="abortion-if-then-3">
+<div class="para">The truth value of implications can be counterintuitive at times. This occurs primarily when the premise is false because the implication will always be true. For example the implications below are true since the implications in all are false:</div>
+<ol class="decimal" id="abortion-if-then-3-1">
+<li id="abortion-if-then-3-1-1">
+<div class="para" id="p-derived-abortion-if-then-3-1-1">If abortions are federally protected, then people will use abortions to terminate unwanted pregnancies.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion-if-then-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion-if-then-3-1-2">
+<div class="para" id="p-derived-abortion-if-then-3-1-2">If abortions are federally protected, then people will not use abortions to terminate unwanted pregnancies.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion-if-then-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="abortion-if-then-3-1-3">
+<div class="para" id="p-derived-abortion-if-then-3-1-3">If abortions are a federal crime, then more women will be jailed.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#abortion-if-then-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="abortion-if-then-3-1-4">
+<div class="para" id="p-derived-abortion-if-then-3-1-4">If abortions are a federal crime, then more women will be jailed.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#abortion-if-then-3-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="para">In these statements, it seems as if only one of the first two statements should be true and one of the last two statements should be true as the conclusions are negations of one another. However, all four statements are true.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-if-then-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-if-then-4">It turns out that the only way for an implication to be false is when the premise is true and the conclusion is false. An example would be, "If abortions are not a federally protected right, then no-one will get an abortion".<div class="autopermalink" data-description="Paragraph"><a href="#abortion-if-then-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="abortion-if-then-5">Another counterintuitive concept that arises with implications is their negation. The negation, <span class="process-math">\(\sim (p \rightarrow q)\)</span> is equivalent to the statement <span class="process-math">\(p\wedge \sim q\text{.}\)</span> This is verified by examining their truth tables.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-if-then-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div id="abortion-if-then-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f = propcalc.formula(" ~(p-> q) ")
+f.truthtable()
+</script></div>
+<div id="abortion-if-then-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">f = propcalc.formula(" p & ~q ")
+f.truthtable()
+</script></div>
+<details id="abortion-if-then-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="abortion-if-then-8-1-1">
+<div class="para">Verify that the following statements are not equivalent to <span class="process-math">\(\sim (p \rightarrow q)\)</span> using the truth table generator below:</div>
+<ol class="decimal" id="abortion-if-then-8-1-1-2">
+<li id="abortion-if-then-8-1-1-2-1">
+<div class="para" id="p-derived-abortion-if-then-8-1-1-2-1"><span class="process-math">\(\displaystyle \sim p\rightarrow q\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion-if-then-8-1-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion-if-then-8-1-1-2-2">
+<div class="para" id="p-derived-abortion-if-then-8-1-1-2-2"><span class="process-math">\(\displaystyle \sim p\rightarrow \sim q\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion-if-then-8-1-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="abortion-if-then-8-1-1-2-3">
+<div class="para" id="p-derived-abortion-if-then-8-1-1-2-3"><span class="process-math">\(\displaystyle p\rightarrow \sim q\)</span></div>
+<div class="autopermalink" data-description="Item 3"><a href="#abortion-if-then-8-1-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="abortion-if-then-8-1-1-2-4">
+<div class="para" id="p-derived-abortion-if-then-8-1-1-2-4"><span class="process-math">\(\displaystyle q\rightarrow p\)</span></div>
+<div class="autopermalink" data-description="Item 4"><a href="#abortion-if-then-8-1-1-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-if-then-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="abortion-if-then-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="abortion-if-then-8-2-1">
+<ol class="decimal" id="abortion-if-then-8-2-1-1">
+<li id="abortion-if-then-8-2-1-1-1">
+<div class="para" id="p-derived-abortion-if-then-8-2-1-1-1">Not equivalent</div>
+<div class="autopermalink" data-description="Item 1"><a href="#abortion-if-then-8-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="abortion-if-then-8-2-1-1-2">
+<div class="para" id="p-derived-abortion-if-then-8-2-1-1-2">Not equivalent</div>
+<div class="autopermalink" data-description="Item 2"><a href="#abortion-if-then-8-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="abortion-if-then-8-2-1-1-3">
+<div class="para" id="p-derived-abortion-if-then-8-2-1-1-3">Equivalent</div>
+<div class="autopermalink" data-description="Item 3"><a href="#abortion-if-then-8-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="abortion-if-then-8-2-1-1-4">
+<div class="para" id="p-derived-abortion-if-then-8-2-1-1-4">not equivalent</div>
+<div class="autopermalink" data-description="Item 4"><a href="#abortion-if-then-8-2-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#abortion-if-then-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.5.2.1"><a href="#abortion-if-then-8-2" title="Copy heading and permalink for Solution 1.5.2.1" aria-label="Copy heading and permalink for Solution 1.5.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.5.2"><a href="#abortion-if-then-8" title="Copy heading and permalink for Example 1.5.2" aria-label="Copy heading and permalink for Example 1.5.2">🔗</a></div></article></details><div class="para" id="abortion-if-then-9">It is important to notice that the negation of an implication is not an implication. For example, the negation of "If abortions are federally protected, then people will not use abortions to terminate unwanted pregnancies" is "Abortions are federally protected and people use abortions to terminate unwanted pregnancies" which is a false statement.<div class="autopermalink" data-description="Paragraph"><a href="#abortion-if-then-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.5.3: Implications (If-Then Statements)"><a href="#abortion-if-then" title="Copy heading and permalink for Subsection 1.5.3: Implications (If-Then Statements)" aria-label="Copy heading and permalink for Subsection 1.5.3: Implications (If-Then Statements)">🔗</a></div></section><div class="autopermalink" data-description="Section 1.5: Simple Logic"><a href="#abortion-simple-logic" title="Copy heading and permalink for Section 1.5: Simple Logic" aria-label="Copy heading and permalink for Section 1.5: Simple Logic">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="abortion-big-problem.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="abortion-quantifiers.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

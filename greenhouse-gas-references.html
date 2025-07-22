@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>References</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math for the People">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.787a04695534ef1e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://web.stevenson.edu/mbranson/math-for-the-people.html"><img src="external/images/Math_Fist.PNG" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="math-for-the-people.html"><span class="title">Math for the People</span></a></h1>
+<p class="byline">Mark Branson (Editor), Whitney George (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="greenhouse-gas-exercises.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="greenhouse-gas.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="payday-loans.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="math-for-the-people-front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="instructors-note.html" class="internal"><span class="title">A Note for Instructors</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="students-note.html" class="internal"><span class="title">A Note for Students</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="abortion.html" class="internal"><span class="codenumber">1</span> <span class="title">Abortion Access Throughout the United States</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-objectives.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-background.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-cui-bono.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-big-problem.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Big Problem: Restricting Abortion Access</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-simple-logic.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Simple Logic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Negating and Combining Statements with "and" and "or"</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation-2" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Negations</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-and-or" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">And &amp; Or</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-equivalent-statements" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Equivalent Statements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-if-then" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Implications (If-Then Statements)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-quantifiers.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Quantifiers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-arguments.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Arguments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-valid-arguments" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Valid Arguments</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-sound-arguments" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Sound Arguments</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Definitions, Assumptions, and Fallacies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Case Study 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion_case-study-1-argument" class="internal"><span class="codenumber">1.8.1.1</span> <span class="title">Case Study 1: The Argument</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-discussion" class="internal"><span class="codenumber">1.8.1.2</span> <span class="title">Case Study 1: Discussion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-Refuting" class="internal"><span class="codenumber">1.8.1.3</span> <span class="title">Case Study 1: Refuting the Argument</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Case Study 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2-discussion" class="internal"><span class="codenumber">1.8.2.1</span> <span class="title">Case Study 2: Discussion</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-solving-for-change.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="abortion-reflection.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="abortion-exercises.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-references.html" class="internal"><span class="codenumber">1.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="environmental-racism.html" class="internal"><span class="codenumber">2</span> <span class="title">Environmental Racism</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-objectives.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Objectives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-objectives.html#environmental-racism-objectives-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Mathematical/Quantitative Objectives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-objectives.html#environmental-racism-objectives-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Environmental Justice Objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-understanding-the-issue.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-understanding-the-issue.html#environmental-racism-understanding-the-issue-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="environmental-racism-cui-bono.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="environmental-racism-big-problem.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Big Problem: Environmental Racism</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-data-classification.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Data Classification</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-data-classification.html#environmental-racism-data-visualization-classification-data-types" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Data types</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-data-classification.html#environmental-racism-types-of-data-exercises" class="internal"><span class="codenumber">2.5.2</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Choosing Data Visualizations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-data-visualization-importance" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Why is data visualization important?</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Types of Data Visualizations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-3" class="internal"><span class="codenumber">2.6.2.1</span> <span class="title">Pie charts</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-4" class="internal"><span class="codenumber">2.6.2.2</span> <span class="title">Bar graph</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-5" class="internal"><span class="codenumber">2.6.2.3</span> <span class="title">Histogram</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-6" class="internal"><span class="codenumber">2.6.2.4</span> <span class="title">Histogram vs Bar graph</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-7" class="internal"><span class="codenumber">2.6.2.5</span> <span class="title">Box plot</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-8" class="internal"><span class="codenumber">2.6.2.6</span> <span class="title">Scatter plot</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-solving-for-change.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Solving for change</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-solving-for-change.html#environmental-racism-solving-for-change-3" class="internal"><span class="codenumber">2.7.1</span> <span class="title">In-depth Exploration</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="environmental-racism-reading-questions.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="environmental-racism-exercises.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-references.html" class="internal"><span class="codenumber">2.10</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-references.html#environmental-racism-references-2" class="internal"><span class="codenumber">2.10.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-references.html#environmental-racism-image-descriptions" class="internal"><span class="codenumber">2.10.2</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="fake-news.html" class="internal"><span class="codenumber">3</span> <span class="title">Fake News</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fake-news-objectives.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fake-news-understanding-the-issue.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fake-news-cui-bono.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Cui Bono – Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fake-news-big-problem.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Big Problem</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="fake-news-error-analysis.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Error Analysis</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fake-news-error-analysis.html#fake-news-error-analysis-introduction" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Introduction to Error Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fake-news-error-analysis.html#fake-news-error-analysis-error-propogation" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Error Propogation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fake-news-misleading-graphs.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Misleading Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fake-news-solving-for-change.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="fake-news-reading-questions.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fake-news-exercises.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="fake-news-references.html" class="internal"><span class="codenumber">3.10</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fake-news-references.html#fake-news-references-2" class="internal"><span class="codenumber">3.10.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fake-news-references.html#fake-news-image-descriptions" class="internal"><span class="codenumber">3.10.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="gerrymandering.html" class="internal"><span class="codenumber">4</span> <span class="title">Gerrymandering</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-objectives.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-background.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-cui-bono.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-big-problem.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Big Problem: Using Mathematics to Determine Fairness</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gerrymandering-math-topic-compactness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Geometry and Compactness</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-compactness.html#gerrymandering-math-topic-compactness-4" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Packing and Cracking: How drawing lines can change outcomes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-compactness.html#gerrymandering-math-topic-compactness-5" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Three Ways to Measure Compactness of a District</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-compactness.html#gerrymandering-math-topic-compactness-6" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Compactness Criteria</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-compactness.html#gerrymandering-math-topic-compactness-7" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Caution: Fairness Goes Beyond Geometry</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gerrymandering-math-topic-partisan-gerrymandering.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Partisan Gerrymandering</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-partisan-gerrymandering.html#gerrymandering-math-topic-partisan-gerrymandering-3" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Efficiency Gap</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-partisan-gerrymandering.html#gerrymandering-math-topic-partisan-gerrymandering-4" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Mean-Median Difference</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-partisan-gerrymandering.html#gerrymandering-math-topic-partisan-gerrymandering-5" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Caution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gerrymandering-math-topic-statistics.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Racial Gerrymandering and Statistics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-statistics.html#gerrymandering-math-topic-statistics-3" class="internal"><span class="codenumber">4.7.1</span> <span class="title">Inference</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-statistics.html#gerrymandering-math-topic-statistics-4" class="internal"><span class="codenumber">4.7.2</span> <span class="title">Scatterplots and linear regression</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-statistics.html#gerrymandering-math-topic-statistics-5" class="internal"><span class="codenumber">4.7.3</span> <span class="title">Caution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-math-topic-outlier.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Outlier Analysis</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gerrymandering-solving-for-change.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-solving-for-change.html#gerrymandering-solving-for-change-3" class="internal"><span class="codenumber">4.9.1</span> <span class="title">Learn a state’s redistricting process.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-solving-for-change.html#gerrymandering-solving-for-change-4" class="internal"><span class="codenumber">4.9.2</span> <span class="title">Use a redistricting mapping program (website) to draw a "fair" map for a state.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-solving-for-change.html#gerrymandering-solving-for-change-5" class="internal"><span class="codenumber">4.9.3</span> <span class="title">Learn about ways you can get involved</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gerrymandering-reflection.html" class="internal"><span class="codenumber">4.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="gerrymandering-exercises.html" class="internal"><span class="codenumber">4.11</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-exercises.html#gerrymandering-exercises-1" class="internal"><span class="codenumber">4.11.1</span> <span class="title">Geometry Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-exercises.html#gerrymandering-exercises-2" class="internal"><span class="codenumber">4.11.2</span> <span class="title">Partisan Gerrymandering Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-exercises.html#gerrymandering-exercises-3" class="internal"><span class="codenumber">4.11.3</span> <span class="title">Racial Gerrymandering Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-references.html" class="internal"><span class="codenumber">4.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="greenhouse-gas.html" class="internal"><span class="codenumber">5</span> <span class="title">Greenhouse Gas Emissions</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="greenhouse-gas-objectives.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="greenhouse-gas-background.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="greenhouse-gas-cui-bono.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="greenhouse-gas-big-problem.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Big Problem: What is the best way to reduce greenhouse gas emissions?</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="greenhouse-gas-math-topic-scientific-notation.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Scientific Notation and Number Sense</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-scientific-notation.html#greenhouse-gas-math-topic-scientific-notation-2" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Thinking about Size Comparisons</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-scientific-notation.html#greenhouse-gas-math-topic-scientific-notation-3" class="internal"><span class="codenumber">5.5.2</span> <span class="title">What is Scientific Notation?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-scientific-notation.html#greenhouse-gas-math-topic-scientific-notation-4" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Significant figures</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Data Visualization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-types-of-data" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Types of Data</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Graphs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-bar" class="internal"><span class="codenumber">5.6.2.1</span> <span class="title">Bar Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-4" class="internal"><span class="codenumber">5.6.2.2</span> <span class="title">Pie Charts</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-5" class="internal"><span class="codenumber">5.6.2.3</span> <span class="title">Scatterplots and Line Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-combining-graphs" class="internal"><span class="codenumber">5.6.2.4</span> <span class="title">Combining Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-other-visualizations" class="internal"><span class="codenumber">5.6.2.5</span> <span class="title">Other Ways of Visualizing Information</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-accessibility" class="internal"><span class="codenumber">5.6.2.6</span> <span class="title">Accessibiliity</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="greenhouse-gas-math-topic-mathematical-models.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Mathematical Models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-mathematical-models.html#greenhouse-gas-math-topic-mathematical-models-3" class="internal"><span class="codenumber">5.7.1</span> <span class="title">The Green House Effect</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="greenhouse-gas-math-topic-mathematical-models.html#greenhouse-gas-math-topic-mathematical-models-4" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Modeling the Green House Effect</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-mathematical-models.html#greenhouse-gas-math-topic-mathematical-models-4-3" class="internal"><span class="codenumber">5.7.2.1</span> <span class="title">First Model: one level of atmosphere</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="greenhouse-gas-solving-for-change.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-solving-for-change.html#greenhouse-gas-solving-for-change-3" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Who is responsible for greenhouse gas emissions?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-solving-for-change.html#greenhouse-gas-solving-for-change-4" class="internal"><span class="codenumber">5.8.2</span> <span class="title">What are the strategies for reducing emissions?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-solving-for-change.html#greenhouse-gas-solving-for-change-5" class="internal"><span class="codenumber">5.8.3</span> <span class="title">Consequences of Failing to Act</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="greenhouse-gas-reflection.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="greenhouse-gas-exercises.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-exercises.html#greenhouse-gas-exercises-12" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Generative AI Prompts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="greenhouse-gas-references.html" class="internal"><span class="codenumber">5.11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-references.html#greenhouse-gas-references-2" class="internal"><span class="codenumber">5.11.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-references.html#greenhouse-gas-references-3" class="internal"><span class="codenumber">5.11.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="payday-loans.html" class="internal"><span class="codenumber">6</span> <span class="title">Payday Loans</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-objectives.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-background.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-interest-and-risk" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Interest and Risk</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Types of Loans and Lenders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-payday" class="internal"><span class="codenumber">6.2.2.1</span> <span class="title">Payday Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-bank" class="internal"><span class="codenumber">6.2.2.2</span> <span class="title">Bank Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-government" class="internal"><span class="codenumber">6.2.2.3</span> <span class="title">Government Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-pawn" class="internal"><span class="codenumber">6.2.2.4</span> <span class="title">Pawn</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-discriminatory-lending" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Discriminatory Lending</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-cui-bono.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-big-problem.html" class="internal"><span class="codenumber">6.4</span> <span class="title">The Big Problem: Predatory Lending</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-interest.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Simple and Compound Interest</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-simple-interest" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Simple Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-compound-interest" class="internal"><span class="codenumber">6.5.2</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-solving-for-apr" class="internal"><span class="codenumber">6.5.3</span> <span class="title">Finding the Interest Rate</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-risk.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Risk and Credit Scores</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-probability" class="internal"><span class="codenumber">6.6.1</span> <span class="title">Introduction to Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-expected-value" class="internal"><span class="codenumber">6.6.2</span> <span class="title">Expected Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-lending-decisions" class="internal"><span class="codenumber">6.6.3</span> <span class="title">How Banks Make Lending Decisions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-correlation.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Correlation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-definition" class="internal"><span class="codenumber">6.7.1</span> <span class="title">Defining the Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-4" class="internal"><span class="codenumber">6.7.2</span> <span class="title">Computing Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-5" class="internal"><span class="codenumber">6.7.3</span> <span class="title">Using Correlation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-solving-for-change.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-3" class="internal"><span class="codenumber">6.8.1</span> <span class="title">If people are willing to pay...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-4" class="internal"><span class="codenumber">6.8.2</span> <span class="title">We have to charge those rates, because of the risk!</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-5" class="internal"><span class="codenumber">6.8.3</span> <span class="title">If we don’t lend to them, who will?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-6" class="internal"><span class="codenumber">6.8.4</span> <span class="title">What Can We Do?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="payday-loan-reflection.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="payday-loans-exercises.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-exercises.html#payday-loans-exercises-22" class="internal"><span class="codenumber">6.10.1</span> <span class="title">Generative AI Prompts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-references.html" class="internal"><span class="codenumber">6.11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-2" class="internal"><span class="codenumber">6.11.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-3" class="internal"><span class="codenumber">6.11.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">7</span> <span class="title">Poverty as a Health Issue</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poverty-health-objectives.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poverty-health-background.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-background.html#poverty-health-background-2" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Why is good health important?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-background.html#poverty-health-background-3" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Access to healthcare</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-background.html#poverty-health-background-4" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Social determinants of health</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-background.html#poverty-health-background-5" class="internal"><span class="codenumber">7.2.4</span> <span class="title">The role of nonprofits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poverty-health-cui-bono.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-cui-bono.html#poverty-health-cui-bono-4" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Redlining, disinvestment, and race and geography as social determinants of health</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-cui-bono.html#poverty-health-cui-bono-5" class="internal"><span class="codenumber">7.3.2</span> <span class="title">Whataboutism</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poverty-health-big-problem.html" class="internal"><span class="codenumber">7.4</span> <span class="title">The Big Problem: Optimizing the Placement of Mobile Health Clinics</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poverty-health-permcomb.html" class="internal"><span class="codenumber">7.5</span> <span class="title">The Product and Division Rules; Permutations and Combinations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-permcomb.html#poverty-health-permcomb-5" class="internal"><span class="codenumber">7.5.1</span> <span class="title">The product rule and permutations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-permcomb.html#poverty-health-permcomb-6" class="internal"><span class="codenumber">7.5.2</span> <span class="title">The division rule and combinations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poverty-health-addition-subtraction.html" class="internal"><span class="codenumber">7.6</span> <span class="title">The Addition and Subtraction Rules; Inclusion-Exclusion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poverty-health-parametric-linear-models.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Parametric Linear Models</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poverty-health-discrete-optimization.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Discrete Optimization</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poverty-health-solve.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-solve.html#poverty-health-solve-16" class="internal"><span class="codenumber">7.9.1</span> <span class="title">Final model</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="poverty-health-reflection.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="poverty-health-exercises.html" class="internal"><span class="codenumber">7.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poverty-health-references.html" class="internal"><span class="codenumber">7.12</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-references.html#poverty-health-references-2" class="internal"><span class="codenumber">7.12.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-references.html#poverty-health-references-3" class="internal"><span class="codenumber">7.12.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="racism-in-policing.html" class="internal"><span class="codenumber">8</span> <span class="title">Racism in Policing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="racism-in-policing-objectives.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="racism-in-policing-understanding-the-issue.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="racism-in-policing-cui-bono.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cui Bono: Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="racism-in-policing-big-problem.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Big Problem: Racially-biased Policing</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="racism-policing-understanding-data.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Understanding data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-understanding-data-summarizing-data" class="internal"><span class="codenumber">8.5.1</span> <span class="title">Summarizing Data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-understanding-data-summarizing-data-numerical" class="internal"><span class="codenumber">8.5.1.1</span> <span class="title">Numerical data</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-understanding-data-categorical-data" class="internal"><span class="codenumber">8.5.1.2</span> <span class="title">Categorical data</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-proportions" class="internal"><span class="codenumber">8.5.2</span> <span class="title">Proportions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-proportions-traffic-stops" class="internal"><span class="codenumber">8.5.2.1</span> <span class="title">Are there more traffic stops in Hartford or Philadelphia?</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-proportions-race-in-stops" class="internal"><span class="codenumber">8.5.2.2</span> <span class="title">Are Black drivers stopped more often than drivers of other races?</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="racism-in-policing-bayes-theorem.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Bayes’ Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="racism-in-policing-bayes-theorem.html#racism-in-policing-bayes-theorem-false-positives" class="internal"><span class="codenumber">8.6.1</span> <span class="title">Using Bayes’ Theorem to calculate false positives</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="racism-policing-solving-for-change.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="racism-policing-solving-for-change.html#racism-policing-proportions-searches" class="internal"><span class="codenumber">8.7.1</span> <span class="title">Are stopped drivers searched more often if they are Black?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="racism-policing-solving-for-change.html#racism-in-policing-bayes-theorem-policing" class="internal"><span class="codenumber">8.7.2</span> <span class="title">Applying Bayes’ Theorem to policing: practice problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="racism-policing-solving-for-change.html#racism-in-policing-bayes-theorem-google-colab" class="internal"><span class="codenumber">8.7.3</span> <span class="title">Using Google Colab and Python to analyze a large police stop dataset</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="racism-policing-reading-questions.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="racism-policing-exercises.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="racism-policing-references.html" class="internal"><span class="codenumber">8.10</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="school-discipline.html" class="internal"><span class="codenumber">9</span> <span class="title">School Discipline</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-objectives.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-background.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-cui-bono.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-big-problem.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Big Problem: School-to-Prison Pipeline</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-math-topic-ratios.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Ratios</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-math-topic-percents.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Percents</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="school-discipline-math-topic-probability.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Probability</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-math-topic-probability.html#school-discipline-math-topic-probability-3" class="internal"><span class="codenumber">9.7.1</span> <span class="title">The complement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-math-topic-probability.html#school-discipline-math-topic-probability-4" class="internal"><span class="codenumber">9.7.2</span> <span class="title">Mutually exclusive events</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-math-topic-probability.html#school-discipline-math-topic-probability-5" class="internal"><span class="codenumber">9.7.3</span> <span class="title">Independent Events</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-10.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Using CODAP</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="school-discipline-solving-for-change.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-3" class="internal"><span class="codenumber">9.9.1</span> <span class="title">What is the School-to-Prison Pipeline?</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-4" class="internal"><span class="codenumber">9.9.2</span> <span class="title">History of police in schools</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-4-3" class="internal"><span class="codenumber">9.9.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-4-4" class="internal"><span class="codenumber">9.9.2.2</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-5" class="internal"><span class="codenumber">9.9.3</span> <span class="title">Presence of other student supports in schools</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-5-3" class="internal"><span class="codenumber">9.9.3.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-5-4" class="internal"><span class="codenumber">9.9.3.2</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-6" class="internal"><span class="codenumber">9.9.4</span> <span class="title">Who gets arrested in schools</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-6-3" class="internal"><span class="codenumber">9.9.4.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-6-4" class="internal"><span class="codenumber">9.9.4.2</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-7" class="internal"><span class="codenumber">9.9.5</span> <span class="title">Who gets suspended from school</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-7-3" class="internal"><span class="codenumber">9.9.5.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-7-4" class="internal"><span class="codenumber">9.9.5.2</span> <span class="title">Analyzing school suspension data</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-7-5" class="internal"><span class="codenumber">9.9.5.3</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-8" class="internal"><span class="codenumber">9.9.6</span> <span class="title">Where is the pipeline?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-9" class="internal"><span class="codenumber">9.9.7</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="school-discipline-reflection.html" class="internal"><span class="codenumber">9.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="school-discipline-exercises.html" class="internal"><span class="codenumber">9.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-references.html" class="internal"><span class="codenumber">9.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="student-loans.html" class="internal"><span class="codenumber">10</span> <span class="title">Student Loans</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-objectives.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="student-loans-background.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="student-loans-background.html#student-loans-background-3" class="internal"><span class="codenumber">10.2.1</span> <span class="title">References to Explore</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-cui-bono.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-big-problem.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Big Problem: the Staggering and Inequitable Burden of U.S. Student Debt</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-math-topic-changes-in-college-tuition.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Changes in College Tuition over Time</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-debt-by-college-type.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Student Debt by College Type</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-intersectional-inequities.html" class="internal"><span class="codenumber">10.7</span> <span class="title">the Intersectional Inequities of Student Debt</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-solving-for-change.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="student-loans-reflection.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="student-loans-exercises.html" class="internal"><span class="codenumber">10.10</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-references.html" class="internal"><span class="codenumber">10.11</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="math-for-the-people-references.html" class="internal"><span class="codenumber">11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="math-for-the-people-bibliography.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Bibliography</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="greenhouse-gas-references"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.11</span><span class="space"> </span><span class="title">References</span>
+</h2>
+<section class="subsection" id="greenhouse-gas-references-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.11.1</span><span class="space"> </span><span class="title">Bibliography</span>
+</h3>
+<article class="bib" id="greenhouse-gas-biblio-emissions-by-country"><div class="bibitem">[51]</div>
+<div class="bibentry"><a class="external" href="https://www.worlddata.info/greenhouse-gas-by-country.php" target="_blank"><code class="code-inline tex2jax_ignore">https://www.worlddata.info/greenhouse-gas-by-country.php</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.51"><a href="#greenhouse-gas-biblio-emissions-by-country" title="Copy heading and permalink for Bibliographic Entry 5.11.1.51" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.51">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-acs-vehicle-access"><div class="bibitem">[52]</div>
+<div class="bibentry"><a class="external" href="https://data.census.gov/cedsci/table?q=vehicle%20access&amp;tid=ACSDT1Y2019.B25044&amp;hidePreview=true" target="_blank"><code class="code-inline tex2jax_ignore">https://data.census.gov/cedsci/table?q=vehicle%20access&amp;tid=ACSDT1Y2019.B25044&amp;hidePreview=true</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.52"><a href="#greenhouse-gas-biblio-acs-vehicle-access" title="Copy heading and permalink for Bibliographic Entry 5.11.1.52" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.52">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-gdp-vs-co2"><div class="bibitem">[53]</div>
+<div class="bibentry"><a class="external" href="https://ourworldindata.org/grapher/co2-emissions-vs-gdp" target="_blank"><code class="code-inline tex2jax_ignore">https://ourworldindata.org/grapher/co2-emissions-vs-gdp</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.53"><a href="#greenhouse-gas-biblio-gdp-vs-co2" title="Copy heading and permalink for Bibliographic Entry 5.11.1.53" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.53">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-global-temperature-anomaly"><div class="bibitem">[54]</div>
+<div class="bibentry"><a class="external" href="https://www.ncdc.noaa.gov/cag/global/time-series/globe/land_ocean/ytd/12/1880-2019" target="_blank"><code class="code-inline tex2jax_ignore">https://www.ncdc.noaa.gov/cag/global/time-series/globe/land_ocean/ytd/12/1880-2019</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.54"><a href="#greenhouse-gas-biblio-global-temperature-anomaly" title="Copy heading and permalink for Bibliographic Entry 5.11.1.54" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.54">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-overall-co2-emissions"><div class="bibitem">[55]</div>
+<div class="bibentry"><a class="external" href="https://data.worldbank.org/indicator/EN.ATM.CO2E.KT" target="_blank"><code class="code-inline tex2jax_ignore">https://data.worldbank.org/indicator/EN.ATM.CO2E.KT</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.55"><a href="#greenhouse-gas-biblio-overall-co2-emissions" title="Copy heading and permalink for Bibliographic Entry 5.11.1.55" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.55">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-ons-vehicle-access"><div class="bibitem">[56]</div>
+<div class="bibentry"><a class="external" href="https://www.ons.gov.uk/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/adhocs/009922numberofvehiclesperhousehold" target="_blank"><code class="code-inline tex2jax_ignore">https://www.ons.gov.uk/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/adhocs/009922numberofvehiclesperhousehold</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.56"><a href="#greenhouse-gas-biblio-ons-vehicle-access" title="Copy heading and permalink for Bibliographic Entry 5.11.1.56" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.56">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-video-scatterplot-gdp-co2"><div class="bibitem">[57]</div>
+<div class="bibentry"><a class="external" href="https://www.flickr.com/photos/150411108@N06/32308286658/in/album-72157684433789793/" target="_blank"><code class="code-inline tex2jax_ignore">https://www.flickr.com/photos/150411108@N06/32308286658/in/album-72157684433789793/</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.57"><a href="#greenhouse-gas-biblio-video-scatterplot-gdp-co2" title="Copy heading and permalink for Bibliographic Entry 5.11.1.57" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.57">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-video-temperature-anomalies"><div class="bibitem">[58]</div>
+<div class="bibentry"><a class="external" href="https://www.flickr.com/photos/150411108@N06/43350961005/in/photostream/" target="_blank"><code class="code-inline tex2jax_ignore">https://www.flickr.com/photos/150411108@N06/43350961005/in/photostream/</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.58"><a href="#greenhouse-gas-biblio-video-temperature-anomalies" title="Copy heading and permalink for Bibliographic Entry 5.11.1.58" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.58">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-video-per-capita-co2"><div class="bibitem">[59]</div>
+<div class="bibentry"><a class="external" href="https://berkeleyearth.org/dv/map-of-greenhouse-gas-emissions-per-person/" target="_blank"><code class="code-inline tex2jax_ignore">https://berkeleyearth.org/dv/map-of-greenhouse-gas-emissions-per-person/</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.59"><a href="#greenhouse-gas-biblio-video-per-capita-co2" title="Copy heading and permalink for Bibliographic Entry 5.11.1.59" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.59">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-climate-sound"><div class="bibitem">[60]</div>
+<div class="bibentry"><a class="external" href="https://chrischafe.net/the-1200-year-climate-podcast-in-detail/" target="_blank"><code class="code-inline tex2jax_ignore">https://chrischafe.net/the-1200-year-climate-podcast-in-detail/</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.60"><a href="#greenhouse-gas-biblio-climate-sound" title="Copy heading and permalink for Bibliographic Entry 5.11.1.60" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.60">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-causes-of-climate-change"><div class="bibitem">[61]</div>
+<div class="bibentry"><a class="external" href="https://www.bgs.ac.uk/discovering-geology/climate-change/what-causes-the-earths-climate-to-change/" target="_blank"><code class="code-inline tex2jax_ignore">https://www.bgs.ac.uk/discovering-geology/climate-change/what-causes-the-earths-climate-to-change/</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.61"><a href="#greenhouse-gas-biblio-causes-of-climate-change" title="Copy heading and permalink for Bibliographic Entry 5.11.1.61" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.61">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-cretaceous-climate-change"><div class="bibitem">[62]</div>
+<div class="bibentry"><a class="external" href="https://www.pnas.org/content/114/36/E7415" target="_blank"><code class="code-inline tex2jax_ignore">https://www.pnas.org/content/114/36/E7415</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.62"><a href="#greenhouse-gas-biblio-cretaceous-climate-change" title="Copy heading and permalink for Bibliographic Entry 5.11.1.62" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.62">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-fourth-assessment"><div class="bibitem">[63]</div>
+<div class="bibentry"></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.63"><a href="#greenhouse-gas-biblio-fourth-assessment" title="Copy heading and permalink for Bibliographic Entry 5.11.1.63" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.63">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-world-of-change"><div class="bibitem">[64]</div>
+<div class="bibentry"><a class="external" href="https://earthobservatory.nasa.gov/world-of-change/global-temperatures" target="_blank"><code class="code-inline tex2jax_ignore">https://earthobservatory.nasa.gov/world-of-change/global-temperatures</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.64"><a href="#greenhouse-gas-biblio-world-of-change" title="Copy heading and permalink for Bibliographic Entry 5.11.1.64" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.64">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-causes-national-geographic"><div class="bibitem">[65]</div>
+<div class="bibentry"><a class="external" href="https://www.nationalgeographic.com/environment/article/global-warming-causes" target="_blank"><code class="code-inline tex2jax_ignore">https://www.nationalgeographic.com/environment/article/global-warming-causes</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.65"><a href="#greenhouse-gas-biblio-causes-national-geographic" title="Copy heading and permalink for Bibliographic Entry 5.11.1.65" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.65">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-history-global-warming"><div class="bibitem">[66]</div>
+<div class="bibentry"><a class="external" href="https://history.aip.org/climate/co2.htm" target="_blank"><code class="code-inline tex2jax_ignore">https://history.aip.org/climate/co2.htm</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.66"><a href="#greenhouse-gas-biblio-history-global-warming" title="Copy heading and permalink for Bibliographic Entry 5.11.1.66" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.66">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-temperature-moon"><div class="bibitem">[67]</div>
+<div class="bibentry"><a class="external" href="https://www.space.com/18175-moon-temperature.html" target="_blank"><code class="code-inline tex2jax_ignore">https://www.space.com/18175-moon-temperature.html</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.67"><a href="#greenhouse-gas-biblio-temperature-moon" title="Copy heading and permalink for Bibliographic Entry 5.11.1.67" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.67">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-history-co2"><div class="bibitem">[68]</div>
+<div class="bibentry"><a class="external" href="https://climate.nasa.gov/evidence/" target="_blank"><code class="code-inline tex2jax_ignore">https://climate.nasa.gov/evidence/</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.68"><a href="#greenhouse-gas-biblio-history-co2" title="Copy heading and permalink for Bibliographic Entry 5.11.1.68" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.68">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-extinction"><div class="bibitem">[69]</div>
+<div class="bibentry"><a class="external" href="https://www.pnas.org/content/117/8/4211" target="_blank"><code class="code-inline tex2jax_ignore">https://www.pnas.org/content/117/8/4211</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.69"><a href="#greenhouse-gas-biblio-extinction" title="Copy heading and permalink for Bibliographic Entry 5.11.1.69" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.69">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-crops"><div class="bibitem">[70]</div>
+<div class="bibentry"><a class="external" href="https://doi.org/10.1371/journal.pone.0217148" target="_blank"><code class="code-inline tex2jax_ignore">https://doi.org/10.1371/journal.pone.0217148</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.70"><a href="#greenhouse-gas-biblio-crops" title="Copy heading and permalink for Bibliographic Entry 5.11.1.70" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.70">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-refugees"><div class="bibitem">[71]</div>
+<div class="bibentry"><a class="external" href="https://storymaps.arcgis.com/stories/065d18218b654c798ae9f360a626d903" target="_blank"><code class="code-inline tex2jax_ignore">https://storymaps.arcgis.com/stories/065d18218b654c798ae9f360a626d903</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.71"><a href="#greenhouse-gas-biblio-refugees" title="Copy heading and permalink for Bibliographic Entry 5.11.1.71" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.71">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-us-population"><div class="bibitem">[72]</div>
+<div class="bibentry"><a class="external" href="https://www.census.gov/newsroom/press-releases/2019/popest-nation.html" target="_blank"><code class="code-inline tex2jax_ignore">https://www.census.gov/newsroom/press-releases/2019/popest-nation.html</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.72"><a href="#greenhouse-gas-biblio-us-population" title="Copy heading and permalink for Bibliographic Entry 5.11.1.72" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.72">🔗</a></div></article><article class="bib" id="greehouse-gas-biblio-emissions-inventory"><div class="bibitem">[73]</div>
+<div class="bibentry"><a class="external" href="https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks" target="_blank"><code class="code-inline tex2jax_ignore">https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.73"><a href="#greehouse-gas-biblio-emissions-inventory" title="Copy heading and permalink for Bibliographic Entry 5.11.1.73" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.73">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-emissions-china"><div class="bibitem">[74]</div>
+<div class="bibentry"><a class="external" href="https://rhg.com/research/preliminary-china-emissions-2019/" target="_blank"><code class="code-inline tex2jax_ignore">https://rhg.com/research/preliminary-china-emissions-2019/</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.74"><a href="#greenhouse-gas-biblio-emissions-china" title="Copy heading and permalink for Bibliographic Entry 5.11.1.74" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.74">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-china-population"><div class="bibitem">[75]</div>
+<div class="bibentry"><a class="external" href="https://www.worldometers.info/world-population/china-population/" target="_blank"><code class="code-inline tex2jax_ignore">https://www.worldometers.info/world-population/china-population/</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.75"><a href="#greenhouse-gas-biblio-china-population" title="Copy heading and permalink for Bibliographic Entry 5.11.1.75" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.75">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-us-oil-consumption"><div class="bibitem">[76]</div>
+<div class="bibentry"><a class="external" href="https://www.eia.gov/tools/faqs/faq.php?id=33&amp;t=6" target="_blank"><code class="code-inline tex2jax_ignore">https://www.eia.gov/tools/faqs/faq.php?id=33&amp;t=6</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.76"><a href="#greenhouse-gas-biblio-us-oil-consumption" title="Copy heading and permalink for Bibliographic Entry 5.11.1.76" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.76">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-aqua-satellite"><div class="bibitem">[77]</div>
+<div class="bibentry"><a class="external" href="https://aqua.nasa.gov/content/about-aqua" target="_blank"><code class="code-inline tex2jax_ignore">https://aqua.nasa.gov/content/about-aqua</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.77"><a href="#greenhouse-gas-biblio-aqua-satellite" title="Copy heading and permalink for Bibliographic Entry 5.11.1.77" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.77">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-co2-historical-data"><div class="bibitem">[78]</div>
+<div class="bibentry"><a class="external" href="https://ourworldindata.org/contributed-most-global-co2" target="_blank"><code class="code-inline tex2jax_ignore">https://ourworldindata.org/contributed-most-global-co2</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.78"><a href="#greenhouse-gas-biblio-co2-historical-data" title="Copy heading and permalink for Bibliographic Entry 5.11.1.78" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.78">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-co2-annual-data"><div class="bibitem">[79]</div>
+<div class="bibentry"><a class="external" href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions" target="_blank"><code class="code-inline tex2jax_ignore">https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.79"><a href="#greenhouse-gas-biblio-co2-annual-data" title="Copy heading and permalink for Bibliographic Entry 5.11.1.79" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.79">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-paris-agreement"><div class="bibitem">[80]</div>
+<div class="bibentry"><a class="external" href="https://www.un.org/en/climatechange/paris-agreement" target="_blank"><code class="code-inline tex2jax_ignore">https://www.un.org/en/climatechange/paris-agreement</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.80"><a href="#greenhouse-gas-biblio-paris-agreement" title="Copy heading and permalink for Bibliographic Entry 5.11.1.80" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.80">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-emissions-by-region"><div class="bibitem">[81]</div>
+<div class="bibentry"><a class="external" href="https://ourworldindata.org/grapher/annual-co-emissions-by-region" target="_blank"><code class="code-inline tex2jax_ignore">https://ourworldindata.org/grapher/annual-co-emissions-by-region</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.81"><a href="#greenhouse-gas-biblio-emissions-by-region" title="Copy heading and permalink for Bibliographic Entry 5.11.1.81" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.81">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-world-population"><div class="bibitem">[82]</div>
+<div class="bibentry"><a class="external" href="https://ourworldindata.org/world-population-growth" target="_blank"><code class="code-inline tex2jax_ignore">https://ourworldindata.org/world-population-growth</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.82"><a href="#greenhouse-gas-biblio-world-population" title="Copy heading and permalink for Bibliographic Entry 5.11.1.82" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.82">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-livestock"><div class="bibitem">[83]</div>
+<div class="bibentry"><a class="external" href="https://www.fao.org/3/i3437e/i3437e.pdf" target="_blank"><code class="code-inline tex2jax_ignore">https://www.fao.org/3/i3437e/i3437e.pdf</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.83"><a href="#greenhouse-gas-biblio-livestock" title="Copy heading and permalink for Bibliographic Entry 5.11.1.83" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.83">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-sources-of-emissions"><div class="bibitem">[84]</div>
+<div class="bibentry"><a class="external" href="https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions" target="_blank"><code class="code-inline tex2jax_ignore">https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.84"><a href="#greenhouse-gas-biblio-sources-of-emissions" title="Copy heading and permalink for Bibliographic Entry 5.11.1.84" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.84">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-pandemic"><div class="bibitem">[85]</div>
+<div class="bibentry"><a class="external" href="https://www.jpl.nasa.gov/news/emission-reductions-from-pandemic-had-unexpected-effects-on-atmosphere" target="_blank"><code class="code-inline tex2jax_ignore">https://www.jpl.nasa.gov/news/emission-reductions-from-pandemic-had-unexpected-effects-on-atmosphere</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.85"><a href="#greenhouse-gas-biblio-pandemic" title="Copy heading and permalink for Bibliographic Entry 5.11.1.85" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.85">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-necessary-reduction"><div class="bibitem">[86]</div>
+<div class="bibentry"><a class="external" href="https://earth.stanford.edu/news/global-carbon-emissions-need-shrink-10-times-faster-0#gs.3792lq" target="_blank"><code class="code-inline tex2jax_ignore">https://earth.stanford.edu/news/global-carbon-emissions-need-shrink-10-times-faster-0#gs.3792lq</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.86"><a href="#greenhouse-gas-biblio-necessary-reduction" title="Copy heading and permalink for Bibliographic Entry 5.11.1.86" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.86">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-six-sectors"><div class="bibitem">[87]</div>
+<div class="bibentry"><a class="external" href="https://www.unep.org/interactive/six-sector-solution-climate-change/" target="_blank"><code class="code-inline tex2jax_ignore">https://www.unep.org/interactive/six-sector-solution-climate-change/</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.87"><a href="#greenhouse-gas-biblio-six-sectors" title="Copy heading and permalink for Bibliographic Entry 5.11.1.87" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.87">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-rcp"><div class="bibitem">[88]</div>
+<div class="bibentry"><a class="external" href="https://skepticalscience.com/rcp.php?t=1" target="_blank"><code class="code-inline tex2jax_ignore">https://skepticalscience.com/rcp.php?t=1</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.88"><a href="#greenhouse-gas-biblio-rcp" title="Copy heading and permalink for Bibliographic Entry 5.11.1.88" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.88">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-sea-level-rise"><div class="bibitem">[89]</div>
+<div class="bibentry"><a class="external" href="https://www.pnas.org/doi/10.1073/pnas.1605312113" target="_blank"><code class="code-inline tex2jax_ignore">https://www.pnas.org/doi/10.1073/pnas.1605312113</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.89"><a href="#greenhouse-gas-biblio-sea-level-rise" title="Copy heading and permalink for Bibliographic Entry 5.11.1.89" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.89">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-miami-tides"><div class="bibitem">[90]</div>
+<div class="bibentry"><a class="external" href="https://tidesandcurrents.noaa.gov/waterlevels.html?id=8723214&amp;units=standard&amp;bdate=20161002&amp;edate=20161101&amp;timezone=GMT&amp;datum=MLLW&amp;interval=6&amp;action=" target="_blank"><code class="code-inline tex2jax_ignore">https://tidesandcurrents.noaa.gov/waterlevels.html?id=8723214&amp;units=standard&amp;bdate=20161002&amp;edate=20161101&amp;timezone=GMT&amp;datum=MLLW&amp;interval=6&amp;action=</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.90"><a href="#greenhouse-gas-biblio-miami-tides" title="Copy heading and permalink for Bibliographic Entry 5.11.1.90" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.90">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-nyc-storm-surge"><div class="bibitem">[91]</div>
+<div class="bibentry"><a class="external" href="https://www.pnas.org/doi/pdf/10.1073/pnas.1703568114" target="_blank"><code class="code-inline tex2jax_ignore">https://www.pnas.org/doi/pdf/10.1073/pnas.1703568114</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.91"><a href="#greenhouse-gas-biblio-nyc-storm-surge" title="Copy heading and permalink for Bibliographic Entry 5.11.1.91" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.91">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-crop-yields"><div class="bibitem">[92]</div>
+<div class="bibentry"><a class="external" href="https://www.pnas.org/doi/10.1073/pnas.1701762114" target="_blank"><code class="code-inline tex2jax_ignore">https://www.pnas.org/doi/10.1073/pnas.1701762114</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.92"><a href="#greenhouse-gas-biblio-crop-yields" title="Copy heading and permalink for Bibliographic Entry 5.11.1.92" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.92">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-owid-full-data"><div class="bibitem">[93]</div>
+<div class="bibentry"><a class="external" href="https://github.com/owid/co2-data" target="_blank"><code class="code-inline tex2jax_ignore">https://github.com/owid/co2-data</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.93"><a href="#greenhouse-gas-biblio-owid-full-data" title="Copy heading and permalink for Bibliographic Entry 5.11.1.93" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.93">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-mauna-loa-co2"><div class="bibitem">[94]</div>
+<div class="bibentry"><a class="external" href="https://gml.noaa.gov/ccgg/trends/" target="_blank"><code class="code-inline tex2jax_ignore">https://gml.noaa.gov/ccgg/trends/</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.94"><a href="#greenhouse-gas-biblio-mauna-loa-co2" title="Copy heading and permalink for Bibliographic Entry 5.11.1.94" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.94">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-climate-majors"><div class="bibitem">[95]</div>
+<div class="bibentry"><a class="external" href="https://climateaccountability.org/carbonmajors_dataset2020.html" target="_blank"><code class="code-inline tex2jax_ignore">https://climateaccountability.org/carbonmajors_dataset2020.html</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.95"><a href="#greenhouse-gas-biblio-climate-majors" title="Copy heading and permalink for Bibliographic Entry 5.11.1.95" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.95">🔗</a></div></article><article class="bib" id="greenhouse-gas-biblio-vehicles-by-percentage"><div class="bibitem">[96]</div>
+<div class="bibentry"><a class="external" href="https://ourworldindata.org/transport#passenger-vehicle-registrations-by-type" target="_blank"><code class="code-inline tex2jax_ignore">https://ourworldindata.org/transport#passenger-vehicle-registrations-by-type</code></a></div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.96"><a href="#greenhouse-gas-biblio-vehicles-by-percentage" title="Copy heading and permalink for Bibliographic Entry 5.11.1.96" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.96">🔗</a></div></article><article class="bib" id="biblio-greenhouse-gas-chatgpt"><div class="bibitem">[97]</div>
+<div class="bibentry">
+<a class="external" href="" target="_blank">https://chat.openai.com</a><details class="ptx-footnote" aria-live="polite" id="biblio-greenhouse-gas-chatgpt-2"><summary class="ptx-footnote__number" title="Footnote 5.11.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="biblio-greenhouse-gas-chatgpt-2"><code class="code-inline tex2jax_ignore"></code></div></details>
+</div>
+<div class="autopermalink" data-description="Bibliographic Entry 5.11.1.97"><a href="#biblio-greenhouse-gas-chatgpt" title="Copy heading and permalink for Bibliographic Entry 5.11.1.97" aria-label="Copy heading and permalink for Bibliographic Entry 5.11.1.97">🔗</a></div></article><div class="autopermalink" data-description="Subsection 5.11.1: Bibliography"><a href="#greenhouse-gas-references-2" title="Copy heading and permalink for Subsection 5.11.1: Bibliography" aria-label="Copy heading and permalink for Subsection 5.11.1: Bibliography">🔗</a></div></section><section class="subsection" id="greenhouse-gas-references-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.11.2</span><span class="space"> </span><span class="title">Image Descriptions</span>
+</h3>
+<ol class="decimal" id="greenhouse-gas-references-3-2">
+<li id="greenhouse-gas-image-history-co2">
+<div class="para" id="p-derived-greenhouse-gas-image-history-co2">A graph with years from 400,000 years ago on the horizontal axis and atmospheric CO2 in parts per million (ppm) on the vertical axis. The graph shows that atmospheric CO2 has fluctuated between about 180 and 300 ppm for the last 400,000 years, but has soared from less than 300 ppm to over 400 ppm in the last century.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#greenhouse-gas-image-history-co2" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-bar-chart-vehicle-access">
+<div class="para" id="p-derived-greenhouse-gas-image-bar-chart-vehicle-access">A graph with the number of vehicles on the horizontal axis and millions of households on the vertical axis. For each number of vehicles, a rectangle is drawn with height equal to the number of households with that many vehicles. The data displayed is from the frequency table given above.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#greenhouse-gas-image-bar-chart-vehicle-access" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-histogram-co2">
+<div class="para" id="p-derived-greenhouse-gas-image-histogram-co2">A graph with the per capita CO2 emissions in tons per person on the horizontal axis and number of countries on the vertical axis.  For each range of emissions levels, a rectangle is drawn with height equal to the number of countries that produce that level of emissions.  The data displayed is from the frequency table given above.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#greenhouse-gas-image-histogram-co2" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-bar-chart-methane">
+<div class="para" id="p-derived-greenhouse-gas-image-bar-chart-methane">A graph with the names of countries on the horizontal axis and millions of equivalent tons of CO2 on the vertical axis. For each country, a rectangle is drawn with the height of the rectangle corresponding to the methane emissions of each country.  The data displayed is from the table given above.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#greenhouse-gas-image-bar-chart-methane" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-pie-chart-co2">
+<div class="para" id="p-derived-greenhouse-gas-image-pie-chart-co2">A circle with wedges representing countries with emissions in the given ranges.  One wedge is very large, relative to the others, and several wedges are only 0 or 1 percent of the circle. The data displayed is from the table given above.</div>
+<div class="autopermalink" data-description="Item 5"><a href="#greenhouse-gas-image-pie-chart-co2" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-scatterplot-gdp-co2">
+<div class="para" id="p-derived-greenhouse-gas-image-scatterplot-gdp-co2">A graph with GDP, in 2011 dollars per person, on the horizontal axis and CO2 emissions, in tons per person, on the vertical axis.  The values for 165 different nations are represented by dots on the graph, with the horizontal position of the dot corresponding to GDP and the vertical position of the dot corresponding to CO2 emissions.  The data shown in the graph is in gdp and co2 emissions for all countries in 2018 [Excel Spreadsheet].</div>
+<div class="autopermalink" data-description="Item 6"><a href="#greenhouse-gas-image-scatterplot-gdp-co2" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-line-graph-global-temperature-anomaly">
+<div class="para" id="p-derived-greenhouse-gas-image-line-graph-global-temperature-anomaly">A graph with years on the horizontal axis and the global mean temperature anomaly, in degrees celsius difference from the mean temperature from 1901-2000 on the vertical axis.  The value for each year is represented by a dot on the graph, with the horizontal position of the dot corresponding to the year and the vertical position of the dot corresponding to global mean temperature anomaly.  The data shown in the graph is in global mean temperature anomalies from 1880 to 2019 [Excel Spreadsheet].</div>
+<div class="autopermalink" data-description="Item 7"><a href="#greenhouse-gas-image-line-graph-global-temperature-anomaly" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-paired-line-graph-co2-us-china">
+<div class="para" id="p-derived-greenhouse-gas-image-paired-line-graph-co2-us-china">A graph with years on the horizontal axis and total co2 emissions in gigatons on the vertical axis. The values for the USA and China from 1960 to 2018 are represented as points on the graph, with the horizontal position determined by year and the vertical position determined by emissions. The data shown in the graph is in overall co2 emissions for the USA and China from 1960 to 2018 [Excel Spreadsheet].</div>
+<div class="autopermalink" data-description="Item 8"><a href="#greenhouse-gas-image-paired-line-graph-co2-us-china" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-paired-line-graph-co2-us-singapore">
+<div class="para" id="p-derived-greenhouse-gas-image-paired-line-graph-co2-us-singapore">A graph with years on the horizontal axis and total co2 emissions in gigatons on the vertical axis. The values for the USA and Singapore from 1960 to 2018 are represented as points on the graph, with the horizontal position determined by year and the vertical position determined by emissions. The data shown in the graph is in overall co2 emissions for the USA and Singapore from 1960 to 2018 [Excel Spreadsheet].</div>
+<div class="autopermalink" data-description="Item 9"><a href="#greenhouse-gas-image-paired-line-graph-co2-us-singapore" title="Copy heading and permalink for Item 9" aria-label="Copy heading and permalink for Item 9">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-side-by-side-line-graph-co2-singapore">
+<div class="para" id="p-derived-greenhouse-gas-image-side-by-side-line-graph-co2-singapore">A graph with years on the horizontal axis and total co2 emissions in kilotons on the vertical axis. The values for Singapore from 1960 to 2018 are represented as points on the graph, with the horizontal position determined by year and the vertical position determined by emissions. The data shown in the graph is in overall co2 emissions for the USA and Singapore from 1960 to 2018 [Excel Spreadsheet].</div>
+<div class="autopermalink" data-description="Item 10"><a href="#greenhouse-gas-image-side-by-side-line-graph-co2-singapore" title="Copy heading and permalink for Item 10" aria-label="Copy heading and permalink for Item 10">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-side-by-side-line-graph-co2-us">
+<div class="para" id="p-derived-greenhouse-gas-image-side-by-side-line-graph-co2-us">A graph with years on the horizontal axis and total co2 emissions in kilotons on the vertical axis. The values for the United States from 1960 to 2018 are represented as points on the graph, with the horizontal position determined by year and the vertical position determined by emissions. The data shown in the graph is in overall co2 emissions for the USA and Singapore from 1960 to 2018 [Excel Spreadsheet].</div>
+<div class="autopermalink" data-description="Item 11"><a href="#greenhouse-gas-image-side-by-side-line-graph-co2-us" title="Copy heading and permalink for Item 11" aria-label="Copy heading and permalink for Item 11">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-paired-bar-graph-vehicles-gb-us">A graph with number of vehicles on the horizontal access and percentage of households owning that many vehicles on the vertical axis.  For each number of vehicles, there is a bar representing the percentage of Great Britain households and a bar representing the percentage of United States households.  The height of the bar is determined by the percentage.  The data contained in the graph is shown here: <figure class="table table-like" id="greenhouse-gas-image-paired-bar-graph-vehicles-gb-us-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.11.1<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Table 5.11.1"><a href="#greenhouse-gas-image-paired-bar-graph-vehicles-gb-us-1" title="Copy heading and permalink for Table 5.11.1" aria-label="Copy heading and permalink for Table 5.11.1">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines"></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines" colspan="2">Percentage of Households</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Number of vehicles</td>
+<td class="l m b0 r0 l0 t0 lines">Great Britain</td>
+<td class="l m b0 r0 l0 t0 lines">United States</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">25%</td>
+<td class="l m b0 r0 l0 t0 lines">9%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">43%</td>
+<td class="l m b0 r0 l0 t0 lines">32%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">23%</td>
+<td class="l m b0 r0 l0 t0 lines">37%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">6%</td>
+<td class="l m b0 r0 l0 t0 lines">15%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">2%</td>
+<td class="l m b0 r0 l0 t0 lines">5%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5+</td>
+<td class="l m b0 r0 l0 t0 lines">1%</td>
+<td class="l m b0 r0 l0 t0 lines">2%</td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Item 12"><a href="#greenhouse-gas-image-paired-bar-graph-vehicles-gb-us" title="Copy heading and permalink for Item 12" aria-label="Copy heading and permalink for Item 12">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-pie-chart-vehicles-us">A circle divided into wedges, with each wedge proportional in size to the percentage of the United States population who own 0, 1, 2, 3, 4, or 5 or more vehicles.  The percentages also appear on the graph. The data shown in the chart is the United States data from the table below: <figure class="table table-like" id="greenhouse-gas-image-pie-chart-vehicles-us-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.11.2<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Table 5.11.2"><a href="#greenhouse-gas-image-pie-chart-vehicles-us-1" title="Copy heading and permalink for Table 5.11.2" aria-label="Copy heading and permalink for Table 5.11.2">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines"></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines" colspan="2">Percentage of Households</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Number of vehicles</td>
+<td class="l m b0 r0 l0 t0 lines">Great Britain</td>
+<td class="l m b0 r0 l0 t0 lines">United States</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">25%</td>
+<td class="l m b0 r0 l0 t0 lines">9%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">43%</td>
+<td class="l m b0 r0 l0 t0 lines">32%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">23%</td>
+<td class="l m b0 r0 l0 t0 lines">37%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">6%</td>
+<td class="l m b0 r0 l0 t0 lines">15%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">2%</td>
+<td class="l m b0 r0 l0 t0 lines">5%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5+</td>
+<td class="l m b0 r0 l0 t0 lines">1%</td>
+<td class="l m b0 r0 l0 t0 lines">2%</td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Item 13"><a href="#greenhouse-gas-image-pie-chart-vehicles-us" title="Copy heading and permalink for Item 13" aria-label="Copy heading and permalink for Item 13">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-pie-chart-vehicles-gb">A circle divided into wedges, with each wedge proportional in size to the percentage of the Great Britain population who own 0, 1, 2, 3, 4, or 5 or more vehicles.  The percentages also appear on the graph. The data shown in the chart is the Great Britain data from the table below: <figure class="table table-like" id="greenhouse-gas-image-pie-chart-vehicles-gb-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.11.3<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Table 5.11.3"><a href="#greenhouse-gas-image-pie-chart-vehicles-gb-1" title="Copy heading and permalink for Table 5.11.3" aria-label="Copy heading and permalink for Table 5.11.3">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines"></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines" colspan="2">Percentage of Households</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Number of vehicles</td>
+<td class="l m b0 r0 l0 t0 lines">Great Britain</td>
+<td class="l m b0 r0 l0 t0 lines">United States</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">25%</td>
+<td class="l m b0 r0 l0 t0 lines">9%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">43%</td>
+<td class="l m b0 r0 l0 t0 lines">32%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">23%</td>
+<td class="l m b0 r0 l0 t0 lines">37%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">6%</td>
+<td class="l m b0 r0 l0 t0 lines">15%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">2%</td>
+<td class="l m b0 r0 l0 t0 lines">5%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5+</td>
+<td class="l m b0 r0 l0 t0 lines">1%</td>
+<td class="l m b0 r0 l0 t0 lines">2%</td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Item 14"><a href="#greenhouse-gas-image-pie-chart-vehicles-gb" title="Copy heading and permalink for Item 14" aria-label="Copy heading and permalink for Item 14">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-stacked-bar-chart-vehicles-gb-us">Two bars, one for the United States and one for Great Britain.  Each bar is divided proportionally using the number of households with 0, 1, 2, 3, 4, or 5 or more vehicles in each country.  The data shown in the chart is the data in this table: <figure class="table table-like" id="greenhouse-gas-image-stacked-bar-chart-vehicles-gb-us-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.11.4<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Table 5.11.4"><a href="#greenhouse-gas-image-stacked-bar-chart-vehicles-gb-us-1" title="Copy heading and permalink for Table 5.11.4" aria-label="Copy heading and permalink for Table 5.11.4">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines"></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines" colspan="2">Percentage of Households</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Number of vehicles</td>
+<td class="l m b0 r0 l0 t0 lines">Great Britain</td>
+<td class="l m b0 r0 l0 t0 lines">United States</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">25%</td>
+<td class="l m b0 r0 l0 t0 lines">9%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">43%</td>
+<td class="l m b0 r0 l0 t0 lines">32%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">23%</td>
+<td class="l m b0 r0 l0 t0 lines">37%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">6%</td>
+<td class="l m b0 r0 l0 t0 lines">15%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">2%</td>
+<td class="l m b0 r0 l0 t0 lines">5%</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5+</td>
+<td class="l m b0 r0 l0 t0 lines">1%</td>
+<td class="l m b0 r0 l0 t0 lines">2%</td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Item 15"><a href="#greenhouse-gas-image-stacked-bar-chart-vehicles-gb-us" title="Copy heading and permalink for Item 15" aria-label="Copy heading and permalink for Item 15">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-co2-historical-emissions">
+<div class="para" id="p-derived-greenhouse-gas-image-co2-historical-emissions">A stacked 100% line chart, with years from 1750 to present on the x-axis, and percentage of total historical global CO2 emissions from 1750 to that year on the y-axis. Different colors denote the different regions of the world. The data shown in the chart is available at <a href="greenhouse-gas-references.html#greenhouse-gas-biblio-co2-historical-data" class="xref" data-knowl="./knowl/xref/greenhouse-gas-biblio-co2-historical-data.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 5.11.1.78">[5.11.1.78]</a>
+</div>
+<div class="autopermalink" data-description="Item 16"><a href="#greenhouse-gas-image-co2-historical-emissions" title="Copy heading and permalink for Item 16" aria-label="Copy heading and permalink for Item 16">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-co2-annual-emissions">
+<div class="para" id="p-derived-greenhouse-gas-image-co2-annual-emissions">A stacked 100% line chart, with years from 1750 to present on the x-axis, and percentage of annual global CO2 emissions from 1750 to that year on the y-axis. Different colors denote the different regions of the world. The data shown in the chart is available at <a href="greenhouse-gas-references.html#greenhouse-gas-biblio-co2-annual-data" class="xref" data-knowl="./knowl/xref/greenhouse-gas-biblio-co2-annual-data.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 5.11.1.79">[5.11.1.79]</a>
+</div>
+<div class="autopermalink" data-description="Item 17"><a href="#greenhouse-gas-image-co2-annual-emissions" title="Copy heading and permalink for Item 17" aria-label="Copy heading and permalink for Item 17">🔗</a></div>
+</li>
+<li id="greenhouse-gas-image-emissions-by-corporation">
+<div class="para" id="p-derived-greenhouse-gas-image-emissions-by-corporation">A bar chart, with a list of corporation names on the x-axis, and the total emissions of those corporations, in millions of tons of CO2 equivalents, over the history of the corporation.  The data shown in the chart is from <a href="greenhouse-gas-exercises.html#greenhouse-gas-table-emissions-by-corporation" class="xref" data-knowl="./knowl/xref/greenhouse-gas-table-emissions-by-corporation.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 5.10.3">Table 5.10.3</a>.</div>
+<div class="autopermalink" data-description="Item 18"><a href="#greenhouse-gas-image-emissions-by-corporation" title="Copy heading and permalink for Item 18" aria-label="Copy heading and permalink for Item 18">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Subsection 5.11.2: Image Descriptions"><a href="#greenhouse-gas-references-3" title="Copy heading and permalink for Subsection 5.11.2: Image Descriptions" aria-label="Copy heading and permalink for Subsection 5.11.2: Image Descriptions">🔗</a></div></section><div class="autopermalink" data-description="Section 5.11: References"><a href="#greenhouse-gas-references" title="Copy heading and permalink for Section 5.11: References" aria-label="Copy heading and permalink for Section 5.11: References">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="greenhouse-gas-exercises.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="payday-loans.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

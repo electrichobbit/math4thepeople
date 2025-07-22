@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cui Bono – Who Benefits?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math for the People">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.787a04695534ef1e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://web.stevenson.edu/mbranson/math-for-the-people.html"><img src="external/images/Math_Fist.PNG" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="math-for-the-people.html"><span class="title">Math for the People</span></a></h1>
+<p class="byline">Mark Branson (Editor), Whitney George (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="fake-news-understanding-the-issue.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="fake-news.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="fake-news-big-problem.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="math-for-the-people-front-matter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="instructors-note.html" class="internal"><span class="title">A Note for Instructors</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="students-note.html" class="internal"><span class="title">A Note for Students</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="abortion.html" class="internal"><span class="codenumber">1</span> <span class="title">Abortion Access Throughout the United States</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-objectives.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-background.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-cui-bono.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-big-problem.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Big Problem: Restricting Abortion Access</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-simple-logic.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Simple Logic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Negating and Combining Statements with "and" and "or"</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-negation-2" class="internal"><span class="codenumber">1.5.1.1</span> <span class="title">Negations</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-and-or" class="internal"><span class="codenumber">1.5.1.2</span> <span class="title">And &amp; Or</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-equivalent-statements" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Equivalent Statements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-simple-logic.html#abortion-if-then" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Implications (If-Then Statements)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-quantifiers.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Quantifiers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-arguments.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Arguments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-valid-arguments" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Valid Arguments</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="abortion-arguments.html#abortion-sound-arguments" class="internal"><span class="codenumber">1.7.2</span> <span class="title">Sound Arguments</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Definitions, Assumptions, and Fallacies</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Case Study 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion_case-study-1-argument" class="internal"><span class="codenumber">1.8.1.1</span> <span class="title">Case Study 1: The Argument</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-discussion" class="internal"><span class="codenumber">1.8.1.2</span> <span class="title">Case Study 1: Discussion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-1-Refuting" class="internal"><span class="codenumber">1.8.1.3</span> <span class="title">Case Study 1: Refuting the Argument</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2" class="internal"><span class="codenumber">1.8.2</span> <span class="title">Case Study 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="abortion-defs-assumptions-fallacies.html#abortion-case-study-2-discussion" class="internal"><span class="codenumber">1.8.2.1</span> <span class="title">Case Study 2: Discussion</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-solving-for-change.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="abortion-reflection.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="abortion-exercises.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="abortion-references.html" class="internal"><span class="codenumber">1.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="environmental-racism.html" class="internal"><span class="codenumber">2</span> <span class="title">Environmental Racism</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-objectives.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Objectives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-objectives.html#environmental-racism-objectives-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Mathematical/Quantitative Objectives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-objectives.html#environmental-racism-objectives-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Environmental Justice Objectives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-understanding-the-issue.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-understanding-the-issue.html#environmental-racism-understanding-the-issue-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title"></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="environmental-racism-cui-bono.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="environmental-racism-big-problem.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Big Problem: Environmental Racism</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-data-classification.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Data Classification</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-data-classification.html#environmental-racism-data-visualization-classification-data-types" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Data types</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-data-classification.html#environmental-racism-types-of-data-exercises" class="internal"><span class="codenumber">2.5.2</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Choosing Data Visualizations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-data-visualization-importance" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Why is data visualization important?</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Types of Data Visualizations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-3" class="internal"><span class="codenumber">2.6.2.1</span> <span class="title">Pie charts</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-4" class="internal"><span class="codenumber">2.6.2.2</span> <span class="title">Bar graph</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-5" class="internal"><span class="codenumber">2.6.2.3</span> <span class="title">Histogram</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-6" class="internal"><span class="codenumber">2.6.2.4</span> <span class="title">Histogram vs Bar graph</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-7" class="internal"><span class="codenumber">2.6.2.5</span> <span class="title">Box plot</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="environmental-racism-choosing-data-visualization.html#environmental-racism-choosing-data-visualization-4-8" class="internal"><span class="codenumber">2.6.2.6</span> <span class="title">Scatter plot</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-solving-for-change.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Solving for change</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-solving-for-change.html#environmental-racism-solving-for-change-3" class="internal"><span class="codenumber">2.7.1</span> <span class="title">In-depth Exploration</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="environmental-racism-reading-questions.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="environmental-racism-exercises.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environmental-racism-references.html" class="internal"><span class="codenumber">2.10</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-references.html#environmental-racism-references-2" class="internal"><span class="codenumber">2.10.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environmental-racism-references.html#environmental-racism-image-descriptions" class="internal"><span class="codenumber">2.10.2</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="fake-news.html" class="internal"><span class="codenumber">3</span> <span class="title">Fake News</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fake-news-objectives.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fake-news-understanding-the-issue.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="fake-news-cui-bono.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Cui Bono – Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fake-news-big-problem.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Big Problem</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="fake-news-error-analysis.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Error Analysis</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fake-news-error-analysis.html#fake-news-error-analysis-introduction" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Introduction to Error Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fake-news-error-analysis.html#fake-news-error-analysis-error-propogation" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Error Propogation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fake-news-misleading-graphs.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Misleading Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fake-news-solving-for-change.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="fake-news-reading-questions.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fake-news-exercises.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="fake-news-references.html" class="internal"><span class="codenumber">3.10</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fake-news-references.html#fake-news-references-2" class="internal"><span class="codenumber">3.10.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fake-news-references.html#fake-news-image-descriptions" class="internal"><span class="codenumber">3.10.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="gerrymandering.html" class="internal"><span class="codenumber">4</span> <span class="title">Gerrymandering</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-objectives.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-background.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-cui-bono.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-big-problem.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Big Problem: Using Mathematics to Determine Fairness</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gerrymandering-math-topic-compactness.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Geometry and Compactness</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-compactness.html#gerrymandering-math-topic-compactness-4" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Packing and Cracking: How drawing lines can change outcomes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-compactness.html#gerrymandering-math-topic-compactness-5" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Three Ways to Measure Compactness of a District</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-compactness.html#gerrymandering-math-topic-compactness-6" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Compactness Criteria</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-compactness.html#gerrymandering-math-topic-compactness-7" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Caution: Fairness Goes Beyond Geometry</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gerrymandering-math-topic-partisan-gerrymandering.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Partisan Gerrymandering</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-partisan-gerrymandering.html#gerrymandering-math-topic-partisan-gerrymandering-3" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Efficiency Gap</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-partisan-gerrymandering.html#gerrymandering-math-topic-partisan-gerrymandering-4" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Mean-Median Difference</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-partisan-gerrymandering.html#gerrymandering-math-topic-partisan-gerrymandering-5" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Caution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gerrymandering-math-topic-statistics.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Racial Gerrymandering and Statistics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-statistics.html#gerrymandering-math-topic-statistics-3" class="internal"><span class="codenumber">4.7.1</span> <span class="title">Inference</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-statistics.html#gerrymandering-math-topic-statistics-4" class="internal"><span class="codenumber">4.7.2</span> <span class="title">Scatterplots and linear regression</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-math-topic-statistics.html#gerrymandering-math-topic-statistics-5" class="internal"><span class="codenumber">4.7.3</span> <span class="title">Caution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-math-topic-outlier.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Outlier Analysis</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="gerrymandering-solving-for-change.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-solving-for-change.html#gerrymandering-solving-for-change-3" class="internal"><span class="codenumber">4.9.1</span> <span class="title">Learn a state’s redistricting process.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-solving-for-change.html#gerrymandering-solving-for-change-4" class="internal"><span class="codenumber">4.9.2</span> <span class="title">Use a redistricting mapping program (website) to draw a "fair" map for a state.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-solving-for-change.html#gerrymandering-solving-for-change-5" class="internal"><span class="codenumber">4.9.3</span> <span class="title">Learn about ways you can get involved</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="gerrymandering-reflection.html" class="internal"><span class="codenumber">4.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="gerrymandering-exercises.html" class="internal"><span class="codenumber">4.11</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-exercises.html#gerrymandering-exercises-1" class="internal"><span class="codenumber">4.11.1</span> <span class="title">Geometry Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-exercises.html#gerrymandering-exercises-2" class="internal"><span class="codenumber">4.11.2</span> <span class="title">Partisan Gerrymandering Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="gerrymandering-exercises.html#gerrymandering-exercises-3" class="internal"><span class="codenumber">4.11.3</span> <span class="title">Racial Gerrymandering Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="gerrymandering-references.html" class="internal"><span class="codenumber">4.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="greenhouse-gas.html" class="internal"><span class="codenumber">5</span> <span class="title">Greenhouse Gas Emissions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="greenhouse-gas-objectives.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="greenhouse-gas-background.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="greenhouse-gas-cui-bono.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="greenhouse-gas-big-problem.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Big Problem: What is the best way to reduce greenhouse gas emissions?</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="greenhouse-gas-math-topic-scientific-notation.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Scientific Notation and Number Sense</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-scientific-notation.html#greenhouse-gas-math-topic-scientific-notation-2" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Thinking about Size Comparisons</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-scientific-notation.html#greenhouse-gas-math-topic-scientific-notation-3" class="internal"><span class="codenumber">5.5.2</span> <span class="title">What is Scientific Notation?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-scientific-notation.html#greenhouse-gas-math-topic-scientific-notation-4" class="internal"><span class="codenumber">5.5.3</span> <span class="title">Significant figures</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Data Visualization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-types-of-data" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Types of Data</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Graphs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-bar" class="internal"><span class="codenumber">5.6.2.1</span> <span class="title">Bar Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-4" class="internal"><span class="codenumber">5.6.2.2</span> <span class="title">Pie Charts</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-5" class="internal"><span class="codenumber">5.6.2.3</span> <span class="title">Scatterplots and Line Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-combining-graphs" class="internal"><span class="codenumber">5.6.2.4</span> <span class="title">Combining Graphs</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-other-visualizations" class="internal"><span class="codenumber">5.6.2.5</span> <span class="title">Other Ways of Visualizing Information</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-data-visualization.html#greenhouse-gas-math-topic-data-visualization-graphs-accessibility" class="internal"><span class="codenumber">5.6.2.6</span> <span class="title">Accessibiliity</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="greenhouse-gas-math-topic-mathematical-models.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Mathematical Models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-mathematical-models.html#greenhouse-gas-math-topic-mathematical-models-3" class="internal"><span class="codenumber">5.7.1</span> <span class="title">The Green House Effect</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="greenhouse-gas-math-topic-mathematical-models.html#greenhouse-gas-math-topic-mathematical-models-4" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Modeling the Green House Effect</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="greenhouse-gas-math-topic-mathematical-models.html#greenhouse-gas-math-topic-mathematical-models-4-3" class="internal"><span class="codenumber">5.7.2.1</span> <span class="title">First Model: one level of atmosphere</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="greenhouse-gas-solving-for-change.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-solving-for-change.html#greenhouse-gas-solving-for-change-3" class="internal"><span class="codenumber">5.8.1</span> <span class="title">Who is responsible for greenhouse gas emissions?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-solving-for-change.html#greenhouse-gas-solving-for-change-4" class="internal"><span class="codenumber">5.8.2</span> <span class="title">What are the strategies for reducing emissions?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-solving-for-change.html#greenhouse-gas-solving-for-change-5" class="internal"><span class="codenumber">5.8.3</span> <span class="title">Consequences of Failing to Act</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="greenhouse-gas-reflection.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="greenhouse-gas-exercises.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-exercises.html#greenhouse-gas-exercises-12" class="internal"><span class="codenumber">5.10.1</span> <span class="title">Generative AI Prompts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="greenhouse-gas-references.html" class="internal"><span class="codenumber">5.11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-references.html#greenhouse-gas-references-2" class="internal"><span class="codenumber">5.11.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="greenhouse-gas-references.html#greenhouse-gas-references-3" class="internal"><span class="codenumber">5.11.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="payday-loans.html" class="internal"><span class="codenumber">6</span> <span class="title">Payday Loans</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-objectives.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-background.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-interest-and-risk" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Interest and Risk</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Types of Loans and Lenders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-payday" class="internal"><span class="codenumber">6.2.2.1</span> <span class="title">Payday Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-bank" class="internal"><span class="codenumber">6.2.2.2</span> <span class="title">Bank Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-government" class="internal"><span class="codenumber">6.2.2.3</span> <span class="title">Government Loans</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-types-of-loans-pawn" class="internal"><span class="codenumber">6.2.2.4</span> <span class="title">Pawn</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-background.html#payday-loans-background-discriminatory-lending" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Discriminatory Lending</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-cui-bono.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="payday-loans-big-problem.html" class="internal"><span class="codenumber">6.4</span> <span class="title">The Big Problem: Predatory Lending</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-interest.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Simple and Compound Interest</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-simple-interest" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Simple Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-compound-interest" class="internal"><span class="codenumber">6.5.2</span> <span class="title">Compound Interest</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-interest.html#payday-loans-solving-for-apr" class="internal"><span class="codenumber">6.5.3</span> <span class="title">Finding the Interest Rate</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-risk.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Risk and Credit Scores</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-probability" class="internal"><span class="codenumber">6.6.1</span> <span class="title">Introduction to Probability</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-expected-value" class="internal"><span class="codenumber">6.6.2</span> <span class="title">Expected Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-risk.html#payday-loans-lending-decisions" class="internal"><span class="codenumber">6.6.3</span> <span class="title">How Banks Make Lending Decisions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-correlation.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Correlation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-definition" class="internal"><span class="codenumber">6.7.1</span> <span class="title">Defining the Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-4" class="internal"><span class="codenumber">6.7.2</span> <span class="title">Computing Correlation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-correlation.html#payday-loans-correlation-5" class="internal"><span class="codenumber">6.7.3</span> <span class="title">Using Correlation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-solving-for-change.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-3" class="internal"><span class="codenumber">6.8.1</span> <span class="title">If people are willing to pay...</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-4" class="internal"><span class="codenumber">6.8.2</span> <span class="title">We have to charge those rates, because of the risk!</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-5" class="internal"><span class="codenumber">6.8.3</span> <span class="title">If we don’t lend to them, who will?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-solving-for-change.html#payday-loans-solving-for-change-6" class="internal"><span class="codenumber">6.8.4</span> <span class="title">What Can We Do?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="payday-loan-reflection.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises">
+<div class="toc-title-box"><a href="payday-loans-exercises.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-exercises.html#payday-loans-exercises-22" class="internal"><span class="codenumber">6.10.1</span> <span class="title">Generative AI Prompts</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="payday-loans-references.html" class="internal"><span class="codenumber">6.11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-2" class="internal"><span class="codenumber">6.11.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="payday-loans-references.html#payday-loans-references-3" class="internal"><span class="codenumber">6.11.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_first.html" class="internal"><span class="codenumber">7</span> <span class="title">Poverty as a Health Issue</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poverty-health-objectives.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poverty-health-background.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-background.html#poverty-health-background-2" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Why is good health important?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-background.html#poverty-health-background-3" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Access to healthcare</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-background.html#poverty-health-background-4" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Social determinants of health</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-background.html#poverty-health-background-5" class="internal"><span class="codenumber">7.2.4</span> <span class="title">The role of nonprofits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poverty-health-cui-bono.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-cui-bono.html#poverty-health-cui-bono-4" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Redlining, disinvestment, and race and geography as social determinants of health</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-cui-bono.html#poverty-health-cui-bono-5" class="internal"><span class="codenumber">7.3.2</span> <span class="title">Whataboutism</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poverty-health-big-problem.html" class="internal"><span class="codenumber">7.4</span> <span class="title">The Big Problem: Optimizing the Placement of Mobile Health Clinics</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poverty-health-permcomb.html" class="internal"><span class="codenumber">7.5</span> <span class="title">The Product and Division Rules; Permutations and Combinations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-permcomb.html#poverty-health-permcomb-5" class="internal"><span class="codenumber">7.5.1</span> <span class="title">The product rule and permutations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-permcomb.html#poverty-health-permcomb-6" class="internal"><span class="codenumber">7.5.2</span> <span class="title">The division rule and combinations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poverty-health-addition-subtraction.html" class="internal"><span class="codenumber">7.6</span> <span class="title">The Addition and Subtraction Rules; Inclusion-Exclusion</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poverty-health-parametric-linear-models.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Parametric Linear Models</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poverty-health-discrete-optimization.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Discrete Optimization</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poverty-health-solve.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-solve.html#poverty-health-solve-16" class="internal"><span class="codenumber">7.9.1</span> <span class="title">Final model</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="poverty-health-reflection.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="poverty-health-exercises.html" class="internal"><span class="codenumber">7.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poverty-health-references.html" class="internal"><span class="codenumber">7.12</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-references.html#poverty-health-references-2" class="internal"><span class="codenumber">7.12.1</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poverty-health-references.html#poverty-health-references-3" class="internal"><span class="codenumber">7.12.2</span> <span class="title">Image Descriptions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="racism-in-policing.html" class="internal"><span class="codenumber">8</span> <span class="title">Racism in Policing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="racism-in-policing-objectives.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="racism-in-policing-understanding-the-issue.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="racism-in-policing-cui-bono.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cui Bono: Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="racism-in-policing-big-problem.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Big Problem: Racially-biased Policing</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="racism-policing-understanding-data.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Understanding data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-understanding-data-summarizing-data" class="internal"><span class="codenumber">8.5.1</span> <span class="title">Summarizing Data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-understanding-data-summarizing-data-numerical" class="internal"><span class="codenumber">8.5.1.1</span> <span class="title">Numerical data</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-understanding-data-categorical-data" class="internal"><span class="codenumber">8.5.1.2</span> <span class="title">Categorical data</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-proportions" class="internal"><span class="codenumber">8.5.2</span> <span class="title">Proportions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-proportions-traffic-stops" class="internal"><span class="codenumber">8.5.2.1</span> <span class="title">Are there more traffic stops in Hartford or Philadelphia?</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="racism-policing-understanding-data.html#racism-policing-proportions-race-in-stops" class="internal"><span class="codenumber">8.5.2.2</span> <span class="title">Are Black drivers stopped more often than drivers of other races?</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="racism-in-policing-bayes-theorem.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Bayes’ Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="racism-in-policing-bayes-theorem.html#racism-in-policing-bayes-theorem-false-positives" class="internal"><span class="codenumber">8.6.1</span> <span class="title">Using Bayes’ Theorem to calculate false positives</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="racism-policing-solving-for-change.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="racism-policing-solving-for-change.html#racism-policing-proportions-searches" class="internal"><span class="codenumber">8.7.1</span> <span class="title">Are stopped drivers searched more often if they are Black?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="racism-policing-solving-for-change.html#racism-in-policing-bayes-theorem-policing" class="internal"><span class="codenumber">8.7.2</span> <span class="title">Applying Bayes’ Theorem to policing: practice problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="racism-policing-solving-for-change.html#racism-in-policing-bayes-theorem-google-colab" class="internal"><span class="codenumber">8.7.3</span> <span class="title">Using Google Colab and Python to analyze a large police stop dataset</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="racism-policing-reading-questions.html" class="internal"><span class="codenumber">8.8</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="racism-policing-exercises.html" class="internal"><span class="codenumber">8.9</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="racism-policing-references.html" class="internal"><span class="codenumber">8.10</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="school-discipline.html" class="internal"><span class="codenumber">9</span> <span class="title">School Discipline</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-objectives.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-background.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Understanding the Issue</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-cui-bono.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-big-problem.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Big Problem: School-to-Prison Pipeline</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-math-topic-ratios.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Ratios</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-math-topic-percents.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Percents</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="school-discipline-math-topic-probability.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Probability</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-math-topic-probability.html#school-discipline-math-topic-probability-3" class="internal"><span class="codenumber">9.7.1</span> <span class="title">The complement</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-math-topic-probability.html#school-discipline-math-topic-probability-4" class="internal"><span class="codenumber">9.7.2</span> <span class="title">Mutually exclusive events</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-math-topic-probability.html#school-discipline-math-topic-probability-5" class="internal"><span class="codenumber">9.7.3</span> <span class="title">Independent Events</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-10.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Using CODAP</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="school-discipline-solving-for-change.html" class="internal"><span class="codenumber">9.9</span> <span class="title">Solving for Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-3" class="internal"><span class="codenumber">9.9.1</span> <span class="title">What is the School-to-Prison Pipeline?</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-4" class="internal"><span class="codenumber">9.9.2</span> <span class="title">History of police in schools</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-4-3" class="internal"><span class="codenumber">9.9.2.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-4-4" class="internal"><span class="codenumber">9.9.2.2</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-5" class="internal"><span class="codenumber">9.9.3</span> <span class="title">Presence of other student supports in schools</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-5-3" class="internal"><span class="codenumber">9.9.3.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-5-4" class="internal"><span class="codenumber">9.9.3.2</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-6" class="internal"><span class="codenumber">9.9.4</span> <span class="title">Who gets arrested in schools</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-6-3" class="internal"><span class="codenumber">9.9.4.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-6-4" class="internal"><span class="codenumber">9.9.4.2</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-7" class="internal"><span class="codenumber">9.9.5</span> <span class="title">Who gets suspended from school</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-7-3" class="internal"><span class="codenumber">9.9.5.1</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-7-4" class="internal"><span class="codenumber">9.9.5.2</span> <span class="title">Analyzing school suspension data</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-7-5" class="internal"><span class="codenumber">9.9.5.3</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-8" class="internal"><span class="codenumber">9.9.6</span> <span class="title">Where is the pipeline?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="school-discipline-solving-for-change.html#school-discipline-solving-for-change-9" class="internal"><span class="codenumber">9.9.7</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="school-discipline-reflection.html" class="internal"><span class="codenumber">9.10</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="school-discipline-exercises.html" class="internal"><span class="codenumber">9.11</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="school-discipline-references.html" class="internal"><span class="codenumber">9.12</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="student-loans.html" class="internal"><span class="codenumber">10</span> <span class="title">Student Loans</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-objectives.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="student-loans-background.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Understanding the Issue</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="student-loans-background.html#student-loans-background-3" class="internal"><span class="codenumber">10.2.1</span> <span class="title">References to Explore</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-cui-bono.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Cui Bono - Who Benefits?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-big-problem.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Big Problem: the Staggering and Inequitable Burden of U.S. Student Debt</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-math-topic-changes-in-college-tuition.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Changes in College Tuition over Time</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-debt-by-college-type.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Student Debt by College Type</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-intersectional-inequities.html" class="internal"><span class="codenumber">10.7</span> <span class="title">the Intersectional Inequities of Student Debt</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-solving-for-change.html" class="internal"><span class="codenumber">10.8</span> <span class="title">Solving for Change</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="student-loans-reflection.html" class="internal"><span class="codenumber">10.9</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="student-loans-exercises.html" class="internal"><span class="codenumber">10.10</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="student-loans-references.html" class="internal"><span class="codenumber">10.11</span> <span class="title">References</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="math-for-the-people-references.html" class="internal"><span class="codenumber">11</span> <span class="title">References</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="math-for-the-people-bibliography.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Bibliography</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="fake-news-cui-bono"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.3</span><span class="space"> </span><span class="title">Cui Bono – Who Benefits?</span>
+</h2>
+<div class="para" id="fake-news-cui-bono-2">If we cannot get accurate information, then people cannot solve problems together. If people cannot agree on what the problems are, how widespread they are, and how effective various solutions are, they will not be able to work on making life better for everyone. If we as a people do not make any progress, then the people who stand to gain from the current system continue to benefit. When no one can agree on how to solve problems, then the people who benefit from the existence of the problems will continue to receive those benefits.<div class="autopermalink" data-description="Paragraph"><a href="#fake-news-cui-bono-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 3.3: Cui Bono – Who Benefits?"><a href="#fake-news-cui-bono" title="Copy heading and permalink for Section 3.3: Cui Bono – Who Benefits?" aria-label="Copy heading and permalink for Section 3.3: Cui Bono – Who Benefits?">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="fake-news-understanding-the-issue.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="fake-news-big-problem.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

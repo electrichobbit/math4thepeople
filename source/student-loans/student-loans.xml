@@ -1,0 +1,856 @@
+<chapter xml:id="student-loans"  xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Student Loans</title>
+	<introduction xml:id="student-loans-introduction">
+		<p>
+			<em>This module was authored by <xref ref="kince"/>.</em>
+		</p>
+	</introduction>
+	<section xml:id="student-loans-objectives">
+		<title>Objectives</title>
+		<p>
+			By the end of this module, an engaged learner will be able to: 
+			<ol>
+				<li> 
+					understand the impact of student demographics, type of institution, and time on student loan debt.
+				</li>
+				<li>
+					perform exploratory data analysis on a numerical variable (college tuition, student loan debt) as a function of a numerical (year) or categorical (institution type, student demographics) variable.
+				</li>
+				<ul>
+					<li> 
+						create line charts of student loan data over time.
+					</li>
+					<li> 
+						create scatterplots of student loan debt versus college graduation rates.
+					</li>
+					<li> 
+						create bar charts of the average student loan debt owed by various demographic groups.
+					</li>
+					<li> 
+						compute summary statistics to describe each of the above.
+					</li>
+				</ul>
+				<li> 
+					use linear regression and correlation to judge trends in numerical data on tuition and student loan debt as a function of time and predict future outcomes. 
+				</li>
+				<li> 
+					use a chi-squared test for independence to analyze the impact of student demographics (race, gender, and others) on student loan debt load.
+				</li>
+				<li> 
+					understand how data analysis can contribute to understanding the impact of student loan debt and government policy on student loans.
+				</li>
+			</ol>
+		</p>
+	</section>
+	<section xml:id="student-loans-background">
+		<title>Understanding the Issue</title>
+		<introduction>
+			<p>
+				In <m>2020</m>, Joseph Biden, Jr., said during his winning campaign for U.S. President that he would forgive <m>\$10,000</m> in debt for all those who had taken out student loans. In June <m>2021</m>, in the Education Department's largest student loan forgiveness action currently in effect, it eliminated <m>\$5.8</m> billion in debt owed by <m>560,000</m> former students of the now-defunct for-profit Corinthian Colleges system, which collapsed in <m>2015</m> amid federal investigations and lawsuits <xref ref="cowleyBillionLoansWill2022"/>. 
+			</p>
+			<p>
+				One year later, on August <m>24</m>, <m>2022</m>, President Biden announced a plan that would forgive <m>\$10,000</m> for a subset of lower-income student debtors who had attended both for-profit and nonprofit colleges, then an additional <m>\$10,000</m> in student debt for an additional subset of highest-need borrowers. This plan was immediately controversial, quickly challenged by many Republican-led states, and unanimously blocked by the U.S. Court of Appeals for the Eighth Circuit on November <m>14</m>, <m>2022</m> <xref ref="cowleyAppealsCourtBlocks2022"/>. This injunction preventing debt forgiveness from coming into effect was upheld by the U.S. Supreme Court, which heard arguments in February <m>2023</m> on the case. 
+			</p>
+			<p>
+				Finally, on January <m>10</m>, <m>2023</m>, President Biden proposed a novel income-based federal student loan repayment plan <xref ref="bernardWhatKnowBiden2023"/>. Why did President Biden feel the political impetus to forgive student loan debt? What were the political causes of and blowback to these debt forgiveness actions, and why were they so controversial? Whether or not Biden's loan forgiveness policy is overturned by the Supreme Court, what would its impacts be, and should future Presidents and legislators continue to advocate for student loan forgiveness?
+			</p>
+			<p>
+				In this module, we begin by attempting to understand student loan debt through an analysis of media and political claims and the academic literature. Specifically, we ask:
+				<ul>
+					<li>
+						What are the causes of the current level of student loan debt?
+					</li>
+					<li> 
+						Who benefits from the high rate of student loan debt in the U.S.?
+					</li>
+					<li> 
+						How does the load of student loan debt impact college students' and graduates' lives?
+					</li>
+					<li> 
+						What factors, including time and the nonprofit status of a college, impact the burden of debt faced by students?
+					</li>
+					<li> 
+						How do historical and present inequities, such as systemic racism, impact student loan debt load and default rates?
+					</li>
+					<li> 
+						What is the federal government doing in response to the large amount of student loan debt in the U.S.?
+					</li>
+				</ul>
+			</p>
+		</introduction>
+		<subsection>
+			<title>References to Explore</title>
+			<ul>
+				<li>
+					<url href="https://www.youtube.com/watch?v=P8pjd1QEA0c">Last Week Tonight with John Oliver - Student Debt (2014)</url>
+				</li>
+				<li>
+					<url href="https://web.archive.org/web/20230122063133/https://www.nytimes.com/interactive/2022/08/26/your-money/student-loan-forgiveness-debt.html">Internet Archive - The Toll of Student Debt in the U.S. (New York Times, 2023)</url>
+				</li>
+				<li>
+					<url href="https://web.archive.org/web/20230406021331/https://www.nytimes.com/2023/01/10/your-money/student-loans-income-driven-repayment.html">Internet Archive - What to Know About Biden's Income-Driven Repayment Proposal (New York Times, 2023)</url>
+				</li>
+				<li>
+					<url href="https://eric.ed.gov/?id=ED621932">Disproportionately Impacted: Closing the Racial Weath Gap through Student Loan Cancellation, Payment Reforms, and Investment in College Affordability (Center for Law and Social Policy, 2022)</url>
+				</li>
+			</ul>
+		</subsection>
+	</section>
+	<section xml:id="student-loans-cui-bono">
+		<title>Cui Bono - Who Benefits?</title>
+		<exercise xml:id="student-loans-cui-bono-introductory-video-exercise">
+			<title>Introductory Video Exercise</title>
+			<p>
+				The comedian Hasan Minhaj, of the former Netflix weekly show Patriot Act, focused a <url href="https://www.youtube.com/watch?v=t0CyBv18A5k">popular episode</url> <xref ref="netflixisajokeStudentLoansPatriot2019"/> of his show on student loans in the US. Amazingly, this led to an invitation to testify before Congress on September 10, 2019, on the student loan debt crisis.
+			</p>
+			<figure xml:id="student-loans-patriot-act-video">
+				<video youtube="t0CyBv18A5k"/>
+				<caption>
+					Hasan Minhaj presents information on student loans.
+				</caption>
+			</figure>
+			<p>
+				Please watch <xref ref="student-loans-patriot-act-video"/>, then answer the following questions. 
+			</p>
+			<ol>
+				<li>
+					What are some of the consequences that are faced by people who can't pay off their student loans? 
+				</li>
+				<li>
+					What happened in 2010 to change the landscape of student loan debt in the US? 
+				</li>
+				<li>
+					What are loan servicers, and what has their role been in the student loan crisis? 
+				</li>
+				<li>
+					What are three ways in which Navient has mistreated borrowers?
+				</li> 
+				<li>
+					What is an income-based repayment plan? What is forbearance, and why has it negatively affected borrowers when Navient encourages borrowers to enter forbearance instead of income-based repayment? 
+				</li>
+				<li>
+					In what ways does Minhaj argue that the Department of Education has " failed borrowers"?
+				</li>
+			</ol>
+		</exercise>
+		<p>
+			The highest proportion of student loan debt (the amount of debt held per student) is held by students at for-profit colleges <xref ref="benmillerOpinionStudentDebt2018"/>, which are colleges that are not funded by taxes but instead depend on federal student aid (guaranteed by the government) and the tuition dollars that students pay to attend, often backed up by federal student aid. Contrast this situation with the vast majority of colleges and universities in the U.S., which are nonprofit institutions, which are usually run by a not-for-profit institution, religious organization, or government and hence often receive funding from taxes or a particular religious group.
+		</p>
+		<p>
+			The greatest proportion of defaults (see <xref ref="student-loans-definition-default"/>) on student debt in <m>2015</m> occurred at the University of Phoenix, Walden University, Nova Southeastern University, Capella University, and Strayer University <xref ref="looneyCrisisStudentLoans2015"/>, of which all but Nova are for-profit.
+		</p>
+		<p>
+			Almost all students are eligible to receive federal student loans, which are student loans funded by the U.S. federal government through programs such as Pell Grants. Federal loans are either subsidized (that is, interest payments are covered by the federal government for a period including the student's time at a college or university <xref ref="departmentofeducationSubsidizedUnsubsidizedLoans2023"/>; such loans are restricted to undergraduates only) or unsubsidized (in which case borrowers must pay the interest). 
+		</p>
+		<p>
+			In contrast, private student loans are loans offered by non-governmental companies which are heavily advertised, do not offer the relatively generous forbearance and deferred-payment options that federal loans do, and charge interest while the borrower is in college. Often, private student loan interest rates are higher even than those of unsubsidized federal student loans. Since many students do not have a credit history, federal student loans do not require proof of, or a co-signer attesting, "creditworthiness", or evidence of past ability to repay debt; as of the <m>2010</m>s, most private student loans required such proof <xref ref="consumerfinancialprotectionbureauPrivateStudentLoans2012"/>. Additionally, students who declare bankruptcy are unable to discharge private student loans, meaning borrowers who have no money are still required to pay private corporations back for student loans <xref ref="ExceptionsDischarge"/>. Therefore, the U.S. government earns more income from student loans, but profits less, on average, than private student loan companies. 
+		</p>
+		<p>
+			Employers benefit from the number of students who attend college, including those who could not otherwise attend without taking out student loans. "Credentialism", the continuing growth in employers' expectations of postsecondary education on the part of their employees, has been called a key driver of student loan debt <xref ref="furquimAnyOtherTrap2022"/>. In <m>2020</m>, earnings were stagnant for most workers, but declined rapidly for workers with no college education. This pressures people to seek a college education whether or not they can afford it.
+		</p>
+		<p>
+			Finally, a <m>2022</m> article in <en>The Atlantic</en> <xref ref="demsasWhoReallyBenefits"/> implies that middle-class college graduates were able to advance their cause over other causes championed by more marginalized groups because they have higher relative political power compared to non-college graduates. Certainly, as we will see below, middle-class college graduates benefit a great deal from President Biden's <m>2022</m> student debt cancellation policy.
+		</p>
+	</section>
+	<section xml:id="student-loans-big-problem">
+		<title>Big Problem: the Staggering and Inequitable Burden of U.S. Student Debt</title>
+		<definition xml:id="student-loans-definition-student-loans">
+			<title>Student Loans</title>
+			<p> 
+				<term>Student loans</term> are a form of debt taken on in order to help students afford to pay tuition, fees, and other expenses necessary to attend colleges and universities. Unlike scholarships or grants, student loans must be repaid. 
+			</p>
+		</definition>
+		<p>
+			In July <m>2021</m>, student loan debt in the U.S. totaled <m>\$1.73</m> trillion. In <m>2019</m>, the average debt held by a student loan borrower was <m>\$30,000</m> <xref ref="nadwornyTheseArePeople2019"/>. 
+		</p>
+		<definition xml:id="student-loans-definition-default">
+			<title>Default</title>
+			<p>
+				<term>Defaulting</term> on a loan means a borrower stops making the required payments on that loan. When someone defaults on a student loan, the federal government is allowed to withhold their tax refund, paycheck, or (for older adults) Social Security payments.
+			</p>
+		</definition>
+		<p>
+			The average person to default on their student loans owes less than <m>\$10,000</m>, suggesting that defaulters are make significantly lower incomes than the average student loan borrower. Those borrowers who did not complete a college degree are three times as likely to default as those who completed <xref ref="nadwornyTheseArePeople2019"/>. Moreover, half of Black borrowers who took out loans in <m>2003</m>-<m>2004</m> had defaulted after <m>12</m> years. 
+		</p>
+		<definition xml:id="student-loans-definition-pell-grant">
+			<title>Pell Grant</title>
+			<p>
+				The <term>Pell Grant</term> is a federal government grant which provides money for college to low-income students that does not have to be repaid, unlike student loans. 
+			</p>
+		</definition>
+		<p>
+			Those who receive a Pell Grant, signaling they are low-income without adding to their debt, are still disproportionately likely to default on their student loans <xref ref="nadwornyTheseArePeople2019"/>.
+		</p>
+		<definition xml:id="student-loans-definition-college-types">
+			<title>For-Profit and Not-for-Profit Colleges</title>
+			<p>
+				All public and most private colleges (<m>91\%</m> of all colleges in <m>2016</m> <xref ref="theinstituteforcollegeaccess"/>) are <term>not-for-profit institutions</term>, meaning they invest their profits back into the institution and often operate under independent governance.
+			</p>
+			<p>
+				A college that is not registered as a not-for-profit institution is called a <term>for-profit college</term>.
+			</p>
+		</definition>
+		<definition xml:id="student-loans-definition-independent-governance">
+			<title>Independent Governance</title>
+			<p>
+				A college or university operates under <term>independent governance</term> if their leadership is required to focus on factors other than generating a profit when providing an education <xref ref="theinstituteforcollegeaccess"/>. 
+			</p>
+		</definition>
+		<p>
+			A government study in <m>2017</m> found that the default rates for student borrowers at for-profit institutions, which are not required to focus on factors other than profit, were nearly double compared to community colleges; for-profit institutions have more expensive tuition and fees than community colleges, have lower graduation rates, and have less valuable credentials <xref ref="jenniehwooRepaymentStudentLoans2017"/>.
+		</p>
+		<definition xml:id="student-loans-definition-tuition">
+			<title>Tuition</title>
+			<p>
+				Tuition is the amount of money charged by a college for instruction by faculty.
+			</p>
+		</definition>
+		<definition xml:id="student-loans-definition-student-fees">
+			<title>Student Fees</title>
+			<p>
+				A student fee is a sum of money charged to students at a school, college, or university in addition to tuition. Student fees may be used to support student organizations and activities, sports teams, exercise facilities, class supplies such as art materials, or anything else beyond the cost of instruction.
+			</p>
+		</definition>
+		<p>
+			The United States is a relative outlier compared to other nations in the high cost of college tuition and fees. For example, according to a late <m>2017</m> study by the Organisation for Economic Cooperation and Development (OECD), the U.S. has the highest average tuition costs of the <m>35</m> OECD member countries <xref ref="oecdEducationGlance20172017"/>. This tuition has increased over time.
+		</p>
+	</section>
+	<section xml:id="student-loans-math-topic-changes-in-college-tuition">
+		<title>Changes in College Tuition over Time</title>
+		<p>
+			Use <url href="https://docs.google.com/spreadsheets/d/1lbB5OSSsxrwQdDh5Px8fqMSRRwwvxseg/edit?usp=sharing&amp;ouid=113361107850751941418&amp;rtpof=true&amp;sd=true">the Excel spreadsheet on average undergraduate tuition and fees and room and board rates charged for full-time students in degree-granting institutions, by level and control of institution: 1969-70 through 2020-21</url> <xref ref="nationalcenterforeducationstatisticsIntegratedPostsecondaryEducation"/> to do the following: 
+		</p>
+		<ol>
+			<li xml:id="student-loans-changes-problem-graph">
+				Create a graph, trendline, and interpret the <m>R^{2}</m> value for each type of institution: public nonprofit, private nonprofit, private for-profit. What does it mean? 
+			</li>
+			<li>
+				Use it to predict average tuition and fees across the country in the current year. How accurate is your prediction? 
+			</li>
+			<li>
+				What trends over time do you notice in each the three graphs? Describe trends in words, using phrases like <em>increasing</em>, <em>decreasing</em>,<em>increasing slope</em>, <em>decreasing slope</em>. What overall trend do we notice that's common to all three graphs over time?
+			</li>
+			<li>
+				The <m>R</m>-squared value that I asked you to show in <xref ref="student-loans-changes-problem-graph"/> measures what proportion of the variation in the <m>y</m> variable is explained by the trendline. For instance, <m>R^{2}=1</m> means that <m>100\%</m> of the variation in <m>y</m> is explained by the trendline, so the trendline is a perfect fit. Conversely, <m>R^{2}=0</m> means that the trendline explains <m>0\%</m> of the variation in the <m>y</m> variable, so this trendline doesn't fit the data at all. What percentage of the variation in two-year public college tuition (<m>y</m>) is explained by the variation in year (<m>x</m>)? What about when <m>y=</m> four-year private college tuition? Four-year public college tuition?
+			</li>
+			<li>
+				<term>Outliers</term> are data that fall far away from the trendline. What outliers do you notice, if any? Interpret these outliers in context: what do they mean for tuition and fees over time, and what possible historical explanations could there be for these outliers?
+			</li>
+			<li>
+				<p>
+					<term>Polynomials</term> are a special type of mathematical function, or process for turning one number into another. Polynomials are functions of the form
+					<me>
+						f(x)=a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{1}x^{1}+a_{0}
+					</me>
+					sums of powers of <m>x</m>, maybe with constant terms in front. For example, <m>f(x)=x+1</m>, <m>g(x)=17x^{3}-234x+7</m>, and <m>h(x)=-x^{142}+1</m> are all polynomials. The polynomial <m>a(x)=x^{2}+2x+3</m> takes the input <m>1</m> and turns it into the output <m>1^{2}+2(1)+3=6</m>. All numbers which make sense to input are called the <term>domain</term> of the function, and the possible sensical outputs you could get are called the <em>range</em>.
+				</p>
+				<p>
+					What is the domain and range of each of the polynomial trendlines? 
+				</p>
+			</li>
+			<li>
+				Use this model to predict the tuition cost for a student entering each type of institution in the current academic year. How accurate do you think your prediction is?
+			</li>
+			<li>
+				Use the model to predict the tuition cost for a student entering a public two-year college in the academic years <m>2050</m>-<m>2051</m>, <m>2100</m>-<m>2101</m>, and <m>1900</m>-<m>1901</m>. How accurate do you think your predictions are? 
+			</li>
+			<li>
+				Within (roughly) what domain do you think your trendline can make fairly accurate predictions? Explain.
+			</li>
+		</ol>
+	</section>
+	<section xml:id="student-loans-debt-by-college-type">
+		<title>Student Debt by College Type</title>
+		<figure xml:id="student-loans-image-total-us-consumer-debt">
+			<image source="student-loans/images/total-us-consumer-debt.png">
+			</image>
+			<caption>
+				A graph showing total U.S. consumer debt of various types from <m>2003</m> to <m>2021</m>. Source: Fitch Ratings, New York Fed Consumer Credit Panel, Equifax. <xref ref="FitchWeakerBorrowers"/>
+			</caption>
+		</figure>
+		<p>
+			Use the graph in <xref ref="student-loans-image-total-us-consumer-debt"/> to estimate:
+		</p>
+		<ol>
+			<li>
+				The percentage of total debt in 2008 that was student loans vs. mortgage debt. 
+			</li>
+			<li>
+				The percentage of total debt in 2021 that was student loans vs. mortgage debt. 
+			</li>
+			<li>
+				Why do you think did this graph choose 2003 as a starting year? 
+			</li>
+			<li>
+				Do research online if needed to determine why the second quarter of <m>2008</m> was the previous peak in U.S. total consumer debt.
+			</li>
+			<li>
+				Find another source for the US consumer debt broken down by type of debt in 2008 and in 2019. Does it agree with the graph above? Why or why not? 
+			</li>
+			<li>
+				<p>
+					Use the <url href="https://docs.google.com/spreadsheets/d/1lbB5OSSsxrwQdDh5Px8fqMSRRwwvxseg/edit?usp=sharing&amp;ouid=113361107850751941418&amp;rtpof=true&amp;sd=true/copy">Excel spreadsheet on undergrad and grad tuition/fees from the National Center for Education Statistics</url> (make a copy first) and/or the <url href="student-loans/data-files/nces-tuition.xlsx">Excel version of this table</url> on undergrad tuition by nonprofit status and college private/public status to do the following:
+				</p>
+				<ol>
+					<li xml:id="student-loans-r-squared-nonprofit">
+						Create a graph, trendline, and interpret the <m>R^{2}</m> value for each type of institution: public nonprofit, private nonprofit, private for-profit. What does it mean? Use it to predict average tuition and fees across the country in the current year. How accurate is your prediction?
+					</li>
+					<li>
+						<p>
+							Fit the data to a polynomial function (of least degree). We'll talk about how to do this in class, so let me know when you reach this step. For your reference, the steps in Excel are:
+						</p>
+						<ol>
+							<li>
+								Left-click on your graph. In the top menu under <em>Chart Tools</em> , click Design. 
+							</li>
+							<li>
+								Click Add Chart Element -> Trendline -> More trendline options. Click on the data you want to make a trendline for. 
+							</li>
+							<li>
+								In the right sidebar, select Polynomial and play around with the <em> Order</em> until you get a good fit for your data.
+							</li>
+							<li>
+								Check <em> Display Equation on chart</em> and <em> Display R-squared value on chart</em>. 
+							</li>
+							<li>
+								Now, our goal is to get all our <m>R^{2}</m> values larger than roughly 0.96, which is a very large degree of accuracy. If some of your trendlines have <m>R^{2}\leq0.96</m>, double-click on the offending trendline(s) until the sidebar comes up and increase the <em> Order</em> of your polynomial until <m>R^{2}>0.96</m>. 
+							</li>
+						</ol>
+					</li>
+					<li>
+						What trends over time do you notice in each the three graphs? Describe trends in words, using phrases like <em> increasing</em>, <em> decreasing</em>, <em> increasing slope</em>, <em> decreasing slope</em>. What overall trend do we notice that's common to all three graphs over time? 
+					</li>
+					<li>
+						<p>
+							The <m>R</m>-squared value that I asked you to show in <xref ref="student-loans-r-squared-nonprofit"/> above measures what proportion of the variation in the <m>y</m>-variable is explained by the trendline. For instance, <m>R^{2}=1</m> means that <m>100\%</m> of the variation in y is explained by the trendline, so the trendline is a perfect fit. Conversely, <m>R^{2}=0</m> means that the trendline explains <m>0\%</m> of the variation in the <m>y</m> variable, so this trendline doesn't fit the data at all. 
+						</p>
+						<p>
+							What percentage of the variation in two-year public college tuition (<m>y</m>) is explained by the variation in year (<m>x</m>)? What about when <m>y=</m> four-year private college tuition? Four-year public college tuition? 
+						</p>
+					</li>
+					<li>
+						<term>Outliers</term> are data that fall far away from the trendline. What outliers do you notice, if any? Interpret these outliers in context: what do they mean for tuition and fees over time, and what possible historical explanations could there be for these outliers? 
+					</li>
+					<li>
+						<p>
+							<term>Polynomials</term> are a special type of mathematical function, or process for turning one number into another. Polynomials are functions of the form <m>f(x)=a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{1}x^{1}+a_{0}</m>: sums of powers of <m>x</m>, maybe with constant terms in front. For example, <m>f(x)=x+1</m>, <m>g(x)=17x^{3}-234x+7</m>, and <m>h(x)=-x^{1}42+1</m> are all polynomials. The polynomial <m>a(x)=x^{2}+2x+3</m> takes the input 1 and turns it into the output <m>1^{2}+2(1)+3=6</m>. All numbers which make sense to input are called the <term>domain</term> of the function, and the possible sensical outputs you could get are called the <term>range</term>.
+						</p>
+						<p>
+							What is the domain and range of each of the polynomial trendlines? 
+						</p>
+						<ol>
+							<li>
+								Use this model to predict the tuition cost for a student entering each type of institution in the academic year <m>2020</m>-<m>2021</m>. How accurate do you think your prediction is? 
+							</li>
+							<li>
+								Use the model to predict the tuition cost for a student entering a public two-year college in the academic years <m>2050</m>-<m>2051</m>, <m>2100</m>-<m>2101</m>, and <m>1900</m>-<m>1901</m>. How accurate do you think your predictions are? 
+							</li>
+							<li>
+								Within (roughly) what domain do you think your trendline can make fairly accurate predictions? Explain.
+							</li> 
+							<li>
+								Does this table (and <url href="https://nces.ed.gov/programs/coe/indicator/chb/postbaccalaureate-enrollment">the supplement</url> on the number of students in grad school) back up the suggestion of <url href="https://webcache.googleusercontent.com/search?q=cache:QCadmloDEIoJ:https://www.theatlantic.com/ideas/archive/2022/04/should-biden-forgive-student-loan-debt/629700/&amp;cd=18&amp;hl=en&amp;ct=clnk&amp;gl=us">this Atlantic article</url> <xref ref="demsasWhoReallyBenefits"/> that the cause of increased student debt is that more students are taking out loans to enroll in grad school? Why or why not?
+							</li>
+						</ol>
+					</li>
+					<li>
+						Use <url href="https://www.tuitiontracker.org/school.html?unitid=230807">TuitionTracker</url> to describe recent trends at your own institution in the same way. Is your college or university better or worse in amount of student debt than the average in the US? The average for institutions of the same type? 
+					</li>
+				</ol>
+			</li>
+			<li>
+				<p>
+					Compare the total amount paid in student debt for various racial groups using <url href="https://nces.ed.gov/fastfacts/display.asp?id=900">this table</url>.
+				</p>
+				<ol>
+					<li>
+						Does it seem like any racial groups are being disproportionately saddled with student loan debt? How can we compare, say, debt held by white vs. Asian students to see whether the difference is larger than we'd expect? Well, first we need to quantify the idea of <em> what	we'd expect</em> ...what does this mean? Create an <term>expected frequency table</term> for what you'd expect to see if there were absolutely no racial differences in student debt. 
+					</li>
+					<li>
+						Compute the difference between the observed count for each race <m>O</m> and the expected count <m>E</m>. What do you notice? 
+					</li>
+					<li>
+						What if we averaged all the <m>O-E</m>\textquoteright s for each racial group? This is effectively the idea of a <term>chi-squared test for goodness-of-fit</term>, which is used by statisticians to determine whether any differences observed are small enough to be due to chance or large enough that they give evidence of a difference. What would the equation for this average look like? 
+					</li>
+					<li>
+						We'll use a computer to perform this test in a minute. First, what groups do you think are disproportionately likely/unlikely to hold student loan debt? What racial groups have a higher/lower debt burden per person? 
+					</li>
+					<li>
+						Now, enter this data into an app such as RStudio or an online tool. In RStudio, run this code to do a chi-squared test. (In a statistics class, walk through the steps.) Output the <m>p</m>-value (the likelihood the observed differences are due to chance alone) and \textbf{residuals}, which are basically scaled versions of the <m>O-E</m> s for each racial group. Which are highest? Lowest? Is there evidence of racial bias? 
+					</li>
+				</ol>
+			</li>
+		</ol>
+		<p>
+			If these materials are being used for a course in, say, introductory statistics for STEM fields or a higher-level data science class, this is a good time to discuss <url href="https://openintro-ims.netlify.app/model-mlr.html">linear regression with multiple predictors</url> to formalize the effect of year and type of institution on tuition or race and year on student debt. However, since this text is primarily intended for courses without prerequisites targeted at majors and non-majors alike, such material is beyond the scope of this chapter.
+		</p>
+	</section>
+	<section xml:id="student-loans-intersectional-inequities">
+		<title>the Intersectional Inequities of Student Debt</title>
+		<p>
+			The average undergraduate student who takes out student loans has around <m>\$25,000</m> in debt by the end of their higher education, according to the U.S. Department of Education. However, this debt is not spread equitably by demographic category: <m>30\%</m> of non-Hispanic-identifying Black families carry an education loan, compared to <m>20\%</m> of non-Hispanic white families and <m>14\%</m> of Hispanic-identifying families <xref ref="koezeTollStudentDebt2022"/>. 
+		</p>
+		<p>
+			Student debt is also not equally spread among age groups; Millennials (who were <m>30</m>-<m>39</m> years old in <m>2021</m>) total over <m>\$500</m> billion in student loan debt, compared to a little over <m>\$350</m> million of Gen Z (under <m>30</m> in <m>2021</m>), a little under <m>\$350</m> million held by those <m>40</m>-<m>49</m> years of age in <m>2021</m>, a bit under <m>\$250</m> million held by those <m>50</m>-<m>59</m> years old, and only around <m>\$125</m> million held by those <m>60</m> or older in <m>2021</m> <xref ref="koezeTollStudentDebt2022"/>.
+		</p>
+		<p>
+			Since Black families have been prevented from amassing generational wealth through systemic racism (in which laws favor one racial group over another), the legacy of slavery and Jim Crow, and mass incarceration, as well as continued implicit and explicit racism in public policy, housing (including the legacy of redlining, a policy which conitnued through <m>1977</m>), private banking and lending, access to education, and hiring practices, Black folks are both more likely to have to take on debt to attend college and less likely to attain wealth due to a college education <xref ref="geimanDisproportionatelyImpactedClosing2022"/>.
+		</p>
+		<p>
+			In particular, a <m>2013</m> study found that the average white college-educated parent contributed <m>\$73,500</m> to their children's education, while Black parents contributed <m>\$16,000</m> on average. This is true despite the fact that, when controlling by household type and economic situation, Black parents contribute more on average than white parents.
+		</p>
+		<p>
+			Lower-income Black parents are disproportionately likely to take out Parent PLUS loans, which is a loan provided by the U.S. Department of Education to the parents of college students. Parent PLUS loans are unsubsidized and charge a <em>loan fee</em> (added to each loan payment) of <m>4.228\%</m> and an interest rate of <m>7.54\%</m> as of <m>2022</m> <xref ref="departmentofeducationWhatParentLoan"/>, adding a substantial financial burden to the parent borrower. 
+		</p>
+		<p>
+			Under these circumstances, Black borrowers default on student loans five times more often that white borrowers <xref ref="brownStudentLoansNot2022"/>. Therefore, the disproportionate load of student debt on Black borrowers is both a symptom of, and exacerbates, the racial wealth gap in the U.S., or the difference in total assets and debts between Black and white Americans.
+		</p>
+		<p>
+			Defaulting on federal student loan debt leads to consequences such as bad credit ratings, a decrease in tax refunds, the garnishment of wages, and removal of security clearances which are at times a condition of employment <xref ref="brownStudentLoansNot2022"/>. The consequences for those who default include an inability to obtain loans to buy homes or cars, loss of wages, or loss of employment. 
+		</p>
+		<p>
+			The data in this section come partly from a <em>New York Times</em> article by Ella Koeze and Karl Russell entitled ``The Toll of Student Debt in the U.S.'' An archived version of the article can be accessed <url href="https://web.archive.org/web/20230122063133/https://www.nytimes.com/interactive/2022/08/26/your-money/student-loan-forgiveness-debt.html">here</url>.
+		</p>
+		<ol>
+			<li>
+				What are three things you notice about the graphs shown in the article? Explain what these particular things mean for students with debt.
+			</li>
+			<li>
+				What are three things you wonder about based on the article that are not answered in the article itself?
+			</li>
+			<li>
+				Do some research online and find reputable sources to answer your questions above.
+			</li>
+		</ol>
+	</section>
+	<section xml:id="student-loans-solving-for-change">
+		<title>Solving for Change</title>
+		<p>
+			In August <m>2022</m>, President Biden committed to forgiving <m>\$10,000</m> in student debt for around <m>43</m> million debtors in the U.S., with an additional <m>\$10,000</m> being forgiven for Pell Grant recipients. The debt was forgiven only for single adults earning under <m>\$125,000</m> a year and married couples earning under <m>\$250,000</m> a year <xref ref="boseBidenSaysWill2022"/>.
+		</p>
+		<p>
+			Student debt in the U.S. in <m>2022</m>, when President Biden proposed his student loan debt forgiveness plan, was roughly equal to the size of the economy of Brazil <xref ref="koezeTollStudentDebt2022"/>. Additionally, the amount of funding for higher education provided by state governments has declined from around <m>70\%</m> in the <m>1970</m>s to slightly under <m>60\%</m> in <m>2019</m> \cite{koezeTollStudentDebt2022"/>.
+		</p>
+		<p>
+			An independent analysis by the University of Pennsylvania Wharton School of Business found that about two-thirds of the financial benefit from Biden's student loan forgiveness plan will be to households making <m>\$88,000</m> or less per year, especially households earning between <m>\$51,000</m> and <m>\$82,000</m> a year <xref ref="pennwhartonbudgetmodelBidenStudentLoan2022"/>. The impact to the U.S. budget will be between <m>\$469</m> and <m>\$519</m> billion. 
+		</p>
+		<p>
+			The Wharton School also released the data in <xref ref="student-loans-table-debt-forgiven-by-income"/> on the distribution of student loan forgiveness benefits by income.
+
+			<table xml:id="student-loans-table-debt-forgiven-by-income">
+				<title>Student Loan Debt Forgiven by Income Level</title>
+				<tabular>
+					<row header="yes">
+						<cell>
+
+						</cell>
+						<cell>
+							All Ages
+						</cell>
+						<cell>
+							Age <m>25</m>-<m>35</m>
+						</cell>
+					</row>
+					<row header="yes">
+						<cell>
+							Income Group
+						</cell>
+						<cell>
+							Percentage of benefit
+						</cell>
+						<cell>
+							Percentage of benefit
+						</cell>
+					</row>
+					<row>
+						<cell>
+							Bottom <m>20\%</m>
+						</cell>
+						<cell>
+							<m>13.27\%</m>
+						</cell>
+						<cell>
+							<m>10.97\%</m>
+						</cell>
+					</row>
+					<row>
+						<cell>
+							21st to 40th percentile
+						</cell>
+						<cell>
+							22.89%
+						</cell>
+						<cell>
+							24.56%
+						</cell>
+					</row>
+					<row>
+						<cell>
+							41st to 60th percentile
+						</cell>
+						<cell>
+							30.90%
+						</cell>
+						<cell>
+							30.62%
+						</cell>
+					</row>
+					<row>
+						<cell>
+							61st to 80th percentile
+						</cell>
+						<cell>
+							23.19%
+						</cell>
+						<cell>
+							23.03%
+						</cell>
+					</row>
+					<row>
+						<cell>
+							81st to 90th percentile
+						</cell>
+						<cell>
+							8.06%
+						</cell>
+						<cell>
+							10.39%
+						</cell>
+					</row>
+					<row>
+						<cell>
+							91st to 95th percentile
+						</cell>
+						<cell>
+							1.70%
+						</cell>
+						<cell>
+							0.43%
+						</cell>
+					</row>
+				</tabular>
+			</table>
+		</p>
+		<p>
+			<xref ref="student-loans-table-debt-forgiven-by-income"/> shows the distribution of student loan forgiveness benefit by income under the <m>2022</m> Biden student loan forgiveness plan. Most of the debt forgiven would have accumulated for those in the <m>25</m>-<m>35</m> age group; hence, this column may be more representative of the plan's effects. No benefit is expected to go to the top <m>5\%</m> of earners in either age group. Data from Wharton School of Business <xref ref="pennwhartonbudgetmodelBidenStudentLoan2022"/>.
+		</p>
+		<p>
+			Assume for a moment that these policies stay constant for the next <m>10</m> years (perhaps an unlikely assumption given the changes in policy between Presidential administrations as well as Supreme Court challenges).
+		</p> 
+		<ol>
+			<li>
+				What percentage of the benefit will your age and income group receive <m>10</m> years from now?
+			</li>
+			<li>
+				If you are in one of the groups (single adults earning under <m>\$125,000</m> a year and married couples earning under <m>\$250,000</m> a year, plus an additional <m>\$10,000</m> for Pell Grant recipients) that President Biden targeted for debt forgiveness in <m>2022</m>, what amount of debt will you have forgiven? 
+			</li>
+			<li>
+				Do you believe that President Biden's student loan debt forgiveness policy is a good idea? Why or why not? Do its benefits for lower-income debtors outweigh its impats on the U.S. budget? Estimate whether your taxes will rise as a result and, if so, by how much, using a well-explained dimensional analysis.
+			</li>
+			<li>
+				<p>
+					The following note from the Wharton Budget Model <xref ref="pennwhartonbudgetmodelBidenStudentLoan2022"/>, describes the income groups listed in <xref ref="student-loans-table-debt-forgiven-by-income"/>: "Estimate household income percentile thresholds for 2022 all age: 20%: $28,784; 40%: $50,795; 60%: $82,400; 80%: $141,096; 90% $212,209; 95%: $321,699; 99%: $961,711; 99.9%: $3,668,499."
+				</p>
+				<ol>
+					<li>
+						Given this information, estimate the percentage of the student loan forgiveness plan your income group will receive.
+					</li>
+					<li>
+						The Congressional Budget Office <xref ref="virginiafoxxCostsSuspendingStudent"/>, a nonpartisan organization within the legislative branch of the United States government, estimated the total cost of Biden's student loan forgiveness program at <m>\$400</m> billion. Use this estimate, together with the information above, to estimate how much total debt relief (in U.S. dollars) your income and age group wlil receive <m>10</m> years from now.
+					</li>
+				</ol>
+			</li>
+			<li>
+				<p>
+					President Biden's loan forgiveness program involves an ``income cap'', which means that the program only applies to individuals who earn below <m>\$125,000</m> or households who earn below <m>\$250,000</m> each year. According to the Wharton analysis shown in Table <xref ref="pennwhartonbudgetmodelBidenStudentLoan2022"/>, whether or not an income cap is applied, the most loan forgiveness would go to households earning between <m>\$51,000</m> and <m>\$82,000</m> a year.
+				</p>
+				<ol>
+					<li>
+						What income percentile(s) in <xref ref="student-loans-table-debt-forgiven-by-income"/> do these earners belong to?
+					</li>
+					<li>
+						Assuming that the loan forgiveness policy stays constant for the next <m>10</m> years, estimate the percentage of loan forgiveness that will apply to these income percentile(s). Make the simplifying assumption that all student loan borrowers are individuals and not households.
+					</li>
+					<li>
+						Does the Wharton estimate make sense? Why or why not?
+					</li>
+				</ol>
+			</li>
+		</ol>
+
+
+	</section>
+	<conclusion xml:id="student-loans-conclusion">
+		<p> Conclusion of module.</p>
+	</conclusion>
+	<reading-questions xml:id="student-loans-reflection">
+		<p>
+			For each of the following questions, read the cited article, considering the listed questions. Then use what you've read, as well as your own thoughts, to make your best attempt at answering these questions.
+		</p>
+		<p>
+			Finally, bring these attempts to class and discuss them with your group. Choose someone in your group to report your group's conclusions during full-class discussion.
+		</p>
+		<exercise>
+			<p>
+				<url href="https://www.motherjones.com/politics/2022/06/biden-student-debt-cancellation-occupy-wall-street-collective/">This article by Mother Jones</url> <xref ref="levintovaFightStudentDebt"/> (known for being a left-leaning publication) investigates the history of the student loan debt forgiveness movement, beginning with the activism of Occupy Wall Street in <m>2011</m> (see <xref ref="student-loans-image-occupy-student-loans"/>) and America's first debtors' union, the Debt Collective.
+			</p>
+			<figure xml:id="student-loans-image-occupy-student-loans">
+				<image source="student-loans/images/occupy-wall-street-student-loans.png">
+					A photo of two Occupy Wall Street protesters, one of whom carries a sign saying "I Owe SallieMae <m>\$25,123.91</m>."
+				</image>
+				<caption>
+					Occupy Wall Street Protesters protesting student loans. Photo by Bob Jagendorf entitled ``Occupy Wall Street - Student Loans'' under <url href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</url>.
+				</caption>
+			</figure>
+			<ol>
+				<li>
+					What does the article describe as the origin of the Debt Collective and the movement to cancel student debt from for-profit colleges?
+				</li>
+				<li>
+					Why did Gokey decide to focus on forming a debt collective?
+				</li>
+			</ol>
+		</exercise>
+		<exercise>
+			<p>
+				For-profit colleges have defrauded students and led to an increase in student debt; this was a major concern of Occupy Wall Street activists and is described in <xref ref="student-loans-video-last-week-tonight"/>
+			</p>
+			<figure xml:id="student-loans-video-last-week-tonight">
+				<video youtube="P8pjd1QEA0c"/>
+				<caption>
+					Last Week Tonight episode on Student Loan Debt from 2014. <xref ref="lastweektonightStudentDebtLast2014"/>
+				</caption>
+			</figure>
+			<p>
+				In June <m>2022</m>, the federal Department of Education <url href="https://www.motherjones.com/politics/2022/06/education-department-student-debt-cancellation-corinthian/">automatically canceled all debt currently held by Corinthian Colleges students and alumni} \cite{levintovaEducationDepartmentJust</url>.
+			</p>
+			<ol>
+				<li>
+					What makes Corinthian and other for-profit colleges different from private nonprofit colleges or public universities? 
+				</li>
+				<li>
+					Do you agree with the Department of Education's actions? 
+				</li>
+				<li>
+					What should the Department of Education do with student loans held by other for-profit colleges, including those who were not as openly fraudulent as Corinthian (who paid companies to hire their students for two days in order to inflate their job placement numbers)? 
+				</li>
+				<li>
+					What should the Department of Education do with student loans held by nonprofit colleges?
+				</li>
+			</ol>
+		</exercise>
+		<exercise>
+			<p>
+				The following four questions are about the most recent <url href="https://research.collegeboard.org/trends/student-aid">College Board Trends in Student Aid publication</url> <xref ref="collegeboardresearchTrendsStudentAid"/>.
+			</p>
+			<ol>
+				<li>
+					Explain the difference between subsidized and unsubsidized federal loans. (You may have to use other online sources.) 
+				</li>
+				<li>
+					When did the federal government begin giving unsubsidized loans to students according to the chart in Trends in Student Aid? (You may also have to use other online sources.) 
+				</li>
+				<li>
+					Since the year <m>2000</m>, describe the trend for both subsidized and unsubsidized loans. 
+				</li>
+			</ol>
+		</exercise>
+		<exercise>
+			<p>
+				In <m>2022</m> and <m>2023</m>, the Biden-Harris administration released a plan whose multiple components are designed to decrease the burden of student loan debt on lower-income individuals. Read <url href="https://studentaid.gov/debt-relief-announcement">the White House's announcement of the plan} \cite{thewhitehouseFACTSHEETPresident2022</url>, then answer the following questions.
+			</p>
+			<ol>
+				<li>
+					In your own words, describe the three main components of the White House's "student debt relief plan". Who is impacted by each part? What impacts would the plan have on each group?
+				</li>
+				<li>
+					Which do you feel is the most essential component of the plan? Why?
+				</li>
+				<li>
+					What is the current status of this debt relief plan? You may have to do additional research online. Has it been blocked by the courts? Changed by legislation? Implemented in full? Why or why not?
+				</li>
+			</ol>
+		</exercise>
+		<exercise>
+			<p>
+				<em>The Atlantic</em> asks, "<url href="https://webcache.googleusercontent.com/search?q=cache:QCadmloDEIoJ:https://www.theatlantic.com/ideas/archive/2022/04/should-biden-forgive-student-loan-debt/629700/">Who Really Benefits From Student-Loan Forgiveness</url><xref ref="demsasWhoReallyBenefits"/>?"
+			</p>
+			<ol>
+				<li>
+					The article hints that student loan debt has received national attention because college graduates have significant political power. Do you believe that student debt forgiveness is a privileged position to advocate for? Why or why not?
+				</li>
+				<li>
+					Why might student debt exacerbate the racial wealth gap? Do you think it does? 
+				</li>
+				<li>
+					Do you believe that canceling student debt helps shrink the racial wealth gap? Why or why not?
+				</li>
+				<li>
+					How could you use statistics to determine whether student loan debt was due to rising tuition/fees, inflation, or as the article mentions, the number of recipients attending grad school? What do you believe? 
+				</li>
+			</ol>
+		</exercise>
+		<exercise>
+			<p>
+				According to a <url href="https://read.oecd-ilibrary.org/education/education-at-a-glance-2017_eag-2017-en\#page222">late 2017 study by the Organisation for Economic Cooperation and Development} <xref ref="oecdEducationGlance20172017"/>, the U.S. has the greatest annual average tuition and fees of all surveyed countries charged to nationals of that country. Note that the symbols `a' in the table mean "the category does not apply", while `m' means "data are not available" (missing) \cite{oecdEducationGlance20172017a</url>.
+			</p>
+			<ol>
+				<li>
+					What general trends (by continent, region, degree type, or type of institution) do you notice in the table? Explain.
+				</li>
+				<li>
+					What impact may the missing or ``not applicable'' data have on the general trends observed in the table? Explain.
+				</li>
+			</ol>
+		</exercise>
+		<exercise>
+			<p>
+				Part of quantitative literacy is being able to critically interpret numbers and mathematics in the news media. To that end, find an article from the last four years involving student loans that makes at least 2-3 numerical claims. The <url href="https://trends.collegeboard.org/college-pricing/figures-tables/variation-published-priceshttps://trends.collegeboard.org/college-pricing/figures-tables/variation-published-prices">College Board website</url> or reputable news sources (<em>New York Times</em>, <em>Washington Post</em>, Reuters, Associated Press, etc.) about government policy on student loans and loan forgiveness are good sources,; you're welcome to find your own sources as well. Take the number(s) in your article and do the following:
+			</p>
+			<ol>
+				<li>
+					Decide what point the article is trying to make by citing these numbers. 
+				</li>
+				<li>
+					Before pulling out an electronic device, brainstorm a list of questions (3-5) you'd like to know about the numbers--things that would help you understand if the numbers are big or small, and whether or not the underlying data actually supports the article's argument. 
+				</li>
+				<li>
+					Get online and try to answer your questions. 
+				</li>
+				<li>
+					<p>
+						Rate the article's claims on two scales: 
+					</p>
+					<ol>
+						<li>
+							How true is the statement? (0 = completely false, 4 = completely true) 
+						</li>
+						<li>
+							How misleading is the statement? (0 = not at all, 4 = totally misleading) (In other words, when you look at the underlying data, does it support the article's point or not?) 
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</exercise>
+	</reading-questions>
+	<exercises xml:id="student-loans-exercises">
+		<exercise>
+			<p>
+				(Modified from Jaafar <xref ref="reemjaafarStudentLoansFulfilling2019"/>)	Write a <m>\approx3</m>-page letter to a student about to enter college describing what you've learned about student loans, including:
+			</p>
+			<ul>
+				<li>
+					what's happened to tuition at various types of institutions over the last decades; 
+				</li>
+				<li>
+					what's happened at our institution in particular; 
+				</li>
+				<li>
+					any racial differences in student debt and how confident you are that these differences exist, citing statistics; and
+				</li>
+				<li>
+					what you recommend the student does to manage their finances during and after college.
+				</li>
+			</ul>
+		</exercise>
+	</exercises>
+	<section xml:id="student-loans-references">
+		<title>References</title>
+		<biblio xml:id="boseBidenSaysWill2022">
+			N. Bose, A. Alper, <title>Biden says US will forgive $10k in student loans for millions of Americans</title>, Globabl News (2022).
+		</biblio>
+		<biblio xml:id="benmillerOpinionStudentDebt2018">
+			B. Miller, <title>Opinion | The Student Debt Problem is Worse than We Imagined</title>, The New York Times (2018).
+		</biblio>
+		<biblio xml:id="bernardWhatKnowBiden2023">
+			Bernard, T.S., <title>What to Know About Biden's Income-Driven Repayment Proposal</title>, The New York Times (2023).
+		</biblio>
+		<biblio xml:id="collegeboardresearchTrendsStudentAid">
+			College Board Research, <title>Trends in Student Aid</title>, Technical Report, College Board.
+		</biblio>
+		<biblio xml:id="consumerfinancialprotectionbureauPrivateStudentLoans2012">
+			Consumer Financial Protection Bureau, <title>Private Student Loans: Report to the Senate Committee on Banking, Housing, and Urban Affairs, the Senate Committee on Health, Education, Labor, and Pensions, The House of Representatives Committee on Financial Services, and the House of Representatives Committee on Education and the Workforce</title>, Techniocal Report, US Department of Education, August 2012
+		</biblio>
+		<biblio xml:id="cowleyBillionLoansWill2022">
+			S. Cowley, <title>$5.8 Billion in Loans Will Be Forgiven for Corinthian College Students</title>, The New York Times (2022)
+		</biblio>
+		<biblio xml:id="cowleyAppealsCourtBlocks2022">
+			S. Cowley, <title>Appeals Court Blocks Biden's Student Debt Cancellation Plan</title>, The New York Times (2022)
+		</biblio>
+		<biblio xml:id="demsasWhoReallyBenefits">
+			J. Demsas, <title>Who Really Benefits from Student Loan Forgiveness?</title>, The Atlantic, <url href="https://webcache.googleusercontent.com/search?q=cache:QCadmloDEIoJ:https://www.theatlantic.com/ideas/archive/2022/04/should-biden-forgive-student-loan-debt/629700/"/>.
+		</biblio>
+		<biblio>
+			Equifax, Inc., <title>U.S. National Consumer Credit Trends Report: Portfolio</title>, <url href="https://assets.equifax.com/marketing/US/assets/EFX_PortfolioCreditTrends_202207.pdf"/>, August 2022.
+		</biblio>
+		<biblio xml:id="ExceptionsDischarge">
+			<title>Exceptions to Discharge</title>
+		</biblio>
+		<biblio xml:id="furquimAnyOtherTrap2022">
+			F. Furquim, K.C. Deane, B. McCall, S. Desjardins, <title>Like Any Other Trap: The Circuitous Path of Student Loan Repayment</title>, AERA Open 8 (2022), 233285842210933.
+		</biblio>
+		<biblio xml:id="geimanDisproportionatelyImpactedClosing2022">
+			J. Geiman, A. S. Taylor, <title>Disproportionately Impacted: Closing the Racial Wealth Gap through Student Loan Cancellation, Payment Reforms, and Investment in College Affordability</title>, Tech. report, Center for Law and Social Policy, June 2022. 
+		</biblio>
+		<biblio xml:id="jenniehwooRepaymentStudentLoans2017">
+			J. H. Woo, A. H. Bentz, S. Lew, E. D. Velez, N. Smith, RTI International, and S. A. Simone, <title>Repayment of Student Loans as of 2015 Among 1995–96 and 2003–04 First-Time Beginning Students: First Look, Tech. Report 2018- 410</title>, Institute for Education Statistics, National Center for Education Statistics, October 2017.
+		</biblio>
+		<biblio xml:id="koezeTollStudentDebt2022">
+			E. Koeze and K. Russell, <title>The Toll of Student Debt in the U.S.</title>, The New York Times (2022).
+		</biblio>
+		<biblio xml:id="lastweektonightStudentDebtLast2014">
+			Last Week Tonight, <title>Student Debt: Last Week Tonight with John Oliver (HBO)</title>, September 2014.
+		</biblio>
+		<biblio xml:id="levintovaEducationDepartmentJust">
+			H. Levintova, <title>The Education Department just took its biggest debt cancellation step ever.</title>
+		</biblio>
+		<biblio xml:id="levintovaFightStudentDebt">
+			H. Levintova, <title>The fight for student debt relief started a decade ago—at Occupy Wall Street.</title>
+		</biblio>
+		<biblio xml:id="looneyCrisisStudentLoans2015">
+			A. Looney, C. Yannelis, <title>A Crisis in Student Loans?: How Changes in the Characteristics of Borrowers and in the Institutions They Attended Contributed to Rising Loan Defaults</title>, Brookings Papers on Economic Activity 2015 (2015), no. 2, 1–89.
+		</biblio>
+		<biblio xml:id="brownStudentLoansNot2022">
+			M. A. Brown, <title>Student Loans Do Not Equal 40 Acres and a Mule: A Case Study of African Americans and the Student Loan Crisis</title>, ProQuest, Ph.D. thesis, Baylor University, Waco, TX, 2022.
+		</biblio>
+		<biblio xml:id="FitchWeakerBorrowers">
+			MBA NewsLink Staff, <title>Fitch: Weaker Borrowers in U.S. Securitizations Vulnerable to Inflation.</title>
+		</biblio>
+		<biblio xml:id="nadwornyTheseArePeople2019">
+			E. Nadworny, <title>These Are The People Struggling The Most To Pay Back Student Loans</title>, NPR (2019).
+		</biblio>
+		<biblio xml:id="nationalcenterforeducationstatisticsIntegratedPostsecondaryEducation">
+			National Center for Education Statistics, <title>The Integrated Postsecondary Education Data System</title>, <url href="https://nces.ed.gov/ipeds/"/>.
+		</biblio>
+		<biblio xml:id="netflixisajokeStudentLoansPatriot2019">
+			Netflix Is A Joke, <title>Student Loans | Patriot Act with Hasan Minhaj</title>, Netflix, February 2019.
+		</biblio>
+		<biblio xml:id="oecdEducationGlance20172017">
+			OECD, <title>Education at a Glance 2017: OECD Indicators</title>, Tech. report, OECD Publishing, Paris, 2017.
+		</biblio>
+		<biblio xml:id="oecdEducationGlance20172017a">
+			OECD, <title>Education at a Glance 2017 Reader’s Guide</title>, 2017.
+		</biblio>
+		<biblio xml:id="pennwhartonbudgetmodelBidenStudentLoan2022">
+			Penn Wharton Budget Model, <title>The Biden Student Loan Forgiveness Plan: Budgetary Costs and Distributional Impact</title>, Tech. report, Wharton School of Business, University of Pennsylvania, October 2022.
+		</biblio>
+		<biblio xml:id="reemjaafarStudentLoansFulfilling2019">
+			R. Jaafar, <title>Student Loans: Fulfilling the American Dream or Surviving a Financial Nightmare?, Mathematics for Social Justice: Resources for the College Classroom</title>, AMS/MAA Classroom Resource Materials, vol. 1, MAA Press, Providence, Rhode Island, 2019.
+		</biblio>
+		<biblio xml:id="theinstituteforcollegeaccess">
+			The Institute for College Access &amp; Success, <title>The Evolution of the For-Profit College Industry: New Challenges for Oversight</title>, Tech. report, December 2019.
+		</biblio>
+		<biblio xml:id="thewhitehouseFACTSHEETPresident2022">
+			The White House, <title>FACT SHEET: President Biden Announces Student Loan Relief for Borrowers Who Need It Most</title>, <url href="https://www.whitehouse.gov/briefing- room/statements-releases/2022/08/24/fact-sheet-president-biden-announces-student- loan-relief-for-borrowers-who-need-it-most/"/>, August 2022.
+		</biblio>
+		<biblio xml:id="departmentofeducationWhatParentLoan">
+			U.S. Department of Education, <title>What is a parent PLUS loan?</title>, <url href="https://studentaid.gov/help-center/answers/article/what-is-parent-plus-loan"/>.
+		</biblio>
+		<biblio xml:id="departmentofeducationSubsidizedUnsubsidizedLoans2023">
+			U.S. Department of Education, <title>Subsidized and Unsubsidized Loans | Federal Student Aid</title>, <url href="https://studentaid.gov/understand-aid/types/loans/subsidized-unsubsidized"/>, 2023.
+		</biblio>
+		<biblio xml:id="virginiafoxxCostsSuspendingStudent">
+			V. Foxx, R. Burr, <title>Costs of Suspending Student Loan Payments and Canceling Debt</title>.
+		</biblio>
+	</section>
+</chapter>

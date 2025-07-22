@@ -1,0 +1,591 @@
+<chapter xml:id="greenhouse-gas" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Greenhouse Gas Emissions</title>
+	<introduction xml:id="greenhouse-gas-introduction">
+		<p>
+			<em>This module on Greenhouse Gas Emissions was authored by <xref ref="mbranson"/>, <xref ref="elandes"/>, and <xref ref="fvanvliet"/>.</em>
+		</p>
+		<p>The introduction should provide background on the topic.  It should be relatively brief - there's more space to go into background information during the background section.</p>
+		<p>Text of introduction second paragraph</p>
+	</introduction>
+	<section xml:id="greenhouse-gas-objectives">
+		<title>Objectives</title>
+		<p>
+			By the end of this module students will be able to:
+			<ol>
+				<li> Describe the scale of global greenhouse gas emissions.</li>
+				<li> Compare the quantity of emissions between individuals, corporations, and nation states.</li>
+				<li> Model the greenhouse effect with varying levels of greenhouse gases.</li>
+				<li> Create data visualizations of both quantitative and qualitative data related to greenhouse gas emissions.</li>
+				<li> Evaluate strategies for reducing emissions using quantitative tools.</li>
+				<li> Discuss the consequences of failing to cut greenhouse gas emissions.</li>
+				<li> Propose actions to mitigate emissions in your personal life, institution, and nation</li>
+			</ol>
+		</p>
+	</section>
+
+	<xi:include href="greenhouse-gas-introduction.xml"/>
+
+	<section xml:id="greenhouse-gas-cui-bono">
+		<title>Cui Bono - Who Benefits?</title>
+		<p> 
+			The unfortunate reality of climate change is that we all benefit - the quality of life which we have is largely due to the cheap availability of fossil fuels.  We can get around easily with cars, fly (relatively) cheaply when we go on vacation, eat the food that we want, and buy all of the things that we want.  All of the things that we do produce greenhouse gases, at some level.  
+		</p>
+		<p>
+			Some individuals, though, benefit more than others.  The corporations that produce the goods we buy - our cars, plastics, electronics, and food - are motivated to keep selling more stuff, even if that stuff produces greenhouse gas emissions.  Fossil fuel companies make money by extracting and selling fossil fuels like coal, natural gas, and petroleum.  All of this economic activity contributes to government tax revenues, which allows politicians to spend more money on their constituents and special interests.
+		</p>
+		<p>
+			In short, unless you live in a cabin in the woods, grow all of your own food, and use energy only from zero-emissions sources (even a campfire generates greenhouse gases), you're benefiting from greenhouse gas emissions.  If you own a car company or an oil company (or have stock in them), you're benefiting a lot more.
+		</p>
+	</section>
+	<section xml:id="greenhouse-gas-big-problem">
+		<title>Big Problem: What is the best way to reduce greenhouse gas emissions?</title>
+		<assemblage>
+			<p>
+				What are the best strategies for reducing greenhouse gas emissions?
+			</p>
+		</assemblage>
+		<p> 
+			Most people agree that we need to reduce greenhouse gas emissions, so that we can limit the dangerous effects of global warming.  There are, however, many different strategies for doing this.  Should we focus our efforts on switching to electric cars? Or to convincing everyone to switch to a vegan diet? How can we evaluate and find the best strategies for reducing emissions - before it's too late?
+		</p>
+	</section>
+
+	<xi:include href="greenhouse-gas-math-topic-scientific-notation.xml"/>
+
+	<xi:include href="greenhouse-gas-math-topic-data-visualization.xml"/>
+
+	<xi:include href="greenhouse-gas-modeling.xml"/>
+
+	<xi:include href="greenhouse-gas-solving-for-change.xml"/>
+
+	<conclusion xml:id="greenhouse-gas-conclusion">
+		<p> Conclusion of module.</p>
+	</conclusion>
+	<reading-questions xml:id="greenhouse-gas-reflection">
+		<exercise> 
+			<p>
+				While anthropogenic (caused by humans) emissions are a large source of greenhouse gas emissions, there are others.  What are some of the other sources of greenhouse gas emissions in the atmosphere? How do the amounts of these emissions compare to those produced by humans?
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				One argument frequently made for why increased CO2 emissions are <em>beneficial</em> is that higher levels of CO2 encourage plant growth and could help produce more food. Is this true? Explain how higher CO2 levels and the resulting changes to the earth's climate affect plant growth &amp; agricultural crops.
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				Some people make the argument that global warming patterns are unrelated to the increase in greenhouse gas emissions.  How can mathematics be used to argue against this claim?
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				Greenhouse gas levels in the Earth's atmosphere and the corresponding global temperatures have been much higher at times in Earth's history, like during the Triassic period (the age of dinosaurs).  How can looking at the geological past of the Earth help us to plan for the future? Why is it short-sighted to say that just because the Earth has been warmer in the past, we should do nothing to slow climate change?
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				Many resources around climate change focus on reducing personal consumption and cutting down your "carbon footprint."  What role do individual choices have in reducing greenhouse gas emissions, compared to public policy changes like increased funding for public transportation or regulations on new power plants? What kind of actions can we take to most effectively reduce greenhouse gas emissions?
+			</p>
+		</exercise>
+	</reading-questions>
+	<exercises xml:id="greenhouse-gas-exercises">
+		<exercise> 
+			<p>
+				The USA released greenhouse gases equivalent to <m>6.34*10^9</m> metric tons of CO2 in 2021 <xref ref="greenhouse-gas-biblio-sources-of-emissions"/>.  <xref ref="greenhouse-gas-epa-sources"/> shows where those emissions come from.
+				<figure xml:id="greenhouse-gas-epa-sources">
+					<image source="greenhouse-gas/images/epa-sources-pie-graph.png">
+						<description>
+							Pie chart showing Agriculture 10%; Transportation 28%; Electric Power 25%; Industry 23%; Commercial and Residential 13%
+						</description>
+					</image>
+					<caption>
+						Percentage of CO2 equivalent emissions in the USA by source in 2021 <xref ref="greenhouse-gas-biblio-sources-of-emissions"/>.
+					</caption>
+				</figure>
+				<ol>
+					<li>
+						Which sector accounts for the largest part of emissions? How many millions of metric tons of CO2 equivalent gases does that sector emit?
+					</li>
+					<li>
+						Which sector accounts for the smallest part of emissions? How many millions of metric tons of CO2 equivalent gases does that sector emit?
+					</li>
+					<li>
+						How could we use the information in this graph to prioritize laws, regulations, and other changes to reduce greenhouse gas emissions?
+					</li>
+				</ol>
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				According to <xref ref="greenhouse-gas-biblio-emissions-by-region"/>, global CO2 emissions were 37.1 billion tons in 2021.  Write this number in scientific notation.  If there were 7.8 billion people, how many tons of CO2 emissions would that be per person?
+			</p>
+			<p>
+				Is this a reasonable way to look at per capita emissions? Consider the following two statements:
+				<ul>
+					<li>
+						The average person worldwide uses ___ tons of CO2 per year.
+					</li>
+					<li>
+						On average, each person worldwide uses ___ tons of CO2 per year.
+					</li>
+				</ul>
+				where the blank is filled in with your answer.  Do you agree with these statements? Why or why not? What is the danger of using an average with a quantity like this
+			</p>
+			<p>
+				Repeat this exercise with just the US (2021 emissions: 5 billion tons, population 331.9 million people).  Do these numbers have the same problems as the ones above? Explain.
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				The graph in <xref ref="greenhouse-gas-figure-emissions-by-corporation"/> uses data from <xref ref="greenhouse-gas-biblio-climate-majors"/> and shows the 20 corporations which have contritbuted most to global CO2 emissions.  The graph gives the total emissions for each corporation from 1965-2018.
+				<figure xml:id="greenhouse-gas-figure-emissions-by-corporation">
+					<image source="greenhouse-gas/images/emissions-by-corporation.png">
+						Image description available at <xref ref="greenhouse-gas-image-emissions-by-corporation"/>.
+					</image>
+					<caption>
+						Total emissions (1965-2018) for the 20 corporations which have contributed most to global CO2 emissions.
+					</caption>
+				</figure>
+				The data is also shown in this table:
+				<xi:include href="tables/emissions-by-corporation.xml"/>
+			</p>
+			<p>
+				<ol>
+					<li>
+						Why did the person who made this visualization choose a bar chart? Explain why a line graph and a pie chart would each be inappropriate here.
+					</li>
+					<li>
+						Use the graph and the table to find the four corporations listed from the US.  How much have they contributed overall to CO2 emissions? Give your answer in scientific notation.
+					</li>
+					<li>
+						How could the information in this chart be used to help us create effective strategies to reduce greenhouse gas emissions? 
+					</li>
+				</ol>
+			</p>
+		</exercise>
+
+		<exercise xml:id="greenhouse-gas-exercise-emissions-by-country"> 
+			<p>
+				The file <url href="greenhouse-gas/data-files/owid-emissions-by-country.csv">Emissions by Country/Region</url> from <xref ref="greenhouse-gas-biblio-owid-full-data"/> gives data for countries and regions around the world.  The data includes:
+				<ul>
+					<li>
+						Country Name
+					</li>
+					<li>
+						Population
+					</li>
+					<li>
+						Total CO2 Emissions in 2021.
+					</li>
+					<li>
+						CO2 Emissions per capita - the total CO2 emissions divided by the population in 2021.
+					</li>
+					<li>
+						Cumulative CO2 emissions over history.
+					</li>
+					<li>
+						The change in atmostpheric CO2 due to land use.  This can be positive or negative - if countries plant more trees, for example, that would reduce atmospheric CO2, while clearing land or changing how it is used can increase emissions.
+					</li>
+					<li>
+						CO2 emissions from land use per capita.
+					</li>
+					<li>
+						Share of CO2 emissions in 2021, as a percentage of global emissions in 2021.
+					</li>
+					<li>
+						Share of cumulative global CO2 emissions over time, as a percentage of cumulative global emissions.
+					</li>
+					<li>
+						Share of temperature change from greenhouse gas emissions.  Certain changes or types of emissions can have larger effects on temperature change, so this may be different that then the percentage of CO2 emissions.
+					</li>
+				</ul>
+				Use the data in the spreadsheet to answer these questions:
+				<ol>
+					<li>
+						Create a graph of the total CO2 emissions of the 10 countries with the highest emissions in the list.  What kind of graph did you choose to make and why?
+					</li>
+					<li>
+						Create a graph which shows the percentage share of CO2 that each continent or region (the continents/regions listed are Africa, Asia, Europe, North America, Oceania, and South America) has emitted.  What kind of graph did you choose to make and why?
+					</li>
+					<li>
+						Taking all the countries with populations smaller than the USA, create a graph which shows the relationship between population and the percentage of CO2 emissions which the country is responsible for.  What kind of graph did you choose and why? Does there seem to be a relationship between the size of the country and the percentage of CO2 emissions they're responsible for.
+					</li>
+				</ol>
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				Use the data from <url href="greenhouse-gas/data-files/owid-emissions-by-country.csv">Emissions by Country/Region</url> to answer the following questions:
+				<ol>
+					<li>
+						What kind of data is the variable <em>land_use_change_co2_per_capita</em>, which gives the per capita CO2 emissions due to land use change for each country or region?
+					</li>
+					<li>
+						This variable gives the CO2 emissions from changes in land use, like clearing of land for agriculture or housing, open-pit mining, or elimination of wetlands. The values for per capita land use CO2 emissions range from -3.674 tons per person (Vanuatu) to 8.483 tons per person (Bhutan).  Explain why you would need to use a histogram to display this data.
+					</li>
+					<li xml:id="greenhouse-gas-exercise-emissions-frequency-table">
+						Create a frequency table using intervals of width 1 (<m>[-4,-3),[-3,-2),\ldots,[7,8),[8,9)</m>) for per capita land use emissions from the countries listed in the data - you can omit continents, regions, and groupings of countries by income.
+					</li>
+					<li>
+						Use the frequency table you created in <xref ref="greenhouse-gas-exercise-emissions-frequency-table"/> to create a histogram of the per capita land use emissions for the countries.
+					</li>
+					<li>
+						What does the histogram tell you? Are there a lot of countries with positive land use emissions per capita, or very few? Do most countries have positive or negative emissions per capita? What does this histogram tell you about how we should focus our efforts to reduce greenhouse gas emissions from land use?
+					</li>
+					<li>
+						We built our histogram for per capita land use change CO2 emissions.  The table also has overall land use change CO2 emissions for each country (the <em>land_use_change_co2</em> variable).  Why is it easier to create a histogram for the land use per capita data than the overall land use CO2 emissions? Why is it more useful to use per capita data to understand patterns in emissions than overall land use CO2 totals?
+					</li>
+				</ol>
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				The data in <url href="greenhouse-gas/data-files/owid-emissions-usa.csv">USA CO2 Emissions</url> gives the CO2 emissions (in millions of tons) and per capita CO2 emissions (in tons per person) for the USA for each year since 1800 <xref ref="greenhouse-gas-biblio-owid-full-data"/>. Use the data to answer the following questions:
+				<ol>
+					<li xml:id="greenhouse-gas-exercise-usa-historical-co2">
+						Create a graph of the CO2 emissions from 1800 to 2022.  What kind of graph did you use and why?
+					</li>
+					<li>
+						Use the same kind of graph to graph the per capita CO2 emissions from 1800 to 2022.  How are the patterns in the graph similar to those in <xref ref="greenhouse-gas-exercise-usa-historical-co2"/>? How are they different?
+					</li>
+					<li>
+						CO2 emissions rose steadily in the USA until 2005, with some notable exceptions.  Look at the graphs and the data to find at least two periods where CO2 emissions dropped for multiple years in a row.  What was going on in the USA when this occurred that could have caused the reduction in emissions?
+					</li>
+					<li>
+						Since 2005, CO2 emissions have fallen in the USA.  Using your own research, list a few possible explanations for what has caused this reduction in emissions.
+					</li>
+				</ol>
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				Use the data provided in <xref ref="greenhouse-gas-exercise-emissions-by-country"/> to create a graph for each of the following questions.  Explain why you chose to create the graph that you did and how it helped you answer the question.
+				<ol>
+					<li>
+						Are the continental regions which have contributed the most to cumulative global emissions the same ones that are currently contributing most to global emissions?
+					</li>
+					<li> 
+						Do countries that have high CO2 emissions per capita also have high CO2 emissions from land use per capita?
+					</li>
+					<li>
+						Do countries with higher incomes have higher per capita CO2 emissions?
+					</li>
+					<li>
+						Which countries have the highest per capita emissions?
+					</li>
+				</ol>
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				The file at <url href="greenhouse-gas/data-files/co2-and-temperature-anomaly.csv">CO2 Levels and Temperature Anomalies</url> (Data from <xref ref="greenhouse-gas-biblio-global-temperature-anomaly"/> and <xref ref="greenhouse-gas-biblio-mauna-loa-co2"/>) gives the following data for every year since 1959:
+				<ul>
+					<li>
+						The mean annual CO2 level recorded at the Mauna Loa Observatory in Hawaii in parts per million (ppm).
+					</li>
+					<li>
+						The mean annual global temperature anomaly gives the number of degrees Celsius that the mean global temperature differs from the mean temperature during the years 1901-2000.  If the temperature in a year was exactly average for the 20th century, then the anomaly would be 0.  If it is higher than the average for the 20th century, it will be greater than 0 - and less than 0 if it is lower.
+					</li>
+				</ul>
+				Create a graph of the relationship between CO2 levels and the global temperature anomaly.  Explain why you chose the graph you did. Does there appear to be a relationship between global CO2 levels and a rise in temperature?
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				The two graphs shown below in <xref ref="greenhouse-gas-two-axis-graphs"/> both use the data from <url href="greenhouse-gas/data-files/co2-and-temperature-anomaly.csv">CO2 Levels and Temperature Anomalies</url>.
+			</p>
+			<figure	xml:id="greenhouse-gas-two-axis-graphs">
+				<sidebyside>
+					<image source="greenhouse-gas/images/two-axes-one.png">
+						Graph of CO2 levels and mean temperature anomaly where the CO2 level axis goes from 300 to 440 and the temperature anomaly axis goes from -0.3 to 6.0.
+					</image>
+					<image source="greenhouse-gas/images/two-axes-two.png">
+						Graph of CO2 levels and mean temperature anomaly where the CO2 level axis goes from 300 to 440 and the temperature anomaly axis goes from -0.3 to 1.2.
+					</image>
+				</sidebyside>
+				<caption>
+					Two graphs of the same data on CO2 levels and global mean temperature anomaly.
+				</caption>
+			</figure>
+			<p>
+				Answer the following questions about these graphs:
+				<ol>
+					<li>
+						In the first graph in <xref ref="greenhouse-gas-two-axis-graphs"/>, does it look like CO2 is increasing, decreasing, or staying the same? What about the temperature anomaly?
+					</li>
+					<li>
+						In the second graph in <xref ref="greenhouse-gas-two-axis-graphs"/>, does it look like CO2 is increasing, decreasing, or staying the same? What about the temperature anomaly?
+					</li>
+					<li>
+						From looking at the first graph in <xref ref="greenhouse-gas-two-axis-graphs"/>, what conclusion might you draw about the relationship between CO2 levels and temperature? What about from the second graph in <xref ref="greenhouse-gas-two-axis-graphs"/>?
+					</li>
+					<li>
+						What makes the two graphs in <xref ref="greenhouse-gas-two-axis-graphs"/> look so different, even though they show the same data?
+					</li>
+					<li>
+						These graphs - usually called <em>dual axis charts</em> are frequently used in misleading ways.  Read more on your own about dual axis charts.  Can they be used effectively, or do you think they are best avoided? 
+					</li>
+				</ol>
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				The data in <xref ref="greenhouse-gas-table-vehicles-by-percentage"/> gives the percentage of newly registered vehicles in some European countries that are fully electric, plug-in hybrid, hybrid, gasoline, or diesel in 2019 (data from <xref ref="greenhouse-gas-biblio-vehicles-by-percentage"/>).  
+				<xi:include href="tables/vehicles-by-percentage.xml"/>
+				The data is also available in this <url href="greenhouse-gas/data-files/vehicle-type-percentages.csv">2019 Vehicle Types Spreadsheet</url>.
+			</p>
+			<ol>
+				<li>
+					Use the data in <xref ref="greenhouse-gas-table-vehicles-by-percentage"/> to create a graph of the types of vehicles driven in Ireland.  Why did you choose the type of graph you did? What does the graph tell you about the types of cars people drive in Ireland?
+				</li>
+				<li>
+					Use the data in <xref ref="greenhouse-gas-table-vehicles-by-percentage"/> to create a graph of the percentages of vehicles which are electic, plug-in hybrid, or hybrid in each country,.  Why did you choose the type of graph you did? What does the graph tell you about the usage of electric/hybrid cars across Europe?
+				</li>
+				<li>
+					Use the data in <xref ref="greenhouse-gas-table-vehicles-by-percentage"/>to create a graph which compares the types of vehicles driven in Norway and the United Kingdom.  Why did you choose the type of graph you did? What does the graph tell you about the differences between Norway and the United Kingdom?
+				</li>
+			</ol>
+		</exercise>
+		<exercise>
+			<p>
+				The data in <xref ref="greenhouse-gas-table-norway-vehicle-types"/> gives the percentage of newly registered vehicles in Norway that were fully electric, plug-in hybrid, hybrid, gasoline, or diesel from 2013 to 2019 (data from <xref ref="greenhouse-gas-biblio-vehicles-by-percentage"/>).  
+				<xi:include href="tables/norway-vehicle-types.xml"/>
+				The data is also available in this <url href="greenhouse-gas/data-files/norway-vehicle-types.csv">Norway Vehicle Types Spreadsheet</url>.
+			</p>
+			<ol>
+				<li>
+					Graph the percentage of fully electric vehicles in Norway for each year since 2013.  Explain why you chose the graph that you did.
+				</li>
+				<li>
+					Create a graph of the percentages of electric (fully electric, plug-in-hybrid, hybrid) and petroleum (gasoline, diesel) in Norway for each year from 2013 to 2019.  Explain why you chose to graph them the way that you did.
+				</li>
+			</ol>
+		</exercise>
+		<subsection>
+			<title>Generative AI Prompts</title>
+			<p>
+				Consider using the following prompts with generative AI, such as Chat GPT, to develop additional exercises for this material.  These programs can also be used to generate solutions, but those solutions will not necessarily be correct!  These prompts have been tested with ChatGPT <xref ref="biblio-greenhouse-gas-chatgpt"/>.
+				<ul>
+					<li> 
+						Give me 5 questions that use examples from greenhouse gases, climate change, and global warming to teach students about using scientific notation and working with large numbers.
+					</li>
+					<li>
+						Give 5 questions which encourage students to explore data visualizations of greenhouse gas emissions data
+					</li>
+				</ul>
+			</p>
+		</subsection>
+	</exercises>
+
+	<section xml:id="greenhouse-gas-references">
+		<title>References</title>
+		<subsection>
+			<title>Bibliography</title>
+			<biblio xml:id="greenhouse-gas-biblio-emissions-by-country">
+				Worlddata.info, Ranking of countries by greenhouse gas emissions (06-07-2021), <url aria-label="Ranking of countries by greenhouse gas emissions" href="https://www.worlddata.info/greenhouse-gas-by-country.php"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-acs-vehicle-access">
+				American Community Survey 2019, Tenure by Vehicles Available (06-25-2021), <url aria-label="Tenure by Vehicles Available, ACS 2019" href="https://data.census.gov/cedsci/table?q=vehicle%20access&amp;tid=ACSDT1Y2019.B25044&amp;hidePreview=true"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-gdp-vs-co2">
+				Our World in Data, CO2 Emissions per capita vs GDP per capita, <url aria-label=
+				"CO2 Emissions per capita vs GDP per capita" href="https://ourworldindata.org/grapher/co2-emissions-vs-gdp"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-global-temperature-anomaly">
+				National Centers for Environmental Information at the National Oceanic and Atmospheric Administration, Climate at a Glance: Global Time Series, <url aria-label="Global mean temperature anomaly" href="https://www.ncdc.noaa.gov/cag/global/time-series/globe/land_ocean/ytd/12/1880-2019"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-overall-co2-emissions">
+				World Bank, CO2 emissions (kt), <url aria-label="Overall CO2 emissions" href="https://data.worldbank.org/indicator/EN.ATM.CO2E.KT"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-ons-vehicle-access">
+				Office for National Statistics, Number of Vehicls Per Household, <url aria-label="Vehicles per household in the UK" href="https://www.ons.gov.uk/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/adhocs/009922numberofvehiclesperhousehold"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-video-scatterplot-gdp-co2">
+				A. Lipponen, CO2 Emissions, GDP &amp; temperature by country 1961-2014, <url aria-label="CO2 emissions, GDP &amp; temperature by country 1961-2014" href="https://www.flickr.com/photos/150411108@N06/32308286658/in/album-72157684433789793/"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-video-temperature-anomalies">
+				A. Lipponen, Temperature Anomalies by Country 1880-2017, <url aria-label="Temperature Anomalies by Country 1880-2017" href="https://www.flickr.com/photos/150411108@N06/43350961005/in/photostream/"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-video-per-capita-co2">
+				R. Rohde, Map of Greenhouse Gas Emissions per Person, <url aria-label="Map of Greenhouse Gas Emissions per Person" href="https://berkeleyearth.org/dv/map-of-greenhouse-gas-emissions-per-person/"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-climate-sound">
+				C. Chafe, H. Gordon, K. Pennington, K. Snow, V. Vasquez, D. Venton, The 1200-year Climate Podcast in Detail, <url aria-label="The 1200-year Climate Podcast in Detail" href="https://chrischafe.net/the-1200-year-climate-podcast-in-detail/"/>.	
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-causes-of-climate-change">
+				British Geological Survey, United Kingdom Research Institute, What Causes the Earth's Climate to Change? <url aria-label="What Causes the Earth's Climate to Change?" href="https://www.bgs.ac.uk/discovering-geology/climate-change/what-causes-the-earths-climate-to-change/"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-cretaceous-climate-change">
+				C. Bardeen, R. Garcia, O. Toon, A. Conley, On transient climate change at the Cretaceous-Paleogene boundary due to atmospheric soot injections, PNAS 114 (36) (2017) E7415-E7424 <url aria-label="n transient climate change at the Cretaceous−Paleogene boundary due to atmospheric soot injections" href="https://www.pnas.org/content/114/36/E7415"/>
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-fourth-assessment">
+				IPCC, 2007: Climate Change 2007: The Physical Science Basis. Contribution of Working Group I to the Fourth Assessment Report of the Intergovernmental Panel on Climate Change [Solomon, S., D. Qin, M. Manning, Z. Chen, M. Marquis, K.B. Averyt, M.Tignor and H.L. Miller (eds.)]. Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-world-of-change">
+				World of Change: Global Temperatures <url aria-label="World of Change: Global Temperatures" href="https://earthobservatory.nasa.gov/world-of-change/global-temperatures"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-causes-national-geographic">
+				Causes of Global Warming, Explained. <url aria-label="Causes of Global Warming, Explained" href="https://www.nationalgeographic.com/environment/article/global-warming-causes"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-history-global-warming">
+				Weart, S. The Discovery of Global Warming. <url aria-label="The Discovery of Global Warming" href="https://history.aip.org/climate/co2.htm"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-temperature-moon">
+				Sharp, T. What is the Temperature of the Moon? <url aria-label="What is the Temperature of the Moon?" href="https://www.space.com/18175-moon-temperature.html"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-history-co2">
+				Earth Science Communications Team at NASA's Jet Propulsion Laboratory. Climate Change: How do we Know? <url aria-label="Climate Change: How do we Know?" href="https://climate.nasa.gov/evidence/"/>
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-extinction">
+				C. Román-Palacios, J. Wiens. Recent responses to climate change reveal the drivers of species extinction and survival. PNAS 117 (8) (2020) P.4211-4217 <url aria-label="Recent responses to climate change reveal the drivers of species extinction and survival" href="https://www.pnas.org/content/117/8/4211"/>
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-crops">
+				D. Ray, P. West, M. Clark, J. Gerber, A. Prishchepov, S. Chatterjee. Climate change has likely already affected global food production. PLoS ONE 14(5): e0217148. (2019) <url aria-label="Climate change has likely already affected global food production." href="https://doi.org/10.1371/journal.pone.0217148"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-refugees">
+				United Nations High Commission on Refugees (UNHCR). Displaced on the frontlines of the climate emergency <url aria-label="Displaced on the frontlines of the climate emergency" href="https://storymaps.arcgis.com/stories/065d18218b654c798ae9f360a626d903"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-us-population">
+				Census Bureau. 2019 U.S. Population Estimates Continue to Show the Nation’s Growth Is Slowing. <url aria-label="2019 U.S. Population Estimates Continue to Show the Nation’s Growth Is Slowing" href="https://www.census.gov/newsroom/press-releases/2019/popest-nation.html"/>
+			</biblio>
+			<biblio xml:id="greehouse-gas-biblio-emissions-inventory">
+				Environmental Protection Agency. Inventory of U.S. Greenhouse Gas Emissions and Sinks<url aria-label="Inventory of U.S. Greenhouse Gas Emissions and Sinks" href="https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks"/>
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-emissions-china">
+				M. Grant, K. Larsen. Preliminary China Emissions Estimates for 2019. <url aria-label="Preliminary China Emissions Estimates for 2019" href="https://rhg.com/research/preliminary-china-emissions-2019/"/>
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-china-population">
+				Worldometer. China Population. <url aria-label="China Population" href="https://www.worldometers.info/world-population/china-population/"/>
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-us-oil-consumption">
+				U.S. Energy Information Administration. How much oil is consumed in the United States. <url aria-label="How much oil is consumed in the United States" href="https://www.eia.gov/tools/faqs/faq.php?id=33&amp;t=6"/>
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-aqua-satellite">
+				NASA. About Aqua. <url aria-label="About Aqua" href="https://aqua.nasa.gov/content/about-aqua"/>
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-co2-historical-data">
+				H. Ritchie, Who has contributed most to global CO2 emissions? <url aria-Label="who has contributed most to global CO2 emissions" href="https://ourworldindata.org/contributed-most-global-co2"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-co2-annual-data">
+				H. Ritchie, M. Roser, CO2 and Greenhouse Gas Emissions. <url aria-Label="CO2 and Greenhouse Gas Emissions" href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-paris-agreement">
+				United Nations. The Paris Agreement. <url aria-label="The Paris Agreement" href="https://www.un.org/en/climatechange/paris-agreement"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-emissions-by-region">
+				Global Carbon Project, via Our World in Data. Annual CO2 Emissions by Region. <url aria-Label="Annual CO2 Emissions by Region" href="https://ourworldindata.org/grapher/annual-co-emissions-by-region"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-world-population">
+				E. Ortiz-Ospina, M. Roser, H. Ritchie, World Population Growth. <url aria-label="World Population Growth" href="https://ourworldindata.org/world-population-growth"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-livestock">
+				P.J. Gerber, H. Steinfeld, B. Henderson, A. Mottet, C. Opio, J. Dijkman, A. Falcucci, G. Tempio, Tackling climate change through livestock – A global assessment of emissions and mitigation opportunities. Food and Agriculture Organization of the United Nations (FAO), Rome (2013). <url aria-label="Tackling climate change through livestock – A global assessment of emissions and mitigation opportunities" href="https://www.fao.org/3/i3437e/i3437e.pdf"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-sources-of-emissions">
+				Environmental Protection Agency. Sources of Greenhouse Gas Emissions. <url aria-Label="Sources of Greenhouse Gas Emissions" href="https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-pandemic">
+				C. Rasmussen. Emission Reductions From Pandemic Had Unexpected Effects on Atmosphere. <url aria-label="Emission Reductions From Pandemic Had Unexpected Effects on Atmosphere" href="https://www.jpl.nasa.gov/news/emission-reductions-from-pandemic-had-unexpected-effects-on-atmosphere"/>
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-necessary-reduction">
+				University of East Anglia Communications. Global Carbon Emissions Need to Shrink by 10 Times Faster. <url aria-label="Global Carbon Emissions need to shrink by 10 times faster" href="https://earth.stanford.edu/news/global-carbon-emissions-need-shrink-10-times-faster-0#gs.3792lq"/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-six-sectors">
+				United Nations Environment Programme. The Six-Sector Solution to the Climate Crisis. <url aria-label="Six-Sector Solution to the Climate Crisis" href="https://www.unep.org/interactive/six-sector-solution-climate-change/"/>
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-rcp">
+				G. P. Wayne. The Beginner's Guide to Representative Concentration Pathways. Skeptical Science. <url aria-label="The Beginner's Guide to Representative Concentration Pathways" href="https://skepticalscience.com/rcp.php?t=1"/>. Accessed 07-28-22.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-sea-level-rise">
+				S. Jevrejeva, L. Jackson, R. Riva, J. Moore. Coastal sea level rise with warming above 2 °C. PNAS 113 (47) 13342-13347. <url href="https://www.pnas.org/doi/10.1073/pnas.1605312113"/>. Accessed 07/30/22.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-miami-tides">
+				NOAA. Tides &amp; Currents. Observed Water Levels at 8723214, Virginia Key, Biscayne Bay, FL From 2016/10/02 00:00 GMT to 2016/11/01 23:59 GMT. <url href="https://tidesandcurrents.noaa.gov/waterlevels.html?id=8723214&amp;units=standard&amp;bdate=20161002&amp;edate=20161101&amp;timezone=GMT&amp;datum=MLLW&amp;interval=6&amp;action="/>.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-nyc-storm-surge">
+				A. Garner, M. Mann, K. Emanuel, R. Kopp, N. Lin, R. Alley, B. Horton, R. DeConto, J. Donnelly, D. Pollard. Impact of climate change on New York City’s coastal flood hazard: Increasing flood heights from the preindustrial to 2300 CE. PNAS 114 (45) 11861-11866. <url href="https://www.pnas.org/doi/pdf/10.1073/pnas.1703568114"/>. Accessed 07/30/22.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-crop-yields">
+				C. Zhao, B. Liu, S. Piao, S. Asseng. Temperature increase reduces global yields of major crops in four independent estimates. PNAS 114 (35) 9326-9331. <url href="https://www.pnas.org/doi/10.1073/pnas.1701762114"/>. Accessed 07/30/22.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-owid-full-data">
+				Our World in Data. Data on CO2 and Greenhouse Gas Emissions by Our World in Data. <url href="https://github.com/owid/co2-data"/>. Accessed 07/12/23.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-mauna-loa-co2">
+				Global Monitoring Laboratory, Earth System Research Laboratories, National Oceanic and Atmospheric Administration. Trends in Atmospheric Carbon Dioxide. <url href="https://gml.noaa.gov/ccgg/trends/"/>. Accessed 07/12/23.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-climate-majors">
+				Climate Accountability Institute. Climate Majors Database. <url href="https://climateaccountability.org/carbonmajors_dataset2020.html"/>. Accessed 07/25/23.
+			</biblio>
+			<biblio xml:id="greenhouse-gas-biblio-vehicles-by-percentage">
+				Our World in Data. Passenger Vehicle Registrations by Type. <url href="https://ourworldindata.org/transport#passenger-vehicle-registrations-by-type"/>. Accessed 07/26/23.
+			</biblio>
+			<biblio xml:id="biblio-greenhouse-gas-chatgpt">
+				ChatGPT. <url>https://chat.openai.com</url>
+			</biblio>
+		</subsection>
+		<subsection>
+			<title>Image Descriptions</title>
+			<ol>
+				<li xml:id="greenhouse-gas-image-history-co2">
+					A graph with years from 400,000 years ago on the horizontal axis and atmospheric CO2 in parts per million (ppm) on the vertical axis. The graph shows that atmospheric CO2 has fluctuated between about 180 and 300 ppm for the last 400,000 years, but has soared from less than 300 ppm to over 400 ppm in the last century.
+				</li>
+				<li xml:id="greenhouse-gas-image-bar-chart-vehicle-access">
+					A graph with the number of vehicles on the horizontal axis and millions of households on the vertical axis. For each number of vehicles, a rectangle is drawn with height equal to the number of households with that many vehicles. The data displayed is from the frequency table given above.
+				</li>
+				<li xml:id="greenhouse-gas-image-histogram-co2">
+					A graph with the per capita CO2 emissions in tons per person on the horizontal axis and number of countries on the vertical axis.  For each range of emissions levels, a rectangle is drawn with height equal to the number of countries that produce that level of emissions.  The data displayed is from the frequency table given above.
+				</li>
+				<li xml:id="greenhouse-gas-image-bar-chart-methane">
+					A graph with the names of countries on the horizontal axis and millions of equivalent tons of CO2 on the vertical axis. For each country, a rectangle is drawn with the height of the rectangle corresponding to the methane emissions of each country.  The data displayed is from the table given above.
+				</li>
+				<li xml:id="greenhouse-gas-image-pie-chart-co2">
+					A circle with wedges representing countries with emissions in the given ranges.  One wedge is very large, relative to the others, and several wedges are only 0 or 1 percent of the circle. The data displayed is from the table given above.
+				</li>
+				<li xml:id="greenhouse-gas-image-scatterplot-gdp-co2">
+					A graph with GDP, in 2011 dollars per person, on the horizontal axis and CO2 emissions, in tons per person, on the vertical axis.  The values for 165 different nations are represented by dots on the graph, with the horizontal position of the dot corresponding to GDP and the vertical position of the dot corresponding to CO2 emissions.  The data shown in the graph is in <a href="data-files/co2-emissions-vs-gdp-2018.xlsx">gdp and co2 emissions for all countries in 2018 [Excel Spreadsheet]</a>.
+				</li>
+				<li xml:id="greenhouse-gas-image-line-graph-global-temperature-anomaly">
+					A graph with years on the horizontal axis and the global mean temperature anomaly, in degrees celsius difference from the mean temperature from 1901-2000 on the vertical axis.  The value for each year is represented by a dot on the graph, with the horizontal position of the dot corresponding to the year and the vertical position of the dot corresponding to global mean temperature anomaly.  The data shown in the graph is in <a href="data-files/global-temperature-anomaly.xlsx">global mean temperature anomalies from 1880 to 2019 [Excel Spreadsheet]</a>.
+				</li>
+				<li xml:id="greenhouse-gas-image-paired-line-graph-co2-us-china">
+					A graph with years on the horizontal axis and total co2 emissions in gigatons on the vertical axis. The values for the USA and China from 1960 to 2018 are represented as points on the graph, with the horizontal position determined by year and the vertical position determined by emissions. The data shown in the graph is in <a href="data-files/paired-line-graph-co2-us-china.xlsx">overall co2 emissions for the USA and China from 1960 to 2018 [Excel Spreadsheet]</a>.
+				</li>
+				<li xml:id="greenhouse-gas-image-paired-line-graph-co2-us-singapore">
+					A graph with years on the horizontal axis and total co2 emissions in gigatons on the vertical axis. The values for the USA and Singapore from 1960 to 2018 are represented as points on the graph, with the horizontal position determined by year and the vertical position determined by emissions. The data shown in the graph is in <a href="data-files/paired-line-graph-co2-us-singapore.xlsx">overall co2 emissions for the USA and Singapore from 1960 to 2018 [Excel Spreadsheet]</a>.
+				</li>
+				<li xml:id="greenhouse-gas-image-side-by-side-line-graph-co2-singapore">
+					A graph with years on the horizontal axis and total co2 emissions in kilotons on the vertical axis. The values for Singapore from 1960 to 2018 are represented as points on the graph, with the horizontal position determined by year and the vertical position determined by emissions. The data shown in the graph is in <a href="data-files/paired-line-graph-co2-us-singapore.xlsx">overall co2 emissions for the USA and Singapore from 1960 to 2018 [Excel Spreadsheet]</a>.
+				</li>
+				<li xml:id="greenhouse-gas-image-side-by-side-line-graph-co2-us">
+					A graph with years on the horizontal axis and total co2 emissions in kilotons on the vertical axis. The values for the United States from 1960 to 2018 are represented as points on the graph, with the horizontal position determined by year and the vertical position determined by emissions. The data shown in the graph is in <a href="data-files/paired-line-graph-co2-us-singapore.xlsx">overall co2 emissions for the USA and Singapore from 1960 to 2018 [Excel Spreadsheet]</a>.
+				</li>
+				<li xml:id="greenhouse-gas-image-paired-bar-graph-vehicles-gb-us">
+					A graph with number of vehicles on the horizontal access and percentage of households owning that many vehicles on the vertical axis.  For each number of vehicles, there is a bar representing the percentage of Great Britain households and a bar representing the percentage of United States households.  The height of the bar is determined by the percentage.  The data contained in the graph is shown here:
+					<xi:include href="tables/paired-bar-graph-vehicles-gb-us.xml"/>
+				</li>
+				<li xml:id="greenhouse-gas-image-pie-chart-vehicles-us">
+					A circle divided into wedges, with each wedge proportional in size to the percentage of the United States population who own 0, 1, 2, 3, 4, or 5 or more vehicles.  The percentages also appear on the graph. The data shown in the chart is the United States data from the table below:
+					<xi:include href="tables/paired-bar-graph-vehicles-gb-us.xml"/> 
+				</li>
+				<li xml:id="greenhouse-gas-image-pie-chart-vehicles-gb">
+					A circle divided into wedges, with each wedge proportional in size to the percentage of the Great Britain population who own 0, 1, 2, 3, 4, or 5 or more vehicles.  The percentages also appear on the graph. The data shown in the chart is the Great Britain data from the table below:
+					<xi:include href="tables/paired-bar-graph-vehicles-gb-us.xml"/> 
+				</li>
+				<li xml:id="greenhouse-gas-image-stacked-bar-chart-vehicles-gb-us">
+					Two bars, one for the United States and one for Great Britain.  Each bar is divided proportionally using the number of households with 0, 1, 2, 3, 4, or 5 or more vehicles in each country.  The data shown in the chart is the data in this table:
+					<xi:include href="tables/paired-bar-graph-vehicles-gb-us.xml"/> 
+				</li>
+				<li xml:id="greenhouse-gas-image-co2-historical-emissions">
+					A stacked 100% line chart, with years from 1750 to present on the x-axis, and percentage of total historical global CO2 emissions from 1750 to that year on the y-axis. Different colors denote the different regions of the world. The data shown in the chart is available at <xref ref="greenhouse-gas-biblio-co2-historical-data"/>
+				</li>
+				<li xml:id="greenhouse-gas-image-co2-annual-emissions">
+					A stacked 100% line chart, with years from 1750 to present on the x-axis, and percentage of annual global CO2 emissions from 1750 to that year on the y-axis. Different colors denote the different regions of the world. The data shown in the chart is available at <xref ref="greenhouse-gas-biblio-co2-annual-data"/>
+				</li>
+				<li xml:id="greenhouse-gas-image-emissions-by-corporation">
+					A bar chart, with a list of corporation names on the x-axis, and the total emissions of those corporations, in millions of tons of CO2 equivalents, over the history of the corporation.  The data shown in the chart is from <xref ref="greenhouse-gas-table-emissions-by-corporation"/>.
+				</li>
+
+			</ol>
+		</subsection>
+	</section>
+</chapter>

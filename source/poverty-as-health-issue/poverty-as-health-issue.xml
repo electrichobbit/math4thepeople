@@ -1,0 +1,3427 @@
+<chapter xml:id="ch_first" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+	<title>Poverty as a Health Issue</title>
+	
+	
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  
+  <!-- Outline
+	<ol>
+		<li>Text introduction providing background on the topic (not in its own section)</li>
+		<li>Objectives</li>
+		<li>Understanding the Issue</li>
+		<li>Cui Bono - Who Benefits</li>
+		<li>Big Problem</li>
+		<li>Math Content</li>
+		<li>Solving for Change</li>
+		<li>Conclusion</li>
+		<li>References</li>
+	</ol> -->
+  
+	<introduction xml:id="poverty-health-introduction">
+	
+		<!-- <p>I am modeling this chapter after <url href="https://web.stevenson.edu/mbranson/m4tp/version1/payday-loans.html" visual="hi">Mark's chapter on Payday loans</url>: <url href="https://web.stevenson.edu/mbranson/m4tp/version1/payday-loans.html"/></p> -->
+		
+		<p><em>This module on Poverty as a Health Issue was authored by <xref ref="bstucky"/>. It was inspired and partially supported by the author’s experience as an instructor through the Preparation for Industrial Careers in Mathematics Program (PIC Math). PIC Math is a program of the Mathematical Association of America (MAA) and the Society for Industrial and Applied Mathematics (SIAM). Support is provided by the National Science Foundation (NSF grant DMS-1722275).</em></p> <!-- add little link with author info once I learn how to do that -->
+	
+		<p>We can’t thrive (and sometimes can’t survive) if we are not healthy.  To stay healthy, we depend on being able to access affordable healthcare.  Unfortunately, the reality is that many folks across the United States do not have this access, often due to cycles of poverty.</p>
+		<p>Short of fixing broken systems, what can we do to help? Nonprofits such as free health clinics provide some relief in the form of free health services to poor and uninsured Americans in the communities they serve. But they have limited resources and face the challenge of deciding how best to use them. Thankfully, math can come to the rescue!</p>
+		<p>In this module, we will explore the connection between poverty and health outcomes, and learn some ways that we can use mathematics to help nonprofits such as free health clinics decide how best to allocate their resources.</p>
+		
+	</introduction>
+	<section xml:id="poverty-health-objectives">
+		<title>Objectives</title>
+		<p>
+			After completing this module, students will be able to:
+			<ol>
+				<li>Describe the connection between poverty and health outcomes.</li>
+				<li>Explain why a free health clinic might be interested in considering social determinants of health to create measures of medical need in the community they serve.</li>
+				<li>Calculate the number of possibilities for mobile clinic placements using the concepts of permutations, combinations, and other rules for counting.</li>
+				<li>Understand how parametric linear models can be used to combine relevant variables and model medical need. </li>
+				<li>Understand how discrete optimization can be used to place mobile clinic(s) in a way that maximizes the need covered.</li>
+				<li>Explain, justify and think critically about the assumptions underpinning mathematical models.</li>
+			</ol>
+		</p>
+	</section>
+	<section xml:id="poverty-health-background">
+		<title>Understanding the Issue</title>
+		<subsection>
+		<title>Why is good health important?</title>
+		<p>Have you ever gotten sick and thought to yourself “I feel so bad that I can’t do anything. I have been taking my good health for granted!”</p>
+		<p>Dealing with health issues is a burden. Not only can they prevent us from being able to do the things that we love to do - they can make it harder to do the things we need to do to survive. Healthcare can be expensive and even harder to afford if our health issues prevent us from working. To take an extreme example, if you are injured in a way that prevents you from doing your job, you may lose both your job and have to pay a hefty sum for treatment. Without some kind of safety net, your situation can quickly become life or death.</p>
+		<p>So, as a society, we have developed mechanisms that serve as safety nets for us when we get sick or injured. In the modern age, the most fundamental of these is health insurance. We pay a monthly fee to an insurance organization, even if we are in good health. These fees are aggregated and distributed to those of us who need them: When we need to pay for healthcare, money is taken from this pot to help financially support our care.</p>
+		</subsection>
+		<subsection>
+		<title>Access to healthcare</title>
+		<p>Different countries take different approaches to maintaining the health of their citizens. Before modern times, governments did not guarantee their citizens any form of health insurance. Instead, large family units, religious institutions, and/or community organizations played the role of the health insurance company, coming together to financially support community members when they got sick. Today, the government usually plays a role in making sure all of its citizens have access to health insurance. In some countries around the world such as Canada, Iceland, Kuwait, and South Korea (full list at <xref ref="biblio-poverty-health-universal-healthcare-list"/>), all citizens are guaranteed affordable access to health care by the government through a system called universal health care, usually financed by taxpayers.</p>
+		<p>In the United States, the system is more complicated. What seems to be considered the ideal situation is to have your employer pay for your health insurance by deducting a certain amount from your paycheck each month. At the time of writing, the Affordable Care Act gives unemployed citizens access to health insurance, but they have to enroll themselves at <url href="https://healthcare.gov" visual="https://healthcare.gov">https://healthcare.gov</url> and must find a way to pay for the insurance themselves or use assistance programs. How much they pay depends on their living situation and many other factors <xref ref="biblio-poverty-health-insurance-cost-determination"/>.</p>
+		<p>It’s worth noting that even with these programs, many Americans remain uninsured. If you’re uninsured and have a health crisis, your only option is the emergency room (ER). The ER provides care without proof of insurance but is expensive, and this option can quickly result in rapidly accruing medical debt.</p>
+		<p>In fact, data shows that the U.S. has among the poorest health outcomes in the world as compared to other developed nations. Among Australia, Canada, France, Germany, the Netherlands, New Zealand, Norway, Sweden, Switzerland, and the United Kingdom, we spend the most on our healthcare system, and yet have the lowest life expectancy, highest number of hospitalizations from preventable causes, and highest rate of avoidable deaths (see e.g. <xref ref="biblio-poverty-health-usa-health-outcomes"/>).</p>
+		<p>There is something wrong with our current system, and the government is not doing enough to maintain the health of our citizens. Everyone deserves to have their basic medical needs met, so why is the United States faring so poorly, and what can we do?</p>
+		</subsection>
+		<subsection>
+		<title>Social determinants of health</title>
+
+		<p>Scholars argue that the problem lies in the connection between poverty and poor health outcomes. Whether or not you have insurance, poverty contributes both to lack of access to healthcare, and poor health in the first place. To give you some examples, imagine the following scenarios:</p>
+		
+		<ol>
+				<li>You may not be able to afford transportation to the doctor’s office.</li>
+				<li>You may not have received adequate health education resulting in poor <em>health literacy.</em></li>
+				<li>You may only be able to afford foods which do not provide adequate nutrition, leading to worse health outcomes.</li>
+				<li>You may have been forced into a living situation contributing to poor health, such as an apartment with poor air quality due to a mold problem.</li>
+				<li>You may be forced to live in a neighborhood where drugs and/or crime are prevalent.</li>
+				<li>Your immigration status may limit your ability to work or receive healthcare.</li>
+			</ol>
+
+		<p>Social determinants of health refer to those sociodemographic factors which correlate positively or negatively (see <xref ref="payday-loans"/> ) with poor health outcomes. As you might imagine, income is a one of these. Others include employment status, highest degree of education, disability status, quality of affordable housing, etc.</p>
+		<p>The documentary <em>Unnatural Causes: Place Matters</em> gives concrete examples which show how an individual living in poverty can be stuck in a living situation adversely affecting their health. A stressful living situation can complicate issues such as heart problems, which may make it hard or impossible to work, which in turn makes it impossible to improve your living situation. Health issues and poverty can compound one another in a sinister feedback loop <xref ref="biblio-poverty-health-place-matters"/>.</p>
+		<p>In other words, there is a vicious cycle: Living in poverty can make you sick, and being sick can keep you poor or make you poorer.</p>
+
+		
+		</subsection>
+		<subsection>
+		<title>The role of nonprofits</title>
+		<p>Not-for-profit free health clinics have cropped up across the country to improve Americans’ access to healthcare. Since poverty is the root cause, we can’t expect these clinics to be a complete solution, but they do offer an important service to uninsured and/or low-income residents of underserved communities, providing basic health services such as check-ups, medication, lab work, basic dental and vision exams, counseling, and referrals to specialists.</p>
+		<p>One issue some clinics face is that the patients who most need their services are not able to easily get to their clinic. Perhaps they do not have a car, perhaps they have a very tight schedule, or perhaps they have mobility challenges. Thus, nonprofits may strategically deploy mobile clinics within the geographical region they are able to serve. Such a clinic might operate out of an RV and offer a limited subset of clinical services including basic health check-ups, or COVID-19/flu vaccinations.</p>
+		<p>Since their monetary and human resources are limited, the health clinic must choose wisely in its deployment of the mobile units. How can they effectively choose where to concentrate their efforts? We will see in this module how mathematics can help these nonprofits use sociodemographic and geographic data to make informed decisions about resource allocation.</p>
+		</subsection>
+
+	</section>
+	<section xml:id="poverty-health-cui-bono">
+		<title>Cui Bono - Who Benefits?</title>
+		<p>The <xref ref="poverty-health-background" type="section">previous section</xref> described the connection between poverty and health outcomes. But why do we have such a problem with poverty in the United States in the first place, and who benefits from the status quo being the way that it is?</p>
+		<p>If we want to understand this, we need to take a slight digression and explore the connection between geography and race. The unfortunate truth is a history of systemic racism.</p>
+		<subsection>
+		<title>Redlining, disinvestment, and race and geography as social determinants of health</title>
+		<p>We gave some examples of social determinants of health in the previous section. Yet another pair of social determinants of health is your address and your race. Let’s dig a bit deeper into why this is.</p>
+		<p>Not all neighborhoods are created equally. In the 1930s, the U.S. government established standards for providing home loans to Americans after commissioning maps categorizing neighborhoods by desirability for lending. In a racist process known as redlining, the most "undesirable" neighborhoods, outlined in red, tended to be older urban neighborhoods, collectively including a majority of the African American households in the country <xref ref="biblio-poverty-health-redlining"/>.</p>
+		<p>In the following decades, historians theorize that these maps were used to deny loans to African Americans, effectively trapping them in these same neighborhoods <xref ref="biblio-poverty-health-denying-loans"/>. African Americans received less than 2 percent of all federally-insured home loans from 1945 to 1959 <xref ref="biblio-poverty-health-denying-loans-data"/>. Meanwhile, many whites moved out of these neighborhoods in the 1950s and 60s in a process known as <em>white flight</em>. They were incentivized in part by their ability to actually obtain home loans in newer affluent suburbs, as well as other racist practices such as <em>blockbusting</em>, where developers convinced white homeowners to sell their homes at a discount in part through fearmongering about racial minorities in their communities <xref ref="biblio-poverty-health-white-flight"/>.</p>
+		<p>Thus began a <em>cycle of disinvestment</em> in Black communities, for the benefit of a powerful few, which continues today. These cycles of poverty exist elsewhere, too, and might follow this formula:</p>
+		
+		<ol>
+				<li>A neighborhood of racially minoritized Americans, usually Black or Latinx, is perceived to be undesirable by those with influence.</li>
+				<li>Those who can afford it distance themselves from that community and move to newer, affluent communities.</li>
+				<li>There is little incentive to invest in the original community. Rather, those in power often lobby for infrastructure improvements in the affluent communities where their constituents live. This might be attributed in part to gerrymandering (<xref ref="gerrymandering"/>), suppression of voting rights, misinformation (<xref ref="fake-news"/>), and/or prioritization of corporate interests.</li>
+				<li>Disinvestment in the disenfranchised community causes quality of life to decrease. The quality of housing, education, public transportation, infrastructure, social services, access to healthcare, etc., declines due to lack of investment. Crime may increase, opportunities diminish, and health outcomes worsen. Perception of the community may worsen as well, creating a feedback loop.</li>
+				<li>Repeat.</li>
+			</ol>
+			
+		</subsection>
+		<subsection>
+		<title>Whataboutism</title>
+		<p>Depending on your background, you may have a kneejerk negative reaction to the narrative above that is worth acknowledging and briefly addressing. In particular, a white person who grew up poor might read the section above and ask "What about my story?"</p>
+		
+		<p>It is true that such individuals' stories should be told, and that their perspectives are valuable. There are of course other issues causing suffering besides systemic racism; it just so happens that the phenomenon is a particularly well-documented and widespread manifestation of the brokenness of many deeply ingrained systems. Shedding light on and fixing this brokenness is in fact likely to improve the system for all of us.</p>
+		<!-- The choice to focus the current discussion on systemic racism is a reflection of the fact that each of us must focus our efforts on one struggle at a time in order to make positive changes in society. -->
+		<p>The tendency to get stuck comparing our struggles and degrees of suffering with one another is a form of <em>whataboutism</em>. Rather than leading to productive change, this way of thinking only leads to gridlock. In fact, those in power who benefit when the status quo is maintained use whataboutism in their rhetoric to pit us against one another while keeping us from uniting against the root causes of our unhappiness <xref ref="biblio-poverty-health-whataboutism"/>. This idea is closely related to the concept of <em>false consciousness</em> <xref ref="biblio-poverty-health-false-consciousness"/>.</p>
+		<p>In any case, both your address and your race can negatively affect your health, and those in power have so far not been willing and able to adequately address the root of the inequality. It appears that a true solution to the problem of poor health outcomes in the United States would involve a confrontation of systemic racism. This is a monumental task, but a worthy one if we believe that everyone deserves to have their basic medical needs met.</p>
+		<p>Let’s now explore how free health clinics can function better within the current state of affairs.</p>	
+		
+		</subsection>
+		
+	</section>
+	<section xml:id="poverty-health-big-problem">
+		<title>The Big Problem: Optimizing the Placement of Mobile Health Clinics</title>
+		<assemblage>
+			<p>How can nonprofits take multiple social determinants of health into account in order to create accurate measures of medical need in the communities they serve? How many possibilities do they need to consider when deciding where to place mobile clinics? How might the number of possibilities thus depend on the types of resources available? How could geographical considerations (such as not wanting to have multiple clinic locations too close together) be taken into account?</p>
+		</assemblage>
+		<p>Let’s imagine that a nonprofit such as <url href="https://openarmsfreeclinic.org/" visual="openarmsfreeclinic.com">Open Arms Free Clinic</url> (OAFC) has tasked us with finding the best locations in a community for their mobile clinic. To get an idea of the size of the problem to be solved, we may first want to compute the number of possibilities of where we might place the clinics, under a few different scenarios or assumptions. This motivates the multiplication and division rules for counting, which leads to the idea of permutations and combinations. In the next section, we will consider some more complex scenarios motivating the counting techniques of the addition and subtraction rules.</p>
+		<p>Next we need to quantify medical need. We will introduce a basic way of combining several variables of interest in a single model called a parametric linear model. In doing so, we will establish a measure of medical need based on social determinants of health, and use it to identify the areas of greatest need.</p>
+		<p>Perhaps the solution we obtain in the previous step is inadequate because it suggests mobile clinic placements that are clustered too closely together. We will describe how we can account for this by introducing some additional assumptions that will help us ensure that we are spreading out our resources. In the process, we will learn about discrete optimization.</p>
+		<p>Finally, we will consider one additional variable closely related to poverty, and put everything together. A similar solution to this problem was presented to OAFC in Spring of 2022 by actual students at Beloit College.</p>
+
+		
+	</section>
+	<section xml:id="poverty-health-permcomb">
+		<title>The Product and Division Rules; Permutations and Combinations</title>
+		<p><url href="https://openarmsfreeclinic.org/" visual="openarmsfreeclinic.com">Open Arms Free Clinic</url> (OAFC) in Elkhorn, Wisconsin serves uninsured residents living below <m>200\%</m> of the poverty line in Walworth County, Wisconsin. This clinic and the geographical area they serve will be a running example for us.</p>
+		
+		<!-- <p>Disclaimer: The scenarios discussed in the next few sections are inspired by a specific problem that students at Beloit College were tasked with solving when they partnered with OAFC in Spring of 2022. That scenario and work is described in REFERENCE SECTION. In order to introduce the mathematical topics in this chapter, the author is taking creative license in crafting some possible scenarios that OAFC or clinics like it might face. These scenarios may be fictional and/or simplified. After understanding the mathematical topics that follow, you will be able to apply your understanding to the actual scenario faced by OAFC.</p> -->
+		
+		<p>The map below shows the <m>30</m> municipalities in Walworth County. Later, we will remove the municipality of Burlington City from our analysis since it barely overlaps the county and there was no data for it available for any of the variables we will consider.</p>
+		
+		<figure>
+			<title>Walworth County, WI.</title>
+			<image source="poverty-as-health-issue/images/countymap.png" width = "95%"/>
+			<caption>A map of the <m>30</m> municipalities in Walworth County, WI. <xref ref="poverty-health-images-countymap">Image Description </xref>.</caption>
+		</figure>
+
+		<subsection>
+		<title>The product rule and permutations</title>
+		
+		<p>Consider the following motivating example.</p>
+		
+		<example xml:id="poverty-health-ex1">
+			<statement>
+				<p>Let's imagine that OAFC intends to open three mobile health clinics in separate municipalities within Walworth County, each one staffed by a different volunteer. How many different ways could they do this?</p>
+			</statement>
+			<solution>
+				<p>Let's label the clinics <m>A</m>, <m>B</m>, and <m>C</m> according to the volunteer staffing them, and imagine placing the clinics in that order. For clinic <m>A</m>, we have <m>30</m> municipalities to choose from. For clinic <m>B</m>, we have <m>21</m> choices since we already used one. Thus there are <m>30*29</m> ways of placing clinic <m>A</m>, and then clinic <m>B</m>. Then, there are <m>28</m> choices for the placement of clinic <m>C</m> (since we already used two). Thus there are <m>30*29*28=24360</m> ways of placing the clinics.</p>
+			</solution>
+		</example>
+		
+		<p>This example illustrates a counting principle called the <em>product rule</em>:</p>
+		
+		<assemblage>
+				<title>Product rule</title>
+				<p>Suppose that a procedure can be broken down into a sequence of <m>n</m> tasks. The first task can be done in <m>m_1</m> ways, the second task can be done in <m>m_2</m> ways after doing the first task, the third task can be done in <m>m_3</m> ways after doing the first two tasks, and in general the <m>i^{\text{th}}</m> task can be done in <m>m_i</m> ways after doing all the tasks preceding it. Then there are</p>
+				<p><me>m_1*m_2*m_3*\cdots*m_n</me></p>
+				<p>ways to do the procedure.</p>
+		</assemblage>
+		
+		<p>The form that the product rule takes in <xref ref="poverty-health-ex1"/> comes up so often that it has its own notation, the <em>factorial</em>.</p>
+		
+		<assemblage>
+				<title>Factorials</title>
+				<p>For a positive integer <m>n</m>, we write <m>n!</m> to stand for the product of the numbers <m>1</m> through <m>n</m>. That is, <me>n!=n*(n-1)*(n-2)*\cdots *3*2*1</me>. In order to make common formulas involving factorials work in edge cases, we also define <m>0!=1</m>.</p>
+		</assemblage>
+		
+		<example xml:id="poverty-health-ex2">
+			<statement>
+				<p>Find <m>n!</m> for <m>n=0,1,2,3,4,5</m>.</p>
+			</statement>
+			<solution>
+				<p><m>0!=1</m> by convention.</p>
+				<p><m>1!=1</m>.</p>
+				<p><m>2!=2*1=2</m>.</p>
+				<p><m>3!=3*2*1=6</m>.</p>
+				<p><m>4!=4*3*2*1=24</m>.</p>
+				<p><m>5!=5*4!=120</m>.</p>
+			</solution>
+		</example>
+		
+		<p>A permutation is a way of creating a sequence of labeled objects from some larger collection when replacement is not allowed. The most common formula for counting permutations uses factorials.</p>
+		
+		<assemblage>
+				<title>Permutations</title>
+				<p>Suppose <m>n</m> and <m>m</m> are nonnegative integers with <m>m\leq n</m>. Then the number of ways to place <m>m</m> labeled objects in sequence from a larger collection of <m>n</m> objects is <me>\frac{n!}{(n-m)!}</me>. We call these ways <em>permutations</em> and write this number as <m>nPm</m>, that is, <me>nPm=\frac{n!}{(n-m)!}</me>.</p>
+		</assemblage>
+		
+		<p>Another notation which is commonly used in place of <m>nPm</m> is <m>P(n,m)</m>.</p>
+		
+		<example xml:id="poverty-health-ex3">
+			<statement>
+				<p>Let's recall <xref ref="poverty-health-ex1"/> in which OAFC intended to open three mobile clinics in separate municipalities within Walworth County, each one staffed by a different volunteer. We saw that the number of ways to do this was <m>30*29*28</m>. Explain this answer in terms of permutations.</p>
+			</statement>
+			<solution>
+				<p>We can think of the municipalities as a collection of objects (<m>n=30</m>) and note that a sequence of three municipalities (a permutation) exactly corresponds to a way of staffing three clinic locations. Thus we can imagine the municipalities as a large collection of objects from which we must count the number of permutations of size <m>3</m>, or <m>30P3</m>. By the formula above, <me>30P3=\frac{30!}{(30-3)!}=\frac{30!}{27!}</me><me>=\frac{30*29*28*27*26*25*24*23\cdots*3*2*1}{27*26*25*\cdots*3*2*1}</me><me>=30*29*28</me>, the same as our answer. Note the large amount of cancellation in the numerator and denominator arising from the factorial!</p>
+			</solution>
+		</example>
+		
+		</subsection>
+		<subsection>
+		<title>The division rule and combinations</title>
+		
+		<p>Next, consider the following variant of <xref ref="poverty-health-ex1"/>:</p>
+		
+		<example xml:id="poverty-health-ex4">
+			<statement>
+				<p>Suppose now that OAFC is interested only in the possible clinic locations, and is not concerned with staffing at the moment. In other words, they simply intend to open three mobile health clinics in separate municipalities within Walworth County. How many different ways could they do this?</p>
+			</statement>
+			<solution>
+				<p>Let's again label the clinics <m>A</m>, <m>B</m>, and <m>C</m>. As in <xref ref="poverty-health-ex1"/>, there are <m>30P3=30*29*28=24360</m> ways of placing the clinics with their labels. What has changed in the current example? In short, we no longer care about the labels of the clinics. As in <xref ref="poverty-health-countymap2"/>, a placement in the same municipalities which only switches the labels on clinics <m>A</m> and <m>B</m> should be considered equivalent to the original. The question becomes "How many placements are equivalent to a given placement?" And the answer to this is <m>3!=3*2*1=120</m>, since this number represents the number of ways we can label the clinics for this specific choice of <m>3</m> municipalities. Now, since each of the <m>24360</m> clinic placements has <m>5</m> other equivalent placements, we can find the answer to our question by dividing <m>24360</m> by <m>6</m>. In other words, there are <me>\frac{30*29*28}{3*2*1}=\frac{24360}{6}=4060</me> ways of placing the clinics in this way.</p>
+						
+
+				<figure xml:id="poverty-health-countymap2">
+				<title>Two equivalent placements.</title>
+				<sidebyside widths="49% 49%" valign="middle">
+				<image source="poverty-as-health-issue/images/countymap2.png" width = "100%"/>
+				<image source="poverty-as-health-issue/images/countymap3.png" width = "100%"/>
+				</sidebyside>
+				<caption>Two equivalent clinic placements. <xref ref="poverty-health-images-equivalent-placements">Image Description</xref>.</caption>
+				</figure>	
+				
+				
+				<!--<sidebyside widths="49% 49%" valign="middle">
+				
+				<figure xml:id="poverty-health-countymap2">
+					<title>Walworth County, WI.</title>
+					<image source="poverty-as-health-issue/images/countymap2.png" width = "100%"/>
+					
+				</figure>
+				
+			   <figure xml:id="poverty-health-countymap3">
+					<title>Walworth County, WI.</title>
+					<image source="poverty-as-health-issue/images/countymap3.png" width = "100%"/>
+					
+				</figure>
+				
+				<caption>A map of the 30 municipalities in Walworth County, WI.</caption>
+			  
+				</sidebyside> -->
+				
+		
+			</solution>
+		</example>
+						
+		<p>This example illustrates a counting principle called the <em>division rule</em>:</p>
+		
+		<assemblage>
+				<title>Division rule</title>
+				<p>Suppose that there are <m>n</m> ways of completing a procedure, but that those ways are not unique in the sense that each of the them is equivalent to <m>m</m> others including itself. Then the task can be done in <m>n/m</m> unique ways.</p>
+		</assemblage>
+		
+		<p>A combination is a way of choosing a subset of labeled objects from some larger collection when replacement is not allowed. The formula for the number of combinations comes from the division rule.</p>
+		
+		<assemblage>
+				<title>Combinations</title>
+				<p>Suppose <m>n</m> and <m>m</m> are nonnegative integers with <m>m\leq n</m>. Then the number of ways to choose <m>m</m> labeled objects in sequence from a larger collection of <m>n</m> objects is <me>\frac{n!}{(n-m)!m!}</me>. We call these ways <em>combinations</em> and write this number as <m>nCm</m>, that is, <me>nCm=\frac{n!}{(n-m)!m!}</me>.</p>
+		</assemblage>
+		
+		<p>Another notation which is commonly used in place of <m>nCm</m> is <m>\binom{n}{m}</m>.  Some authors also write <m>C(n,m)</m>. The numbers that arise in this way are sometimes called <em>binomial coefficients</em>. There is a good reason for this which you may enjoy exploring <xref ref="biblio-poverty-health-binom"/>. Some of the many beautiful patterns that can be seen in these numbers are explored in the exercises.</p>
+		
+		<example xml:id="poverty-health-ex5">
+			<statement>
+				<p>Let's recall <xref ref="poverty-health-ex4"/> in which OAFC intended to open three mobile clinics in separate municipalities within Walworth County. We saw that the number of ways to do this was <me>\frac{30*29*28}{3*2*1}</me>. Explain this answer in terms of combinations.</p>
+			</statement>
+			<solution>
+				<p>We can think of the municipalities as a collection of objects (<m>n=30</m>) and note that a choice of three municipalities (a combination), where order does not matter, is exactly what we are after counting. Thus we can imagine the municipalities as a large collection of objects from which we must count the number of combinations of size <m>3</m>, or <m>30C3</m>. By the formula above, <me>30C3=\frac{30!}{(30-3)!*3!}=\frac{30!}{27!*3!}</me><me>=\frac{30*29*28*27*26*25*24*23\cdots*3*2*1}{(27*26*25*\cdots*3*2*1)*(3*2*1)}</me><me>=\frac{30*29*28}{3*2}</me>, the same as our answer.</p>
+			</solution>
+		</example>
+		
+		<p>Warning: When plugging an expression such as <m>\frac{30*29*28}{3*2}</m> into your calculator, be careful to put the product in the denominator (<m>3*2</m>) in parenthesis (i.e. you should type <m>30*29*28/(3*2)</m>). If you type <m>30*29*28/3*2</m> the calculator will interpret the <m>2</m> as being in the numerator. This is because multiplications and divisions are done from left to right, and both have equal priority under the usual conventions.</p>
+		
+		</subsection>
+		
+		<!--
+		The examples throughout these sections will be focused on Walworth County.
+		<p> Description of math topic.  We suggest that each module should cover 3-4 math topics.  These topics should be directly applicable to the social justice topic, but don't need to be related in other ways.  Each topic should be approachable without any specialized background  You can insert LaTeX like this: <m>a^2 + b^2 = c^2</m>.  You can include interactive elements like Desmos or Geogebra using an interactive tag, as seen in <xref ref="module-tag-math-topic-topicname-desmos-exercise-example"/>:
+		</p>
+		<figure xml:id="module-tag-math-topic-topicname-desmos-exercise-example">
+			<interactive desmos="ttox1bvxku" width="60%" aspect="2:3" />
+			<caption>This shows you how to include a Desmos object.</caption>
+		</figure>
+		<p>
+			You can include Sage math cells in your text by using a sage tag, and specifying the language in the @language attribute.  Available languages include sage, gap, gp, maxima, octave, python, r, singular, and more (a full list is available at <a href="https://doc.sagemath.org/html/en/reference/spkg/">https://doc.sagemath.org/html/en/reference/spkg/</a>.  Any characters which are special characters in xml (like &lt; or &amp;) will need to be escaped just as they would in the regular text.
+			<sage language="python">
+				<input>
+					x  = 2
+					y  = 2
+					z = x + y
+					print(z)
+				</input>
+			</sage>
+		</p> 
+		-->
+	</section>
+	<section xml:id="poverty-health-addition-subtraction">
+		<title>The Addition and Subtraction Rules; Inclusion-Exclusion</title>
+		
+		Addition and subtraction can also arise when counting the number of ways to complete a task, as the next example illustrates.
+		
+		<example xml:id="poverty-health-ex6">
+			<statement>
+				<p>Let's imagine that OAFC intends to open at most three (and at least one) mobile health clinics in separate municipalities within Walworth County. How many different ways could they do this?</p>
+			</statement>
+			<solution>
+				<p>First, note that order does not matter in choosing clinic locations, as in <xref ref="poverty-health-ex4"/>, so combinations will probably be involved. Next, the words <em>at most</em> are crucial, and suggest a way of breaking up our problem. Assuming that we will place at least one clinic, we can either place one, or two, or three clinic locations in the <m>30</m> municipalities. There is no overlap in these different categories (since, for example, a way of placing three clinics will necessarily be distinct from a way of placing two clinics). Thus, we can simply count the number of ways to place one, two, or three clinics, and then add them up! As in <xref ref="poverty-health-ex4"/>, there are <m>30C3</m> ways of placing three clinics. Similarly, there are <m>30C2</m> ways of placing four clinics, and <m>30C1</m> ways of placing one clinic. Thus there are a total of <me>30C1+30C2+30C3</me><me>=\frac{30!}{(30-1)!*1!}+\frac{30!}{(30-2)!*2!}+\frac{30!}{(30-3)!*3!}</me><me>=4525</me> ways.</p>
+			</solution>
+		</example>
+		
+		<p><xref ref="poverty-health-ex6"/> illustrates the <em>addition rule</em>:</p>
+		
+		<assemblage>
+				<title>Addition rule</title>
+				<p>Suppose that a procedure may be done in either <m>n_1</m> ways or <m>n_2</m> ways, and that there is no overlap between the ways. Then there are <m>n_1+n_2</m> ways of completing the procedure.</p>
+				<p>More generally, if there are <m>m</m> types of ways of completing a procedure, with <m>n_i</m> ways of completing the procedure using the <m>i^\text{th}</m> type of way, and no overlap between any of the types, then there are <m>n_1+n_2+n_3+\cdots+n_m</m> ways of completing the procedure.</p>
+		</assemblage>
+		
+		<p>But what happens if there is overlap in the types of ways?</p>
+		
+		<example xml:id="poverty-health-ex7">
+			<statement>
+				<p>Suppose that the <m>7</m> northernmost municipalities of Walworth county (Whitewater city, Whitewater town, La Grange town, Troy town, Mukwonago village, East Troy town, East Troy village) as well as the <m>9</m> easternmost municipalities of Walworth county (Mukwonago village, East Troy town, East Troy village, Spring Prairie town, Burlington city, Lyons town, Bloomfield town, Bloomfield village, and Genoa City village) have access to medical resources in neighoring counties, so that OAFC intends to remove them from consideration. How many different municipalities must be removed from consideration? If OAFC intends to place 2 clinics in separate remaining municipalities, how many possibilities for clinic placements are there?</p>
+			</statement>
+			<solution>
+				<p>Note that there are exactly three municipalities which are both northernmost and easternmost (those being Mukwonago village, East Troy town, and East Troy village). Thus there are <me>9+7-3=13</me> municipalities that are either northernmost or easternmost, and this is the number to remove from consideration. Thus there are <m>30-13=17</m> municipalities to consider for clinic placement. Since order does not matter in choosing clinic locations, as in <xref ref="poverty-health-ex4"/>, the number of possible ways to place clinics is <me>17C2=136</me>.</p>
+			</solution>
+		</example>
+		
+		<p><xref ref="poverty-health-ex7"/> illustrates <em>inclusion-exclusion</em>, which is closely related to the <em>subtraction rule</em>:</p>
+		
+		<assemblage>
+				<title>Subtraction rule</title>
+				<p>Suppose that a procedure may be done in <m>n</m> total ways, <m>m</m> of which are not allowed. Then there are <m>n-m</m> allowable ways of completing the procedure.</p>
+		</assemblage>		
+		
+		<assemblage>
+				<title>Inclusion-exclusion</title>
+				<p>Suppose that a procedure may be done in <m>n_1</m> ways or <m>n_2</m> ways, and that there are exactly <m>n_3</m> ways which are counted in both categories. Then there are <m>n_1+n_2-n_3</m> ways of completing the procedure.</p>
+		</assemblage>
+		
+	</section>
+	<section xml:id="poverty-health-parametric-linear-models">
+		<title>Parametric Linear Models</title>
+		
+		<p>In order to help OAFC decide on the best place for mobile health clinics within Walworth county, we will need to create a model of medical need. How exactly we do this will depend on many different factors, and there is no single right way to do it. One way of approaching the problem is to start by making some simplifying assumptions for our model. For the moment, me might make the following assumptions:</p>
+		
+		<ol>
+			<li>We will place three mobile clinics in three separate municipalities around the county. At the moment, we will not worry about exactly where the clinics are placed within each municipality.</li>
+			<li>For each municipality, we will compute a value between <m>0</m> and <m>1</m> which represents the medical need within that municipality as a percentage. This value will take into account several different variables which are strategically chosen, and whose values come from some trusted data set.</li>
+			<li>For each variable, we will use percentages of residents or households rather than population. This will ensure that our solution does not simply target the most populous areas.</li>
+			<li>We will choose to place our clinics in the three municipalities having the three highest measures of need.</li>		
+		</ol>
+				
+		<!--<p>For the model at hand, most of the work will go into how we choose our objective function.</p> -->
+		
+		<p>What variables are important in determining medical need? To simplify things, let's start by considering two of them: The percentage of working individuals who do not have a car (which we call <m>x</m>), and the percentage of individuals who self-identify as Hispanic or Latino (which we call <m>y</m>). The choice of variable <m>x</m> is justified by the fact that OAFC is particularly interested in serving individuals in their mobile clinic who cannot make it to the existing clinic in Elkhorn. It stands to reason that individuals without a car would struggle to get to the clinic in an area with limited public transportation. On the other hand, the choice of variable <m>y</m> is partially justified by the systemic issues mentioned in <xref ref="poverty-health-cui-bono"/>. Indeed, individuals in this category are more likely to be noncitizens or undocumented than those in other minority categories, and data shows that these populations are more likely to be uninsured <xref ref="biblio-poverty-health-uninsured"/>. Finally, the data below shows that this category is the largert minority category, by far, in the county.</p>
+
+		<figure>
+		<caption>Race/ethnic categories in Walworth County, WI <xref ref="biblio-poverty-health-race-ethnic-census-data"/>.</caption>
+  <tabular>
+    <row header="yes" bottom="minor" >
+      <cell>
+        Race/ethnic category
+      </cell>
+      <cell>
+        Percentage
+      </cell>
+    </row>
+    <row>
+      <cell>
+        White alone
+      </cell>
+      <cell halign="right">
+        83.70%
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Black or African American alone
+      </cell>
+      <cell halign="right">
+        1%
+      </cell>
+    </row>
+    <row>
+      <cell>
+        American Indian and Alaska Native alone
+      </cell>
+      <cell halign="right">
+        0.10%
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Asian alone
+      </cell>
+      <cell halign="right">
+        0.70%
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Native Hawaiian and Other Pacific Islander alone
+      </cell>
+      <cell halign="right">
+        0%
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Some other race alone
+      </cell>
+      <cell halign="right">
+        0.60%
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Two or more races
+      </cell>
+      <cell halign="right">
+        2.30%
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Hispanic or Latino
+      </cell>
+      <cell halign="right">
+        11.60%
+      </cell>
+    </row>
+  </tabular>
+</figure>
+				
+		<p>How can we combine these two variables to create a single model of medical need? The simplest way to do so is by choosing a <em>weight</em> <m>w</m> between <m>0</m> and <m>1</m> and creating a new variable <m>z</m> defined as follows: <me>z=wx+(1-w)y.</me> The number <m>w</m> represents the fraction of the significance we place on the variable <m>x</m>. When <m>w=0</m>, all weight goes into variable <m>y</m>, and when <m>w=1</m>, all weight goes into variable <m>x</m>. Equal weight is placed on the two variables when <m>w=\frac{1}{2}</m>. The model is flexible in that we can allow the client to choose a value of <m>w</m> based on their own judgement of the relative importance of the variables. We will default to <m>w=\frac{1}{2}</m> for simplicity. The table below shows the values of <m>x</m>, <m>y</m> and <m>z</m> for each municipality in the county when <m>w=\frac{1}{2}</m>.</p>
+		
+		<figure>
+		<caption>Vehicle availability and Hispanic/Latino self-identification by municipality <xref ref="biblio-poverty-health-vehicle-availability-census-data"/>, <xref ref="biblio-poverty-health-ethnicity-by-muni-census-data"/>.</caption>
+		
+  <tabular halign="right">
+    <row header="yes" bottom="minor" >
+      <cell halign="left">
+        Municipality
+      </cell>
+      <cell halign="left">
+        Percentage of working households with no vehicle available as decimal <m>(x)</m>
+      </cell>
+      <cell halign="left">
+        Percentage of individuals identifying as Hispanic/Latino as decimal <m>(y)</m>
+      </cell>
+      <cell halign="left" right="medium">
+        <m>z=wx+(1-w)y</m> <m>(w=\frac{1}{2})</m>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Bloomfield village
+      </cell>
+      <cell>
+		0.0179
+      </cell>
+      <cell>
+		0.2026
+      </cell>
+      <cell>
+		0.1102
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Bloomfield town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        <alert>0.2805</alert>
+      </cell>
+      <cell>
+        <alert>0.1402</alert>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Darien village
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.1552
+      </cell>
+      <cell>
+		0.0776
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Darien town
+      </cell>
+      <cell>
+		0.0033
+      </cell>
+      <cell>
+		0.1803
+      </cell>
+      <cell>
+		0.0918
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Delavan city
+      </cell>
+      <cell>
+        <alert>0.0275</alert>
+      </cell>
+      <cell>
+		0.234
+      </cell>
+      <cell>
+        <alert>0.1308</alert>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Delavan town
+      </cell>
+      <cell>
+        <alert>0.0403</alert>
+      </cell>
+      <cell>
+		0.0914
+      </cell>
+      <cell>
+		0.0658
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        East Troy village
+      </cell>
+      <cell>
+		0.0202
+      </cell>
+      <cell>
+		0.0171
+      </cell>
+      <cell>
+		0.0186
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        East Troy town
+      </cell>
+      <cell>
+		0.0171
+      </cell>
+      <cell>
+		0.0369
+      </cell>
+      <cell>
+		0.027
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Elkhorn city
+      </cell>
+      <cell>
+		0.0106
+      </cell>
+      <cell>
+		0.1531
+      </cell>
+      <cell>
+		0.0819
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Fontana-on-Geneva Lake village
+      </cell>
+      <cell>
+		0.025
+      </cell>
+      <cell>
+		0.0152
+      </cell>
+      <cell>
+		0.0201
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Geneva town
+      </cell>
+      <cell>
+		0.0121
+      </cell>
+      <cell>
+		0.1366
+      </cell>
+      <cell>
+		0.0743
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Genoa City village
+      </cell>
+      <cell>
+		0.0054
+      </cell>
+      <cell>
+		0.1336
+      </cell>
+      <cell>
+		0.0695
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lafayette town
+      </cell>
+      <cell>
+		0.0042
+      </cell>
+      <cell>
+		0.0193
+      </cell>
+      <cell>
+		0.0117
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        La Grange town
+      </cell>
+      <cell>
+		0.0131
+      </cell>
+      <cell>
+		0.0455
+      </cell>
+      <cell>
+		0.0293
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lake Geneva city
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0964
+      </cell>
+      <cell>
+		0.0482
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Linn town
+      </cell>
+      <cell>
+		0.0046
+      </cell>
+      <cell>
+		0.0591
+      </cell>
+      <cell>
+		0.0319
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lyons town
+      </cell>
+      <cell>
+		0.0203
+      </cell>
+      <cell>
+		0.0234
+      </cell>
+      <cell>
+		0.0219
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Mukwonago village
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Richmond town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0708
+      </cell>
+      <cell>
+		0.0354
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sharon village
+      </cell>
+      <cell>
+		0.0092
+      </cell>
+      <cell>
+        <alert>0.3139</alert>
+      </cell>
+      <cell>
+        <alert>0.1615</alert>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sharon town
+      </cell>
+      <cell>
+		0.0046
+      </cell>
+      <cell>
+		0.0663
+      </cell>
+      <cell>
+		0.0354
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Spring Prairie town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0125
+      </cell>
+      <cell>
+		0.0062
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sugar Creek town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0178
+      </cell>
+      <cell>
+		0.0089
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Troy town
+      </cell>
+      <cell>
+		0.0132
+      </cell>
+      <cell>
+		0.0282
+      </cell>
+      <cell>
+		0.0207
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Walworth village
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        <alert>0.2457</alert>
+      </cell>
+      <cell>
+		0.1229
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Walworth town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.1169
+      </cell>
+      <cell>
+		0.0585
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Whitewater city
+      </cell>
+      <cell>
+		0.027
+      </cell>
+      <cell>
+		0.1067
+      </cell>
+      <cell>
+		0.0668
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Whitewater town
+      </cell>
+      <cell>
+        <alert>0.065</alert>
+      </cell>
+      <cell>
+		0.0979
+      </cell>
+      <cell>
+		0.0814
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Williams Bay village
+      </cell>
+      <cell>
+		0.0259
+      </cell>
+      <cell>
+		0.1083
+      </cell>
+      <cell>
+		0.0671
+      </cell>
+    </row>
+  </tabular>
+</figure>
+
+				
+		<p>The highlighted values in the table show the three municipalities of greatest need according to our model.</p> <!-- But, note that the municipalities with the highest need are the same whether <m>w=\frac{1}{2}</m> (which is supposed to represent equal weight on <m>x</m> and <m>y</m>) or <m>w=0</m> (which is supposed to represent all weight on <m>y</m>). Why do you think this is?</p> -->
+
+		<p>But, if you look closely, you may notice an interesting imbalance in this data: The values of the variable <m>y</m> are on average much larger than the values of the variable <m>x</m>, and this may be throwing off the weighting. We can fix this by <em>normalizing</em> <m>x</m> and <m>y</m> so that each column sums to <m>1</m>. To do this, we can divide each variable by sum of all of its values. We call these new variables <m>\bar{x}</m> and <m>\bar{y}</m>. Using <m>\bar{x}</m> and <m>\bar{y}</m> ensures that the variables will have equal weight when <m>w=\frac{1}{2}</m>. The table below shows the values of <m>\bar{x}</m>, <m>\bar{y}</m>, and <m>\bar{z}=w\bar{x}+(1-w)\bar{y}</m> for <m>w=\frac{1}{2}</m>. This model also has the nice property that the measures of need in the final column <m>(z)</m> sum up to <m>1</m> no matter what the value of <m>w</m> is, so we can think of them as decimal percentages.</p>
+
+		<figure xml:id="poverty-health-paralintable">
+		<caption>Normalized vehicle availability and Hispanic/Latino self-identification by municipality.</caption>
+  <tabular halign="right">
+    <row header="yes" bottom="minor" >
+      <cell halign="left">
+        Municipality
+      </cell>
+      <cell halign="left">
+        Normalized percentage of working households with no vehicle available as decimal <m>(\bar{x})</m>
+      </cell>
+      <cell halign="left">
+        Normalized percentage of individuals identifying as Hispanic/Latino as decimal <m>(\bar{y})</m>
+      </cell>
+      <cell halign="left">
+        <m>z=w\bar{x}+(1-w)\bar{y}</m> <m>(w=\frac{1}{2})</m>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Bloomfield village
+      </cell>
+      <cell>
+		0.0489
+      </cell>
+      <cell>
+		0.0661
+      </cell>
+      <cell>
+		0.0575
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Bloomfield town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        <alert>0.0915</alert>
+      </cell>
+      <cell>
+		0.0458
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Darien village
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0506
+      </cell>
+      <cell>
+		0.0253
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Darien town
+      </cell>
+      <cell>
+		0.0089
+      </cell>
+      <cell>
+		0.0588
+      </cell>
+      <cell>
+		0.0339
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Delavan city
+      </cell>
+      <cell>
+        <alert>0.0752</alert>
+      </cell>
+      <cell>
+		0.0763
+      </cell>
+      <cell>
+        <alert>0.0757</alert>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Delavan town
+      </cell>
+      <cell>
+        <alert>0.1099</alert>
+      </cell>
+      <cell>
+		0.0298
+      </cell>
+      <cell>
+        <alert>0.0699</alert>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        East Troy village
+      </cell>
+      <cell>
+		0.055
+      </cell>
+      <cell>
+		0.0056
+      </cell>
+      <cell>
+		0.0303
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        East Troy town
+      </cell>
+      <cell>
+		0.0468
+      </cell>
+      <cell>
+		0.0121
+      </cell>
+      <cell>
+		0.0294
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Elkhorn city
+      </cell>
+      <cell>
+		0.0289
+      </cell>
+      <cell>
+		0.05
+      </cell>
+      <cell>
+		0.0394
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Fontana-on-Geneva Lake village
+      </cell>
+      <cell>
+		0.0682
+      </cell>
+      <cell>
+		0.005
+      </cell>
+      <cell>
+		0.0366
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Geneva town
+      </cell>
+      <cell>
+		0.0329
+      </cell>
+      <cell>
+		0.0446
+      </cell>
+      <cell>
+		0.0387
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Genoa City village
+      </cell>
+      <cell>
+		0.0149
+      </cell>
+      <cell>
+		0.0436
+      </cell>
+      <cell>
+		0.0292
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lafayette town
+      </cell>
+      <cell>
+		0.0114
+      </cell>
+      <cell>
+		0.0063
+      </cell>
+      <cell>
+		0.0088
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        La Grange town
+      </cell>
+      <cell>
+		0.0357
+      </cell>
+      <cell>
+		0.0148
+      </cell>
+      <cell>
+		0.0253
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lake Geneva city
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0314
+      </cell>
+      <cell>
+		0.0157
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Linn town
+      </cell>
+      <cell>
+		0.0127
+      </cell>
+      <cell>
+		0.0193
+      </cell>
+      <cell>
+		0.016
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lyons town
+      </cell>
+      <cell>
+		0.0555
+      </cell>
+      <cell>
+		0.0076
+      </cell>
+      <cell>
+		0.0316
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Mukwonago village
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Richmond town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0231
+      </cell>
+      <cell>
+		0.0115
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sharon village
+      </cell>
+      <cell>
+		0.025
+      </cell>
+      <cell>
+        <alert>0.1024</alert>
+      </cell>
+      <cell>
+		0.0637
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sharon town
+      </cell>
+      <cell>
+		0.0125
+      </cell>
+      <cell>
+		0.0216
+      </cell>
+      <cell>
+		0.0171
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Spring Prairie town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0041
+      </cell>
+      <cell>
+		0.002
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sugar Creek town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0058
+      </cell>
+      <cell>
+		0.0029
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Troy town
+      </cell>
+      <cell>
+		0.0361
+      </cell>
+      <cell>
+		0.0092
+      </cell>
+      <cell>
+		0.0227
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Walworth village
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        <alert>0.0802</alert>
+      </cell>
+      <cell>
+		0.0401
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Walworth town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0381
+      </cell>
+      <cell>
+		0.0191
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Whitewater city
+      </cell>
+      <cell>
+		0.0736
+      </cell>
+      <cell>
+		0.0348
+      </cell>
+      <cell>
+		0.0542
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Whitewater town
+      </cell>
+      <cell>
+        <alert>0.1773</alert>
+      </cell>
+      <cell>
+		0.032
+      </cell>
+      <cell>
+        <alert>0.1046</alert>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Williams Bay village
+      </cell>
+      <cell>
+		0.0707
+      </cell>
+      <cell>
+		0.0353
+      </cell>
+      <cell>
+		0.053
+      </cell>
+    </row>
+  </tabular>
+</figure>
+
+
+		<p>Now we can advise OAFC to place mobile clinics in the municipalities of Delavan city, Delavan town, and Whitewater town, assuming they want to weight the variables <m>x</m> and <m>y</m> equally!<!-- You can adjust the slider to see how the solution changes as the value of <m>w</m> is adjusted.--></p>	
+		
+		<p>The model we have just created is called a <em>parametric linear model with two variables</em>. The only difference when we add additional variables and weights is that the weights should all add up to <m>1</m>.</p>
+		
+		<assemblage>
+				<title>Parametric linear model</title>
+				<p>Suppose that <m>x_1,x_2,x_3,\ldots,x_n</m> are quantitative variables associated to some dataset. A <em>parametric linear model</em> is an equation <me>z=w_1x_1+w_2x_2+w_3x_3+\cdots+w_nx_n.</me>The numbers <m>w_1,w_2,w_3,\ldots,w_n</m> are called <em>weights</em> or <em>parameters</em>. In practice, we usually assume or arrange that the weights are positive and all sum to <m>1</m>, and that for each <m>i</m>, the value of the variable <m>x_i</m> over each point in the dataset sums to <m>1</m> as well. In this case we say the model is <em>normalized</em>.</p>
+		</assemblage>
+		
+		<!--
+
+		<p>Since OAFC only serves residents with no health insurance at or below 200% of the federal poverty line, let's start with these variables. The table below shows the percentage of residents with no health insurance and who are at or below 200% of the federal poverty line. This data comes from the <url href="https://www.census.gov/data/developers/data-sets/acs-5year.html" visual="https://www.census.gov/data/developers/data-sets/acs-5year.html">American Community Survey (2021)</url>.</p>
+		
+		<table>
+		<title>Percentage of residents meeting OAFC requirements in Walworth County by municipality. Data from <url href="https://www.census.gov/data/developers/data-sets/acs-5year.html" visual="https://www.census.gov/data/developers/data-sets/acs-5year.html">census.gov</url>.</title>
+			<tabular halign="center">
+			<row header="yes" bottom="minor" >
+			<cell>Municipality</cell>
+			<cell>Percentage (as decimal) below 200% FPL</cell>
+			<cell>Percentage (as decimal) having no health insurance</cell>
+		</row>
+		  <row>
+			<cell>Bloomfield village</cell>
+			<cell>0.231175</cell>
+			<cell>0.068885</cell>
+		  </row>
+		  <row>
+			<cell>Bloomfield town</cell>
+			<cell>0.32093</cell>
+			<cell>0.117099</cell>
+		  </row>
+		  <row>
+			<cell>Burlington city</cell>
+			<cell>0</cell>
+			<cell>0</cell>
+		  </row>
+		  <row>
+			<cell>Darien village</cell>
+			<cell>0.188285</cell>
+			<cell>0.080399</cell>
+		  </row>
+		  <row>
+			<cell>Darien town</cell>
+			<cell>0.142549</cell>
+			<cell>0.130194</cell>
+		  </row>
+		  <row>
+			<cell>Delavan city</cell>
+			<cell>0.244231</cell>
+			<cell>0.117848</cell>
+		  </row>
+		  <row>
+			<cell>Delavan town</cell>
+			<cell>0.144634</cell>
+			<cell>0.057143</cell>
+		  </row>
+		  <row>
+			<cell>East Troy village</cell>
+			<cell>0.092643</cell>
+			<cell>0.049391</cell>
+		  </row>
+		  <row>
+			<cell>East Troy town</cell>
+			<cell>0.109347</cell>
+			<cell>0.029324</cell>
+		  </row>
+		  <row>
+			<cell>Elkhorn city</cell>
+			<cell>0.235753</cell>
+			<cell>0.055458</cell>
+		  </row>
+		  <row>
+			<cell>Fontana-on-Geneva Lake village</cell>
+			<cell>0.107943</cell>
+			<cell>0.030363</cell>
+		  </row>
+		  <row>
+			<cell>Geneva town</cell>
+			<cell>0.11781</cell>
+			<cell>0.086314</cell>
+		  </row>
+		  <row>
+			<cell>Genoa City village</cell>
+			<cell>0.195238</cell>
+			<cell>0.047427</cell>
+		  </row>
+		  <row>
+			<cell>Lafayette town</cell>
+			<cell>0.121575</cell>
+			<cell>0.029271</cell>
+		  </row>
+		  <row>
+			<cell>La Grange town</cell>
+			<cell>0.104994</cell>
+			<cell>0.050822</cell>
+		  </row>
+		  <row>
+			<cell>Lake Geneva city</cell>
+			<cell>0.195901</cell>
+			<cell>0.058045</cell>
+		  </row>
+		  <row>
+			<cell>Linn town</cell>
+			<cell>0.174713</cell>
+			<cell>0.09184</cell>
+		  </row>
+		  <row>
+			<cell>Lyons town</cell>
+			<cell>0.093321</cell>
+			<cell>0.01065</cell>
+		  </row>
+		  <row>
+			<cell>Mukwonago village</cell>
+			<cell>0</cell>
+			<cell>0</cell>
+		  </row>
+		  <row>
+			<cell>Richmond town</cell>
+			<cell>0.061657</cell>
+			<cell>0.02974</cell>
+		  </row>
+		  <row>
+			<cell>Sharon village</cell>
+			<cell>0.34058</cell>
+			<cell>0.092604</cell>
+		  </row>
+		  <row>
+			<cell>Sharon town</cell>
+			<cell>0.2125</cell>
+			<cell>0.031969</cell>
+		  </row>
+		  <row>
+			<cell>Spring Prairie town</cell>
+			<cell>0.157546</cell>
+			<cell>0.058146</cell>
+		  </row>
+		  <row>
+			<cell>Sugar Creek town</cell>
+			<cell>0.122349</cell>
+			<cell>0.052738</cell>
+		  </row>
+		  <row>
+			<cell>Troy town</cell>
+			<cell>0.117188</cell>
+			<cell>0.065105</cell>
+		  </row>
+		  <row>
+			<cell>Walworth village</cell>
+			<cell>0.369382</cell>
+			<cell>0.073144</cell>
+		  </row>
+		  <row>
+			<cell>Walworth town</cell>
+			<cell>0.118182</cell>
+			<cell>0.038321</cell>
+		  </row>
+		  <row>
+			<cell>Whitewater city</cell>
+			<cell>0.329923</cell>
+			<cell>0.072283</cell>
+		  </row>
+		  <row>
+			<cell>Whitewater town</cell>
+			<cell>0.117137</cell>
+			<cell>0.08037</cell>
+		  </row>
+		  <row>
+			<cell>Williams Bay village</cell>
+			<cell>0.185754</cell>
+			<cell>0.041009</cell>
+		  </row>
+		  </tabular>
+		</table> -->
+		
+		
+		
+		<!--<p>We have spent a great deal of time concerning ourselves with </p>. 
+		<p>Next we need to quantify medical need. We will start by motivating and studying the idea of an objective function. The goal will be to establish a measure of medical need based on social determinants of health, and use it to identify the areas of greatest need. The objective function is a key idea in the field of discrete optimization.</p> -->
+		
+		
+		
+	</section>
+	<section xml:id="poverty-health-discrete-optimization">
+		<title>Discrete Optimization</title>
+		
+		<p>Now that we have a basic model of medical need, let's think about how we can improve it. <xref ref='poverty-health-paralin'/> shows a plot of the need in each municipality (the variable <m>z</m> in <xref ref="poverty-health-paralintable"/>), with a darker color representing a higher need. Note that the three municipalities with the highest need (whose boundaries are highlighted in the figure) are not necessarily spread evenly across the county. In particular, two of the areas with highest need are Delavan city and Delavan town, and you can see that Delavan city is geographically surrounded by Delavan town. Rather than placing a clinic within both Delavan city and Delavan town, it would make more sense to serve the need in Delavan town and Delavan city with a single clinic in Delavan city. This would free OAFC up to place another clinic somewhere else in the county.</p>
+		
+		<figure xml:id="poverty-health-paralin">
+			<title>Parametric linear model</title>
+			<image source="poverty-as-health-issue/images/visualizedneed1.png" width = "95%"/>
+			<caption>Three municipalities of highest need according to parametric linear model. The darker the color, the higher the need. <xref ref="poverty-health-images-paralin-need-visualization">Image Description</xref>.</caption>
+		</figure>
+		
+		<p>Continuing along this line of reasoning, it seems to make sense to assume that each mobile clinic will have a certain radius <m>r</m> of effective coverage. Areas within this radius can then be assumed to have all of their need met, or perhaps some fraction of their need met proportional to how far they are from the nearby clinic. For simplicity, let's assume that nearby municipalities will have all of their need met.</p>
+		
+		<p>What will we mean by "nearby" municipalities? Again, we have some choice here. For simplicity, let's use the <em>centroid</em> of each municipality as a stand-in for where each clinic will be placed, and to measure how close other municipalities are to it. The centroid of a 2-dimensional shape can be defined using calculus, and we won't spend time on it here. For our purposes, suffice it to say that the centroid of a shape is like a center of mass: If we were to laser-cut a piece of sheet metal in the shape of Delavan city, its centroid would be the point upon which it would balance perfectly on a finger. <xref ref="poverty-health-centroids"/> shows each municipality in the county along with its centroid.</p>
+
+		<figure xml:id="poverty-health-centroids">
+			<title>Municipalities with centroids.</title>
+			<image source="poverty-as-health-issue/images/centroids.png" width = "95%"/>
+			<caption>Municipalities in Walworth county with centroids. <xref ref="poverty-health-images-centroid-visualization">Image Description</xref>.</caption>
+		</figure>
+
+		<p>With this additional assumption, one way to adjust our model is as follows:</p>
+		
+		<ol>
+			<li>As before, our goal will be to place three mobile clinics in three separate municipalities around the county. We will assume that each mobile clinic is placed at the centroid of a municipality.</li>
+			<li>As before, we will compute a value between <m>0</m> and <m>1</m> which represents the medical need within that municipality as a percentage, taking into account several strategically-chosen variables. For now, we will use the parametric linear model from the previous section.</li>
+			<li>We will choose (or allow OAFC to choose) a parameter <m>r</m> which represents the effective service radius of the mobile clinics. For a given choice of placement of the three clinics, we will compute the need met by adding up all need values corresponding to municipalities whose centroids fall within the service radius of one or more of the mobile clinics.</li>
+			<li>We will choose to place our clinics according to the placement which gives the greatest amount of need met.</li>
+		</ol>
+		
+		<p>At this point, we have a very nice example of a <em>discrete optimization</em> problem. In fact, this specific type of problem is known as the <em>maximal covering location problem</em> <xref ref="biblio-poverty-health-mclp1"/> <xref ref="biblio-poverty-health-mclp2"/>.</p>
+
+		<assemblage>
+				<title>Discrete optimization</title>
+				<p><em>Discrete optimization</em> is a broad area of study at the intersection of applied math and computer science. The goal is usually to minimize or maximize a function called an <em>objective function</em>. The most challenging problems in discrete optimization involve finding the maximum or minimum of the objective function among a large, but finite, set of possibilities. Often, the number of possibilities is so large that they cannot all be tested in a reasonable amount of time, and clever algorithms must be used to limit the number of possibilities to test, or to compute an approximate solution.</p>
+		</assemblage>
+		
+		<p>These days, a very popular application of discrete optimization is artificial intelligence. The problem of (approximately) minimizing or maximizing an objective function is fundamental to the success of machine learning algorithms. For example, there is a carefully-chosen objective function at the heart of language models such as ChatGPT <xref ref="biblio-poverty-health-ai"/>.</p>
+		
+		<p>Additionally, the reason that we care so much about counting the number of possibilities for the problem at hand (using permutations, combinations, etc) is that the size of the domain of the objective function (the number of possibilities to be considered) must be analyzed to estimate the amount of computing resources needed to solve the problem.</p>
+		
+		<p>In our model, the objective function is the measure of need mentioned in the third step. The set of all <m>29C3=3654</m> possible clinic placements is the total number of possibilities to test. We certainly would not want to do this by hand, but a computer can do it relatively quickly. However, if there were ten times as many municipalities, or even if we were placing twice as many clinics, a clever algorithm may be needed to enable the computer to find a solution (or approximate solution) in a reasonable amount of time. Because the time taken by the computer corresponds closely to the number of possibilities to consider, computer scientists rely heavily on the basic counting principles in sections <xref ref="poverty-health-permcomb"/> and <xref ref="poverty-health-addition-subtraction"/> when they come up with and analyze these algorithms.</p>
+		
+		<p>The figure below shows a possible solution which was found by a computer, for a value of <m>r=4500</m> meters. When the clinics are placed at the three locations of Whitewater city, Delavan city, and Fontana-on-Geneva Lake village, this solution assumes that need is met in all municipalities whose centroids lie within <m>4500</m> meters of one of the mobile clinics. Those municipalities are the ones whose centroids fall inside one of the green disks. In this case, we cover the need from Delavan city, Delavan town, Fontana-on-Geneva Lake village, Walworth village, Walworth town, Whitewater city, Whitewater town, and Williams Bay village. Adding up their percentages of need from <xref ref="poverty-health-paralintable"/>, we see that this optimal solution covers <m>\approx 45 \%</m> of the need in the county. As we had hoped, this solution uses the proximity of Delavan city and Delavan town to increase the amount of need covered.</p>
+		
+		<!--Final: 0.45320711599999997 (4, 9, 26) {'Delavan city': '0.075748313', 'Delavan town': '0.069871258', 'Fontana-on-Geneva Lake village': '0.036568682', 'Walworth village': '0.04008137', 'Walworth town': '0.019071', 'Whitewater city': '0.054215709', 'Whitewater town': '0.104620333', 'Williams Bay village': '0.053030451'}   -->
+		
+		<figure xml:id="poverty-health-mclp1">
+			<title>MCLP.</title>
+			<image source="poverty-as-health-issue/images/mclp1.png" width = "95%"/>
+			<caption>Placement of three clinics maximizing coverage. <xref ref="poverty-health-images-maximizing">Image Description</xref>.</caption>
+		</figure>
+		
+	</section>
+	<section xml:id="poverty-health-solve">
+		<title>Solving for Change</title>
+		
+		<p>In this section, we will consider one additional variable and then demonstrate one possible solution which puts everything together. The solution presented here is similar to a solution presented to OAFC by Beloit College students in Spring of 2022.</p>
+		
+		<p>Perhaps the most important variable we have not yet considered is the percentage of uninsured residents at or below <m>200\%</m> of the federal poverty line (FPL). We have seen the connection between health and poverty, and in fact this is the population that OAFC serves by law. We have saved this analysis for last because it will take some additional mathematical reasoning to estimate based on the data available.</p>
+		
+		<p>The federal poverty line is determined based on household size, as shown in the table below.</p>
+		
+		<figure xml:id="poverty-health-t1">
+  
+  <caption>Federal poverty guidelines as of 2021 <xref ref="biblio-poverty-health-poverty-line"/>.</caption>
+    <tabular halign="right">
+	<row header="yes" bottom="minor" >
+      <cell halign="left">
+        Household size
+      </cell>
+      <cell halign="left">
+        FPL
+      </cell>
+      <cell halign="left">
+        2*FPL
+      </cell>
+    </row>
+    <row>
+      <cell>
+        1
+      </cell>
+      <cell>
+        $12,880
+      </cell>
+      <cell>
+        $25,760
+      </cell>
+    </row>
+    <row>
+      <cell>
+        2
+      </cell>
+      <cell>
+        $17,420
+      </cell>
+      <cell>
+        $34,840
+      </cell>
+    </row>
+    <row>
+      <cell>
+        3
+      </cell>
+      <cell>
+        $21,960
+      </cell>
+      <cell>
+        $43,920
+      </cell>
+    </row>
+    <row>
+      <cell>
+        4
+      </cell>
+      <cell>
+        $26,500
+      </cell>
+      <cell>
+        $53,000
+      </cell>
+    </row>
+    <row>
+      <cell>
+        5
+      </cell>
+      <cell>
+        $31,040
+      </cell>
+      <cell>
+        $62,080
+      </cell>
+    </row>
+    <row>
+      <cell>
+        6
+      </cell>
+      <cell>
+        $35,580
+      </cell>
+      <cell>
+        $71,160
+      </cell>
+    </row>
+    <row>
+      <cell>
+        7
+      </cell>
+      <cell>
+        $40,120
+      </cell>
+      <cell>
+        $80,240
+      </cell>
+    </row>
+    <row>
+      <cell>
+        8
+      </cell>
+      <cell>
+        $44,660
+      </cell>
+      <cell>
+        $89,320
+      </cell>
+    </row>
+  </tabular>
+</figure>
+
+		<p>Note that the poverty line increases by <m>$4,540</m> for each additional member of the household, and <m>200\%</m> of the poverty line increases by <m>$9,080</m> per person. This suggests a linear relationship between the number of people per household (call this <m>x</m>), and the value of <m>200\%</m> FPL (call this <m>y</m>). We know that the equation of a line takes the form <m>y=mx+b</m>. Plugging in <m>m=9080</m> and any point on the line (say <m>x=1</m> and <m>y=25760</m>) allows us to find <m>b</m>. Indeed, <m>25760=9080*1+b</m> has the solution <m>b=16680</m>. Thus we have an equation for the value of <m>200\%</m> FPL based on household size: <me>y=9080x+16680</me>.</p>
+
+		<p>We can combine this data with data from the American Community Survey at census.gov to estimate what value "<m>200\%</m> of the federal poverty line" should take based on the average household size in each municipality.</p>
+		
+				<figure xml:id="poverty-health-t2">
+				<caption>Value of <m>200\%</m> FPL by municipality based on average household size <xref ref="biblio-poverty-health-average-household-size-census-data"/>.</caption>
+		 
+  <tabular halign="right">
+	<row header="yes" bottom="minor" >
+      <cell halign="left">
+        Municipality
+      </cell>
+      <cell halign="left">
+        Average household size <m>(x)</m>
+      </cell>
+      <cell halign="left">
+        <m>200\%</m> FPL <m>(y=9080x+16680)</m>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Bloomfield village
+      </cell>
+      <cell>
+        3.06
+      </cell>
+      <cell>
+        44464.8
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Bloomfield town
+      </cell>
+      <cell>
+        2.71
+      </cell>
+      <cell>
+        41286.8
+      </cell>
+    </row>
+    <!--<row>
+      <cell halign="left">
+        Burlington city
+      </cell>
+      <cell halign="left">
+        no data
+      </cell>
+      <cell halign="left">
+        no data
+      </cell>
+    </row>-->
+    <row>
+      <cell halign="left">
+        Darien village
+      </cell>
+      <cell>
+        2.49
+      </cell>
+      <cell>
+        39289.2
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Darien town
+      </cell>
+      <cell>
+        2.8
+      </cell>
+      <cell>
+        42104
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Delavan city
+      </cell>
+      <cell>
+        2.45
+      </cell>
+      <cell>
+        38926
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Delavan town
+      </cell>
+      <cell>
+        2.38
+      </cell>
+      <cell>
+        38290.4
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        East Troy village
+      </cell>
+      <cell>
+        2.16
+      </cell>
+      <cell>
+        36292.8
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        East Troy town
+      </cell>
+      <cell>
+        2.78
+      </cell>
+      <cell>
+        41922.4
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Elkhorn city
+      </cell>
+      <cell>
+        2.42
+      </cell>
+      <cell>
+        38653.6
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Fontana-on-Geneva Lake village
+      </cell>
+      <cell>
+        2.24
+      </cell>
+      <cell>
+        37019.2
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Geneva town
+      </cell>
+      <cell>
+        2.4
+      </cell>
+      <cell>
+        38472
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Genoa City village
+      </cell>
+      <cell>
+        2.55
+      </cell>
+      <cell>
+        39834
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lafayette town
+      </cell>
+      <cell>
+        2.45
+      </cell>
+      <cell>
+        38926
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        La Grange town
+      </cell>
+      <cell>
+        2.46
+      </cell>
+      <cell>
+        39016.8
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lake Geneva city
+      </cell>
+      <cell>
+        2.09
+      </cell>
+      <cell>
+        35657.2
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Linn town
+      </cell>
+      <cell>
+        2.4
+      </cell>
+      <cell>
+        38472
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lyons town
+      </cell>
+      <cell>
+        2.4
+      </cell>
+      <cell>
+        38472
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Mukwonago village
+      </cell>
+      <cell>
+        3.56
+      </cell>
+      <cell>
+        49004.8
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Richmond town
+      </cell>
+      <cell>
+        2.18
+      </cell>
+      <cell>
+        36474.4
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sharon village
+      </cell>
+      <cell>
+        2.81
+      </cell>
+      <cell>
+        42194.8
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sharon town
+      </cell>
+      <cell>
+        2.38
+      </cell>
+      <cell>
+        38290.4
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Spring Prairie town
+      </cell>
+      <cell>
+        2.77
+      </cell>
+      <cell>
+        41831.6
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sugar Creek town
+      </cell>
+      <cell>
+        2.48
+      </cell>
+      <cell>
+        39198.4
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Troy town
+      </cell>
+      <cell>
+        2.77
+      </cell>
+      <cell>
+        41831.6
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Walworth village
+      </cell>
+      <cell>
+        2.76
+      </cell>
+      <cell>
+        41740.8
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Walworth town
+      </cell>
+      <cell>
+        2.45
+      </cell>
+      <cell>
+        38926
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Whitewater city
+      </cell>
+      <cell>
+        2.55
+      </cell>
+      <cell>
+        39834
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Whitewater town
+      </cell>
+      <cell>
+        2.48
+      </cell>
+      <cell>
+        39198.4
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Williams Bay village
+      </cell>
+      <cell>
+        2.3
+      </cell>
+      <cell>
+        37564
+      </cell>
+    </row>
+  </tabular>
+</figure>
+		
+		
+
+		<p>What about uninsured residents? The ACS data at census.gov contains information about the percentage of uninsured residents by household in income intervals of <m>$25,000</m>, but does not break this data down further based on where residents fall relative to the federal poverty line. That data is shown in the table below.</p>
+		
+		<figure xml:id="poverty-health-t3">
+				<caption>Percentage of uninsured households by income bracket <xref ref="biblio-poverty-health-insurance-coverage-by-income-bracket-by-municipality-census-data"/>.</caption>
+		 
+  <tabular halign="right">
+	<row header="yes" bottom="minor" >
+      <cell halign="left">
+        Municipality
+      </cell>
+      <cell halign="left">
+        Income under $25K with no health insurance coverage (percentage as decimal) <m>(a)</m>
+      </cell>
+      <cell halign="left" right="medium">
+        Income $25K-$50K with no health insurance coverage (percentage as decimal) <m>(b)</m>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Bloomfield village
+      </cell>
+      <cell>
+        0.011516
+      </cell>
+      <cell>
+        0.015355
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Bloomfield town
+      </cell>
+      <cell>
+        0.021956
+      </cell>
+      <cell>
+        0.045243
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Darien village
+      </cell>
+      <cell>
+        0.005869
+      </cell>
+      <cell>
+        0.017606
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Darien town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0.041551
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Delavan city
+      </cell>
+      <cell>
+        0.010226
+      </cell>
+      <cell>
+        0.03701
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Delavan town
+      </cell>
+      <cell>
+        0.006623
+      </cell>
+      <cell>
+        0.024976
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        East Troy village
+      </cell>
+      <cell>
+        0.008193
+      </cell>
+      <cell>
+        0.011236
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        East Troy town
+      </cell>
+      <cell>
+        0.010437
+      </cell>
+      <cell>
+        0.003479
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Elkhorn city
+      </cell>
+      <cell>
+        0.005183
+      </cell>
+      <cell>
+        0.024153
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Fontana-on-Geneva Lake village
+      </cell>
+      <cell>
+        0.005281
+      </cell>
+      <cell>
+        0.007921
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Geneva town
+      </cell>
+      <cell>
+        0.025774
+      </cell>
+      <cell>
+        0.018581
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Genoa City village
+      </cell>
+      <cell>
+        0.001682
+      </cell>
+      <cell>
+        0.008745
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lafayette town
+      </cell>
+      <cell>
+        0.002129
+      </cell>
+      <cell>
+        0.008515
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        La Grange town
+      </cell>
+      <cell>
+        0.003363
+      </cell>
+      <cell>
+        0.005979
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lake Geneva city
+      </cell>
+      <cell>
+        0.010659
+      </cell>
+      <cell>
+        0.007063
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Linn town
+      </cell>
+      <cell>
+        0.001766
+      </cell>
+      <cell>
+        0.025786
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lyons town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0.002185
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Mukwonago village
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Richmond town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0.005842
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sharon village
+      </cell>
+      <cell>
+        0.01243
+      </cell>
+      <cell>
+        0.067744
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sharon town
+      </cell>
+      <cell>
+        0.002558
+      </cell>
+      <cell>
+        0.007673
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Spring Prairie town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sugar Creek town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Troy town
+      </cell>
+      <cell>
+        0.01452
+      </cell>
+      <cell>
+        0.028103
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Walworth village
+      </cell>
+      <cell>
+        0.011115
+      </cell>
+      <cell>
+        0.029043
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Walworth town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0.015207
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Whitewater city
+      </cell>
+      <cell>
+        0.020959
+      </cell>
+      <cell>
+        0.023413
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Whitewater town
+      </cell>
+      <cell>
+        0.002845
+      </cell>
+      <cell>
+        0.020626
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Williams Bay village
+      </cell>
+      <cell>
+        0.010647
+      </cell>
+      <cell>
+        0.009464
+      </cell>
+    </row>
+  </tabular>
+</figure>
+		
+		<p>The reason that that we went through the trouble of estimating what <m>200\%</m> FPL should be per municipality is that the ACS does not have more granular data about whether residents are above or below the poverty line (or <m>200\%</m> of it). So, we will have to estimate.</p>
+		<p>How should the estimation work? We will have to make an assumption about the percentage of households that fall below the thresholds calculated in <xref ref="poverty-health-t2"/>. One of the simplest things we could do is to assume that the distribution of incomes is uniform within each income bracket. Under that assumption, and based on the fact that all values lie between <m>$25,000</m> and <m>$50,000</m>, we can estimate the percentage of uninsured households lying below <m>200\%</m> FPL as follows:</p>
+		
+		<p>Let's continue to call the variable representing <m>200\%</m> of the FPL, <m>y</m>. Let's call the variable representing the percentage of uninsured households making under <m>$25,000</m>, <m>a</m> and the percentage of uninsured households making betwen <m>$25,000</m> and <m>$50,000</m>, <m>b</m>. Since <m>25000\leq y \leq 50000</m>, we can estimate the percentage of uninsured households under <m>200\%</m> FPL, which we can call <m>z</m>, by adding <m>a</m> to a certain fraction of <m>b</m>. That fraction of <m>b</m>, which we can call <m>r</m>, should be how "far" <m>y</m> is along the way from <m>25000</m> to <m>50000</m>. If <m>y=50000</m>, then <m>r</m> should be <m>1</m>, and if <m>y=25000</m>, then <m>r</m> should be <m>0</m>. Right in the middle, when <m>y=37500</m>, we should have <m>r=\frac{1}{2}</m>. In fact, there is another linear relationship here: <me xml-id="eq1">r=\frac{y-25000}{25000}.</me></p>
+		
+		<p>Now that we have <m>r</m>, the formula for <m>z</m> is simply <me>z=a+rb</me>. Computing this for all municipalities gives the table below.</p>
+		
+<figure xml:id="poverty-health-t4">
+				<caption>Estimated percentage of households which are uninsured and under <m>200\%</m> FPL using data from <xref ref='poverty-health-t3'/>.</caption>
+		 
+			<tabular halign="right">
+	<row header="yes" bottom="minor" >
+      <cell>
+        Municipality
+      </cell>
+      <cell right="medium">
+        Percentage as decimal of households which are uninsured and under <m>200\%</m> FPL <m>(z)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Bloomfield village
+      </cell>
+      <cell halign="right">
+        0.02347128016
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Bloomfield town
+      </cell>
+      <cell halign="right">
+        0.0514305477
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Darien village
+      </cell>
+      <cell halign="right">
+        0.01593202621
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Darien town
+      </cell>
+      <cell halign="right">
+        0.02842753216
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Delavan city
+      </cell>
+      <cell halign="right">
+        0.0308420504
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Delavan town
+      </cell>
+      <cell halign="right">
+        0.01990064122
+      </cell>
+    </row>
+    <row>
+      <cell>
+        East Troy village
+      </cell>
+      <cell halign="right">
+        0.01326843603
+      </cell>
+    </row>
+    <row>
+      <cell>
+        East Troy town
+      </cell>
+      <cell halign="right">
+        0.01279192118
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Elkhorn city
+      </cell>
+      <cell halign="right">
+        0.01837401603
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Fontana-on-Geneva Lake village
+      </cell>
+      <cell halign="right">
+        0.009089163328
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Geneva town
+      </cell>
+      <cell halign="right">
+        0.03578692928
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Genoa City village
+      </cell>
+      <cell halign="right">
+        0.0068709332
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Lafayette town
+      </cell>
+      <cell halign="right">
+        0.0068721956
+      </cell>
+    </row>
+    <row>
+      <cell>
+        La Grange town
+      </cell>
+      <cell halign="right">
+        0.006715257888
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Lake Geneva city
+      </cell>
+      <cell halign="right">
+        0.01366987214
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Linn town
+      </cell>
+      <cell halign="right">
+        0.01566155968
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Lyons town
+      </cell>
+      <cell halign="right">
+        0.0011774528
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Mukwonago village
+      </cell>
+      <cell halign="right">
+        0
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Richmond town
+      </cell>
+      <cell halign="right">
+        0.002681337792
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Sharon village
+      </cell>
+      <cell halign="right">
+        0.05902378125
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Sharon town
+      </cell>
+      <cell halign="right">
+        0.006637089568
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Spring Prairie town
+      </cell>
+      <cell halign="right">
+        0
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Sugar Creek town
+      </cell>
+      <cell halign="right">
+        0
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Troy town
+      </cell>
+      <cell halign="right">
+        0.03344073819
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Walworth village
+      </cell>
+      <cell halign="right">
+        0.03056312218
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Walworth town
+      </cell>
+      <cell halign="right">
+        0.00847090728
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Whitewater city
+      </cell>
+      <cell halign="right">
+        0.03485133768
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Whitewater town
+      </cell>
+      <cell halign="right">
+        0.01455924794
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Williams Bay village
+      </cell>
+      <cell halign="right">
+        0.01540322784
+      </cell>
+    </row>
+  </tabular>
+		</figure>
+
+		<subsection>
+		<title>Final model</title>
+		<p>Let's put everything together in one final model. We'll use three variables to create a parametric linear model of medical need, suppose that each clinic serves an effective coverage radius of <m>4500</m> meters, and choose a placement which maximize the total amount of need met.</p>
+		
+		<p>Let's take the variables <m>\bar{x}</m> (the normalized percentage of working individuals who do not have a car) and <m>\bar{y}</m> (the normalized percentage of individuals who self-identify as Hispanic or Latino) from <xref ref="poverty-health-parametric-linear-models"/>, and the variable <m>\bar{z}</m> which estimates the normalized percentage of households which are uninsured and at or below <m>200\%</m> FPL. We'll combine all of three of these into a parametric linear model where <m>\bar{x}</m>, <m>\bar{y}</m>, and <m>\bar{z}</m> are each weighted at <m>\frac{1}{3}</m> (in practice, we would give OAFC the freedom to adjust these weights - for instance, they may decide that <m>\bar{z}</m> should be given more weight). This gives the table below.</p>
+		
+		<figure xml:id="poverty-health-t5">
+				<caption>Final model of medical need.</caption>
+		 
+			<tabular halign="right">
+	<row header="yes" bottom="minor" >
+      <cell halign="left"><!-- style="font-size: xx-small">-->
+		Municipality
+      </cell>
+      <cell halign="left">
+        Normalized percentage of working households with no vehicle available as decimal <m>(\bar{x})</m>
+      </cell>
+      <cell halign="left">
+        Normalized percentage of individuals identifying as Hispanic/Latino as decimal <m>(\bar{y})</m>
+      </cell>
+      <cell halign="left">
+        Normalized percentage of uninsured households under <m>200\%</m> FPL as decimal <m>(\bar{z})</m>
+      </cell>
+      <cell halign="left">
+        Final percentage of need as decimal <m>(\frac{1}{3}\bar{x}+\frac{1}{3}\bar{y}+\frac{1}{3}\bar{z})</m>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Bloomfield village
+      </cell>
+      <cell>
+		0.0489
+      </cell>
+      <cell>
+		0.0661
+      </cell>
+      <cell>
+		0.0455
+      </cell>
+      <cell>
+		0.0535
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Bloomfield town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0915
+      </cell>
+      <cell>
+		0.0997
+      </cell>
+      <cell>
+		0.0637
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Darien village
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0506
+      </cell>
+      <cell>
+		0.0309
+      </cell>
+      <cell>
+		0.0272
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Darien town
+      </cell>
+      <cell>
+		0.0089
+      </cell>
+      <cell>
+		0.0588
+      </cell>
+      <cell>
+		0.0551
+      </cell>
+      <cell>
+		0.0409
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Delavan city
+      </cell>
+      <cell>
+		0.0752
+      </cell>
+      <cell>
+		0.0763
+      </cell>
+      <cell>
+		0.0598
+      </cell>
+      <cell>
+		0.0704
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Delavan town
+      </cell>
+      <cell>
+		0.1099
+      </cell>
+      <cell>
+		0.0298
+      </cell>
+      <cell>
+		0.0386
+      </cell>
+      <cell>
+		0.0594
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        East Troy village
+      </cell>
+      <cell>
+		0.055
+      </cell>
+      <cell>
+		0.0056
+      </cell>
+      <cell>
+		0.0257
+      </cell>
+      <cell>
+		0.0288
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        East Troy town
+      </cell>
+      <cell>
+		0.0468
+      </cell>
+      <cell>
+		0.0121
+      </cell>
+      <cell>
+		0.0248
+      </cell>
+      <cell>
+		0.0279
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Elkhorn city
+      </cell>
+      <cell>
+		0.0289
+      </cell>
+      <cell>
+		0.05
+      </cell>
+      <cell>
+		0.0356
+      </cell>
+      <cell>
+		0.0382
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        F-o-G Lake village
+      </cell>
+      <cell>
+		0.0682
+      </cell>
+      <cell>
+		0.005
+      </cell>
+      <cell>
+		0.0176
+      </cell>
+      <cell>
+		0.0303
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Geneva town
+      </cell>
+      <cell>
+		0.0329
+      </cell>
+      <cell>
+		0.0446
+      </cell>
+      <cell>
+		0.0694
+      </cell>
+      <cell>
+		0.0489
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Genoa City village
+      </cell>
+      <cell>
+		0.0149
+      </cell>
+      <cell>
+		0.0436
+      </cell>
+      <cell>
+		0.0133
+      </cell>
+      <cell>
+		0.0239
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lafayette town
+      </cell>
+      <cell>
+		0.0114
+      </cell>
+      <cell>
+		0.0063
+      </cell>
+      <cell>
+		0.0133
+      </cell>
+      <cell>
+		0.0103
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        La Grange town
+      </cell>
+      <cell>
+		0.0357
+      </cell>
+      <cell>
+		0.0148
+      </cell>
+      <cell>
+		0.013
+      </cell>
+      <cell>
+		0.0212
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lake Geneva city
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0314
+      </cell>
+      <cell>
+		0.0265
+      </cell>
+      <cell>
+		0.0193
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Linn town
+      </cell>
+      <cell>
+		0.0127
+      </cell>
+      <cell>
+		0.0193
+      </cell>
+      <cell>
+		0.0304
+      </cell>
+      <cell>
+		0.0208
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Lyons town
+      </cell>
+      <cell>
+		0.0555
+      </cell>
+      <cell>
+		0.0076
+      </cell>
+      <cell>
+		0.0023
+      </cell>
+      <cell>
+		0.0218
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Mukwonago village
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+        0
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Richmond town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0231
+      </cell>
+      <cell>
+		0.0052
+      </cell>
+      <cell>
+		0.0094
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sharon village
+      </cell>
+      <cell>
+		0.025
+      </cell>
+      <cell>
+		0.1024
+      </cell>
+      <cell>
+		0.1144
+      </cell>
+      <cell>
+		0.0806
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sharon town
+      </cell>
+      <cell>
+		0.0125
+      </cell>
+      <cell>
+		0.0216
+      </cell>
+      <cell>
+		0.0129
+      </cell>
+      <cell>
+		0.0157
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Spring Prairie town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0041
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0014
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Sugar Creek town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0058
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0019
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Troy town
+      </cell>
+      <cell>
+		0.0361
+      </cell>
+      <cell>
+		0.0092
+      </cell>
+      <cell>
+		0.0648
+      </cell>
+      <cell>
+		0.0367
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Walworth village
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0802
+      </cell>
+      <cell>
+		0.0592
+      </cell>
+      <cell>
+		0.0465
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Walworth town
+      </cell>
+      <cell>
+        0
+      </cell>
+      <cell>
+		0.0381
+      </cell>
+      <cell>
+		0.0164
+      </cell>
+      <cell>
+		0.0182
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Whitewater city
+      </cell>
+      <cell>
+		0.0736
+      </cell>
+      <cell>
+		0.0348
+      </cell>
+      <cell>
+		0.0676
+      </cell>
+      <cell>
+		0.0587
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Whitewater town
+      </cell>
+      <cell>
+		0.1773
+      </cell>
+      <cell>
+		0.032
+      </cell>
+      <cell>
+		0.0282
+      </cell>
+      <cell>
+		0.0792
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        Williams Bay village
+      </cell>
+      <cell>
+		0.0707
+      </cell>
+      <cell>
+		0.0353
+      </cell>
+      <cell>
+		0.0299
+      </cell>
+      <cell>
+		0.0453
+      </cell>
+    </row>
+  </tabular>
+</figure>
+
+		
+		<p>Finally, we will assume that each mobile clinic has an effective coverage radius of <m>r=4500</m> meters, and we will use a computer to test all <m>29C3=3654</m> possible clinic placements. We will choose one of them which maximizes the total need covered.</p>
+		
+		<p>The figure below shows an optimal solution which was found by a computer. This solution involves placing the clinics at the three locations of Whitewater city, Delavan city, and Bloomfield village. The municipalities covered by this placement (those whose centroids fall within one of the green disks) are Bloomfield village, Bloomfield town, Fontana-on-Geneva Lake village, Walworth village, Walworth town, Whitewater city, Whitewater town, and Williams Bay village. Adding up their percentages of need from table <xref ref="poverty-health-t5"/>, we see that this optimal solution covers <m>\approx 40 \%</m> of the need in the county.</p>
+		
+		<!-- Final: 0.387450203 (0, 9, 26) {'Bloomfield village': '0.051482317', 'Bloomfield town': '0.072720492', 'Fontana-on-Geneva Lake village': '0.027093162', 'Walworth village': '0.04966113', 'Walworth town': '0.017745134', 'Whitewater city': '0.060884251', 'Whitewater town': '0.066420355', 'Williams Bay village': '0.041443362'}    -->
+		
+		<figure xml:id="poverty-health-mclp2">
+			<title>MCLP2.</title>
+			<image source="poverty-as-health-issue/images/mclp2.png" width = "95%"/>
+			<caption>Placement of three clinics maximizing coverage. <xref ref="poverty-health-images-maximizing-final">Image Description</xref>.</caption>
+		</figure>
+		
+		</subsection>
+		
+	</section>	
+	
+	
+	<!--<conclusion xml:id="module-tag-conclusion">
+		<p> Conclusion of module.</p>
+	</conclusion>-->
+	<reading-questions xml:id="poverty-health-reflection">
+		<!--<exercise> <p>Reflection or discussion question.  These questions should be non-quantitative in nature, but involve reflection on the mathematics done in analyzing the social question.</p></exercise>-->
+		
+		<exercise><p> The scenarios mentioned in <xref ref="poverty-health-background"/> illustrate connections between certain social determinants of health and health outcomes. Come up with three additional scenarios which illustrate such connections. Indicate clearly which sociodemographic factors are at play.</p></exercise>
+		<exercise><p> Where have you seen cycles of poverty? Give an example of a cycle of poverty from your own experience (or research one) and explain how it follows or deviates from the formula given in section <xref ref="poverty-health-cui-bono"/>.</p></exercise>
+		<exercise><p> Choose a scenario that you came up with in question 1. If you were modeling medical need in this scenario using a parametric linear model, which variables would you use? How would you choose weights for them?</p></exercise>
+		<exercise><p> Why might it be important to normalize a parametric linear model?</p></exercise>
+		<exercise><p> Analyze the four assumptions of the discrete optimization model in section <xref ref="poverty-health-discrete-optimization"/>. Do they make sense to you? How would you adjust them and why? Come up with at least one additional assumption and indicate how you might adjust the model to consider it.</p></exercise>
+		<exercise><p> Recall an assumption of the models presented in this chapter: "For each variable, we will use percentages of residents or households rather than population. This will ensure that our solution does not simply target the most populous areas." Is this assumption reasonable? Why are why not?</p></exercise>
+		<exercise><p> Recall another assumption of the model in section <xref ref="poverty-health-discrete-optimization"/>: "Our goal will be to place three mobile clinics in three separate municipalities around the county. We will assume that each mobile clinic is placed at the centroid of a municipality." Is this assumption about centroids reasonable? Why or why not?</p></exercise>
+		<exercise><p> Is the estimation for the percentage of uninsured households under 200% of the FPL in section <xref ref="poverty-health-solve"/> reasonable? Why or why not?</p></exercise>
+		<exercise><p> Suppose that OAFC wanted to ensure that its mobile clinics were deployed a certain distance away from the brick-and-mortar clinic in Elkhorn. How could the model be adjusted to incorporate this requirement?</p></exercise>
+		
+
+	</reading-questions>
+	<exercises xml:id="poverty-health-exercises">
+		<!-- <exercise> <p>Mathematical exercise.  These exercises should be quantitative in nature, but could involve other tasks, like gathering data, using technology, or analyzing consequences to come to an answer.  The answer need not be quantitative.</p></exercise>
+		<exercise> <p>Explain how the equation <me>r=\frac{y-25000}{25000}</me> in <xref ref="solve"/> was calculated in your own words.</p></exercise> -->
+		<exercise><p> Calculate the number of ways to choose (using combinations):
+		<ol>
+			<li><m>2</m> municipalities from a county with <m>10</m>  total.</li>
+			<li><m>3</m>  municipalities from a county with <m>10</m>  total.</li>
+			<li><m>3</m> municipalities from a county with <m>11</m>  total.</li>
+			<li><m>3</m>  municipalities from a county with <m>12</m>  total.</li>
+			<li><m>3</m> municipalities from a county with <m>n</m> total (simplify the expression so that it contains no factorials).</li>
+			<li><m>n-3</m> municipalities from a county with a total of <m>n</m>. Explain why it agrees with your answer in e.</li>
+			<li><m>4</m>  municipalities from a county with <m>n</m> total.</li>
+			<li>Explain why the formula for choosing <m>k</m> municipalities from a county with <m>n</m> total is a polynomial of degree <m>k</m>.</li>
+		</ol>
+		</p></exercise>
+		
+		<exercise><p>Suppose OAFC wishes to place a vaccine clinic and a dental clinic in two separate municipalities of the <m>30</m>  in Walworth county. In how many ways can they do this?</p></exercise>
+		<exercise><p>Suppose they wish to place a vaccine clinic, a dental clinic, and a check-up clinic in three separate municipalities of the <m>30</m>. In how many ways can they do this?</p></exercise>
+		<exercise><p> Suppose they wish to choose two clinic types out of the three: vaccine clinic, dental clinic, and check-up clinic, and then to place two clinics of the chosen types in two separate municipalities of the <m>30</m>. In how many ways can they do this?</p></exercise>
+		<exercise><p> (harder) Suppose they wish to place two vaccine clinics and one dental clinic in three separate municipalities out of <m>30</m>. In how many ways can they do this? What about two vaccine clinics, one dental clinic, and three check-up clinics?</p></exercise>
+		<exercise><p> Suppose OAFC wishes to open at least <m>1</m> and at most <m>5</m> clinics in separate municipalities out of the <m>30</m> in Walworth county. In how many ways can they do this?</p></exercise>
+		<exercise><p> Suppose OAFC wishes to open at least <m>2</m> and at most <m>5</m> clinics in separate municipalities out of the <m>30</m> in Walworth county. In how many ways can they do this? Use the previous exercise and the subtraction rule.</p></exercise>
+		<exercise><p> In section <xref ref="poverty-health-solve"/>, the relationship between <m>y</m>, 200% of the FPL in a fixed municipality, and <m>r</m>, the fraction of how "far" <m>y</m> is along the way from to <m>$25000</m> to <m>$50000</m>, was said to be given by <me>r=\frac{y-25000}{25000}.</me> Explain this formula in your own words.</p></exercise>
+		<exercise><p>Suppose a state-funded aid organization has modeled medical need in a state with <m>100</m> counties. They have the resources to open as many as <m>20</m> clinics in diffent counties. If they have access to a computer which can check the need covered for one billion different possible clinic placements, what is the maximum number of clinics for which they can compute all placement possibilities (for that number of clinics) exhaustively?</p></exercise>
+		
+		<exercise><p> Recall the formulas for <m>nCm</m> and <m>nPm</m>:
+
+		<me>nPm=\frac{n!}{(n-m)!}</me>
+
+		<me>nCm=\frac{n!}{(n-m)!m!}</me>.
+
+		Explain how the formula for <m>nCm</m> comes from the formula for <m>nPm</m> and the division rule.</p></exercise>
+
+
+		<exercise><p>Pascal’s triangle (perhaps more appropriately known as Khayyam’s triangle or Yang Hui’s triangle after those who studied it earlier) provides a method of computing the binomial coefficients (numbers of the form <m>nCk=\binom{n}{k}</m>) in an iterative way <xref ref="biblio-poverty-health-pascal"/>. One starts with an infinite row of <m>0</m>s with a single <m>1</m> in the middle:
+			<me>\ldots 0 \quad 0 \quad 0 \quad 0 \quad 1 \quad 0 \quad 0 \quad 0 \quad 0 \ldots</me>
+			Subsequent rows are computed by putting the sum of the two numbers above in the gap below them:
+			<me>\ldots 0 \quad 0 \quad 0 \quad 0 \quad 1 \quad 0 \quad 0 \quad 0 \quad 0 \ldots</me>
+			<me>\ldots 0 \quad 0 \quad 0 \quad 0 \quad 1 \quad 1 \quad 0 \quad 0 \quad 0 \quad 0 \ldots</me>
+			<me>\ldots 0 \quad 0 \quad 0 \quad 0 \quad 1 \quad 2 \quad 1 \quad 0 \quad 0 \quad 0 \quad 0 \ldots</me>
+			<me>\ldots 0 \quad 0 \quad 0 \quad 0 \quad 1 \quad 3 \quad 3 \quad 1 \quad 0 \quad 0 \quad 0 \quad 0 \ldots</me>
+			We can ignore the <m>0</m>s in order to draw it more compactly:
+			<me>
+			\begin{array}{c}
+			1 \\
+			1 \quad 1 \\
+			1 \quad 2 \quad 1 \\
+			1 \quad 3 \quad 3 \quad 1 \\
+			1 \quad 4 \quad 6 \quad 4 \quad 1 \\
+			1 \quad 5 \quad 10 \quad 10 \quad 5 \quad 1 \\
+			1 \quad 6 \quad 15 \quad 20 \quad 15 \quad 6 \quad 1 \\
+			1 \quad 7 \quad 21 \quad 35 \quad 35 \quad 21 \quad 7 \quad 1 \\
+			\end{array}
+			 </me>
+		<ol>
+		<li>Now compute <m>\binom{4}{0}</m>, <m>\binom{4}{1}</m>, <m>\binom{4}{2}</m>, <m>\binom{4}{3}</m>, and <m>\binom{4}{4}</m> using the formula from section <xref ref="poverty-health-permcomb"/> and compare the numbers you get to the triangle above. What do you notice? Make a conjecture (guess) about the binomial coefficients and the <m>5^\text{th}</m>, <m>6^\text{th}</m>, and <m>n^\text{th}</m> row of Pascal’s triangle.</li>
+		<li><p>(requires algebra) Consider the expression <m>(x+1)^n</m>.</p>
+			<ol>
+				<li>Expand <m>(x+1)^2</m> by distributing and collecting like terms.</li>
+				<li>Expand <m>(x+1)^3</m> by distributing and collecting like terms.</li>
+				<li>Make a guess which connects the coefficients (numbers appearing before the variables in the expanded expression) and Pascal’s triangle.</li>
+				<li> The sum of the entries in the <m>3^\text{rd}</m> row of Pascal’s triangle is
+					<me>1+3+3+1=8.</me>
+					Compute the sum of entries in all eight of the rows shown. What patterns do you see?</li>
+				<li>In fact, if we call the top row the <m>0^\text{th}</m> row, the sum of entries in the <m>n^\text{th}</m> row is <m>2^n</m>. Can you explain why? Hint: Set <m>x=1</m>.</li>
+			</ol>
+		</li>
+		<li> Suppose that OAFC wants to consider the possibility of placing any number of mobile clinics (as few as <m>0</m> and as many as <m>30</m>) in separate municipalities in Walworth county. How many possible ways can they do this?</li>
+		</ol></p></exercise>
+
+
+		<exercise> <p>Arguably, a smarter model than the one we settled on would take into account the distance from each centroid to a clinic location and weight the need satisfied at this municipality according to this distance. Expand upon how this might be done to improve our solution.</p></exercise>
+		
+		<exercise> <p>The map visualizations throughout this chapter were created by importing and analyzing publically available data from the American Community Survey using a python library called GeoPandas <xref ref="biblio-poverty-health-geopandas"/>. The author's code is also available <xref ref="biblio-poverty-health-chapter-code"/>. The data was imported from GeoJSON files which can be obtained at the censusreporter.org links in the references, e.g. following the link at <xref ref="biblio-poverty-health-ethnicity-by-muni-census-data"/>, clicking "Download data" at the top right and then GeoJSON in the dropdown menu. Follow the online YouTube tutorial at <xref ref="biblio-poverty-health-geopandas-tutorial"/> to get this software up and running on your own machine, and follow the one at <xref ref="biblio-poverty-health-geopandas-tutorial-2"/> to learn how to import and plot data from GeoJSON files. The more at advanced tutorial <xref ref="biblio-poverty-health-geopandas-tutorial-3"/> may be helpful as well.</p></exercise>
+		
+		<!--<exercise> <p>Small MCLP problem to do by hand?</p></exercise>-->
+	</exercises>
+	<section xml:id="poverty-health-references">
+		<title>References</title>
+		<!--><p>References will be in AMS style.  Please use your module-tag in the label name so that we can avoid collisions between similarly named references in multiple modules. Feel free to use a mixture of peer-reviewed and non-peer-reveiewed references.</p>-->
+		<subsection>
+		<title>Bibliography</title>
+		
+					
+		
+				<biblio xml:id="biblio-poverty-health-geopandas-tutorial">
+					<title>An Absolute Beginner's Guide to Python GeoPandas.</title>
+					"An Absolute Beginner's Guide to Python GeoPandas." YouTube, uploaded by GeoDeltaLabs, 12 Nov. 2020, <url href="https://www.youtube.com/watch?v=t7lliJXFt8w">https://www.youtube.com/watch?v=t7lliJXFt8w</url>.
+				</biblio>	
+				
+				<biblio xml:id="biblio-poverty-health-mclp2">
+					<title>https://pysal.org/spopt/notebooks/mclp.html</title>
+					Barcelos, Germano et. al. <em>The Maximal Coverage Location Problem.</em> From https://pysal.org/spopt. <url href="https://pysal.org/spopt/notebooks/mclp.html">https://pysal.org/spopt/notebooks/mclp.html</url>, Accessed 06/12/24.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-denying-loans">
+					<title>Bell, Thomas L. Geographical Review</title>
+					Bell, Thomas L. <em>Geographical Review</em>, vol. 76, no. 3, 1986, pp. 327–29. <em>JSTOR</em>, https://doi.org/10.2307/214153. Accessed 17 June 2024.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-geopandas-tutorial-3">
+					<title>Census Data Analysis and Mapping with Python.</title>
+					"Census Data Analysis and Mapping with Python." YouTube, uploaded by UCLA Office of Advanced Research Computing (OARC), 1 Mar. 2021, <url href="https://www.youtube.com/watch?v=rrGw6ct-Cbw">https://www.youtube.com/watch?v=rrGw6ct-Cbw</url>.
+				</biblio>	
+				<biblio xml:id="biblio-poverty-health-poverty-line">
+					<title>Federal poverty guidelines</title>
+					Federal poverty guidelines as of 2021. Retrieved from <url href="https://aspe.hhs.gov/2021-poverty-guidelines#guidelines">https://aspe.hhs.gov/2021-poverty-guidelines#guidelines</url>, Accessed 06/12/24.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-redlining">
+					<title>The HOLC Maps: How Race and Poverty Influenced Real Estate Professionals’ Evaluation of Lending Risk in the 1930s.</title>
+					Fishback PV, LaVoice J, Shertzer A, Walsh RP. The HOLC Maps: How Race and Poverty Influenced Real Estate Professionals’ Evaluation of Lending Risk in the 1930s. <em>The Journal of Economic History</em>. 2023;83(4):1019-1056. doi:10.1017/S0022050723000475. Available at <url href="https://www.cambridge.org/core/journals/journal-of-economic-history/article/holc-maps-how-race-and-poverty-influenced-real-estate-professionals-evaluation-of-lending-risk-in-the-1930s/A1BC46058B2EDCBD796977FF66B33FA3"> https://www.cambridge.org/core/journals/journal-of-economic-history/article/holc-maps-how-race-and-poverty-influenced-real-estate-professionals-evaluation-of-lending-risk-in-the-1930s/A1BC46058B2EDCBD796977FF66B33FA3</url>, Accessed 06/12/24.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-universal-healthcare-list">
+					<title>Foreign Countries with Universal Health Care</title>
+					Foreign Countries with Universal Health Care. <url href=" https://www.health.ny.gov/regulations/hcra/univ_hlth_care.htm"> https://www.health.ny.gov/regulations/hcra/univ_hlth_care.htm</url>, Accessed 06/12/24.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-geopandas-tutorial-2">
+					<title>GeoPandas Snippets - reading GeoJSON files.</title>
+					"GeoPandas Snippets - reading GeoJSON files." YouTube, uploaded by BugBytes, 9 May 2021, <url href="https://www.youtube.com/watch?v=Kr658rFToOs">https://www.youtube.com/watch?v=Kr658rFToOs</url>.
+				</biblio>	
+				
+				<biblio xml:id="biblio-poverty-health-denying-loans-data">
+					<title>The Other "Subsidized Housing": Federal Aid To Suburbanization</title>
+					Hanchett, Tom. The Other "Subsidized Housing": Federal Aid To Suburbanization, 1940s-1960s. Originally published in John Bauman, Roger Biles and Kristin Szylvian, editors, From Tenements to Taylor Homes: In Search of Urban Housing Policy in Twentieth Century America (University Park, Pennsylvania: the Pennsylvania State University Press, 2000), 163 – 179. Available at <url href="https://www.historysouth.org/wp-content/uploads/2015/12/The-Other-22Subsidized-Housing22-Federal-Aid-To-Suburbanization-.pdf"> https://www.historysouth.org/wp-content/uploads/2015/12/The-Other-22Subsidized-Housing22-Federal-Aid-To-Suburbanization-.pdf</url>, Accessed 06/12/24.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-pascal">
+					<title>Pascal's triangle</title>
+					Hosch, William L. <em>Pascal's triangle.</em> In Encyclopedia Brittanica. 5/2/2024. <url href="https://www.britannica.com/science/Pascals-triangle
+				">https://www.britannica.com/science/Pascals-triangle
+				</url>, Accessed 06/12/24.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-uninsured">
+					<title>Key Facts on Health Coverage of Immigrants</title>
+					Key Facts on Health Coverage of Immigrants. 9/17/2023. <url href="https://www.kff.org/racial-equity-and-health-policy/fact-sheet/key-facts-on-health-coverage-of-immigrants/"> https://www.kff.org/racial-equity-and-health-policy/fact-sheet/key-facts-on-health-coverage-of-immigrants/</url>, Accessed 06/12/24.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-place-matters">
+					<title>Place Matters</title>
+					Lee, Ellie. <em>Place Matters.</em> Episode 5 in Unnatural Causes. Broadcast by PBS. Written and produced by Ellie Lee. Edited by Andrea Williams. Produced by Ann S. Kim. Available at <url href="https://www.kanopy.com/en/product/62777?vp=bu">https://www.kanopy.com/en/product/62777?vp=bu</url>.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-binom">
+					<title>The mathematical secrets of Pascal’s triangle - Wajdi Mohamed Ratemi</title>
+					"The mathematical secrets of Pascal’s triangle - Wajdi Mohamed Ratemi." YouTube, uploaded by TED - Ed, 15 Sep. 2015, <url href="https://www.youtube.com/watch?v=XMriWTvPXHI">https://www.youtube.com/watch?v=XMriWTvPXHI</url>.
+				</biblio>	
+				<biblio xml:id="biblio-poverty-health-mclp1">
+					<title>The Maximum Covering Location Problem (MCLP).</title>
+					"The Maximum Covering Location Problem (MCLP)." YouTube, uploaded by Eric Delmelle, 19 Sep. 2020, <url href="https://www.youtube.com/watch?v=i2Xy3VSkGRs">https://www.youtube.com/watch?v=i2Xy3VSkGRs</url>.
+				</biblio>	
+				<biblio xml:id="biblio-poverty-health-whataboutism">
+					<title>"It's Not Accidental at All"--Media Literacy, "Whataboutism," and Occam's Razor.</title>
+					Pearcy, Mark. "It's Not Accidental at All"--Media Literacy, "Whataboutism," and Occam's Razor. Research Issues in Contemporary Education, v6 n2 p10-35 2021. Available at <url href="https://eric.ed.gov/?id=EJ1317315">https://eric.ed.gov/?id=EJ1317315</url>, Accessed 06/12/24.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-ai">
+					<title>How ChatGPT actually works</title>
+					Ramponi, Marco. <em>How ChatGPT actually works.</em> 12/23/2022. <url href="https://www.assemblyai.com/blog/how-chatgpt-actually-works/"> https://www.assemblyai.com/blog/how-chatgpt-actually-works/</url>, Accessed 06/12/24.
+				</biblio>	
+				<biblio xml:id="biblio-poverty-health-insurance-cost-determination">
+					<title>Saving Money on Health Insurance</title>
+					Saving money on health insurance. <url href="https://www.healthcare.gov/lower-costs/">https://www.healthcare.gov/lower-costs/</url>, Accessed 06/12/24.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-chapter-code">
+					<title>Code to accompany "Poverty as a health issue".</title>
+					Stucky, Ben. Code to accompany "Poverty as a health issue" chapter in <em>Math for the People</em>, <url href="https://github.com/beanstalk555/m4tp-public">https://github.com/beanstalk555/m4tp-public</url>.
+				</biblio>	
+				<biblio xml:id="biblio-poverty-health-average-household-size-census-data">
+					<title>Average household size by municipality in Walworth County, WI</title>
+					 U.S. Census Bureau (2018-2022). <em>Average Household Size of Occupied Housing Units by Tenure American Community Survey 5-year estimates</em>  Retrieved from <url href="https://censusreporter.org/data/table/?table=B25010&amp;geo_ids=05000US55127,060%7C05000US55127&amp;primary_geo_id=05000US55127#">https://censusreporter.org</url>, Accessed 06/12/24.
+				</biblio>	
+				<biblio xml:id="biblio-poverty-health-insurance-coverage-by-income-bracket-by-municipality-census-data">
+					<title>Percentage of uninsured households by income bracket by municipality in Walworth County, WI</title>
+					 U.S. Census Bureau (2018-2022). <em>Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (In 2022 Inflation-adjusted Dollars) American Community Survey 5-year estimates.</em>  Retrieved from <url href="https://censusreporter.org/data/table/?table=B27015&amp;geo_ids=05000US55127,060%7C05000US55127&amp;primary_geo_id=05000US55127">https://censusreporter.org</url>, Accessed 06/12/24.
+				</biblio>	
+				<biblio xml:id="biblio-poverty-health-race-ethnic-census-data">
+					<title>Race/ethnic categories in Walworth County, WI</title>
+					U.S. Census Bureau (2022). <em>Hispanic or Latino Origin by Race American Community Survey 1-year estimates.</em> Retrieved from <url href="https://censusreporter.org/data/table/?table=B03002&amp;primary_geo_id=05000US55127&amp;geo_ids=05000US55127,04000US55,01000US#">https://censusreporter.org</url>, Accessed 06/12/24.
+				</biblio>				
+				<biblio xml:id="biblio-poverty-health-ethnicity-by-muni-census-data">
+					<title>Race/ethnic categories by municipality in Walworth County, WI</title>
+					 U.S. Census Bureau (2018-2022). <em>Hispanic or Latino Origin American Community Survey 5-year estimates.</em>  Retrieved from <url href="https://censusreporter.org/data/table/?table=B03003&amp;geo_ids=05000US55127,060|05000US55127&amp;primary_geo_id=05000US55127#">https://censusreporter.org</url>, Accessed 06/12/24.
+				</biblio>							
+				<biblio xml:id="biblio-poverty-health-vehicle-availability-census-data">
+					<title>Vehicle availability by municipality in Walworth County, WI</title>
+					 U.S. Census Bureau (2018-2022). <em>Means of Transportation to Work by Vehicles Available American Community Survey 5-year estimates.</em>  Retrieved from <url href="https://censusreporter.org/data/table/?table=B08141&amp;geo_ids=05000US55127,060|05000US55127&amp;primary_geo_id=05000US55127#">https://censusreporter.org</url>, Accessed 06/12/24.
+				</biblio>					
+							
+				<biblio xml:id="biblio-poverty-health-usa-health-outcomes">
+					<title>U.S. Health Care from a Global Perspective, 2019: Higher Spending, Worse Outcomes?</title>
+					U.S. Health Care from a Global Perspective, 2019: Higher Spending, Worse Outcomes? <url href="https://www.commonwealthfund.org/publications/issue-briefs/2020/jan/us-health-care-global-perspective-2019">https://www.commonwealthfund.org/publications/issue-briefs/2020/jan/us-health-care-global-perspective-2019</url>, Accessed 06/12/24.
+				</biblio>	
+				<biblio xml:id="biblio-poverty-health-geopandas">
+					<title>GeoPandas</title>
+					Van den Bossche, Joris, et. al. (2024, June 24). geopandas/geopandas: v1.0.0 (Version v1.0.0). Zenodo. <url href="https://doi.org/10.5281/zenodo.12515477">https://doi.org/10.5281/zenodo.12515477</url>. Available at <url href="https://geopandas.org/en/stable/">https://geopandas.org/en/stable/</url>.
+				</biblio>						
+				<biblio xml:id="biblio-poverty-health-white-flight">
+					<title>Gale Force: Gale Cincotta, the Battles for Disclosure and Community Investment.</title>
+					Westgate, Michael and Ann Vick-Westgate. <em>Gale Force: Gale Cincotta, the Battles for Disclosure and Community Investment.</em> Second ed., Harvard Book Store, 2011. Available at <url href="https://www.worldcat.org/title/gale-force-gale-cincotta-the-battles-for-disclosure-and-community-investment/oclc/708579366"> https://www.worldcat.org/title/gale-force-gale-cincotta-the-battles-for-disclosure-and-community-investment/oclc/708579366</url>, Accessed 06/12/24.
+				</biblio>
+				<biblio xml:id="biblio-poverty-health-false-consciousness">
+					<title>Why Tucker Carlson Pretends to Hate Elites.</title>
+					"Why Tucker Carlson Pretends to Hate Elites." YouTube, uploaded by Vox, 3 Apr. 2019, <url href="https://www.youtube.com/watch?v=RNineSEoxjQ">www.youtube.com/watch?v=RNineSEoxjQ</url>.
+				</biblio>	
+				
+				
+				
+
+
+				
+				
+				
+					
+				
+				
+					
+				
+				<!--<biblio type="raw" xml:id="module-tag-biblio-book-reference-name">
+					A. Author, B. Second-Author, <title>Title of Reference</title>, Publisher, Place of Publication, year, DOI, <url href="http://citation.web.page"/>.
+				</biblio>
+				<biblio xml:id="module-tag-biblio-article-reference-name">
+					A. Author, <title>Title of Article</title>, Abbreviated Journal Title, Volume (year) page-page, <url href="http://citation.web.page"/>.
+				 </biblio>
+				 <biblio xml:id="module-tag-biblio-other-reference-name"> 
+					A. Author, Publisher of Information, Title of Webpage (date), <url href="http://citation.web.page"/>.
+				 </biblio>-->
+		</subsection>
+		<subsection>
+				<title>Image Descriptions</title>
+				<ol>
+					<li xml:id="poverty-health-images-countymap">
+						A map of the <m>30</m> municipalities in Walworth County, WI. The county is shaped like a square which is approximately <m>24</m> miles long. About half of the municipalities are shaped like smaller squares which are about <m>6</m> miles long and fill up the county in a gridlike fashion, while the other half are scattered around more urban areas and shaped irregularly.
+					</li>
+					<li xml:id="poverty-health-images-equivalent-placements">
+						Two different maps of the <m>30</m> major municipalities in Walworth County, WI, with three clinics placed in certain municipalities. The only difference between the two placements is the switching of the clinic labels <m>A</m> and <m>B</m>.
+					</li>
+					<li xml:id="poverty-health-images-paralin-need-visualization">
+						A map of the <m>29</m> major municipalities in Walworth County, WI, colored according to medical need from the normalized parametric linear model. The three municipalities with highest need (Whitewater town, Delavan city, and Delavan town) are highlighted. Additionally, the municipality of Delavan town surrounds the municipality of Delavan city.
+					</li>
+					<li xml:id="poverty-health-images-centroid-visualization">
+						A map of the <m>29</m> major municipalities in Walworth County, WI. The centroid of each municipality is shown with a dot. The centroids of the square-shaped municipalities lie where you might expect - in the center of the square, while the centroids of irregularly-shaped municipalities are harder to predict.
+					</li>
+					<li xml:id="poverty-health-images-maximizing">
+						A map of the <m>29</m> major municipalities in Walworth County, WI, colored according to medical need from the normalized parametric linear model. Filled circles of radius <m>4500</m> meters are placed at the centroids of Whitewater city, Delavan city, and Fontana-on-Geneva Lake village, representing coverage by clinics placed at these three municipalities. The centroids of Delavan city, Delavan town, Fontana-on-Geneva Lake village, Walworth village, Walworth town, Whitewater city, Whitewater town, and Williams Bay village, all lie inside the filled circles, indicating that the medical need in these municipalities is covered under this model.
+					</li>
+					<li xml:id="poverty-health-images-maximizing-final">
+						A map of the <m>29</m> major municipalities in Walworth County, WI, colored according to medical need from the final model. Filled circles of radius <m>4500</m> meters are placed at the centroids of Whitewater city, Delavan city, and Bloomfield village, representing coverage by clinics placed at these three municipalities. The centroids of Bloomfield village, Bloomfield town, Fontana-on-Geneva Lake village, Walworth village, Walworth town, Whitewater city, Whitewater town, and Williams Bay village, all lie inside the filled circles, indicating that the medical need in these municipalities is covered under this model.
+					</li>
+					
+					
+					
+				</ol>		
+					
+		</subsection>
+	</section>
+  
+
+  <!-- Sections can be written directly here, but it might help  -->
+  <!-- with organization to include them as separate files.      -->
+  <!-- That way it is easy to include the section in a different -->
+  <!-- chapter later if you change your mind about the order.    -->
+  <!-- <xi:include href="./sec_first-intro.ptx" /> -->
+  <!-- <xi:include href="./sec_first-examples.ptx" /> -->
+
+  <!-- One or more of the sections of a chapter might be exercises-->
+  <!--  <xi:include href="./ex_first.ptx"/> -->
+</chapter>

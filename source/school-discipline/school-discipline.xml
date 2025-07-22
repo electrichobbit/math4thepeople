@@ -1,0 +1,605 @@
+<chapter xml:id="school-discipline">
+    <title>School Discipline</title>
+    <introduction xml:id="school-discipline-introduction">
+        <p>
+            <em>This module on School Discipline was authored by <xref ref="ksimic-muller"/> and <xref ref="jseat"/>.</em>
+        </p>
+        <p>
+            Every day children of all ages, from preschool to high school, get disciplined at school. The form of discipline varies, from being sent to the principal’s office all the way to being arrested or expelled. Who gets disciplined at school, and for which offenses and behaviors? And what is the phenomenon that people refer to as the “school-to-prison pipeline”? In this module, you will use ratios, percents, data analysis, and probability to try to answer these and other questions.
+        </p>
+        <!-- <p>Text of introduction second paragraph</p> -->
+    </introduction>
+    <section xml:id="school-discipline-objectives">
+        <title>Objectives</title>
+        <p>
+            By the end of this module students will be able to:
+            <ol>
+                <li> Construct ratios and percentages from raw data in multiple forms, including fractions and decimals, that will be used to interpret information related to school discipline.</li>
+                <li> Judge the validity of claims related to school discipline using ratios and percentages.</li>
+                <li> Explain the meaning of a probability statement and its connections to school discipline.</li>
+                <li> Articulate if two related events are mutually exclusive and apply this skill to make judgments about the school-to-prison pipeline.</li>
+                <li> Calculate the probability of an event not happening and apply this skill to make judgments about the school-to-prison pipeline.</li>
+                <li> Calculate the sum of probabilities for multiple outcomes and apply this skill to make judgments about the school-to-prison pipeline.</li>
+                <li> Calculate the probability of two or more independent events occurring using multiple methods, including a formula and a simulation, and use this skill to make judgments about the school-to-prison pipeline.</li>
+                <li>Analyze and interpret data about school discipline provided in the form of raw numbers, tables, and graphs.</li>
+
+            </ol>
+            <!-- Objectives should focus on both mathematical and social justice goals. The objective should start with a verb (e.g. Calculate the financial costs of a payday loan.), be at an appropriate level for first-year college undergraduates, and be assessable using the provided exercises at the end of the module. For a list of assessable activities organized by level, see
+            <a href="https://mygrowthmindsethome.files.wordpress.com/2019/03/blooms-taxonomy.pdf">Bloom's Taxonomy</a>
+            . Objectives for this level will fall roughly in the range of Comprehension, Application, and Analysis. -->
+        </p>
+    </section>
+    <section xml:id="school-discipline-background">
+        <title>Understanding the Issue</title>
+        <p>
+            In the wake of racial justice protests in 2020, the public’s attention was also turned to the presence of police in schools, and the disproportionate impact that this presence has on students of color, primarily Black and Indigenous students. According to the National Center for Education Statistics <xref ref="school-discipline-biblio-other-NCES-firearm" />, 61.4% of the public schools in 2017-2018 had one or more security staff. The number of police officers in schools especially exploded after the mass shooting in Columbine High School in 1999, as a consequence of which the government began to offer federal grants to schools for hiring police officers in an effort to increase school security. Twenty years later, over 200,000 students are being referred to law enforcement every year <xref ref="school-discipline-biblio-other-CRights-estimates" />. Some of these referrals are arrests with or without charges filed, while others are citations. Students are referred to law enforcement for offenses as minor as talking back to a teacher or having a fight with a classmate <xref ref="school-discipline-biblio-other-NEA-STP" />. Because students who have contact with law enforcement are more likely to drop out of school and/or end up incarcerated <xref ref="school-discipline-biblio-other-NBER-STP" />, this increased criminalization of youth behavior has become known as the school-to-prison pipeline. However, contact with law enforcement is not the only problem. Closely related to it is the problem of school discipline. In 2017-18, over 2.5 million students received an out-of-school suspension, and over 2.6 million received an in-school suspension <xref ref="school-discipline-biblio-other-CRights-estimates" />. Frequent suspensions can also lead to dropout <xref ref="school-discipline-biblio-other-NBER-STP" />, and, as they are usually at the discretion of teachers and administrators, can be used indiscriminately <xref ref="school-discipline-biblio-other-NEA-STP" /> <xref ref="school-discipline-biblio-other-Texas-study" />, leading to disparities.
+        </p>
+        <p>
+            In this module, we begin to explore the school-to-prison pipeline. After the completion of this module, you are encouraged to do more research on the topic, especially if you have not been personally affected by the overpolicing and overdisciplining in schools. It is important to acknowledge that neither race nor gender are discrete categories in the real world. However, all the data sources used in this module assume two genders and separate race categories. We will have to work with these limitations, but it is worth asking of all data we encounter: how were these data collected and what assumptions were made in collecting them?
+        </p>
+        <p>In order to engage with this module, you will need to know some terminology:</p>
+
+        <p><term>School resource officer</term>: School resource officers (SROs) are sworn law enforcement officers who are at a school part-time or full-time to maintain school safety and prevent crime. These officers may educate and counsel students, but otherwise have similar responsibilities as police officers. In particular, they can make arrests on school property.</p>
+
+        <p><term>School arrest</term>: This is an arrest that happens on the school grounds, often, but not always, by the school’s SRO.</p>
+
+        <p><term>In-school suspension</term>: When a student commits an offense that the school considers worthy of suspension, the suspension may be completed at the school. Suspended students do not attend regular classes or interact with their peers but are in a separate room where they are required to complete their assignments.</p>
+
+        <p><term>Out-of-school suspension</term>: This is a more traditional form of suspension where students are physically barred from school grounds for one or more days.</p>
+
+        <p><term>Zero tolerance policies</term>: School discipline policies that require predetermined serious consequences for particular offenses. Originally, these policies specifically addressed possession of weapons and drugs but were also expanded to others, such as defiant behavior or not following the school dress code.</p>
+
+        <p><term>Pushout</term>: This term is often used instead of “dropout,” since it can be argued that students do not drop out of school unprompted, but as a consequence of policies and actions that make it difficult or impossible for them to remain in school.</p>
+
+        <p><term>Students with disabilities</term>: For the purpose of looking at school discipline, students with disabilities are those who require special education services due to a disability. If a student has a disability but does not need accommodations for it, that student is not considered to fall under this category. </p>
+
+        <p><term>Truant</term>: A student with a large number of absences, usually set by an official standard like a school board or regulatory agency.
+        The descriptions of the following four terms were adapted from <xref ref="school-discipline-biblio-other-ACLU-report" />.</p>
+
+        <p><term>School counselor</term>: These are professional staff members who counsel students and parents, consult with other staff, evaluate students, and implement guidance programs. They are among the first staff members to work with students who are struggling.</p>
+
+        <p><term>Social worker</term>: Social workers assist students and families with issues such as poverty, homelessness, lack of access to healthcare, domestic violence, and other issues that might affect student performance at school.</p>
+
+        <p><term>Psychologist</term>: School psychologists help diagnose problems of a personal and educational nature in students, and evaluate student social, emotional, and intellectual development.</p>
+
+        <p><term>Nurse</term>: School nurses are qualified nurses who assist with the health needs of students at schools.</p>
+    </section>
+    <section xml:id="school-discipline-cui-bono">
+        <title>Cui Bono - Who Benefits?</title>
+        <p>
+            Strict school discipline is supposed to make parents feel safer sending their children to school, and it is also supposed to make the classroom environment more conducive to learning, with fewer distractions. Families of students who are not being disciplined might welcome, for example, presence of police in schools or zero tolerance policies. It could also be argued that teachers and administrators can benefit from not having to spend time and energy on students they view as disruptive. Finally, mass incarceration has been shown to be profitable, so the prison-industrial complex benefits as well.
+        </p>
+    </section>
+    <section xml:id="school-discipline-big-problem">
+        <title>Big Problem: School-to-Prison Pipeline</title>
+        <assemblage>
+            <p>
+                Why do schools discipline so many students? Why do students get arrested at school? Who is most affected by school discipline policies?
+            </p>
+        </assemblage>
+        <p> To understand what the school-to-prison pipeline is, we need to learn some history of police presence in schools and of strict school discipline policies. We will use ratios, percentages, probability, and data analysis to understand how school discipline has changed over time and how school discipline does not affect all students the same. In this module, we will see that there are certain groups of students that are disproportionately affected by these policies.
+        </p>
+    </section>
+    <section xml:id="school-discipline-math-topic-ratios">
+        <title>Ratios</title>
+        <p>A ratio is a mathematical tool for comparison. Ratios can be used either visually or numerically to compare quantitative data. With a ratio, you can either compare two parts of a group to each other, or you can compare a part of a group to the whole group. For this section, the focus is on the comparison of parts of the group to each other, specifically using the context of school support personnel.</p>
+        <p>First, there is a need to explore the different forms that a ratio can take. There are three main ways a ratio can be expressed:
+            <ul>
+                <li> A verbal form (the ratio of part to part)</li>
+                <li>A colon form (part: part)</li>
+                <li>A fraction form (<m>\frac{part}{part}</m>)</li>
+            </ul>
+            Each of these is read the same way as the verbal form, the ratio of part to part. The main significance is recognizing the notation when you come across it in readings. To avoid confusion, most writers will present ratios using a colon form (part: part) and reserve fraction form for comparisons against the whole. The same convention will be followed in this module and other portions of this text.</p>
+        </section>
+        <section xml:id="school-discipline-math-topic-percents">
+            <title>Percents</title>
+            <p>Percents will be used heavily in this module. The percent formula is one that will be used throughout: </p>
+            <me>\frac{part}{whole} = \frac{percent}{100}.</me>
+            <p>    You can use this formula when you are missing the part, the whole, or the percent.</p>
+            <example>
+                <p>In 2013-14, there were approximately 49 million students enrolled in public schools. Out of those students, 5.3% were suspended or expelled. How many students were suspended or expelled?</p>
+                <p>In this case, we know the whole (49 million) and the percent (5.3), but we do not know the part. Therefore,</p>
+                <me>\frac{part}{49} = \frac{5.3}{100} = 0.053,</me>
+                <p>so <m>part = 0.053 \cdot 49=2.597</m>, so about 2.6 million students were suspended or expelled in 2013-14.</p>
+            </example>
+            <example> 
+                <p>In 2015-16, 43.42% of the students, or 21,700,551 students, were in schools with police officers. How many total students were enrolled in schools in 2015-16?</p>
+                <p>Now we know the part (21,700,551) and the percent (43.42), but not the whole, so in this case,</p>
+                <me>\frac{21700551}{whole} = 4342/100=0.4342,</me> 
+                <p>and <m>whole = \frac{21700551}{0.4342} = 49978238</m>,  so there were 49,978,238 students enrolled in public schools in 2015-16.</p>
+            </example>
+            <example> 
+                <p>In 2015-16, 61,812 students were arrested out of 49,977,268 who were enrolled nationally that year. What percentage of the student population was arrested that year?</p>
+                <p>We know the part (61,812) and the whole (49,977,268), but not the percent, so</p>
+                <me>\frac{61812}{49977268} = percent/100,</me>
+                <p>or <m>0.00124 = percent/100</m>, which means that</p>
+                <me>percent = 0.00124 \cdot 100 = 0.124\%,</me>
+                <p>so 0.124% of all students were arrested.</p>
+            </example>
+            <p> Note that the part does not have to be smaller than the whole. For example, 130 is 130% of 100. While in real life we cannot give more than 100% effort, there are situations in which percentages are over 100, for example if comparing two numbers (your pay may be 115% of your friend’s pay) or calculating change (for example, the price of coffee may have gone up 200%).</p>
+            <p>Percents are often used to represent change. For example, you may read that the number of suspended students in a school increased by 13% in a year. How is this change calculated?</p>
+            <example> 
+                <p>There were 60,170 school arrests in 2013-14 school year, and 61,812 arrests in 2015-16. The total change in the number of school arrests between these two years is 61,812-60,170=1,642. To know what percent increase this is, we need to compare to the original number, in this case 60,170:</p>
+                <me>1,642/60,170=0.027.</me>
+                <p>We convert a decimal to percent by multiplying by 100: since <m>part/whole = percent/100</m>, it means that <m>percent = part/whole \cdot 100</m>. Therefore,
+                0.027= 2.72%, so the number of arrests went up by 2.72%.</p>
+                <p>More generally, the formula for percent change from old value to new value is</p>
+                <me>\frac{end value - start value}{start value},</me>
+                <p>where <m>end value - start value</m> is total change, and dividing by start value gives percent change. Note that end value does not have to be bigger than start value, in which case we have a decrease and not an increase. For example, if the number of arrests went down from 61,812 to 60,170, then the total change would be -1,642, which is a 1,642/61,812=0.0266=2.66% decrease (since <m>0.0266 \cdot 100=2.66</m>). Note that in this case we divided by 61,812 because that was the starting value, and the percent decrease is smaller than the percent increase, because the change of is the same in both cases, while the starting value is different. </p>
+            </example>
+        </section>
+        <section xml:id="school-discipline-math-topic-probability">
+            <title>Probability</title>
+            <introduction>
+            <p>Probability is a specific type of ratio that allows the comparison of specific outcomes with the entire group of outcomes. We see probability expressed in three ways: as a fraction ranging from 0 to 1, as a decimal ranging from 0 to 1, and as a percentage ranging from 0% to 100%. All three of these expressions allow us to see a part and a whole, even if in the case of decimals and percentages where the whole is adjusted to be a multiple of ten. These different expressions can be seen in the Probability Scale below.</p>
+            <figure>
+                <image source="school-discipline/images/probscale.jpg">
+                    <description>Probability scale giving examples of likelihoods between 0 and 1 as fractions, decimals, and percents.</description></image>
+                    <caption>
+                        Probability scale
+                    </caption>
+                </figure>
+                <p>We have two main ways that we think about probability. One is what is called a theoretical model.  In the theoretical model, probabilities are driven by expectations of what we know. One classical example of a theoretical model is a coin flip where we know that there are two specific outcomes, or thinking about the months of the year from the probability scale. The second model is called an empirical model, and it is based on directly counting the occurrences of outcomes from events that have occurred. The empirical model is useful when the event being studied does not happen regularly. The process of selecting objects to model a process is called a probability experiment. A probability experiment offers a way to explore different outcomes. We can manually calculate the outcomes of a probability experiment, or use a tool like a simulator to help us understand a situation that is represented in a statement. Our choice to do this depends on the outcome or event that we might be looking at.</p>
+                <p>Both theoretical probability and empirical probabilities have similar building blocks. The sample space is the collection of all possible outcomes. An event consists of one or more outcomes. The probability is a ratio of the specific event of interest over the total number of outcomes. In this module, while we recognize the importance of understanding the underlying formulas for probability, we rely on simulations to develop skills that link initial statements of probability and the outcomes of experiments.</p>
+                <exploration xml:id="safe">
+                    Consider the statement: “A student feels safe to be themselves at school.”
+                    <ol>
+                        <li>What outcomes are possible?</li>
+                        <li>Are there reasons that might cause students to feel  unsafe about being themselves?</li>
+                        <li> Do you think a student being themselves could make another student uncomfortable? Why or why not?</li>
+                    </ol>
+                    <p>    The possible outcomes are {a student feels safe, a student does not feel safe}, and that makes sense. The probability of a student feeling safe to be themselves will result in 1 out of 2 outcomes, but can we reliably predict which outcome we see? Ideally, students feeling safe to be themselves at school should be the only outcome we expect to see. In reality, we find that students do not feel safe to be themselves at school for any number of reasons. Consider the following quote: “The teachers … they thought we were selling weed in school, they thought that me and her were both selling weed ‘cause like, the way we were dressing, ‘cause we were the only girls at that middle school that dressed like boys. So it was like 'now we’re bad'.” (non-gender conforming youth from Arizona) <xref ref="school-discipline-biblio-article-LGBTQ-youth" />. In this quote, the student was exposed to a negative experience, accusations of illegal activity, because of choices associated with how they chose to express who they believed themself to be.</p> 
+                    <p>Making Sense: Think back to your experiences in school. Identify if there were similar incidents to the incident described above in your community. Do you think that how people were seen by others influenced their behavior, meaning if a label was applied to a person did they adapt to the label? Or do you think that the person stayed the same?</p>
+                </exploration>
+                <p>    The second type of probability that we use is the empirical model. This comes from raw data. We tend to see this in the form of tables with numeric values, instead of the summary statistics. The basic use of the empirical model is very similar to the ideas from theoretical probability, and when we think about how to make sense of data from a table of data we think about what the theoretical model might have to look like.</p>
+                <exploration xml:id="arrests">
+                    The data in the table below is taken from a report by the American Civil Rights Union (ACLU) <xref ref="school-discipline-biblio-other-ACLU-report" />. The report states that students in these three states have the same general probability of being arrested per 10,000 students. For many states being arrested as a form of school discipline aligns with zero tolerance offenses that qualify for expulsion. For this reason, we may make a reasonable assumption that students may not be arrested multiple times as a form of school discipline.
+                    <me>\begin{array}{|c||c|c|}\hline \text{State}\amp \text{Total Students}\amp \text{Total Arrests}\\ \hline \text{Missouri}\amp 915,033\amp 1,487\\ \hline \text{Arkansas}\amp 480,300\amp 751 \\ \hline
+                        \text{Rhode Island}\amp 141,210\amp 231 \\ \hline \end{array}</me>
+                        <p>Our first step to exploring the claim in the document is to think about the probability that we want to build. If you are a student going to school, when it comes to being arrested, you either get arrested at school or you don’t get arrested at school. So we have two groups of students, those that get arrested and those that don’t get arrested. We also happen to know about the number of students that get arrested, as well as how many students there are. This means that we have everything we need.</p>
+                        <p>To find the probability of being arrested, we find the ratio of arrests to students for each state. For this example, we will model with Missouri and you can test your ideas on Arkansas and Rhode Island.</p>
+                        <me>\text{arrests}/\text{(total students)}=1487/915033.</me>
+                        <p>We can reduce this to a decimal figure, as finding common factors or a reduced form fraction is highly unlikely. This yields approximately 0.001625.Now we want to know how this fits with thinking about the probability of being arrested per 10,000 students. In other words, if the probability of getting arrested is 0.001625, this is about 0.1625%; how many arrests would that be among 10,000 students? We use this previously calculated value and solve an equation, to find a value out of 10000:</p>
+                        <me> 0.001625=p/10000</me>
+                        <p>Solving this equation gives a value of 16 whole students in Missouri per 10000 based on the overall probability. The report claims that you have the same probability per 10000 in all three states. Can you verify the claim?</p>
+                    </exploration>
+                    <p>Those are the basics of probability. We can use these basic ideas of probability to help us build more complex models that can help us build more complex structures.</p>
+                </introduction>
+                    <subsection>
+                        <title>The complement</title>
+                        <p>The first of these complex structures is the complement. We generally define the probability of a complement as the probability of an event of interest not happening. In <xref ref="arrests" />, we identified that there were two specific groups: students that got arrested and students that did not get arrested. The probability of not getting arrested can be found in two ways: either by calculating it directly or by subtracting the opposite event from 1.</p>
+                        <example>
+                            <p>To find the probability of not getting arrested in school in Missouri, we know that there are 915,033 total students, and we also know that only 1,487 were arrested. So we know that the rest of the students were not arrested. So, we can subtract the arrested students from the total students to find the not arrested students, which gives us 913,546 students that were not arrested. We then find the ratio of not arrested students to total students: 913,546/915,033=0.998375, or around 99.3875%.</p>
+                            <p>We can also find this by using the fact that we know the probability of getting arrested. We start with the group of all students (1), and then we subtract out the group that represents getting arrested: 1 - 0.001625=0.998375, or 99.8375%.</p>
+                            <p>We get the same mathematical answers from calculating the complement using either method. It is important to understand both methods because we have to think about the different types of information that we might have available. What is something that we notice in this scenario? Can a person be both arrested and not arrested at the same time? That leads us to our second special scenario.</p>
+                        </example>
+                    </subsection>
+                    <subsection>
+                        <title>Mutually exclusive events</title>
+                        <p>One consideration in probability is the consideration of if events can occur at the same time. One example of events that cannot occur at the same time are an event and its complement, so thinking about our prior example a student cannot be both arrested and not arrested at the same time. This is an example of mutually exclusive events. But when we start to think about more complicated events, like can you be a specific race and be suspended from school, the events become more complicated. Understanding if events are mutually exclusive or not, allows for better and more accurate methods of calculating probabilities. Having more accurate probability calculations can help us make more informed judgments about issues.</p>
+                        <example>
+                            <p>Determine if you think the following event pairs are mutually exclusive or not. Explain to yourself why you think they are or are not mutually exclusive. What information did you use to make your decisions?</p>
+                            <p>Event Pair A: Being Black and Getting suspended from school</p>
+                            <p>Event Pair B: Being truant and Having regular school attendance</p>
+                            <p>Event Pair C: Making good grades and Being disciplined in school</p>
+                            <p>Following up: Based on models we have looked at, we realize that being Black and getting suspended can happen together, so those events are not mutually exclusive. When I know that being truant means not attending school regularly, I realize that the events in Event pair B are complements and have to be mutually exclusive. Event pair C is the most difficult to really take apart. Common sense-wise and experience-wise it seems like maybe the people who got good grades didn’t get in real trouble at school, but then again there is no reason why they couldn’t get into trouble. This means that they have to be not mutually exclusive events.</p>
+                        </example>
+                    </subsection>
+                    <!-- <subsection> -->
+                    <!--    <title>The Addition Rule</title>
+                            <p>As mentioned above, sometimes there is a need to calculate the probability of a combined event. For example, we may want to know the probability of one event or another taking place.The addition rule allows us to find such a probability.  Before we start considering answers we have to think about if we have mutually exclusive events. For example, we might think about how suspension impacts different racial groups. We would see student race as an outcome and suspension as a separate outcome. The other view of the addition rule is to think about the total probability that a Latinx student was disciplined at school for a single offense. This would involve finding the probability that a student could get detention, finding the probability that the student could get in-school suspension, finding the probability that the student could get suspended, finding the ways that the student could get arrested, and finding the ways that the student could get expelled. There are several different probabilities that we have to manage. We also have to realize that there is overlap between getting arrested and getting expelled. Once we know the probabilities and the overlaps, we can add the probabilities of the different events together to find the total probability for the individual. There are two mathematical ways to state the addition rule. The first is based on probabilities:</p>
+                            <me>P(\text{Combined Events})= P(\text{Event A})+P(\text{Event B})-P(\text{Event A and Event B})</me>
+                        <p>In this formula, the probabilities for two separate events are combined, and if needed the overlap between the events is subtracted to prevent double counting. If events are mutually exclusive, then we do not have to worry about the overlap.  In this formula, the probability of  the events has been previously calculated. This could be used with national statistics or from samples that are very large that we would assume represent a population. A second way that we can view the addition rule is by using the raw counts of events:</p>
+                        <me>P(\text{Combined Events})=\frac{(\text{Count of Event A})+(\text{Count of Event B})-(\text{Count of Event A and Event B})}{\text{Total Events}}.</me>
+                        <p>This formula is useful when counts are available instead of probabilities. It is most typically used with empirical probability data, which is generally presented in a tabular form. In some cases, the actual event can be found directly from the table.</p>
+                      <p>  Let’s explore two demonstrations based on the same empirical data adjusted to percentages to help us understand how to use the addition rule with mutually exclusive events and non-mutually exclusive events.</p>
+                    <example>
+                        Use the data from the following paragraph and summary table to help think about how to answer questions. Then solve the probability problem to the best of your ability.
+                        <p>One issue that has been explored is the relationship between suspension and high school completion. A national survey of 20,774 students in middle school was conducted. From this survey data, 1673 students were identified as having their first suspension within one year of the survey; 684 of these students were Black. In the study, 526 black students who experienced their first suspension within one year of the survey successfully completed high school. What is the probability that a randomly selected student in the survey experienced a first suspension within one year of the original survey and graduated high school if a student is Black? (adapted from <xref ref="school-discipline-biblio-article-post-outcomes" />)</p>
+                    <me>\begin{array}{|c||c|}\hline \text{Total Students in survey}\amp 20,774 \\ \hline \text{Students with first suspension within one year of the survey}\amp 1673\\ \hline \text{Students who indicated they were Black}\amp 684 \\ \hline \text{Black students in the survey who were suspended within the first year and successfully graduated high school} \amp
+                    526 \\ \hline \end{array}</me>
+                       <p>Solving the problem: One of the first steps we have to follow is to think about the events and data that we have. We have the total number of students surveyed. We can think about this as an addition rule problem, because we are taking groups and removing pieces from our groups. We also need to think about if being Black, being suspended, and graduating are mutually exclusive. In this case, the events are not mutually exclusive, meaning there is nothing to subtract. We know the total number of students that experienced a first suspension within the first year after the survey, and we also know the number of those students that are Black. Further, we know how many of these students that were Black and suspended but also graduated high school. We can use the specific count to help us build a ratio.</p>
+                        <p>Black and suspended and graduated Total students = 52620774= 0.0253</p>
+                        <p>Making Sense: Because we reference the original sample from the survey, the whole for the ratio is the whole for the survey, the 20,774 students. By having very specific criteria, we created a very small group of the original sample of students. This makes the probability very low. Do you think the probability is an accurate depiction of what actually happens in the school systems?</p>
+                        </example>
+                    <example xml:id="disability"> Let’s consider how to complete a calculation by hand using data from a graph.
+                     <figure>
+                    <image source="source/school-discipline/images/disability.png">
+                    <description>Taken from <xref ref="school-discipline-biblio-other-CRights-snapshot" /></description></image>
+                    <caption>
+                    Restraints for students with disabilities</caption>
+                    </figure>
+                        <p>This is a graphical representation that depicts two different phenomena related to school discipline in a side-by-side fashion. The left side shows the overall percentages for students enrolled in public schools who are labeled as having a disability of some sort. The right side of the graph depicts the students that were subjected to mechanical restraint and labeled as having a disability. There is attention to the racial breakdown in both sides of the graph. When a graph like this is presented, features like large changes in the color bands that represent the racial groups should draw our attention. It is also important to think about what the whole is for each side of the graph. What is the whole for the left side of the graph? What is the whole for the right side? What does 2% mean for each side?</p>
+                        <p>One theory that has been posed is that students that use a heritage language in their home, meaning a non-English language associated with their heritage, may be considered to have behavior problems because they lack a common understanding of the English language. What is the probability that a student is mechanically restrained and belongs to a racial group associated with a heritage language?</p>
+                        <p>Solving the problem: We have to decide which column is relevant, students served by IDEA or students that have been mechanically restrained. Since the question specifies that we are interested in restrained students we are looking at the second column in the graph. Next we want to think about groups that would be more likely to be associated with a heritage language. Groups that identify as “Natives” tend to have a heritage language, which means that the Native Hawaiian/Other Pacific Islander and American Indian/Alaska Native groups both belong in this category. Many Hispanic families are bilingual, although it is not always the case. For this problem, we will assume that this will allow us to include the group. Our question now becomes should we include the Asian students using the same reasoning? We would need to include both groups if we are using the same underlying reasoning. </p>
+                        <p>Now, we can start to calculate the probability. The presented data is national data, and the groups we have are distinct groups, meaning that if a student were to belong to two demographic groups they would actually fall into the Two or More Races category based on the demographic data that was collected for this tool.</p>
+                        <p>Probability of restraint with a heritage language= (restraint and Native Hawaiian/Other Pacific Islander) + (restraint and American Indian/Alaska Native) + (restraint and Hispanic/Latino of any race) + (restraint and Asian)</p>
+                        <p>Probability of restraint with a heritage language= 0.1% + 2% + 12% + 1% = 15.1%.</p>
+                        <p>Making Sense: Based on our calculation, it appears that only 15% of the restrained students were likely to have a heritage language. How do you think this influences the theory that students that have difficulty speaking and understanding English are more likely to be disciplined?</p>
+                        </example>
+                    </subsection> -->
+                    <subsection>
+    <title>Independent Events</title>
+    <p>There is another way to think about multiple outcomes, and this happens when the events happen independently. In independent events, two separate events happen that have the same underlying probability, or at least we would like to think that they should (refer to <xref ref="safe" /> for more detail). This is the crux of many arguments about school discipline. For an event to be independent, the underlying probability of the event should be the same across all subgroups. Consider an event like being enrolled in the reduced lunch program. If the probability of enrollment is approximately the same for all racial subgroups, then being in the reduced lunch group and the being in racial subgroups are independent. From your experience, do you think this is always the case? Feel free to use any relevant examples.</p>
+    <!-- <p>Do you think the graphic from <xref ref="disability" /> shows an independent phenomenon? Why or why not?</p> -->
+    <p>Let’s look at an example of how the math of independence works. For calculations, we assume that individual events are independent.</p>
+    <demonstration>
+        <p>Black students have a 17% chance of being suspended. Suppose two separate Black students get called to the principal's office. Let’s explore the probability of both students receiving the same outcome, meaning either both students get suspended or neither student gets suspended. We will assume that the students’ visits to the principal are for separate offenses. What is the probability that both students are suspended?</p>
+        <me>P(\text{both suspended})=\frac{17}{100}\cdot\frac{17}{100}=\frac{289}{10000}=0.0289</me>
+        <p>What is the probability that neither student is suspended?</p>
+        <p>First, we need to know the probability of not being suspended. Recall, this is called the complement.</p>
+        <me>1-\frac{17}{100}=\frac{83}{100}</me>
+        <p>Now, we can use this to calculate the probability of neither being suspended when called to the principal’s office.</p>
+        <me>P(\text{neither suspended})=\frac{83}{100}\cdot\frac{83}{100}=\frac{6889}{10000}=0.6889</me>
+        <p>When we have independent events that occur in a sequence, we use multiplication to help us determine the probability. These are the essential mathematical pieces that we need to help us evaluate claims about the school to prison pipeline. Let’s dig a little deeper.</p>
+    </demonstration>
+</subsection>
+</section>
+<section>
+    <title>Using CODAP</title>
+    <p>Common Online Data Analysis Platform (<url href="https://codap.concord.org/" visual="codap.concord.org/">CODAP</url>) is free online software for learning statistics and data science. We will use CODAP to make sense of and explore some of the data in this module. Before you begin to use CODAP, you will need to watch a beginning tutorial video: <url href="https://www.youtube.com/watch?v=1qjbtmZHUt4" visual="youtube.com/watch?v=1qjbtmZHUt4">CODAP Overview</url>.
+    You will be able to do calculations in CODAP. To figure out how to do that, you may want to watch the following tutorial as well: <url href="https://www.youtube.com/watch?v=9ogJdB9oEvk" visual="youtube.com/watch?v=9ogJdB9oEvk">Simple formulas</url>.
+    After watching the video, make sure you can do all the tasks in <url href="https://codap.concord.org/app/static/dg/en/cert/index.html#file=examples:Getting%20started%20with%20CODAP">this CODAP worksheet</url>.</p>
+    <p>    CODAP allows you to make both visual and numeric comparisons between variables in a dataset. There are several interesting features in CODAP that can help you learn about data. One of these features is that all representations are linked, meaning that data points can be tracked within different representations. Another feature of CODAP is that you can save your work at benchmarks, meaning that you have a retrievable point in your work. Part of exploring data means making guesses and predictions about trends and patterns you expect to see.</p>
+</section>
+<section xml:id="school-discipline-solving-for-change">
+    <title>Solving for Change</title>
+    <introduction>
+    <p>To make sense of issues with school discipline, we will analyze data. We will use the following sources: Civil Rights Data Collection (CRDC) <xref ref="school-discipline-biblio-other-CRights-snapshot"/> <xref ref="school-discipline-biblio-other-CRights-estimates" /> conducted by the Department of Education annually, data from the National Center of Education Statistics (NCES) <xref ref="school-discipline-biblio-other-NCES-officers"/> <xref ref="school-discipline-biblio-other-NCES-firearm" />, and a report about school support staff from the American Civil Liberties Union (ACLU) <xref ref="school-discipline-biblio-other-ACLU-report" />. We will use data collected by official agencies and organizations as it is the most reliable. However there will always be issues of incorrect reporting, and all data should therefore be considered with the understanding that the information it provides is not perfectly accurate.</p>
+</introduction>
+    <subsection>
+        <title>What is the School-to-Prison Pipeline?</title>
+        <p>In this introduction to the module, you will begin to think about the school-to-prison pipeline through engaging with a quote and an infographic. Rather than give you data or answers, this section gives you an opportunity to begin asking your own questions.</p>
+        <question>
+            <ol>
+                <li>What, if anything, do you know about the school-to-prison pipeline?</li>
+                <li>Read the following excerpt from <xref ref="school-discipline-biblio-other-Landry-OK" />: 
+                “He was always a good boy. Polite,” his grandmother says. “He was raised to be respectful.” So how did he end up in prison? “It’s like they greased the chute. Back when he was in the 9th grade, Kyron got into a fight. Boys fight. Always have. No guns, no knives, just two boys tussling. Next thing I know he is locked up. That’s just crazy! It’s wrong.”
+
+                What is your reaction to this quote? Write at least three different things.How might the content of this quote be related to mathematics?</li>
+                <li>Consider the following infographic <xref ref="school-discipline-biblio-other-advancement-project" />:
+                <figure>
+                    <image source="school-discipline/images/infographic.png">
+                        <description>Infographic with data about school suspensions and arrests.</description></image>
+                        <caption>
+                            School-to-prison pipeline infographic</caption>
+                        </figure>
+                        What do you notice about its content?
+                        What do you wonder about its content?
+                        There is no right or wrong way to notice and wonder, so please list as many observations and questions as you can. Are any of your noticings and wonderings related to math?</li>
+                    </ol>
+                </question>
+                <p>This topic may be new to you, and it also may be one that personally affects you. In this module we are primarily focusing on two aspects of the school-to-prison pipeline: school discipline (such as suspensions) and the presence of police in schools. If you have personal experiences with school discipline and police in schools, please engage with this module at your own pace and comfort level. If you know little or nothing about these topics, the following sections will provide you with more information about the problem.</p>
+                <p>We will investigate the presence of police in schools first, and will then move on to discipline. Whether in contact with teachers, school administrators, or law enforcement, we will see that many students get punished for their actions, and in a variety of ways. We will want to know if these punishments are warranted and who is affected by them the most.</p>
+            </subsection>
+            <subsection>
+                <title>History of police in schools</title>
+                <introduction>
+                <p>In this part of the module you will learn about the presence of police in schools. Before you read on, answer these questions:</p>
+                <question>
+                    <ol>
+                        <li>What do you know about police officers in schools?</li>
+                        <li>Did you go to a school with a school resource officer (SRO)?</li>
+                        <li>Why would schools have SROs?</li>
+                    </ol>
+                </question>
+                </introduction>
+                    <subsubsection>
+                <exploration>
+                    <title>School resource officers in schools</title>
+                    <p>Consider the table below, giving the number of school resource officers, number of public schools, and the number of public schools with school resource officers, by full- and part-time school resource officer status, for selected years from 2003–04 to 2015–16 <xref ref="school-discipline-biblio-other-NCES-officers" />:</p>
+                    <me>\begin{array}{|c|c|c|c|}\hline \text{Year}\amp \text{Public school resource officers}\amp \text{Public schools} \amp \text{Public schools with school resource officers} \\ \hline 2003-04 \amp 34000 \amp 95726 \amp 26000 \\ \hline 2005-06 \amp 36700 \amp 97382 \amp 26900 \\ \hline 2007-08 \amp 46100 \amp 98916 \amp 29400 \\ \hline 2009-10 \amp 40200 \amp 98817 \amp 25700 \\ \hline 2015-16 \amp 52100 \amp 98277 \amp 35100 \\ \hline \end{array}</me>
+                    <p>You can also view this table in <url href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FfFsQ0PKR5caj6wCbidAI%2Ffile.json" >CODAP</url>, where you can also do calculations for some of the questions. You may want to watch the <url href="https://www.youtube.com/watch?v=9ogJdB9oEvk" visual="youtube.com/watch?v=9ogJdB9oEvk">Simple formulas</url> tutorial to figure out how to do calculations in CODAP.</p>
+                    <p>NOTE: In 2003–04, schools reported on school resource officers present at their school on a regular basis. In 2005–06, 2007–08, 2009–10, and 2015–16, schools reported on school resource officers present at their school at least once a week.</p>
+                    <ol>
+                        <li>Give at least three observations you can make about the data in the table.</li>
+                        <li>How much did the number of SROs in schools change between 2003-04 and 2015-2016? Give the total and percent change.</li>
+                        <li>What percentage of schools had SROs in 2003-2004? What percentage of schools had SROs in 2015-2016? How did the percentage change?</li>
+                        <li>Why do you think the number of SROs has gone up so much since 2003?</li>
+                        <li>Consider the graph below, based on data from NCES <xref ref="school-discipline-biblio-other-NCES-officers" />.
+                        <figure>
+                            <image source="school-discipline/images/SROgraph.png">
+                                <description>Bar graph of prevalence of SROs by free and reduced lunch.</description></image>
+                                <caption>Securty staff by free and reduced lunch</caption>
+                            </figure>
+                            What does the graph tell you about which schools are more and less likely to have school resource officers?</li>
+                        </ol>
+                    </exploration>
+                    <p>You probably notice from doing this exploration that the number of SROs and the number of schools with SROs has gone up. According to <xref ref="school-discipline-biblio-other-ACLU-report" />,
+                    “Following the 1999 Columbine High School shooting, President Clinton called for the first round of Community Oriented Policing Services (COPS) grants as a response that would allow for school/police partnerships focused on 'school crime, drug use, and discipline problems.'' COPS is a unit of the U.S. Department of Justice. After the Sandy Hook tragedy in 2012, President Obama allocated another $45 million into COPS to fund additional school police. Federal grants were supplemented by state grants and local monies to sustain SRO programs.”</p>
+                    <p>In other words, highly publicized school shootings were part of the impetus for increased presence of police in schools, even though school shootings are statistically very rare <xref ref="school-discipline-biblio-other-crime-safety" />.</p>
+                </subsubsection>
+                    <subsubsection>
+                        <title>Summary</title>
+                        <p>The presence of police officers in schools has significantly increased since 1999 in response to the Columbine High School and other shootings. The majority of public schools have a part-time or full-time SRO on campus, though schools with a higher percentage of free and reduced lunch eligibility are more likely to have an SRO. In the next section we will look at other supports that have been considered important for preventing school shootings and for improving well-being of students.</p>
+                    </subsubsection>
+                </subsection>
+                <subsection>
+                    <title>Presence of other student supports in schools</title>
+                    <introduction>
+                    <p>It has been argued that to prevent shootings (and for many other reasons), schools should invest in supporting students’ mental and physical well-being. However, in most states, there is a shortage of nurses, social workers, psychologists, and counselors in schools. In this section, you will compare numbers of school support staff (including SROs) in different states.</p>
+                    <p>Before you continue, answer the following questions:</p>
+                    <question>
+                        <ol>
+                            <li>Was there a nurse, social worker, psychologist, and/or counselor in schools you went to?</li>
+                            <li>How common do you think these support staff are in schools?</li>
+                        </ol>
+                    </question>
+                </introduction>
+                <subsubsection>
+                    <p>We will first look at Delaware and Washington, DC as examples, and then you will have a chance to look at your own location if it is different from these two. </p>
+                    <exploration>
+                        <title>School support staff in Delaware</title>
+                        <p>Use the following <url href="https://www.geogebra.org/classic/n6ekzput">Geogebra</url> applet to help you explore the following guiding questions about school support staff in the state of Delaware <xref ref="school-discipline-biblio-other-ACLU-report" /></p>.
+                        <ol>
+                            <li>Which pieces look to be similar in size? Are there relationships between the piece sizes?</li>
+                            <li>Show the names of the sections. Use this to help you refine your discussion above.</li>
+                            <li>Now select the option that allows you to see the number that corresponds with each section. Do the numeric values change any of the relationships that you developed?</li>
+                            <li>Do you think you would have made the same comparisons if you had known the numbers first instead of focusing on the visual representation?</li>
+                        </ol>
+
+                    </exploration>
+                    <p>In this exploration, certain pieces were generally the same size even though they did not hold the same numeric value. Let’s take a minute to explore that difference between the visual representation and the numerical data.</p>
+                    <exploration>
+                        <title>Exploration: School support staff in Washington DC</title>
+                        <p>Examine the following table with data for the school support staff in the Washington DC school district <xref ref="school-discipline-biblio-other-ACLU-report" />.</p>
+                        <me>\begin{array}{|c|c|c|c|c|c|} \hline \text{Counselors} \amp \text{Social Workers} \amp \text{Psychologists} \amp \text{Nurses} \amp \text{Law Enforcement} \amp \text{Security Guards} \\ \hline 235 \amp 223 \amp 198 \amp 154 \amp 154 \amp 333 \\\hline \end{array}</me>
+                        <ol>
+                            <li>Look at the numbers for the groups and make comparisons between them. Are there any exact ratios, meaning any comparisons between groups that are identical or can be combined to be identical?</li>
+                            <li>Thinking about probability, which type of support staff has the highest probability? Which type of support staff has the lowest probability?</li>
+                            <li>Critical thinking: How does the ratio of (Law Enforcement + Security Guards):(Counselors + Social Workers + Psychologists + Nurses) look? Why would we be interested in this ratio? Were you expecting it to be closer together or further apart? How does this help you think about the school-to-prison pipeline?</li>
+                            <li>Critical Thinking: Building on the idea from the previous question, what groups of support staff do students have the highest probability of encountering? How does this help you think about the school-to-prison pipeline?</li>
+                        </ol>
+                    </exploration>
+                    <p>In the next exploration you will have a chance to look at your state or a state that you are interested in.</p>
+                    <exploration>
+                        <title>Numbers in your state</title>
+                        <p>Read the following excerpt from <xref ref="school-discipline-biblio-other-ACLU-report" />:</p>
+                        <p>"Given the importance of these providers, experts and professional organizations provide recommended student-to-SBHM provider ratios. The American School Counselor Association recommends a ratio of 250 students per counselor. The National Association of School Psychologists (NASP) recommends a ratio of 500-700 students per school psychologist, depending on the comprehensiveness of services being provided. School Social Work Association of America (SSWAA) recommends that social work services should also be provided at a ratio of 250 students to one social worker. Several states, along with the American Nurses Association, recommend a ratio of one school nurse to 750 students in healthy student populations."</p>
+                        <p>Consider the table adapted from <xref ref="school-discipline-biblio-other-ACLU-report" /> that gives the numbers of counselors, social workers, psychologists, nurses, teachers, law enforcement, and security guards in U.S. public schools by state in 2015-2016. You can find the table in <url href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FSOrntgcLrvXC7gQ6Qxga%2Ffile.json">CODAP</url> or in <url href="https://docs.google.com/spreadsheets/d/1n5yJT_OwsdTELlJ2EQczIT1h1xvd2TKnaGs-ggg0TpM/edit?usp=sharing">Google Sheets</url> (this sheet is view only). Note that the numbers of teachers, law enforcement, and security guides are provided for your information only. You will not need this information.</p>
+                        <ol>
+                            <li>Select a state. You can choose the state where you currently live, the state in which you were born, the state where you went to school, or even just a state that interests you. How many students went to school in that state in 2015-2016? (Note: Hawaii and Florida have data that may have been underreported. If you choose one of these two states, you will have to decide how to deal with the missing or incomplete information.)</li>
+                            <li>Calculate the number of counselors, school psychologists, social workers, and nurses that should have been employed in that state’s public schools in 2015-2016 according to the recommended ratios from the paragraph. If you wish, you can use CODAP to calculate the answers.</li>
+                            <li>Compare your calculated answers with actual numbers of counselors, social workers, psychologists, and nurses in the table for your chosen state. How do the numbers compare?</li>
+                            <li>What did you learn from this investigation and what do you still wish to know?</li>
+                        </ol>
+                    </exploration>
+                </subsubsection>
+                    <subsubsection>
+                        <title>Summary</title>
+                        <p>The majority of public schools have a part-time or full-time SRO on campus, but not counselors, social workers, psychologists, and nurses. This is true nationwide, with some exceptions.</p>
+                    </subsubsection>
+                    <conclusion>
+                    <p>In the next section, we will get to the central problem with school discipline: that it affects different populations very differently. We will first look at arrests and then at suspensions.</p>
+                </conclusion>
+                </subsection>
+                <subsection>
+                    <title>Who gets arrested in schools</title>
+                    <introduction>
+                    <p>In this part of the module, you will learn about school arrests. You will look at some national statistics to draw conclusions about disparities that exist in school arrests with respect to race and ability.</p>
+                    <p>Before you continue, answer the following questions:</p>
+                    <question>
+                        <ol>
+                            <li>How often do you think students are arrested at school?</li>
+                            <li>Why do you think students are arrested at school?</li>
+                        </ol>
+                    </question>
+                </introduction>
+                <subsubsection>
+                    <exploration>
+                        <title>School arrests</title>
+                        <p>There were over 204,000 referrals to law enforcement in 2015-2016 in U.S. public schools, almost 52,000 of which were school arrests. The actual number is likely higher due to underreporting.</p>
+                        <p>Consider the table, created using data from CRDC <xref ref="school-discipline-biblio-other-CRights-estimates" />, that gives rates of school arrests by race and disability status by state per 10,000 in 2015-2016. Because the table is large, it is linked: <url href="https://docs.google.com/spreadsheets/d/1WFHkK319QGh4kgvfAewJfZCnckO3-vKmiZA-yqvBTHE/edit?usp=sharing">School arrest rates per 10,000 by state, 2015-2016</url>. This table is a view only Google Sheet. You can create your own copy if you want to edit it.</p>
+                        <p>You can find the table in the CODAP file <url href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FXlRi8Tk40GoNW6RnEAPJ%2Ffile.json">School arrests: rates only</url>, where you can manipulate the data and do calculations with it. If you are interested in total numbers of arrests and not just the rates, you can find them in the CODAP file <url href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FWtDfDjuRCCtTDxsGZ4m5%2Ffile.json">School arrests: all</url>. Review the <url href="https://www.youtube.com/watch?v=9ogJdB9oEvk" visual="youtube.com/watch?v=9ogJdB9oEvk">Simple formulas</url> tutorial if you need help doing calculations in CODAP.</p>
+                        <ol>
+                            <li>What do you notice about this table? What do you wonder? Remember that there is no right or wrong way to notice and wonder, but try to include mathematical observations.</li>
+                            <li>Consider the data: How do you think the data in this table were collected? What do the data tell us and what are they unable to tell us? What biases may be present in how the data were collected and summarized?</li>
+                            <li>Are there groups in the table that are mutually exclusive? Explain your reasoning.</li>
+                            <li>Are there groups that are not mutually exclusive based on the information provided? Explain your reasoning.</li>
+                            <li>The table gives rates per 10,000. For example, the 10.26 in Arrests per 10000 column for all of United States means that for every 10,000 students in the United States, around 10 were arrested. The arrest rate for students with disabilities in 2015-2016 was 20.69 per 10,000. Who do you think was more likely to be arrested in 2015-2016: students with disabilities or students without disabilities? How do you know?</li>
+                            <li>Are there any particular groups of students who seem to be arrested more than others? What is your evidence for your conclusion?</li>
+                            <li>Are there any particular states or regions that seem to arrest students more than others? What is your evidence for this conclusion? To answer this question you can make a graph in CODAP. For example, you can drag the state attribute to the x-axis and one of the arrest rates to the y-axis.</li>
+                            <li>If students from one group are arrested more than is their share of the population, we say that they are disproportionately arrested. Consider the stacked bar graph created from CRDC <xref ref="school-discipline-biblio-other-CRights-estimates" /> data:
+                            <figure>
+                                <image source="school-discipline/images/arrests.png">
+                                    <description>Stacked bar graph of enrollment and school arrests by race.</description></image>
+                                    <caption>School enrollment and arrests by race</caption>
+                                </figure>
+                                Note that the graph combines Asian, American Indian or Alaska Native, and Native Hawaiian or other Pacific Islander students because the percentages of their arrests are all very low and would be hard if not impossible to see on the graph. Of the five groups in the graph, which are disproportionately arrested in schools?</li>
+                                <li>Would you say that students with disabilities are also disproportionately arrested in schools? How do you know?</li>
+                                <li>(Optional) There is no information about the breakdown of students arrests by offense. However, media have reported numerous stories of students being arrested for minor infractions. If you are interested, you can find some examples in the document <url href="https://docs.google.com/document/d/1NdIl1hUdew0V5mD-HNnqdcdPHtG0c-03pYoX8hhGO1k/edit?usp=sharing">Articles about individual instances of discipline.</url></li>
+                            </ol>
+                        </exploration>
+                    </subsubsection>
+                        <subsubsection>
+                            <title>Summary</title>
+                            <p>Large numbers of arrests are made in schools every year. The arrests are disproportionately among Black students and students with disabilities.</p>
+                        </subsubsection>
+                        In the next section we will look at a more common form of school discipline: suspensions.
+                    </subsection>
+                    <subsection>
+                        <title>Who gets suspended from school</title>
+                        <introduction>
+                        <p>In this part of the module, you will learn about school suspensions and begin to make connections between school discipline and incarceration.</p>
+                        <p>Before you continue, answer the following questions:</p>
+                        <question>
+                            <ol>
+                                <li>Why do you think students get suspended from school?</li>
+                                <li>Are all groups of students equally likely to get suspended or are some groups suspended more than others?</li>
+                            </ol>
+                        </question>
+                    </introduction>
+                    <subsubsection>
+                        <exploration>
+                            <title>Prison population simulation</title>
+                            <p>One tool that is used to model and understand probability is simulation. In this part of the module, we will be using a simulation to help us explore different probability scenarios to see which behaves most like our target. We can determine if information from an empirical model provides a stable foundation for a theoretical model, meaning it can be replicated or nearly replicated over a number of trials. We can also use a theoretical model to produce simulated samples which can let us know if different empirical models are valid. In this exploration, you will examine a data table that shows the overall population for men's prisons by race <xref ref="school-discipline-biblio-other-BJS-report" />. Then you will examine three different simulations to see which one you think would be most likely to produce the prison population given.  In reading the output from the simulations, there is an overall summary column presented at the left, which shows the mean proportion for each race for all of the trials. In the center, there are the summaries from each trial, meaning it shows the proportion for each race in each trial. Then in the far right hand column, the raw data is shown. The simulations model the selection of 50 individual prisoners in 25 repeated samples. The variable being simulated is prisoner race because that is what we are interested in modeling. Before you start working with the simulations (where you only need to select “start” to collect data), think about strategies that you can use to see if you think a model will match.</p>
+                            <me>\begin{array}{|c|c|c|c|} \hline \text{White} \amp \text{Latinx} \amp \text{Black} \amp \text{Other} \\ \hline 29\% \amp 18\% \amp 34\% \amp 19\% \\ \hline \end{array}</me>
+                            <p> <url href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FfDqh5opDPop1bOS1vziM%2Ffile.json">Simulation A</url> represents the general population according to the US Census.</p>
+                            <p><url href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2F0Sr50EDuWCYBujXEk68H%2Ffile.json">Simulation B</url> represents the percentages of students suspended in schools.</p>
+                            <p><url href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FJDHboerfkUFi2RU95SRs%2Ffile.json">Simulation C</url> represents the percentages with all groups being evenly distributed.</p>
+                            <ol>
+                                <li>The three simulations did not present an exact match to the prison population, but which model do you think was the closest to the prison population model?</li>
+                                <li>What factors helped you make your decision about fitting the model?</li>
+                                <li>Do you think that this single variable (prisoner race) was enough to help you make a decision about the model? What additional information would you think would be useful, if any?</li>
+                                <li>The simulations automatically calculated the proportions of each population group. Explore the data that was produced in the simulations. How does the selection of an individual in the simulation influence the calculated proportion?</li>
+                            </ol>
+                            <p>Notes about probability: For the exploration you just completed, the outcomes of the probability experiment you conducted were the prisoners that were being simulated. There was also a specific group that was counted to create each proportion. These specific groups were the races of interest being counted. The probability is a ratio of the specific outcome of interest over the total number of outcomes. In the simulations, we looked at different races as the specific outcomes. It may be helpful to revisit the exploration with this definition and see if any of your ideas change.</p>
+                        </exploration>
+                    </subsubsection>
+                        <subsubsection>
+                            <title>Analyzing school suspension data</title>
+                            <p>Students can receive in-school or out-of-school suspensions. In this investigation, we focus on out-of-school suspensions only.</p>
+                            <p>Consider the table, created using data from CRDC <xref ref="school-discipline-biblio-other-CRights-estimates" />, that gives numbers of students with one or more out-of school suspension by race and disability status and by state in 2015-2016. Because the table is large, it is linked: <url href="https://docs.google.com/spreadsheets/d/1MuNNrUmYrOJLgr63CibToSSsDa0qZw1VumG76KA4Mes/edit?usp=sharing">Out-of-school suspensions by state, 2015-2016</url>. It is a view only Google Sheet, so you need to create your own copy if you want to edit it.</p>
+                            <p>The CODAP file <url href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FUO2joJ483aCYf3jpvXqF%2Ffile.json">Out of school suspensions</url> contains this same information. In this investigation, you will analyze the data in the table.</p>
+                            <ol>
+                                <li>Can you make some observations about the table just from looking at it? If so, what observations can you make?</li>
+                                <li>Make one or more graphs in CODAP to help you make sense of the table. Remember that you have to drag an attribute to the x-axis and that you may also drag an attribute to the y-axis to make a meaningful graph.</li>
+                                <li>What are the advantages of giving only total numbers of suspensions and not rates?</li>
+                                <li>What are disadvantages of giving only total numbers of suspensions and not rates?</li>
+                                <li>Create a formula in CODAP or use a calculator to calculate some suspension rates from the table (e.g., rates for your state by race or for a particular race by state). What do these rates tell you about how suspensions vary by state and/or race?</li>
+                            </ol>
+                        </subsubsection>
+                        <subsubsection>
+                            <title>Summary</title>
+                            <p>As is the case with arrests, Black students and students with disabilities are disproportionately disciplined at school. While we did not look at gender in this module, it is worth noting that boys get suspended much more than girls, though racial disparities for girls’ suspensions are more pronounced.</p>
+                            <p>In the last part of the module, it may become more clear where the term school-to-prison pipeline comes from. As it turns out, students who are disciplined at school are more likely to leave school and have increased interactions with law enforcement.</p>
+                        </subsubsection>
+                    </subsection>
+                    <subsection>
+                        <title>Where is the pipeline?</title>
+                        <p>In this part of the module, we return to the concept of the school-to-prison pipeline and look at some connections between suspensions, school pushout, and incarceration.</p>
+                        <p>Before you continue, answer the following question:</p>
+                        <question>What long-term consequences may there be for students who are suspended from school or arrested at school?</question>
+                        <exploration>
+                            <title>Data from Texas</title>
+                            <p>In 2011, researchers from the Council of State Governments Justice Center in partnership with the Public Policy Research Institute at Texas A &amp; M University published a report <xref ref="school-discipline-biblio-other-Texas-study" /> based on data from all public school students in Texas who were in seventh grade in 2000, 2001, and 2002. The researchers followed these students for at least six years, with access to academic and juvenile records. Among the researchers’ findings was that only 3% of the offenses for which students are disciplined are ones where by law schools are required to suspend or expel. The other 97% are at administrators’ discretion.</p>
+                            <p>The study also found that 59.6% of all the students were disciplined one or more times and 40.4% were not. The table below summarizes some of the outcomes for the different groups of students.</p>
+                            <me>\begin{array}{|c|c|c|}\hline \text{}\amp \text{Total students in the study (928,940)}\amp \text{}  \\ \hline \text{} \amp \text{Students with disciplinary actions (553,413)} \amp \text{Students without disciplinary actions (375,527)} \\ \hline \text{Held back a at least once} \amp 31\% \amp  5\% \\ \hline \text{Dropped out} \amp 10\% \amp 2\%  \\ \hline \text{Juvenile justice contact} \amp 23\% \amp 2\%  \\ \hline \end{array}</me>
+                            <ol>
+                                <li>Using what you now know about ratios, percents, and probability, explain whether the term “school-to-prison pipeline” is justified for the students from this study.</li>
+                                <li>What else would you like to know to better answer this question?</li>
+                            </ol>
+                        </exploration>
+                    </subsection>
+                    <subsection>
+                        <title>Summary</title>
+                        <p>Students who were disciplined at school in Texas between 2000 and 2002 were much more likely to be held back a grade, drop out, or have contact with juvenile justice. These school discipline actions were 97% of the time at the administrators’ discretion and not mandated by school policies; and they had a lasting impact on a large number of students <xref ref="school-discipline-biblio-other-Texas-study" />.</p>
+                        <p>Numerous studies have found that students who are arrested at school or who have been suspended are more likely to drop out of school and have continued contact with law enforcement. A recent study <xref ref="school-discipline-biblio-other-harvard" /> found that in Charlotte-Mecklenberg school district in North Carolina, students who were assigned to schools with higher suspension rates were significantly more likely to be arrested and incarcerated as adults, and less likely to attend a four-year college. Furthermore, the results were independent of which students were assigned to the schools (the study took place during a redrawing of school boundaries when over 50% of the students in the district were assigned to different schools), or of factors like teacher turnover. Instead, the suspension rates were most influenced by school policies and leadership.</p>
+                        <p>Since Black students and students with disabilities are disproportionately disciplined and arrested and schools, it follows that they are also disproportionately likely to drop out of school and have continued troubles with the law. This is why the school-to-prison pipeline disproportionately affects these students.</p>
+                    </subsection>
+                </section>
+
+                <conclusion xml:id="school-discipline-conclusion">
+                    <p> Conclusion of module.</p>
+                </conclusion>
+                <reading-questions xml:id="school-discipline-reflection">
+                    <exercise>
+                        <ol>
+                            <li> Was there a School Resource Officer (SRO) in your elementary, middle, or high school(s)? If you are comfortable, please share what your experience was like.</li>
+                            <li> How does the national SRO data <xref ref="school-discipline-biblio-other-NCES-officers" /> compare to your own experience? (Note that the NCES data is only for public schools and does not separate by grade level. You can look at the <url href="https://nces.ed.gov/surveys/ssocs/tables/tab_my01_2016_pr.asp?referrer=css">elementary</url>, <url href="https://nces.ed.gov/surveys/ssocs/tables/tab_my01_2016_md.asp?referrer=css">middle school</url>, and <url href="https://nces.ed.gov/surveys/ssocs/tables/tab_my01_2016_hs.asp?referrer=css">high school</url> data if you are interested.)</li>
+                            <li> What have you learned about the presence of police in schools from this module? Based on your investigations in this module, is police presence in schools beneficial, detrimental, neither, or other? Please explain.</li>
+                            <li> What have you learned about school arrests from this module? Do you think there are too many, too few, or just the right number of arrests in schools? Justify your answer using mathematics.</li>
+                            <li> What have you learned about school suspensions from this module? Do you think there are too many, too few, or just the right number of suspensions in schools? Justify your answer using mathematics.</li>
+                            <li>The data that we have do not tell us with absolute certainty that certain groups of students are targeted more for school discipline. For example, while we have numbers of students who are arrested or suspended, we do not know what the reasons were for the arrests and suspensions. What additional data would you like to have to be able to answer that question? Why do you think those data are not available?</li>
+                            <li>Solutions: What are some things that districts and states can do (or have done) to decrease the number of arrests and suspensions, and to close the racial gap in school discipline? You can do some research about the reforms already taking place in various states across the country.</li>
+                        </ol>
+                    </exercise>
+                </reading-questions>
+                <exercises xml:id="school-discipline-exercises">
+                    <exercise>
+                        <p>
+                            Anyplace High School (not a real school) has a total of 2500 students. The racial breakdown for the school by grade and race is given below:</p>
+                            <me>\begin{array}{|c|c|c|c|c|c|c|} \hline \amp \text{White} \amp \text{Black/African American} \amp \text{Hispanic/Latinx} \amp \text{Asian-American/Pacific Islander} \amp \text{Indigenous} \amp \text{Total} \\ \hline \text{Freshman} \amp 295 \amp 267 \amp 126 \amp 37 \amp 15 \amp 740 \\ \hline \text{Sophomore} \amp 269 \amp 248 \amp 124 \amp 35 \amp 14 \amp
+                                690 \\ \hline \text{Junior} \amp 217 \amp 213 \amp 118 \amp 30 \amp 12 \amp 590 \\ \hline \text{Senior} \amp 191 \amp 173 \amp 82 \amp 24 \amp 10 \amp 480 \\ \hline \end{array}</me>
+                                <p>The following information is also true about Anyplace: Many students at Anyplace High School receive accommodations for disabilities. Currently, 10% of freshmen, 8% of sophomores, 6% of juniors, and 6% of seniors receive accommodations for disabilities.</p>
+                                <p>A student activist group has been tracking out-of-school suspensions for the past semester at the school. They found all incidents of students being suspended, and then counted the incidents by racial group. The student activists identified 75 suspensions of White students, 72 suspensions of Black/African-American students, 65 suspensions of Hispanic/Latinx students, and 22 suspensions from other groups.</p>
+                                <p>Use the information about Anyplace High School to answer the following questions.</p>
+                                <ol>
+                                    <li>What is the total number of students in the school that receive accommodations for disabilities?</li>
+                                    <li>What is the percentage of the school that receives accommodations for disabilities? Would you have predicted that the percentage would be higher or lower? Why?</li>
+                                    <li>A student with a disability is suspended. What is the probability that the student is either a junior or a senior?</li>
+                                    <li>The student activist group uses their data to make a claim that there is a racial bias in suspensions in an editorial in the school newspaper. To support their claim, the group states that there are fewer Black/African-American students and a similar suspension rate. Do you agree with their claim and support?</li>
+                                    <li>Using the data from the student group, calculate the probability that two separate students are sent to the principal’s office for separate offences for the following:
+                                        Two Hispanic/Latinx students not suspended
+                                        One Black/African-American student suspended and one White student suspended 
+                                        One White student not suspended and one Other student suspended</li>
+                                        <li>Critical Thinking: Recall the definition of independence for probability. If someone wanted to investigate if disability status is independent across racial groups, what additional data would be needed?</li>
+                                    </ol>
+                                </exercise>
+                                <exercise>
+                                    <p>Using the mathematics from this module along with additional sources you wish to use, make an infographic about school discipline and school-to-prison pipeline.</p>
+                                </exercise>
+                            </exercises>
+                            <section xml:id="school-discipline-references">
+                                <title>References</title>
+                                <biblio xml:id="school-discipline-biblio-other-advancement-project">
+                                    Advancement Project, The School-to-Prison Pipeline: Infographic (September 3, 2013),
+                                    <url href="https://advancementproject.org/resources/school-prison-pipeline-infographic/"/>.
+                                </biblio>
+                                <biblio xml:id="school-discipline-biblio-other-ACLU-report">
+                                   American Civil Rights Union, Cops and No Counselors: How the Lack of School Mental Health Staff is Harming Students (2019),
+                                   <url href="https://www.aclu.org/sites/default/files/field_document/030419-acluschooldisciplinereport.pdf"/>.
+                               </biblio>
+                               <biblio xml:id="school-discipline-biblio-other-NBER-STP">
+                                A. Bacher-Hicks, S. B. Billings, D. J. Deming, National Bureau of Economic Research, The School to Prison Pipeline: Long-Run Impacts of School Suspensions on Adult Crime
+                                (September, 2019),
+                                <url href="https://www.nber.org/papers/w26257"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-other-harvard">
+                                E. Boudreau, Harvard Graduate Review, School Discipline Linked to Later Consequences
+                                (September, 2019),
+                                <url href="https://www.gse.harvard.edu/news/uk/19/09/school-discipline-linked-later-consequences"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-other-BJS-report">
+                                Bureau of Justice Statistics, Prisoners in 2018 (2020),
+                                <url href="https://bjs.ojp.gov/library/publications/prisoners-2018"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-other-Texas-study">
+                                T. Fabelo, M. D. Thompson, M. Plotkin, D. Carmichael, M. P. Marchbanks III, E. A. Booth, Breaking Schools’ Rules:  A Statewide Study of How School Discipline Relates to Students’ Success and Juvenile Justice Involvement (2011),
+                                <url href="https://ppri.tamu.edu/files/Breaking_Schools_Rules.pdf"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-other-NEA-STP">
+                                M. E. Flannery, National Education Association (NEA) News, The School-to-Prison Pipeline: Time to Shut it Down (January 5, 2015),
+                                <url href="https://www.nea.org/advocating-for-change/new-from-nea/school-prison-pipeline-time-shut-it-down"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-other-Landry-OK">
+                                C. Landry, Oklahoma Policy Institute, No Exit: The School-to-Prison pipeline (Neglected Oklahoma) (August 27, 2014, updated May 2, 2019),
+                                <url href="https://okpolicy.org/exit-school-prison-pipeline-guest-post-camille-landry"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-article-Mallett-STP">
+                                C. A. Mallett,
+                                <title>The School-to-Prison Pipeline: Disproportionate Impact on Vulnerable Children and Adolescents</title>, Education and Urban Society 49 (2017) 563–-592,
+                                <url href="https://doi.org/10.1177/0013124516644053"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-other-NCES-officers">
+                                National Center for Education Statistics, Number of School Resource Officers, Number of Public Schools, and the Number of Public Schools with School Resource Officers, by Full- and Part-time School Resource Officer Status: 2003-04 through 2015-16 (2016),
+                                <url href=" https://nces.ed.gov/surveys/ssocs/tables/tab_my01_2016_all.asp"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-other-NCES-firearm">
+                                National Center for Education Statistics, Percentage of Public Schools with Security Staff Present at Least Once a Week, and Percentage with Security Staff Routinely Carrying a Firearm, by Selected School Characteristics: 2005–06 through 2017-18 (2019),<url href="https://nces.ed.gov/programs/digest/d19/tables/dt19_233.70.asp"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-article-post-outcomes">
+                                J. Rosenbaum,
+                                <title>Educational and Criminal Justice Outcomes 12 Years After School Suspension,</title>
+                                Youth and Society 52(2020) 515-547,
+                                <url href="https://doi.org/10.1177/0044118X17752208"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-article-LGBTQ-youth">
+                                S. D. Snapp, J. M. Hoenig, A. Fields, S. T. Russell,
+                                <title>Messy, Butch, and Queer: LGBTQ Youth and the School-to-Prison Pipeline,</title>
+                                J. of Adolescent Research 30(2015) 57-–82,
+                                <url href="https://doi.org/10.1177/0743558414557625"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-other-CRights-snapshot">
+                                U. S. Department of Education Office for Civil Rights, Civil Rights Data Collection: Data Snapshot (School Discipline) (March 2014),
+                                <url href="https://www2.ed.gov/about/offices/list/ocr/docs/crdc-discipline-snapshot.pdf"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-other-CRights-estimates">
+                                U. S. Department of Education Office for Civil Rights, 2015-16 State and National Estimations,
+                                <url href="https://ocrdata.ed.gov/estimations/2015-2016"/>.
+                            </biblio>
+                            <biblio xml:id="school-discipline-biblio-other-crime-safety">
+                                K. Wang, Y. Chen, J. Zhang, B.A. Oudekerk, Indicators of School Crime and Safety: 2019 (2020), <url href="https://nces.ed.gov/programs/crimeindicators/index.asp" />.
+                            </biblio>
+                        </section>
+                    </chapter>

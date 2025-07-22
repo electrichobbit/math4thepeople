@@ -1,0 +1,319 @@
+<frontmatter xml:id="math-for-the-people-front-matter" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<titlepage>
+
+		<editor>
+			<personname>Mark Branson</personname>
+			<department>Department of Mathematics and Physics</department>
+			<institution>
+				<line>Stevenson University</line>
+				<line>Owings Mills, MD, USA</line>
+			</institution>
+			<email>mbranson@stevenson.edu</email>
+		</editor>
+		<editor>
+			<personname>Whitney George</personname>
+			<department>Department of Mathematics</department>
+			<institution>
+				<line>University of Wisconsin, LaCrosse</line>
+				<line>LaCrosse, WI, USA</line>
+			</institution>
+			<email>wgeorge@uwlax.edu</email>
+		</editor>
+
+		<!-- Can set date manually or use the "today" element -->
+		<date><today /></date>
+
+	</titlepage>
+
+	<colophon>
+		<edition>First Edition 2022</edition>
+		<website>
+			<url href="https://web.stevenson.edu/mbranson/m4tp/index.html">Math for the People</url>
+		</website>
+
+		<copyright>
+			<year>2020-2022</year>
+			<holder>Mark Branson, Whitney George</holder>
+			<minilicense>
+				<url href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0</url>
+			</minilicense>
+			<shortlicense>
+				<p>
+					You are free to share and adapt any of the material in this text under the terms of the <url href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0</url> license.  You must give appropriate credit, provide a link to the license, and indicate if changes were made.  You many not use this material for commercial purposes, and you must share any adaptation of the work under the same license as the original.
+				</p>
+				<p>
+					Work from individual chapters should be attributed to the authors of that chapter. Each chapter's authors are listed in the introduction to the chapter.
+				</p>
+			</shortlicense>
+		</copyright>
+	</colophon>
+	<preface xml:id="instructors-note">
+		<title>A Note for Instructors</title>
+		<p>
+			Math for the People is designed to be used for an introductory college-level course in quantitative reasoning, with an emphasis on social justice.  Unlike a traditional mathematics textbook, the text is organized by social justice topics, with each module teaching the mathematics concepts needed to understand and work for change in a particular social justice area.
+		</p>
+		<p>
+			Each module is designed to be independent, although there may be overlap.  Instructors are encouraged to proceed through the modules in the order that they find suitable, or to choose modules in consultation with their students.  Each module is designed to be completed in approximately two weeks of a standard 16-week semester, or one week of an 8-week quarter (6-8 class contact hours).
+		</p>
+		<p>
+			Each module is structured identically, beginning with introductory material about the social justice topic and a discussion of the parameters of the problem being discussed.  Once students have a fundamental understanding of the topic, the module introduces them to mathematical skills which they can use to analyze the problem.  Finally, each module culminates in a section which encourages students to use their mathematical skills to engage with the social justice topic.
+		</p>
+		<p>
+			Because the topics which we are discussing in this class can be emotionally charged and "political," we encourage faculty to plan for this in advance.  The University of Waterloo offers a comprehensive set of <url href="https://uwaterloo.ca/centre-for-teaching-excellence/teaching-resources/teaching-tips/alternatives-lecturing/discussions/facilitating-effective-discussions"> tips for facilitating discussion of difficult topics</url> (Facilitating Effective Discussions. Centre for Teaching Excellence, University of Waterloo, <url href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</url>), some of which are summarized below:
+		</p>
+		<ul>
+			<li>
+				Establish ground rules for discussion.  A suggested set of ground rules is provided in <xref ref="students-note" text="title"/>.  You can ask the class if they have other rules they would like to add.
+			</li>
+			<li>
+				Encourage students to participate in multiple different ways, including verbal, written, and electronic participation. Some students may need more time to collect their thoughts for sharing.
+			</li>
+			<li>
+				Actively work to include all students in the discussion. Don't allow one or two students to dominate the conversation or discourage contradiction.
+			</li>
+			<li>
+				Group students and ask them to focus in one part of the issue and report back to the whole class.  Sharing ideas with a small group can be more comfortable initially.
+			</li>
+			<li>
+				Be comfortable with silence. Long pauses are a natural part of discussion on difficult topics - if you fill the space too quickly, it can discourage active discussion.
+			</li>
+			<li>
+				Limit your own involvement.  You can correct misinformation or enforce group rules, but the point of a discussion is to hear &amp; value student input.
+			</li>
+		</ul>
+		<p>
+			Instructors who use the textbook are encouraged to fill out the <url href="https://forms.gle/3eHeEU4eij5wtdES7">Math for the People Instructor's Feedback Form</url> or to join our <url href="https://hypothes.is/groups/MWDJv8wP/math-for-the-people">Hypothes.is group</url>.  Hypothes.is is an online annotation tool which allows you to make private annotations on public webpages.  Once you create an account and join our group, you can install a browser plugin which will allow you to make comments directly on the textbook webpage.  Those comments will be visible to anyone with access to the hypothes.is group.
+		</p>
+	</preface>
+	<preface xml:id="students-note">
+		<title>A Note for Students</title>
+		<p>
+			This textbook is intended to guide you through the mathematics necessary to understand and work to create change in a number of politically charged areas.  You may find areas where you disagree with the material presented or find that it challenges things you believe are true.
+		</p>
+		<p>
+			That's ok.  Education, fundamentally, is about challenging what you already know and learning about new things.  You may find, through your research and work in this class, that your views don't change.  You may find that they do. Our goal, in Math for the People, is to present factual information and to teach you the quantitative tools you need to understand that information.  We encourage you to look at other data, work through your own examples, and see how it agrees or disagrees with what is presented in the text.  While we do not hesitate to present our own viewpoint, which we believe is supported by the quantitative data, these are complicated problems and there may be other solutions we're not considering.
+		</p>
+		<p>
+			In working through these topics with your class, we encourage you to follow the following guidelines, plus any additional guidelines that your class agrees on (these guidelines are adapted from <xref ref="biblio-discussion-guidelines"/>):
+		</p>
+		<ol>
+			<li>
+				Listen to others, rather than just waiting for your chance to speak.
+			</li>
+			<li>
+				Don't interrupt or talk over your classmates.
+			</li>
+			<li>
+				Use "I" statements, like "I believe," "I think," "I feel."  There's a big difference between a statement like "I believe X is true" and "X is true."
+			</li>
+			<li>
+				Support your arguments with evidence, especially with quantitative evidence.
+			</li>
+			<li>
+				Give everyone the chance to speak. If you feel like you are monopolizing the discussion, take a step back and give someone else the chance to talk.
+			</li>
+			<li>
+				Avoid personal attacks. You can disagree with someone's ideas without attacking that person.
+			</li>
+			<li>
+				Do not use language which is offensive or denigrates a particular group. Stereotypes and bigotry are inappropriate in the classroom.
+			</li>
+			<li>
+				If someone does say something offensive unintentionally, give them space to learn from their mistake. You can share your discomfort with the instructor, who will help them understand why what they said was hurtful.
+			</li>
+			<li>
+				Assume accountability for your words and actions.
+			</li>
+			<li>
+				Share the lesson, not the story. Students may share personal information in class which should remain confidential.  You can talk about what you learned without sharing the personal details your classmate shared.
+			</li>
+		</ol>
+		<p>
+			We encourage every student who uses the textbook to fill out the <url href="https://forms.gle/WmE8DJ7Cc1DBiAz5A">Student Feedback Form</url>.  This information will help us improve the textbook for students who use it in the future.
+		</p>
+	</preface>
+	<preface xml:id="contributors">
+		<title>Contributors</title>
+		<p>
+			Math for the People is the sum total of the work of many, many individuals.  The following community members have authored, reviewed, edited, or contributed in some other way to the first edition (Summer 2022 release) of Math for the People:
+		</p>
+		<contributors>
+			<contributor xml:id="dbasu">
+				<personname>Debasmita Basu</personname>
+				<department>Department of Natural Sciences &amp; Mathematics</department>
+				<institution>
+					<line>The New School</line>
+					<line>New York, NY, USA</line>
+				</institution>
+				<email>basud1@newschool.edu</email>
+			</contributor>
+			<contributor xml:id="mbranson">
+				<personname>Mark Branson</personname>
+				<department>Department of Mathematics and Physics</department>
+				<institution>
+					<line>Stevenson University</line>
+					<line>Owings Mills, MD, USA</line>
+				</institution>
+				<email>mbranson@stevenson.edu</email>
+			</contributor>
+			<contributor xml:id="sbryant">
+				<personname>Sarah Bryant</personname>
+				<department>Department of Mathematics</department>
+				<institution>
+					<line>Gettysburg College</line>
+					<line>Gettysburg, PA, USA</line>
+				</institution>
+				<email>sbryant@gettysburg.edu</email>
+			</contributor>
+			<contributor xml:id="bcampbell-hetrick">
+				<personname>Beth Campbell-Hetrick</personname>
+				<department>Department of Mathematics</department>
+				<institution>
+					<line>Gettysburg College</line>
+					<line>Gettysburg, PA, USA</line>
+				</institution>
+				<email>bcampbel@gettysburg.edu</email>
+			</contributor>
+			<contributor xml:id="ccarpenter">
+				<personname>Chris Carpenter</personname>
+				<department>Department of Communications</department>
+				<institution>
+					<line>Western Illinois University</line>
+					<line>Macomb, IL, USA</line>
+				</institution>
+				<email>CJ-Carpenter2@wiu.edu</email>
+			</contributor>
+			<contributor xml:id="kevans">
+				<personname>Kyle Evans</personname>
+				<department>Department of Mathematics</department>
+				<institution>
+					<line>Trinity College</line>
+					<line>Hartford, CT, USA</line>
+				</institution>
+				<email>kyle.evans@trincoll.edu</email>
+			</contributor>
+			<contributor xml:id="wgeorge">
+				<personname>Whitney George</personname>
+				<department>Department of Mathematics</department>
+				<institution>
+					<line>University of Wisconsin, LaCrosse</line>
+					<line>LaCrosse, WI, USA</line>
+				</institution>
+				<email>wgeorge@uwlax.edu</email>
+			</contributor>
+			<contributor xml:id="egoldstein">
+				<personname>Ellen Goldstein</personname>
+				<department>Department of Mathematics</department>
+				<institution>
+					<line>Boston College</line>
+					<line>Boston, MA, USA</line>
+				</institution>
+				<email>ellen.goldstein@bc.edu</email>
+			</contributor>
+			<contributor xml:id="kince">
+				<personname>Kenan &#304;nce</personname>
+				<department>Department of Mathematics</department>
+				<institution>
+					<line>Westminster College</line>
+					<line>Salt Lake City, UT, USA</line>
+				</institution>
+			</contributor>
+			<contributor xml:id="elandes">
+				<personname>Emily Landes</personname>
+				<institution>
+					<line>Castilleja School</line>
+					<line>Palo Alto, CA, USA</line>
+				</institution>
+				<email>elandes@castilleja.org</email>
+			</contributor>
+			<contributor xml:id="jmakansi">
+				<personname>Jason Makansi</personname>
+				<institution>
+					<line>Pearl Street, Inc.</line>
+					<line>Tucson, AZ</line>
+				</institution>
+				<email>jmakansi@gmail.com</email>
+			</contributor>
+			<contributor xml:id="jmiller">
+				<personname>John Miller</personname>
+				<department>College of Business, Influence, and Information Analysis</department>
+				<institution>
+					<line>Rockhurst University</line>
+					<line>Kansas City, MO, USA</line>
+				</institution>
+				<email>john.miller@rockhurst.edu</email>
+			</contributor>
+			<contributor xml:id="rrohatgi">
+				<personname>Ranjan Rohatgi</personname>
+				<department>Department of Mathematics and Computer Science</department>
+				<institution>
+					<line>St. Mary's College</line>
+					<line>Notre Dame, IN, USA</line>
+				</institution>
+				<email>rrohatgi@saintmarys.edu</email>
+			</contributor>
+			<contributor xml:id="jseat">
+				<personname>Jennifer Seat</personname>
+				<department>Department of Mathematics and Science Education</department>
+				<institution>
+					<line>Middle Tennessee State University</line>
+					<line>Nashville, TN, USA</line>
+				</institution>
+				<email>jms2dr@mtmail.mtsu.edu</email>
+			</contributor>
+			<contributor xml:id="kselke">
+				<personname>Kristen Selke</personname>
+				<department>Department of Mathematics, Computer Science, and Physics</department>
+				<institution>
+					<line>Saint Mary's University of Minnesota</line>
+					<line>Winona, MN, USA</line>
+				</institution>
+				<email>ksellke@smumn.edu</email>
+			</contributor>
+			<contributor xml:id="ksimic-muller">
+				<personname>Ksenija Simic-Muller</personname>
+				<department>Department of Mathematics</department>
+				<institution>
+					<line>Pacific Lutheran University</line>
+					<line>Tacoma, WA, USA</line>
+				</institution>
+				<email>simicmka@plu.edu</email>
+			</contributor>
+			<contributor xml:id="bstucky">
+				<personname>Ben Stucky</personname>
+				<cepartment>Department of Mathematics</cepartment>
+				<institution>
+					<line>Beloit College</line>
+					<line>Beloit, WI, USA</line>
+				</institution>
+				<email>stuckybw@beloit.edu</email>
+			</contributor>
+			<contributor xml:id="fvanvliet">
+				<personname>Fern Van Vliet</personname>
+				<department>Department of Mathematics</department>
+				<institution>
+					<line>Arizona State University</line>
+					<line>Tempe, AZ, USA</line>
+				</institution>
+				<email>fern.vanvliet@gmail.com</email>
+			</contributor>
+			<contributor xml:id="jwalsh">
+				<personname>Joel Walsh</personname>
+				<department>Department of Science, Technology, Engineering, and Mathematics Education</department>
+				<institution>
+					<line>University of Texas</line>
+					<line>Austin, TX, USA</line>
+				</institution>
+			</contributor>
+			<contributor xml:id="hyaple">
+				<personname>Haley Yaple</personname>
+				<department>Department of Mathematics</department>
+				<institution>
+					<line>Carthage College</line>
+					<line>Kenosha, WI, USA</line>
+				</institution>
+				<email>hyaple@carthage.edu</email>
+			</contributor>
+		</contributors>
+	</preface>
+</frontmatter>

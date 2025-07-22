@@ -1,0 +1,943 @@
+<chapter xml:id="environmental-racism" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Environmental Racism</title>
+	<introduction>
+		<p>
+			<em>This module on Environmental Racism was written by <xref ref="dbasu"/>.</em>
+		</p>
+	</introduction>
+	<section xml:id="environmental-racism-objectives">
+		<title>Objectives</title>
+		<introduction>
+			<p>
+				Objectives are divided into Quantitative &amp; Environmental Justice objectives.
+			</p>
+		</introduction>
+		<subsection>
+			<title>Mathematical/Quantitative Objectives</title>
+			<p>
+				By the end of the module, students will be able to:
+			</p>
+			<ol>
+				<li> 
+					Identify the different types of data.
+				</li>
+				<li> 
+					Determine the best way to visualize data, based on their types.
+				</li>
+				<li> 
+					Display numerical data in plots on a number line, including scatter plots, histograms, and box plots. <url href="http://www.corestandards.org/Math/Content/6/SP/B/4/">CCSS.MATH.CONTENT.6.SP.B.4</url>
+				</li>
+				<li> 
+					Summarize numerical data sets in relation to their context.<url href="http://www.corestandards.org/Math/Content/6/SP/B/5/">CCSS.MATH.CONTENT.6.SP.B.5</url>
+				</li>
+				<li> 
+					Describing the nature of the attribute under investigation, including how it was measured and its units of measurement. <url href="http://www.corestandards.org/Math/Content/6/SP/B/5/b/">CCSS.MATH.CONTENT.6.SP.B.5.B</url>
+				</li>
+				<li> 
+					Giving quantitative measures of center (median and/or mean) and variability (interquartile range and/or mean absolute deviation), as well as describing any overall pattern and any striking deviations from the overall pattern with reference to the context in which the data were gathered. <url href="http://www.corestandards.org/Math/Content/6/SP/B/5/c/">CCSS.MATH.CONTENT.6.SP.B.5.C</url>
+				</li>
+			</ol>
+		</subsection>
+		<subsection>
+			<title>Environmental Justice Objectives</title>
+			<p>
+				By the end of the module, students will be able to:
+			</p>
+			<ol>
+				<li> 
+					Interpret data and identify the disproportionate impact of environmental issues on African-American people.
+				</li>
+				<li>
+					Identify how cancer alley, creates a form of environmental racism, and poses serious and disproportionate health threats on people of color.
+				</li>
+			</ol>
+		</subsection>
+	</section>
+	<section xml:id="environmental-racism-understanding-the-issue">
+		<title>Understanding the Issue</title>
+		<introduction>
+		<p>
+			In the southern state of Louisiana, along the lower Mississippi River, nearly 150 oil refineries, plastics plants, and chemical facilities are located between New Orleans and Baton Rouge. Environmentalists call this 85-mile-long stretch the Chemical Corridor or Cancer Alley, while industrialists adopted the name Industrial corridor to describe this region. As the name suggests, residents of this area are 50 times more susceptible to get cancer compared the national average <xref ref="environmental-racism-biblio-lived-experience"/>, in some parishes the chance being even higher. In a 1991 interview, Amos Favorite, a resident of Ascension Parish on the Cancer Alley stated,
+		</p>
+		<blockquote>
+			I lost my Uncle James Barber and his son Israel <m>\dots</m> I lost another uncle, Jorden Favorite, his wife, Pipine, and their son Isaac. Then there was another uncle, Herbert Favorite. My cousins Lizzie and Emily died in their 40s. Then there was my aunt’s husband, Josene LeBlanc <m>\dots</m> Our people used to live to be 95, 100, years old <m>\dots</m> Now even the young people are dyin’. [Reed 1991]<xref ref="environmental-racism-biblio-reed1991"/>
+		</blockquote>
+		<p>
+			This is the reality of one of many families living on the Cancer Alley.
+		</p>
+		<figure>
+			<image source="environmental-racism/images/Picture 1.jpg">
+				A chemical plant. Dirty steam and smoke rise from a dense mass of industrial structures. 
+			</image>
+			<caption>
+				Chemical facilities in Baton Rouge <xref ref="environmental-racism-biblio-chemical-plant"/>.
+			</caption>
+		</figure>
+		<p>
+			Louisiana is one of the highest producers of hazardous waste materials in the United States <xref ref="environmental-racism-biblio-cradle"/>. Every year, the chemical factories located in the state, especially on the cancer alley releases vast amount of carbon-dioxide and millions of pounds of poisonous chemicals, thus jeopardizing the health of the residents and the people working in the chemical facilities <xref ref="environmental-racism-biblio-lived-experience"/>. The toxic chemicals do not only pollute the air, but unsustainable waste disposal systems, chemical release from factories, and seepage of fertilizers and pesticides from agricultural production also contaminate drinking water. A study by Gottlieb, Carr, and Morris <xref ref="environmental-racism-biblio-cancer-and-water"/> reported that the residents of cancer alley, who get their drinking water from Mississippi river are 2.1 times more susceptible to rectal cancer compared to those who depends on an alternate source for their drinking water. Apart from cancer, skin inflammation, significant respiratory problems, and a range of other health threats have also been predominant among the people living in the cancer alley <xref ref="environmental-racism-biblio-diamond"/>.
+		</p>
+		<p>
+			Although the cancer is highly predominant among all the people residing in the Cancer Alley, African American people bear a disproportionate burden of cancer mortality compared to the other racial counterparts. Between 1995 and 2006, while the cancer mortality rate of the white men and women were 250 and 167 per 100,000 population, the mortality rate of African American men and women were 395 and 214 per 100,000 population respectively <xref ref="environmental-racism-biblio-cancer-alley"/>. One of the reasons behind this glaring difference in the cancer mortality rate is probably because most of the chemical factories and hazardous waste sites on the Cancer Alley are established in areas which are heavily resided by impoverished, people of color. According to Castellón <xref ref="environmental-racism-biblio-cancer-alley"/> “there is little evidence that communities of color move to sites where toxic waste facilities and landfills are located. Rather, toxic waste sites are often sited in primarily poor and African American neighborhoods” <xref ref="environmental-racism-biblio-cancer-alley"/>. While affluent white communities are often able to "leverage their economic and political clout" to prevent establishment of unwanted facilities in their neighborhoods <xref ref="environmental-racism-biblio-blackmail"/>, lack of political support and money, disable people of color to relocate or afford legal representations to fight big industrial facilities moving to their localities <xref ref="environmental-racism-biblio-cancer-alley"/>. Such disproportionate burden of environmental harms on a particular socio-economic and racial group is called environmental racism <xref ref="environmental-racism-biblio-dumping"/>
+		</p>
+		<p>
+			In this lesson, we will explore the topic of environmental racism through the case of cancer alley. We will extract racial composition data of people living along the 85-mile-long stretch of the Chemical Corridor and use data visualization to compare and identify the disproportionate impact of the chemical factories on African American people.
+		</p>
+	</introduction>
+		<subsection>
+			<ul>
+				<li>
+					<url href="https://www.youtube.com/watch?v=ZB8CbDG7gpk">Why This Town Is Dying From Cancer | AJ+</url>.
+				</li>
+				<li>
+					<url href="https://www.youtube.com/watch?v=MGNtMkFJkKg">Cancer risk in Louisiana town nearly 50 times higher than national average</url>.
+				</li>
+				<li>
+					<url href="https://www.youtube.com/watch?v=XAFD-0aMkwE">One reason why coronavirus hits Black people the hardest</url>
+				</li>
+				<li>
+					<url href="https://www.youtube.com/watch?v=9hE3SyXr9bw">EPA 20th Anniversary Environmental Justice Video Series: Dr. Beverly Wright</url>
+				</li>
+			</ul>
+		</subsection>
+	</section>
+	<section xml:id="environmental-racism-cui-bono">
+		<title>Cui Bono - Who Benefits?</title>
+		<p> 
+			Many areas in the United States have passed legislation and created regulations which limit the type of pollution which factories can release.  Because of this, chemical and petroleum companies often try to find jurisdictions which are less likely to regulate their pollution, like those in Louisiana's Cancer Alley. These companies thus save the money that they would have needed to spend to mitigate pollution in other areas.  Major companies that have factories and refineries in Cancer Alley include Chevron, DuPont, Exxon Mobil, and Shell <xref ref="environmental-racism-biblio-cancer-alley"/>.
+		</p>
+		<p>
+			The products produced at these plants are used by factories to create the products that we use, like plastics, building materials, and cleaning supplies. While we are not individually responsible, it is important to think about the role that our consumption plays in encouraging the type of pollution we see in Cancer Alley.
+		</p>
+	</section>
+	<section xml:id="environmental-racism-big-problem">
+		<title>The Big Problem: Environmental Racism</title>
+		<assemblage>
+			<p>
+				Pollution is a major problem wherever it occurs. When policies and regulations encourage polluting industries to place their factories in minority areas, or only create low-income housing for underprivileged minorities in areas with such industries, pollution becomes <term>environmental racism</term>.  How does environmental racism affect the people living in Cancer Alley, and what can be done to help them?
+			</p>
+		</assemblage>
+	</section>
+	<section xml:id="environmental-racism-data-classification">
+		<title>Data Classification</title>
+		<introduction>
+			<p>
+				Once you collect or obtain a data set, you need to choose which form of data visualization(s) would be appropriate for your data. But before you can determine the best form of data visualization, you need to classify your data. The nature of your data would help you determine the possible forms of visualizations. In the following section, we will discuss the different types of data with examples.
+			</p>
+		</introduction>
+
+		<subsection xml:id="environmental-racism-data-visualization-classification-data-types">
+			<title>Data types</title>
+			<p>
+				Let’s say you are conducting a neighborhood welfare survey. The survey aims to learn about the different issues the residents are concerned about and want the local authorities to address immediately. The survey contains a combination of ten closed and open-ended questions. For details about the survey, see \vref{pictureX}. Overall, the survey questions collected two types of data: non-numeric (Questions 1, 2, 5, 6, 9) and numeric (Questions 3, 4, 7, 8, 10), based on which the data can be broadly classified into two types: categorical data and quantitative data.
+			</p>
+			<figure xml:id="environmental-racism-data-visualization-types-of-data">
+				<image source="environmental-racism/images/data-types.png">
+					Diagram showing the division between categorical and quantitative data.
+				</image>
+				<caption>
+					All data can be divided into categorical and quantitative data.
+				</caption>
+			</figure>
+			<p>
+				Data that are non-numeric or qualitative in nature, and that can be classified into different categories; are called Categorical Data. For example, question 2 of the survey asked the respondents, “What are some issues, if at all, in your neighborhood that concerns you the most?” It provided the respondents with nine non-numeric options to choose from, 
+			</p>
+			<ol>
+				<li>
+					Lack of proper waste disposal system
+				</li>
+				<li>
+					Air Pollution
+				</li>
+				<li>
+					Access to healthy drinking water
+				</li>
+				<li>
+					Lack of green spaces/ parks/ playground
+				</li>
+				<li>
+					Availability of healthcare system
+				</li>
+				<li>
+					Risk of flooding/ forest fire
+				</li>
+				<li>
+					Access to grocery stores/ neighborhood market
+				</li>
+				<li>
+					Unsafe road conditions
+				</li>
+				<li>
+					Others
+				</li>
+			</ol>
+			<p>
+				Each response forms a category; hence, question 2 collected categorical data. 
+			</p>
+			<p>
+				Data that are numeric in nature and hence quantifiable, are called <term>quantitative data</term>. Question 7 in the survey asked the respondents, “How many people live in your household?” Such variables “Number of people” would record data that are numbers; hence are called quantitative data. 
+			</p>
+			<figure xml:id="environmental-racism-neighborhood-welfare-survey">
+				<image source="environmental-racism/images/Neighborhood welfare survey.jpg">
+					Neighborhood welfare survey - include text description of survey.
+				</image>
+				<caption>
+					Neighborhood welfare survey.
+				</caption>
+			</figure>
+			<p>
+				Categorical data can further be classified into two types: nominal data and ordinal data.
+			</p>
+			<p>
+				Let us refocus on Question 2 of the survey, “What are some issues, if at all, in your neighborhood that concerns you the most?” The question provided the respondents with nine non-numeric options,
+			</p>
+			<ol>
+				<li> 
+					Lack of proper waste disposal system
+				</li>
+				<li>
+					Air Pollution
+				</li>
+				<li>
+					Access to healthy drinking water
+				</li>
+				<li>
+					Lack of green spaces/ parks/ playground
+				</li>
+				<li>
+					Availability of healthcare system
+				</li>
+				<li>
+					Risk of flooding/ forest fire
+				</li>
+				<li>
+					Access to grocery stores/ neighborhood market
+				</li>
+				<li>
+					Unsafe road conditions
+				</li>
+				<li>
+					Others
+				</li>
+			</ol>
+			<p>
+				These nine options form nine categories whose order is not essential. Such qualitative data, which can be classified into different categories, but the order of the categories is not important, are called <term>Nominal Data</term>.
+			</p>
+			<p>
+				Nominal data can be counted and hence it can be used to calculate the number of times or the percentage of times a particular category has been selected. No other meaningful mathematical operations can be performed on Nominal Data. 
+			</p>
+			<p>
+				Categorical data, where the order of the categories is important, is called <term>Ordinal data</term>. Question 10 of the survey asked the respondents, “How satisfied are you with your local government’s initiatives to address issues present in your community?” It provided the respondents with five non-numeric options: Extremely satisfied, satisfied, Average, Dissatisfied, and Extremely Dissatisfied. Here, the five options create five categories, and there exists a natural ordering between these categories. Hence such data is Ordinal in nature.
+			</p>
+			<p>
+				Like nominal data, you can count ordinal data and use them to calculate the number of times or the percentage of times a particular category has been selected. However, some disagreement exists about whether you can perform any other mathematical operations, especially calculate the average, with Ordinal Data. When Ordinal data is in non-numeric form, you cannot calculate its average and measure the average response of the respondents. However, sometimes numbers are assigned to the different categories of Ordinal data for easier data entry and analysis (5: Extremely satisfied, 4: satisfied, 3: Average, 2: Dissatisfied, and 1: Extremely Dissatisfied). Although these numbers do not have any true mathematical value, you can often use these numbers to calculate the average response under the assumption that the difference in degree between consecutive categories is approximately equal.
+			</p>
+			<p>
+				Quantitative data can also be classified into two types: interval and ratio data.
+			</p>	
+			<p>
+				Let us start with an example. Question 4 of the survey asked the respondents, “At what time do you experience the heaviest traffic in your neighborhood? Imagine how a respondent would respond to that question? 7:30 AM? 8 AM? All the responses will record the time of the day. Such data is numerical and will be classified as <term>Interval Data</term>.
+			</p>
+			<p>
+				Interval data are numerical, and as a result, the interval between the consecutive points of measurement are uniform. Whether someone experiences the heaviest traffic at 8 AM or 8:30 AM, or 9 AM, the difference between all the three timings is consistently 30 minutes or .5 hours.
+			</p>
+			<p>
+				Since interval data is numeric, you can perform any mathematical operation, but interval data does not have any meaningful zero. For example, suppose Sunday at midnight, there was an accident in your neighborhood, and as a result, there was massive traffic in your neighborhood. One way to measure the timing is through a 24-hour clock and say that your neighborhood experienced unusual traffic at 0:00 AM on Sunday. Here zero does not mean that there is an absence of time. Zero is just the measure of the time of the day using a 24-hour clock.
+			</p>
+			<p>
+				To understand Ratio Data, let us get back to question 7, where the survey asked the respondents, “How many people live in your household?” Unlike Interval data, in this question, if you say that zero people live in the household, it means that no people live in the household. So, in <term>Ratio data</term>, the value zero indicates an absence of a measure.
+			</p>
+			<p>
+				Like interval data, ratio data is numeric in nature. Hence, the interval between the consecutive points of measurement is uniform, and you can perform any mathematical operations on it.
+			</p>
+			<figure xml:id="environmental-racism-data-visualization-types-of-data-full-categorization">
+				<image source="environmental-racism/images/data-types-full.png">
+					Diagram showing how categorical data splits into nominal and ordinal data, and quantitative data splits into interval and ratio data.
+				</image>
+				<caption>
+					The full classification of data by type and subtype.
+				</caption>
+			</figure>
+		</subsection>
+		<subsection xml:id="environmental-racism-types-of-data-exercises">
+			<exercise>
+				<p>
+					Go to the survey in <xref ref="environmental-racism-neighborhood-welfare-survey"/>, and identify the survey questions that gather data of the following types:
+				</p>
+				<ol>
+					<li> 
+						Quantitative
+					</li>
+					<li> 
+						Nominal
+					</li>
+					<li> 
+						Ratio
+					</li>
+					<li> 
+						Interval
+					</li>
+					<li> 
+						Categorical
+					</li>
+					<li> 
+						Ordinal
+					</li>
+				</ol>
+			</exercise>
+		</subsection>
+	</section>
+	<section xml:id="environmental-racism-choosing-data-visualization">
+		<title>Choosing Data Visualizations</title>
+		<introduction>
+			<p>
+				Data visualization is a way to graphically represent data and information by using visual elements such as charts, graphs, and maps. The purposes of data visualizations are to summarize, compare, reveal patterns, and notice anomalies present in the data; in other words, data visualization makes data more understandable to an individual.
+			</p>
+		</introduction>
+		<subsection xml:id="environmental-racism-data-visualization-importance">
+			<title>Why is data visualization important?</title>
+			<p>
+				In the world of big data, where we have access to a large amount of information, it is an essential skill for an individual to learn to handle a significant volume of data and devise a quick and effective way to present the data in meaningful ways to others. Data visualization is a tool that serves such purposes. It provides an intuitive way to visualize and understand trends, outliers, clusters, and patterns in given data sets. Data visualization also helps us compare different data sets and prompts us to raise questions that stimulate research and suggest ideas. It offers a meaningful way to tell a story from data but with a purpose.
+			</p>
+		</subsection>
+		<subsection>
+			<title>Types of Data Visualizations</title>
+			<introduction>
+				<p>
+					Once you identify your data type, you can choose your data visualizations accordingly. For guidance, see <xref ref="environmental-racism-types-of-visualizations"/>:
+				</p>
+				<xi:include href="tables/types-of-visualizations.xml"/>
+				<p>
+					A brief account of each of the data visualization is given below:
+				</p>
+			</introduction>
+			<subsubsection>
+				<title>Pie charts</title>
+				<p>
+					A <term>pie chart</term> is a visual tool that graphs categorical data and helps one understand the part-to-a-whole relationship. Visually a pie chart is circular in shape that is divided into sectors, where each sector represents the number or percentage of times an observation or category has been selected. The pie chart given in Figure~\ref{fig:Pie}, represents the the number or percentage of times respondents expressed concerns about their neighborhood issues. Each sector of the pie chart represents a distinct category, that is a particular neighborhood issue.
+				</p>
+				<p>
+					The pie chart given in <xref ref="environmental-racism-figure-pie-chart"/> shows that 
+				</p>
+				<ol>
+					<li> 
+						15% times respondents expressed their concerns about improper waste disposal system, 
+					</li>
+					<li> 
+						10% times respondents expressed their concerns about air pollution, 
+					</li>
+					<li> 
+						20% times respondents expressed their concerns about access to healthy drinking water, 
+					</li>
+					<li> 
+						6% times respondents expressed their concerns about lack of greenspaces/ parks/ playgrounds, 
+					</li>
+					<li> 
+						14% times respondents expressed their concerns about availability of healthcare system, 
+					</li>
+					<li> 
+						2% times respondents expressed their concerns about risk of flooding/ forest fire, 
+					</li>
+					<li> 
+						11% times respondents expressed their concerns about access to grocery stores/ neighborhood market, 
+					</li>
+					<li>
+						18% times they expressed their concerns about unsafe road conditions, and
+					</li>
+					<li>
+						4% times they expressed their concerns about other neighborhood issues not included in the list.
+					</li>
+				</ol>
+				<p>
+					The important thing to know about a pie chart is that the bigger the area of the sectors, the greater the values they represent. That means, in the given pie chart, since the area of the sector representing “Access to healthy drinking water” is the highest (20% of the total area), you can conclude that out of the nine given issues, the respondents chose "Access to healthy drinking water” the maximum number of times. To be precise, 20% of the times respondents said that they were concerned about healthy drinking water. Likewise, the area of the sector representing “Risk of flooding/ forest fire” is the smallest (2% of the total area), the pie chart suggests that only 2% of times respondents said that they were concerned about flooding and forest fire. 
+				</p>
+				<figure xml:id="environmental-racism-figure-pie-chart">
+					<image source="environmental-racism/images/Pie_new.jpg">
+						A circular disc with wedges whose sizes correspond to those listed above labeled with the corresponding opinion.
+					</image>
+					<caption>
+						Pie Chart representing the different neighborhood related issues that the survey respondents are concerned about.
+					</caption>
+				</figure>
+
+				<p>
+					A pie chart is usually drawn to graph categorical data. To create a pie chart,
+				</p>
+				<ol>
+					<li>
+						<p>
+							First, create a frequency distribution table, where you will note how many times a particular category has been repeated. For example, question 2 of the "Neighborhood welfare survey" asked the respondents to indicate all the neighbourhood-related issues they were concerned about. The question provided the respondents with nine options. Each option would be considered as a category. Based on the responses, if you find that 200 responses have been collected, and 30 of them indicate lack of a proper waste disposal system, then the corresponding frequency would be 30. Likewise, if 20 out of 200 responses indicate respondents' concern about air pollution, then the corresponding frequency would be 20. 
+						</p>
+						<xi:include href="tables/environmental-racism-neighborhood-issues.xml"/>
+					</li>
+					<li>
+						<p>
+							Next, calculate the relative frequency of each category and their corresponding percentage. To calculate the relative frequency of each category, divide the frequency of each category by the total number of responses. For example, the relative frequency of lack of a proper waste disposal system = <m>\frac{30}{200} = \frac{3}{20}</m> Likewise, the relative frequency of air pollution = <m>\frac{20}{200}= \frac{1}{10}</m>.
+						</p>
+						<p>
+							To calculate the corresponding percentages, multiply the relative frequencies by 100. For example, the percentage corresponding to lack of a proper waste disposal system = <m>\frac{3}{20}\times100 = 15\%</m>.
+						</p>
+						<p>
+							That means, 15% of the times respondents expressed their concerns about lack of a proper waste disposal system in their neighborhood. 
+						</p>
+						<xi:include href="tables/environmental-racism-neighborhood-issues-relative-frequencies.xml"/>
+					</li>
+					<li>
+						Finally, once the percentages are calculated, create the pie chart. Divide the circle into sectors, where each sector represents a category. The relative area of each sector must match the percentage of time a particular category has been selected. For example, since 15% of the times respondents expressed their concerns about the lack of a proper waste disposal system, the area of the sector representing "lack of a proper waste disposal system" is 15% of the total area of the pie chart. Refer to <xref ref="environmental-racism-figure-pie-chart"/>.
+					</li>
+				</ol>
+			</subsubsection>
+			<subsubsection>
+				<title>Bar graph</title>
+				<p>
+					A bar graph is a visual tool that uses bars to compare data belonging to different categories. In the bar graph given given in <xref ref="environmental-racism-figure-bar-chart"/>, each bar represents the number of times respondents raised concerns about different issues in their neighborhoods. As the visualization suggests, 15 respondents expressed their concerns about lack of proper waste disposal system, 10 respondents expressed their concerns about air pollution, 20 respondents expressed their concerns about access to healthy drinking water, six respondents expressed their concerns about lack of greenspaces/ pars/ playgrounds in the neighborhood, 14 respondents expressed their concerns about availability of healthcare system, 2 respondents expressed their concerns about forest fire and flooding, 11 respondents expressed their concerns about access to grocery stores and neighborhood markets, 18 respondents expressed their concerns about unsafe road conditions, and four respondents expressed their concerns about other issues in the neighborhood that are not included in the list.
+				</p>
+				<p>
+					The important thing to know about a bar graph is that the longer/ taller the bars are, the greater the values they represent. That means, in the given bar chart, since the height of the bar representing “Access to healthy drinking water” is the highest, you can conclude that most of the respondents, twenty to be precise, said that they were concerned about healthy drinking water. Likewise, the height of the “Risk of flooding/ forest fire” bar suggests that minimum number of respondents, two to be precise, said that they were concerned about flooding or forest fire.
+				</p>
+				<figure xml:id="environmental-racism-figure-bar-chart">
+					<image source="environmental-racism/images/Bar_new.jpg">
+						Bar graph of the neighborhood survey data. Image description available.
+					</image>
+					<caption>
+						Bar graph representing the different neighborhood related issues that the survey respondents are concerned about. <xref ref="environmental-racism-image-bar-chart">Image Description </xref>.
+					</caption>
+				</figure>
+
+				<p>
+					A bar graph is usually drawn to graph categorical data. To create a bar graph,
+				</p>
+				<ol>
+					<li>
+						<p>
+							First, create a frequency distribution table, as in <xref ref="environmental-racism-neighborhood-issues"/>, where you will note how many times a particular category has been repeated or the given values corresponding to different categories. For example, question 2 of the "Neighborhood welfare survey" asked the respondents to indicate all the neighbourhood-related issues they were concerned about. The question provided the respondents with nine options. Each option would form one category. The survey response suggests that 20 respondents expressed their concern about access to healthy drinking water. Hence the frequency corresponding to "access to healthy drinking water" is 20. 
+						</p>
+					</li>
+					<li>
+						Next, draw the two axes. Along the horizontal axis, plot all the categories, and along the vertical axis mark the frequencies. 
+					</li>
+					<li>
+						Draw the bars for each category. Note that the height of a bar corresponding to a category is same as its frequency.
+					</li>
+				</ol>
+			</subsubsection>
+			<subsubsection>
+				<title>Histogram</title>
+				<p>
+					Histogram is a visual tool used to explore the frequency distribution of quantitative data (both Interval and Ratio). The shape of a histogram decides if the data distribution is symmetric or skewed (right skewed and left skewed).
+				</p>
+				<p>
+					The histogram given in <xref ref="environmental-racism-figure-histogram"/>, represents the frequency distribution of the “annual household income”. In this histogram, the data has been used to create five bins of size $5,000 along the <em>x</em>-axis, and the frequency of responses has been recorded along the <em>y</em>-axis. The important thing to know about a histogram is that the taller the bars are, the greater the frequency they represent. That means, in the given histogram, since the height of the first bin is the highest, 20 to be exact, you can conclude that 20 respondents said that their annual household income is between $30,000 and $35,000. 
+				</p>
+				<figure xml:id="environmental-racism-figure-histogram">
+					<image source="environmental-racism/images/Hist_new.jpg">
+						Histogram of annual household income. Image Description available.
+					</image>
+					<caption>
+						Histogram representing the frequency distribution of annual household income of the survey respondents. <xref ref="environmental-racism-image-histogram">Image Description </xref>.
+					</caption>
+				</figure>
+				<p>
+					To explore the distribution of a quantitative data through a histogram, divide the quantitative data into ordered groups, otherwise known as bins, and count the number of data points that fall in each bin. For example, question 8 of the "Neighborhood welfare survey" asked the respondents about their annual household income. Thirty nine respondents responded to the question. The minimum recorded data is $30,000, and the maximum recorded data is $55,000. To create the histogram,
+				</p> 
+				<ol>
+					<li>
+						First, divide the range of data ($55,000-$30,000) into different bins of a fixed size (say $5,000). So, the bins would be, [30,000-35,000], (35,000-40,000],(40,000-45,000],(45,000-50,000],(50,000-55,000].
+					</li>
+					<li>
+						Next, create a frequency distribution table to count the number of responses that fall under each bin.
+					</li>
+					<li>
+						After the frequency distribution table is prepared, draw two axes. Along the horizontal axis, draw the bins and mark frequencies along the vertical axis. 
+					</li>
+					<li>
+						Finally, draw bars from the lower value of one interval to the lower value of the next interval. The height of each bar should be equal to the frequency of its corresponding interval. That is, in the "Neighborhood welfare survey", if twenty respondents said that their annual household income is between $30,000 and $35,000, then the height of the bar corresponding to the bin [30,000-35,000] would be 20.
+					</li>
+				</ol>
+			</subsubsection>
+			<subsubsection>
+				<title>Histogram vs Bar graph</title> 
+				<p>
+					Although a histogram looks like a bar graph, there exists a fundamental difference between the two. 
+				</p>
+				<ul>
+					<li> 
+						A bar graph visually represents categorical data (nominal and ordinal), whereas a histogram represents quantitative data. 
+					</li>
+					<li> 
+						In a bar graph, different categories are represented along the horizontal axis (if the bar graph is oriented vertically), and the associated values are represented along the vertical axis. On the contrary, in a histogram, the horizontal axis represents the different bins of equal length, and the vertical axis represents the frequency of data. 
+					</li>
+					<li> 
+						Since each bar in a bar graph represents different categories, the orders of the bars are not important, and there exist spaces between the consecutive bars. However, in a histogram, the bins are created to organize the quantitative data, so the bins are organized in ascending order, and no gaps exist between any two bins.
+					</li>
+				</ul>
+			</subsubsection>
+			<subsubsection>
+				<title>Box plot</title>
+				<p>
+					A box plot, otherwise known as a box and whisker plot, is a visual tool that uses the five-number summary of a data set to look at the spread and distribution of data. The five-number summary of a data set includes its minimum value, lower quartile <m>(Q_1)</m>, median <m>(Q_2)</m>, upper quartile <m>(Q_3)</m>, and maximum value.
+				</p>
+				<figure xml:id="environmental-racism-figure-box-plot">
+					<image source="environmental-racism/images/Boxplot_new.jpg">
+						Boxplot of the income data. Image description available.
+					</image>
+					<caption>
+						Box plot representing the annual household income the survey respondents. <xref ref="environmental-racism-image-boxplot">Image Description </xref>.
+					</caption>
+				</figure>
+				<p>
+					The box and whisker plot given in <xref ref="environmental-racism-figure-box-plot"/>represents the annual household income of the survey respondents.
+				</p>
+				<p>
+					The box in the middle shows the inter-quartile range <m>(Q_3 – Q_1)</m>, which contains the middle 50% of the data. It means, 50% of the respondents said that their annual household income is between $31,000 and $40,000.
+				</p>
+				<p>
+					The lower and upper whiskers represent the bottom and top 25% of the responses, respectively. That means 25% of the respondents said that their annual household income is lower than $31,000 (lower whisker), and 25% of the respondents said that their annual household income is more than $40,000 (Upper whisker).
+				</p>
+				<p>
+					The line in the middle of the box represents the median. It passes through point $35,000 which indicates that 50% of the respondents said that their annual household income is more than $35,000, and 50% of the respondents said that their annual household income is less than $35,000.
+				</p>
+				<p>
+					There exists an outlier in the data set. One respondent said that their annual household income is $55,000, significantly higher than the rest of the responses.
+				</p>
+				<p>	
+					To draw a boxplot follow the following steps: 
+				</p>
+				<ol>
+					<li>
+						First, organize the data in an ascending order. For example, to draw the boxplot of annual household income, first organize the incomes in an ascending order, with the lowest annual household income on the left and the highest annual household income on the right.
+					</li>
+					<li>
+						Next, calculate the median annual household income.	The <term>median</term> is the middle number in a sorted data set. It divides a data set into exactly two halves, such that 50% of the data points are lesser than the median, and 50% of the data points are larger than the median. If the median annual household income is $35,000, that means 50% respondents' annual household income is more than $35,000, and 50% respondents' annual household income is less than $35,000\}
+					</li>
+					<li>
+						<p>
+							Next, calculate the first and third quartile. Values that divide a data set into four equal parts (quarters) are called <term>quartiles</term>.
+						</p>
+						<p>
+							The <term>first quartile</term> or the <term>lower quartile (<m>Q_1</m>)</term> is the data point below which 25% of the data points, and above which 75% of the data points are located. If the first quartile of the annual household income data is $31,000, then 25% of the respondents' annual household income is less than and 75% of the respondents' annual household income is more than$31,000.
+						</p>
+						<p>
+							The <term>third quartile</term> or the <term>upper quartile (<m>Q_3</m>)</term> is the data point below which 75% of the data points, and above which 25% of the data points are located. If the third quartile of the annual household income data is $40,000, then 75% of the respondents' annual household income is less than and 25% of the respondents' annual household income is more than$40,000.
+						</p>
+						<figure xml:id="environmental-racism-figure-quartiles">
+							<image source="environmental-racism/images/Quartile.jpg">
+								Diagram illustrating quartiles. Image Description available.
+							</image>
+							<caption>
+								Figure showing how Quartiles split a data set into four equal parts. <xref ref="environmental-racism-image-quartiles">Image Description </xref>.
+							</caption>
+						</figure>
+						<p>
+							The difference between the third and first quartile is known as <term>interquartile range</term> (<m>(Q_3 – Q_1)</m>).
+						</p>
+						<p>
+							An <term>outlier</term> is an observation (data point), which is either too high or too low compared to the rest of the data points in a data set. For example, in the annual household income data set, the annual household income of $55,000 is an outlier. That means, the respondent having an annual household income of $55,000 is earning considerably high compared to the rest of the respondents who filled the survey.
+						</p>
+						<p>
+							The rule that is followed to identify an outlier in a given data set is called 1.5 x IQR. When a data set is given, 
+						</p>
+						<ol>
+							<li>
+								First find its median, upper quartile, and the lower quartile. 
+							</li>
+							<li>
+								Next, calculate the value of interquartile range <m>(Q_3-Q_1)</m>
+							</li>
+							<li>
+								Calculate 1.5 x IQR = 1.5 x <m>(Q_3-Q_1)</m>
+							</li>
+							<li>
+								<p>
+									Find the fences:
+								</p>
+								<me>
+									\text{Upper fence: }Q_3 + 1.5 * (Q_3-Q_1)
+								</me>
+								<me>
+									\text{Lower fence: }Q_1 - 1.5 * (Q_3-Q_1)
+								</me>
+							</li>
+							<li>
+								Any data point beyond the fences, that is either lower than the lower fence or higher than the upper fence is an outlier.
+							</li>
+						</ol>
+					</li>
+					<li>
+						<p>
+							Finally, draw a number line (horizontal or vertical) and use the five number summaries, minimum value, lower quartile <m>(Q_1)</m>, median <m>(Q_2)</m>, upper quartile <m>(Q_3)</m>, and maximum value, to draw the box and whisker plot.
+						</p>
+						<figure xml:id="environmental-racism-figure-box-plot-without-outliers">
+							<image source="environmental-racism/images/draw_box.jpg">
+								Drawing of how to create a boxplot. Image description available.
+							</image>
+							<caption>
+								Figure showing how to draw a box plot when there is no outlier. <xref ref="environmental-racism-image-boxplot-creation">Image Description </xref>.
+							</caption>
+						</figure>
+						<p>
+							If there exists one or more outlier in a data set, then the rule will be slightly different. If there is an outlier on the lower side, then to draw the lower whisker join the lower quartile and the lowest non-outlier data point. If there is an outlier on the upper side, then to draw the upper whisker join the upper quartile and the highest non-outlier value. 
+						</p>
+					</li>
+				</ol>
+			</subsubsection>
+			<subsubsection>
+				<title>Scatter plot</title>
+				<p>
+					A scatter plot is a visual tool that is used to visualize the relationship between two numeric variables. In a scatter plot, the independent variable is usually plotted along the horizontal or <m>x</m>-axis, and the dependent variable is usually plotted along the vertical or <m>y</m>-axis.
+				</p>
+				<figure xml:id="environmental-racism-figure-scatter-plot">
+					<image source="environmental-racism/images/scatter_new.jpg">
+
+					</image>
+					<caption>
+						Scatter plot representing the relationship between the number of household members of the survey respondents and their monthly grocery expenses.
+					</caption>
+				</figure>
+				<p>
+					The scatter plot given in <xref ref="environmental-racism-figure-scatter-plot"/> represents the relationship between the  <em>number of household members of the survey respondents</em> and their  <em>monthly grocery expenses</em>. As the figure suggests, the variable  <em>number of household members</em> is an independent variable (plotted along the <m>x</m>-axis), and the variable  \emph{monthly grocery expense} is a dependent variable (plotted along the <m>y</m>-axis). The scatter plot shows if there exists a relationship between the two variables, that is if the number of household members impacts the respondents’ monthly grocery expenses.
+				</p>
+				<p>
+					Scatter plots are drawn to explore the correlation between two variables. One variable (independent variable) is considered an explanatory variable, and the other is considered a dependent variable. For example, in the "Neighborhood welfare survey", respondents were asked about their number of household members and their monthly grocery expenses. If someone explores the possible impact of the number of household members on monthly grocery expenses, then the number of household members would be considered an independent variable, and monthly grocery expenses would be a dependent variable (depends on the number of family members). To draw a scatter plot,
+				</p>
+				<ol>
+					<li>
+						Identify the independent and dependent variables.
+					</li>
+					<li>
+						Plot independent variable along the horizontal axis or x-axis, and plot the dependent variable along the vertical axis or y-axis. Label the axes.
+					</li>
+					<li>
+						Plot the ordered pairs (idependent variable, dependent variable).
+					</li>
+				</ol>
+				<p>
+					Three types of linear correlation can be identified through the patterns displayed by a scatterplot.
+				</p>
+				<ul>
+					<li>
+						<p>
+							If the increase/ decrease in one variable indicates an increase/ decrease in the other variable, then there exists a <term>positive correlation</term> between the two variables. 
+						</p>
+						<figure xml:id="environmental-racism-figure-positive-correlation">
+							<image source="environmental-racism/images/Positive cor.jpg">
+								Points on a graph, lying mostly near the upward-sloping diagonal line <m>y=x</m>.
+							</image>
+							<caption>
+								Scatter plot indicating a positive correlation between two variables. Remix of <xref ref="environmental-racism-biblio-positive-correlation"/>
+							</caption>
+						</figure>
+					</li>
+					<li>
+						<p>
+							Negative correlation: If the increase/ decrease in one variable indicates an decrease/ increase in the other variable, then there exists a negative correlation between the two variables.
+						</p> 
+						<figure xml:id="environmental-racism-figure-negative-correlation">
+							<image source="environmental-racism/images/neg_cor.jpg">
+								Points on a graph, lying mostly near the downward-sloping diagonal line <m>y=-x</m>.
+							</image>
+							<caption>
+								Scatter plot indicating a negative correlation between two variables. Remix of <xref ref="environmental-racism-biblio-positive-correlation"/>.
+							</caption>
+						</figure>
+					</li>
+					<li>
+						<p>
+							No correlation: 
+						</p>
+						<figure xml:id="environmental-racism-figure-no-correlation">
+							<image source="environmental-racism/images/no_Corr.jpg">
+
+							</image>
+							<caption>
+								Scatter plot indicating no correlation correlation between two variables. Remix of <xref ref="environmental-racism-biblio-positive-correlation"/>
+							</caption>
+						</figure>
+					</li>
+				</ul>
+			</subsubsection>
+		</subsection>
+	</section>
+	<section xml:id="environmental-racism-solving-for-change">
+		<title>Solving for change</title>
+		<introduction>
+			<p>
+				Now that we have discussed data types and data visualization, we can begin to explore how the unfavorable living conditions in the Cancer Alley have made its residents, particularly impoverished people of color, more vulnerable to medical conditions with disproportionate health facilities. Watch the video in <xref ref="environmental-racism-video-cancer-alley"/>.
+			</p>
+			<figure xml:id="environmental-racism-video-cancer-alley">
+				<video youtube="MGNtMkFJkKg"/>
+				<caption>
+					Cancer risk in Louisiana town nearly 50 times higher than national average.
+				</caption>
+			</figure>
+			<p>
+				Share your thoughts on the following questions:
+			</p>
+			<ol>
+				<li>
+					Were you familiar with the Cancer Alley?
+				</li>
+				<li> 
+					How did you feel as you watched the conditions of the people living on the Cancer Alley?
+				</li>
+				<li> 
+					Who do you think is most affected by the chemical factories located in the region? Why?
+				</li>
+			</ol>
+			<p>
+				Next, form groups of two and explore the data given in <url href="environmental-racism/data/environmental-racism-cancer-alley.xlsx">Racial distribution of the cities and parishes on the Cancer Alley [Microsoft Excel Spreadsheet]</url>. The data set contains information about the different parishes along the Cancer Alley, their racial compositions, median household incomes, and access to hospitals and medical facilities.
+			</p>
+			<p>
+				As you explore the data, answer the following questions:
+			</p>
+			<ol>
+				<li> 
+					Which of the given variables in the data set collected categorical data?
+				</li>
+				<li> 
+					Which of the given variables in the data set collected quantitative data?
+				</li>
+				<li> 
+					What visualization would you choose to compare the percentage of African American population and the White population in the different parishes along the Cancer Alley? Justify your answer.
+				</li>
+				<li> 
+					Go to Excel and draw a visualization to compare the percentage of African American population and the White population in the different parishes along the Cancer Alley. Interpret your findings.
+				</li>
+				<li> 
+					Draw an appropriate visualization to explore the distribution of median household income (2016-2020) in the different parishes along the Cancer Alley? What is the nature of the distribution? Explain. 
+				</li>
+				<li> 
+					What visualization would help you investigate the possible impact of median household income on the number of hospitals in the different parishes along the Cancer Alley? Draw the visualization and interpret your findings. 
+				</li>
+			</ol>
+		</introduction>
+		<subsection>
+			<title>In-depth Exploration</title>
+			<p>
+				Construct one research question that you intend to answer using the data in <url href="environmental-racism/data/environmental-racism-cancer-alley.xlsx">Racial distribution of the cities and parishes on the Cancer Alley [Microsoft Excel Spreadsheet]</url>. You must choose at least one form of data visualization to answer your research question and justify your choice of data visualization (for example: I decided to construct a scatter plot because I want to explore the correlation between two quantitative data).
+			</p>
+			<p>
+				After you complete working on the problem, create a short presentation (PowerPoint or poster) and present their findings to the whole class. The presentation should contain the following points:
+			</p>
+			<ol>
+				<li> 
+					Brief introduction to the problem (problem statement/ significance of your topic)
+				</li>
+				<li> 
+					Research Question
+				</li>
+				<li> 
+					Data Visualization
+				</li>
+				<li> 
+					Results/ Data Interpretations
+				</li>
+				<li> 
+					Conclusion
+				</li>
+			</ol>
+		</subsection>
+	</section>
+	<reading-questions xml:id="environmental-racism-reading-questions">
+		<title>Reading Questions</title>
+		<p>
+			In this last section of the chapter, engage in a whole-class discussion and reflect on the long-lasting environmental justice issue in the Cancer Alley. Consider the following questions to engage in the discussion:
+		</p>
+		<exercise>
+			<p>
+				Did any of the findings surprise you?
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				How does this lesson impact your understanding of systemic environmental discrimination?
+			</p>
+		</exercise>
+		<exercise>
+			<p>
+				Explore the location of chemical factories, hazardous waste facilities, and oil refineries in their local regions (neighborhood, towns, cities, state). Calculate the distance of those facilities from the nearest schools and residential areas (Google map or field trip), and investigate if those facilities have had any health impact on local residents.
+			</p>
+		</exercise>
+	</reading-questions>
+	<exercises xml:id="environmental-racism-exercises">
+		<exercise>
+			<p>
+				Interpret the bar chart given in <xref ref="environmental-racism-figure-histogram-covid-recovery"/> on distribution of number of days from positive COVID confirmation to clinical recovery.
+			</p>
+			<figure xml:id="environmental-racism-figure-histogram-covid-recovery">
+				<image source="environmental-racism/images/Hist_Cancer.png">
+					Bar chart showing covid recovery times. Image Description available.
+				</image>
+				<caption>
+					Histogram showing patient-count distribution of number of days from positive COVID confirmation to clinical recovery in Singapore during January 23-April 01 2020. <xref ref="environmental-racism-image-covid-recovery">Image Description </xref>.
+				</caption>
+			</figure>
+
+			<ol>
+				<li> 
+					How many people recovered in four days?
+				</li>
+				<li> 
+					How many people took twenty-three days to recover?
+				</li>
+				<li> 
+					How many people took eight to thirteen days to recover?
+				</li>
+				<li> 
+					Is there any potential outlier?
+				</li>
+			</ol>
+		</exercise>
+		<exercise>
+			<p>
+				Go to the data set <url href="environmental-racism/data/environmental-racism-census.xlsx">Households by total money income [Microsoft Excel Document]</url>. The data set has been taken from <xref ref="environmental-racism-biblio-census"/> and simplified for the lesson.
+			</p>
+			<ol>
+				<li> 
+					How has the estimated median income (dollar) of white people changed from 2002 to 2020?
+				</li>
+				<li> 
+					How has the estimated median income (dollar) of black people changed from 2002 to 2020?
+				</li>
+				<li> 
+					What visualization would be most appropriate to explore the change of the estimated median income over the years?
+				</li>
+				<li> 
+					Make at least two interpretations from the visualizations about the change of the white and black people's estimated median income.
+				</li>
+			</ol>
+		</exercise>
+		<exercise>
+			<p>
+				Go to the data set <url href="environmental-racism/data/environmental-racism-census.xlsx">Households by total money income [Microsoft Excel Document]</url>. The data set has been taken from <xref ref="environmental-racism-biblio-census"/> and simplified for the lesson.
+			</p>
+			<ol>
+				<li> 
+					Compare the estimated median income (dollar) of the White, Black, Asian, and Hispanic people from 2002 to 2020. 
+				</li>
+				<li> 
+					What visualization would be most appropriate to compare the estimated median income of the four racial groups?
+				</li>
+				<li> 
+					Make at least two interpretations from the visualization(s) and report how the estimated median income of one racial group is different from others.
+				</li>
+			</ol>
+		</exercise>
+		<exercise>
+			<p>
+				Interpret the bar graph given in <xref ref="environmental-racism-figure-histogram-covid-ethnicity"/> on COVID-19 hospitalizations, broken down by race/ethnicity.
+			</p>
+			<figure xml:id="environmental-racism-figure-histogram-covid-ethnicity">
+				<image source="environmental-racism/images/Bar_Cancer.png">
+					Bar graph of COVID hospitalizations by race. Image Description available.
+				</image>
+				<caption>
+					Bar graph showing CDC’s (2020b) data visualization of COVID-19 hospitalizations, broken down by race/ethnicity. <xref ref="environmental-racism-image-covid-race">Image Description </xref>.
+				</caption>
+			</figure>
+		</exercise>
+		<exercise>
+			<p>
+				Interpret the bar graph in <xref ref="environmental-racism-figure-bar-chart-covid-vaccines"/> on COVID-19 vaccine doses as claimed by different countries and answer the following questions:
+			</p>
+			<figure xml:id="environmental-racism-figure-bar-chart-covid-vaccines">
+				<image source="environmental-racism/images/Vaccine_Cancer.png">
+					Bar graph representing the number of vaccine doses per country. Image Description available.
+				</image>
+				<caption>
+					Bar Graph representing the number of COVID-19 vaccine doses as claimed by different countries as of Nov. 30, 2021. Potential dose purchases include deals that are under negotiation and options for additional doses as part of existing confirmed deals. <xref ref="environmental-racism-image-covid-vaccines">Image Description </xref>. <xref ref="environmental-racism-biblio-covid-vaccines"/>
+				</caption>
+			</figure>
+			<ol>
+				<li> 
+					Which country has definitively purchased the maximum number of COVID vaccine doses? 
+				</li>
+				<li> 
+					Which country is speculated to have contained the maximum number of CODID vaccine doses?
+				</li>
+				<li> 
+					The total population of the USA is approximately 328 million. If the USA contains 2.6 billion vaccine doses, how many times can it vaccinate its population, if most COVID vaccines require individuals to take two doses to protect themselves from the virus?
+				</li>
+				<li> 
+					The total population of Canada is approximately 38 million. If Canada contains 414 million vaccine doses, how many times can it vaccinate its population, if most COVID vaccines require individuals to take two doses to protect themselves from the virus?
+				</li>
+			</ol>
+		</exercise>
+	</exercises>
+	<section xml:id="environmental-racism-references">
+		<title>References</title>
+		<subsection>
+			<title>Bibliography</title>
+			<biblio xml:id="environmental-racism-biblio-cradle">
+				Allen, B. (2006). Cradle of a revolution? The industrial transformation of Louisiana's lower Mississippi river (pp. 112-119). Johns Hopkins University Press.
+			</biblio>
+			<biblio xml:id="environmental-racism-biblio-positive-correlation">
+				Atanassova, V. (2010). <url href="https://en.wikipedia.org/wiki/File:Strong--weak--no-correlation.png"/>. <url href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC-BY-SA-3.0 Unported</url>.
+			</biblio>
+			<biblio xml:id="environmental-racism-biblio-dumping">
+				Bullard, R. D. (2018). Dumping in Dixie: Race, class, and environmental quality. Routledge. 
+			</biblio>
+			<biblio xml:id="environmental-racism-biblio-blackmail">
+				Bullard, R. D. (2019). Environmental blackmail in minority communities. In Race and the incidence of environmental hazards (pp. 82-95). Routledge.
+			</biblio>
+			<biblio xml:id="environmental-racism-biblio-cancer-alley">
+				Castellon, I. G. (2021). Cancer Alley and the Fight Against Environmental Racism. Vill. Envtl. LJ, 32, 15.
+			</biblio>
+			<biblio xml:id="environmental-racism-biblio-cancer-and-water">
+				Gottlieb, Marise, Carr, Jean, Morriess, Daniel (1981). Cancer and drinking water in Louisiana: colon and rectum. International Journal of Epidemiology, 10, 2, 117-126. Oxford University Press. 
+			</biblio>
+			<biblio xml:id="environmental-racism-biblio-covid-vaccines">
+				Launch &amp; Scale Speedometer. <url href="https://launchandscalefaster.org/COVID-19"/>Duke Global Health Innovation Center. <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA-4.0</url>.
+			</biblio>
+			<biblio xml:id="environmental-racism-biblio-diamond">
+				Lerner, S. (2006). Diamond: A struggle for environmental justice in Louisiana's chemical corridor. MIT Press.
+			</biblio>
+			<biblio xml:id="environmental-racism-biblio-reed1991">
+				Reed, Susan (1991) His Family Ravaged by Cancer, an Angry Louisiana Man Wages War onthe Very Air That He Breathes. People 35(11). <url href="http//www.people.com/people/archive/0,,20114739,00.html"/>, accessed April 21, 2010.
+			</biblio>		
+			<biblio xml:id="environmental-racism-biblio-census">
+				Shrider, E., Kollar, M., Chen, F., Semega, J. (2021) <url href="https://www.census.gov/data/tables/2021/demo/income-poverty/p60-273.html"/>. U.S. Census Bureau.
+			</biblio>
+			<biblio xml:id="environmental-racism-biblio-lived-experience">
+				Singer, M. (2011). Down cancer alley: The lived experience of health and environmental suffering in Louisiana’s chemical corridor. Medical Anthropology Quarterly, 25(2), 141-163.
+			</biblio>
+			<biblio xml:id="environmental-racism-biblio-covid-singapore">
+				Sreevalsan-Nair, J., Vangimalla, R. R., &amp; Ghogale, P. R. (2020). Analysis of clinical recovery-period and recovery rate estimation of the first 1000 COVID-19 patients in Singapore. medRxiv
+			</biblio>
+			<biblio xml:id="environmental-racism-biblio-chemical-plant">
+				WClarke (2017). Exxon Mobil Refinery in Baton Rouge, Louisiana, seen from the top of the Louisiana State Capitol. <url href="https://commons.wikimedia.org/wiki/File:Exxon_Mobil_oil_refinery_-_Baton_Rouge,_Louisiana.jpg"/>. <url href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC-BY-SA-4.0 International</url>.
+			</biblio> 
+		</subsection>
+		<subsection xml:id="environmental-racism-image-descriptions">
+			<ol>
+				<li xml:id="environmental-racism-image-bar-chart">
+					Bar chart with neighborhood issues listed along the horizontal axis and frequency on the vertical axis.  Above each neighborhood issue is a bar with height equal to the frequency of responses which were concerned with that issue, as listed in <xref ref="environmental-racism-neighborhood-issues"/>.
+				</li>
+				<li xml:id="environmental-racism-image-histogram">
+					Histogram with categories of income along the horizontal axis and frequency on the vertical axis. Above each income range is a bar with height equal to the frequency of respondents who had an income in that range. Data comes from <xref ref="environmental-racism-table-histogram"/>.
+					<xi:include href="tables/environmental-racism-table-histogram.xml"/>
+				</li>
+				<li xml:id="environmental-racism-image-boxplot">
+					A graph with annual household income on the vertical axis. On the graph is a rectangular region (called the box) between 31,000 and 40,000, with a line across it at 35,000.  There is an x at 37,500.  Coming out of the top and bottom of the box are two "whiskers" - a vertical line with a horizontal line attached to its end. The lower whisker is at 30,000, and the upper whisker is at 53000.  There is a single point, marked by a dot, at 55,000.
+				</li>
+				<li xml:id="environmental-racism-image-quartiles">
+					A horizontal bar split into 4 pieces, each labeled as 25% of the total. The line between the first and second bar is labeled as Q1. The line between the second and third bar is labeled as median or Q2. The line between the third and fourth bar is labeled as Q3.  There are also brackets above and below the bar. The brackets below the bar each contain two of the pieces, and are labeled as 50%.  The bracket above the bar contains three of the pieces and is labeld as 75%.
+				</li>
+				<li xml:id="environmental-racism-image-boxplot-creation">
+					A drawing of a horizontal boxplot, with a rectangular box, and a whisker on the left and right end of the box. There are vertical lines drawn at the left whisker, the left end of the box, part of the way across the box, the right end of the box, and at the right whisker.  These lines are labeled as minimum value (left whisker), lower quartile (left end of box), median (partway across box), upper quartile (right end of box), and maximum value (right whisker).
+				</li>
+				<li xml:id="environmental-racism-image-covid-recovery">
+					Vertical bar chart with days from positive confirmation to clinical recovery on the horizontal axis and number of clinically recovered patients on the vertical axis.  The height of each bar corresponds to the values in <xref ref="environmental-racism-table-covid-recovery"/>.
+					<xi:include href="tables/environmental-racism-table-covid-recovery.xml"/>
+				</li>
+				<li xml:id="environmental-racism-image-covid-race">
+					Vertical bar chart with race/ethnicity along the horizontal axis and percentage on the vertical axis.  There are two bars for each race - one representing the percentage of the overall population and the other representing the percentage of COVID-19 hospitalizations.  Each bar has height corresponding to the data in <xref ref="environmental-racism-table-covid-race"/>
+					<xi:include href="tables/environmental-racism-table-covid-race.xml"/>
+				</li>
+				<li xml:id="environmental-racism-image-covid-vaccines">
+					Horizontal bar chart with countries along the vertical axis and number of vaccine doses along the horizontal axis.  Each country has two bars - one representing the confirmed dose purchases, and the other representing potential dose purchases.  Each bar has width corresponding to the data in <xref ref="environmental-racism-table-covid-vaccines"/>.
+					<xi:include href="tables/environmental-racism-table-covid-vaccines.xml"/>
+				</li>
+			</ol>
+		</subsection>
+	</section>
+</chapter>

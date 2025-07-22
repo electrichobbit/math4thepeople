@@ -1,0 +1,136 @@
+<table xml:id="environmental-racism-types-of-visualizations">
+  <tabular>
+    <row>
+      <cell>
+        Number of Variables
+      </cell>
+      <cell colspan="2">
+        Data Types
+      </cell>
+      <cell>
+        Visualizations
+      </cell>
+    </row>
+    <row>
+      <cell>
+        1
+      </cell>
+      <cell>
+        Categorical Data
+      </cell>
+      <cell>
+        Nominal Data
+      </cell>
+      <cell>
+        Pie Chart
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+        Bar Graph
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+        Ordinal Data
+      </cell>
+      <cell>
+        Pie Chart
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+        Bar Graph
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        Quantitative Data
+      </cell>
+      <cell>
+        Interval Data
+      </cell>
+      <cell>
+        Histogram
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+        Bar Graph
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+        Ratio Data
+      </cell>
+      <cell>
+        Histogram
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+        Bar Graph
+      </cell>
+    </row>
+    <row>
+      <cell>
+        2
+      </cell>
+      <cell>
+        Quantitative Data
+      </cell>
+      <cell>
+        Interval Data
+      </cell>
+      <cell>
+        Scattered Plot
+      </cell>
+    </row>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+        Ratio Data
+      </cell>
+      <cell>
+        Scattered Plot
+      </cell>
+    </row>
+  </tabular>
+</table>

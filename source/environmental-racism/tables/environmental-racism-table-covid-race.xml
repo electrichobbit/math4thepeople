@@ -1,0 +1,48 @@
+<table xml:id="environmental-racism-table-covid-race">
+  <tabular>
+    <row>
+      <cell>
+        Race/Ethnicity
+      </cell>
+      <cell>
+        Percentage of Residents living in COVID-NET counties
+      </cell>
+      <cell>
+        Percentage of COVID-19 hospitalizations
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non-Hispanic White
+      </cell>
+      <cell>
+        59%
+      </cell>
+      <cell>
+        45%
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Non-Hispanic Black
+      </cell>
+      <cell>
+        18%
+      </cell>
+      <cell>
+        33%
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Hispanic
+      </cell>
+      <cell>
+        14%
+      </cell>
+      <cell>
+        8%
+      </cell>
+    </row>
+  </tabular>
+</table>

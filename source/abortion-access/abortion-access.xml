@@ -1,0 +1,922 @@
+<chapter xml:id="abortion">
+	<title>Abortion Access Throughout the United States</title>
+	<introduction xml:id="abortion-introduction">
+		<p>
+			<em>This module on Abortion Access Throughout the United States was authored by <xref ref="wgeorge"/> and <xref ref="jseat"/>.</em>
+		</p>
+		<p>
+			We provide an in depth look at abortion access across the United States through the lens of logic.
+		</p>
+	</introduction>
+	<section xml:id="abortion-objectives">
+		<title>Objectives</title>
+		<p>
+			By the end of this module students will be able to:
+			<ol>
+				<li> 
+					Explain the inequity of the removal of federally protected access to abortion. 
+				</li>
+				<li> 
+					Critique how policies are created regarding abortion access.
+				</li>
+				<li> 
+					Identify Mathematical statements. 
+				</li>
+				<li> 
+					Find the truth values of compound statements of conjunctions, disjunctions, implications, and negations. 
+				</li>
+				<li> 
+					Recognize fallacies in arguments. 
+				</li>
+			</ol>
+		</p>
+	</section>
+
+	<section xml:id="abortion-background">
+		<title>Understanding the Issue</title>
+		<p> We explore the mathematics topics of logic through three side topics: 
+			<ol>
+				<li> Bodily Autonomy </li>
+				<li> When Life Starts </li>
+				<li> Inequalities in Abortion Discussions </li>
+			</ol>
+			Specifically, we investigate mathematical statements, combinations of statements, truth tables, arguments, and fallacies framed within the social debate of abortion access. 
+		</p>
+	</section>
+	<section xml:id="abortion-cui-bono">
+		<title>Cui Bono - Who Benefits?</title>
+		<p> 
+			The first modern anti-abortion group, the National Right to Life Committee, was formed in 1967 at the United States Catholic Conference. Since their formation, many more anti-abortion/pro-life groups have formed and their political influence is noticeable. According to OpenSecrets, from January 2022 to June 30 2022, anti-abortion/pro life organizations spent at least $690,000 in lobbying with 20 of their biggest recipients being republican members of congress or republican candidates running for office <xref ref="abortion-open-secrets"/>. By allowing the government to weigh into medical decisions that should be made between a patient and medical professional, the American Medical Association recognizes this creates inequity in health care and can cause severe adverse health effects for patients.<xref ref="abortion-equity"/> 
+		</p>
+	</section>
+	<section xml:id="abortion-big-problem">
+		<title>Big Problem: Restricting Abortion Access</title>
+		<p>
+			The Supreme Court's ruling in Row v Wade on January 22, 1973, gave people in the United States legal access to abortion across the United States. The ruling was based on the right to privacy which is protected by the 14th Amendment. Since this ruling, there have been numerous attempts to overturn the Supreme Court's 1973 decision. 
+		</p>
+
+		<p>
+			These attempts primarily arise when a state passes their own law defining when and how a person can legally get an abortion. When a state passes their own laws, the legality of these laws are often challenged by advocacy groups for access to abortion. These challenges are brought to the court system and can reach as high as the Supreme Court. The Supreme Court has the right to decide which cases they will review.   Their decision to see a case and/or their decisions in these cases can change accessibility to legal abortion within the United States. This is precisely what happened on June 24, 2022. 
+		</p>
+
+		<p>
+			In December 2021, the case Dobbs v. Jackson Women’s Health Organization was argued in front of the U.S. Supreme Court. In this case, the Jackson Women’s Health Organization and one of its doctors challenged that the Mississippi’s Gestational Age Act violated a constitutional right to abortion. This Act states: 
+		</p>
+
+		<blockquote> 
+			"[e]xcept in a medical emergency or in the case of a severe fetal abnormality, a person shall not intentionally or knowingly perform . . . or induce an abortion of an unborn human being if the probable gestational age of the unborn human being has been determined to be greater than fifteen (15) weeks"[Miss. Code Ann. §41–41–191]<xref ref="abortion-mississippi"/>
+		</blockquote>
+
+		<p>
+			Lower courts had ruled the Mississippi Gestational Age Act as unconstitutional because under the 1973 decision on Roe v. Wade, it was prohibited to ban abortions before a fetus was considered to survive outside a woman’s womb. 
+		</p>
+
+		<p>
+			In a 6-3 decision, the Supreme Court sided with Dobbs, who was the head of the Mississippi Health Department in 2018. This decision is based on the idea that access to abortion is not a constitutional right because, in fact, there is no inherent right to privacy or personal autonomy in the Constitution. Now that precedent has been set that there is no constitutional right to privacy, many other U.S Supreme Court cases are subject to be re-examined that could result in a major set-back to the civil rights movement. These include, but certainly not limited to, legality of same-sex marriages, inter-racial marriages, and contraception.
+		</p>
+
+		<p>
+			Immediately following this historical Supreme Court decision to overturn Roe, there were 16 states in which abortion became illegal, banned, or had trigger laws in place <xref ref="abortion-politico"/>. Trigger laws don’t take effect immediately or require some proactive intervention such as attorney general certification.  
+		</p>
+
+		<p>
+			While the consequences of overturning Roe remains uncertain, what is not uncertain are people’s beliefs about abortion. A person typically identifies as "pro-choice" or "pro-life". In the following sections, we explore the logic of three topics at the center of people’s beliefs. These topics are bodily autonomy, inequity in abortion access, and when "life" starts.
+		</p>
+	</section>
+	<section xml:id="abortion-simple-logic">
+		<title>Simple Logic</title>
+		<introduction>
+			<p> 
+				A <term>mathematical statement</term> is a sentence that is either true or false, but not both at the same time. For example, consider the following sentences:
+				<ol>
+					<li> 
+						The Supreme Court’s ruling on Roe v. Wade on January 22, 1973 gave people the right to access abortion legally all across the country 
+					</li>
+					<li> 
+						The Supreme Court ruled to overturn Roe v. Wade in 2022 making abortion a federal crime within the United States. 
+					</li>
+					<li> 
+						Abortion should be illegal. 
+					</li>
+				</ol>
+			</p>
+
+			<p>
+				The first sentence is a sentence which is true, making the sentence a mathematical statement. The second sentence is false which also means that it is a mathematical statement. Lastly, the third sentence is an opinion which is neither true nor false. Therefore, the third sentence is not a mathematical statement. Determining if a sentence is a statement can be challenging as this causes us to challenge the difference between our individual belief systems and factual information. We will discuss this in further detail in our last section of this module.  
+			</p>
+
+			<p>
+				Mathematical statements, or simply <term>statements</term>, are the building blocks to mathematical logic. While mathematicians primarily focus on statements that involve mathematics such as, "The number 2 is greater than 0", the methods used by mathematicians to make sense of their discipline can be applied to other topics which use critical thinking.
+			</p>	
+
+			<p>
+				There are a series of operations that we can perform on statements to get new statements. This is analogous to taking two numbers and adding, subtracting, or multiplying to get a new number. In algebra, the letters <m>x</m>, <m>y</m>, and <m>z</m> are often used to represent numbers. These are called <term>variables</term>. In logic we typically use the variables <m>p</m>, <m>q</m>, and <m>r</m> to represent a statement. When we perform an operation on one or more statements, we will call the result a <term>compound statement</term>. It is important to note that the resulting statement is, in fact, a statement. This means that a compound statement must either be true or false, but not both at the same time.
+			</p>
+		</introduction>
+		<subsection xml:id="abortion-negation">
+			<title>Negating and Combining Statements with "and" and "or"</title>
+			<subsubsection>
+				<title>Negations</title>
+				<p>
+					The negation of a given statement switches the truth value of the original statement. For example, the negation of "Abortion is a federal crime" is "Abortion is not a federal crime". Many times, a statement can be negated by inserting the word "not", or an equivalent word into the original statement. There are many ways to symbolically represent the negation of a statement. For this module, if we represent a statement by the variable <m>p</m>, we represent the <term>negation</term> of <m>p</m> by <m>\neg p</m>. We can use a logic calculator to see how the value of <m>p</m> and <m>\neg p</m> are related.
+
+					<sage>
+						<input>
+							f = propcalc.formula(&quot; ~p &quot;)
+							f.truthtable()
+						</input>
+					</sage>
+
+					In the calculation above, the left most column represents the values for <m>p</m> and the column under "value" represents the corresponding values for <m> \neg p</m>.
+				</p>
+			</subsubsection>
+			<subsubsection xml:id="abortion-and-or">
+				<title>And &amp; Or </title>
+
+				<p>
+					As we can see, when <m>p</m> is true, <m>~p</m> is false and vice versa.The calculator used above generated a truth table. A <term>truth table</term> is a table that will produce the truth values for compound statements based off of the statement variable which are typically placed to the left of the table and the truth values for the compound statement which are typically to the right in the table. We will use this truth table generator for the remainder of this module. 
+				</p>
+
+				<p>
+					Two more common ways to make a compound statement is by taking two simple statements and combining them with either the word "or" or "and". For example, consider the two statements " In August 2022, abortion is legal with not gestational limit in the state of New Jersey"and "In August 2022, abortion was banned with no exception for rape or incest in the state of Alabama"<xref ref="abortion-nj"/>. We can combine these statements in the following two ways: 
+
+					<ol>
+						<li> 
+							In August 2022, abortion is legal with no gestational limit in the state of New Jersey <term>or</term> in August 2022, abortion was banned with no exception for rape or incest in the state of Alabama. 
+						</li>
+						<li> 
+							In August 2022, abortion is legal with no gestational limit in the state of New Jersey <term>and</term> in August 2022, abortion was banned with no exception for rape or incest in the state of Alabama. 
+						</li>
+					</ol>
+
+
+					These statements are a bit awkward and can be rewritten without losing their meaning as simply:
+
+
+					<ol>
+						<li> 
+							In August 2022, abortion is legal with not gestational limit in the state of New Jersey <term>or</term> was banned with no exception for rape or incest in the state of Alabama. 
+						</li>
+						<li> 
+							In August 2022, abortion is legal with not gestational limit in the state of New Jersey <term>and</term> was banned with no exception for rape or incest in the state of Alabama. 
+						</li>
+					</ol>
+
+
+					Both of these compound statements are true statements because the original simple statements are both true. The truth table for an "or" statement, more formally known as a <term>disjunction</term> is given below: 
+					<sage>
+						<input>
+							f = propcalc.formula(&quot; p | q &quot;)
+							f.truthtable()
+						</input>
+					</sage>
+					The truth table for an "and" statement, more formally known as a <term>conjunction</term> is given next: 
+
+					<sage>
+						<input>
+							f = propcalc.formula(&quot; p &amp; q &quot;)
+							f.truthtable()
+						</input>
+					</sage>
+
+					The columns on the far left represent all possible truth values of the simple statements <m>p</m> and <m>q</m> used in the compound statement. The entries on the far left of each row represent the different truth value of the simple statements used in the compound statement. The final column on the far right represents the truth value of the compound statement for the given simple statement truth values. For example the second row in the truth table above reads "When <m>p</m> is true and <m>q</m> is false, <m>p</m> and <m>q</m> is false". 
+				</p>
+			</subsubsection>
+		</subsection>
+		<subsection xml:id="abortion-equivalent-statements">
+			<title>Equivalent Statements</title>
+			<p>Given a statement <m>p</m>, we say that a statement <m>q</m> is equivalent to <m>p</m> if they have the same truth value. We denote equivalent statements, <m>p</m> and <m>q</m>, by <me>p \equiv q</me>. For example, <m>\neg(p\vee q)\equiv \neg p\wedge \neg q</m> because for corresponding values of <m>p</m> and <m>q</m>, these compound statements have the same truth results. This can be seen by examining the truth tables below: 
+
+			<sage>
+				<input>
+					f = propcalc.formula(&quot; ~(p | q) &quot;)
+					f.truthtable()
+				</input>
+			</sage>
+
+			<sage>
+				<input>
+					f = propcalc.formula(&quot; ~p&amp;  ~q &quot;)
+					f.truthtable()
+				</input>
+			</sage></p>
+
+			<p>
+				Because equivalent statements have the same truth value, we can interchange one for the other without losing the meaning of a statement. Let's try the following example. You may find the following website helpful for entering in the symbols used in these calculators <url href="https://doc.sagemath.org/html/en/reference/logic/sage/logic/propcalc.html">Propositional Calculus</url>. 
+			</p>
+			<example> 
+				<statement>
+					<p>
+						Determine which of the following statements is equivalent to <m>\neg(p\wedge q)</m>:
+						<ol>
+							<li> 
+								<m>\neg(p\vee q)</m> 
+							</li>
+							<li> 
+								<m>\neg p\vee \neg q</m> 
+							</li>
+							<li> 
+								<m>\neg p\wedge \neg q</m> 
+							</li>
+						</ol>
+					</p>
+				</statement>
+				<solution>
+					<p>									
+						<ol>
+							<li> 
+								Not equivalent 
+							</li>
+							<li> 
+								Equivalent 
+							</li>
+							<li> 
+								not equivalent 
+							</li>
+						</ol>
+					</p>
+
+				</solution>
+			</example>
+
+
+
+
+
+			<p>
+				The examples above are called DeMorgan’s Laws. Summarizing DeMorgan’s Laws:
+
+				<ol>
+					<li> 
+						<m>\neg(p\vee q)\equiv \neg p\wedge \neg q</m>
+					</li>
+					<li> 
+						<m>\neg(p\wedge q)\equiv \neg p\vee \neg q</m> 
+					</li>
+				</ol>
+
+				There are many other equivalent statements, as we will see in the next section.
+			</p>
+		</subsection>
+
+		<subsection xml:id="abortion-if-then">
+			<title>Implications (If-Then Statements)</title>
+			<p>
+				An <term>implication</term> is a statement that has a premise and a conclusion such as, "If I take birth control, then I can’t get pregnant". In this implication, the premise is the statement "I take birth control" and the conclusion is the statement "I can’t get pregnant". With an implication, the truth value of the premise and conclusion determine the truth value of the actual implication. Given two statements <m>p</m> and <m>q</m>, the statement: if <m>p</m>, then <m>q</m> can be represented by <m>p\rightarrow q</m> and read as "if <m>p</m>, then <m>q</m>", "<m>p</m> implies <m>q</m>", "<m>p</m> only if <m>q</m>", and "<m>q</m>, if <m>p</m>". Below is the truth table for the implication "if <m>p</m>, then <m>q</m>": 
+
+				<sage>
+					<input>
+						f = propcalc.formula(&quot; p -&gt; q &quot;)
+						f.truthtable()
+					</input>
+				</sage>
+			</p>
+
+			<p>
+				The truth value of implications can be counterintuitive at times. This occurs primarily when the premise is false because the implication will always be true. For example the implications below are true since the implications in all are false: 
+
+				<ol>
+					<li> 
+						If abortions are federally protected, then people will use abortions to terminate unwanted pregnancies. 
+					</li>
+					<li> 
+						If abortions are federally protected, then people will not use abortions to terminate unwanted pregnancies. 
+					</li>
+					<li> 
+						If abortions are a federal crime, then more women will be jailed.  
+					</li>
+					<li> 
+						If abortions are a federal crime, then more women will be jailed. 
+					</li>
+				</ol>
+
+				In these statements, it seems as if only one of the first two statements should be true and one of the last two statements should be true as the conclusions are negations of one another. However, all four statements are true.
+			</p> 
+
+			<p>
+				It turns out that the only way for an implication to be false is when the premise is true and the conclusion is false. An example would be, "If abortions are not a federally protected right, then no-one will get an abortion".
+			</p>
+
+			<p>
+				Another counterintuitive concept that arises with implications is their negation. The negation, <m>\sim (p \rightarrow q)</m> is equivalent to the statement <m>p\wedge \sim q</m>. This is verified by examining their truth tables.
+			</p>
+
+			<sage>
+				<input>
+					f = propcalc.formula(&quot; ~(p-&gt; q) &quot;)
+					f.truthtable()
+				</input>
+			</sage>
+
+			<sage>
+				<input>
+					f = propcalc.formula(&quot; p &amp; ~q &quot;)
+					f.truthtable()
+				</input>
+			</sage>
+
+
+
+			<example> 
+				<statement>
+					<p>Verify that the following statements are not equivalent to <m>\sim (p \rightarrow q)</m> using the truth table generator below:
+					<ol>
+						<li> <m>\sim p\rightarrow q</m> </li>
+						<li><m>\sim p\rightarrow \sim q</m> </li>
+						<li> <m> p\rightarrow \sim q</m> </li>
+						<li> <m>q\rightarrow p</m></li>
+					</ol>
+				</p>
+			</statement>
+			<solution>
+				<p>									
+					<ol>
+						<li> Not equivalent </li>
+						<li> Not equivalent </li>
+						<li> Equivalent </li>
+						<li> not equivalent </li>
+					</ol>
+				</p>
+
+			</solution>
+		</example>
+		<p>
+			It is important to notice that the negation of an implication is not an implication. For example, the negation of "If abortions are federally protected, then people will not use abortions to terminate unwanted pregnancies" is "Abortions are federally protected and people use abortions to terminate unwanted pregnancies" which is a false statement. 
+		</p>
+	</subsection>					
+</section>
+
+<section xml:id="abortion-quantifiers">
+	<title>Quantifiers</title>
+	<p>	
+		A quantifier is a way of indicating quantity within a statement. We know words that indicate quantity such as all, many, some, or none. In logic, these are the words that are used as the quantifiers. They indicate how many of what have a particular attribute or quality. Consider the following examples: 
+
+		<ol>
+			<li> 
+				<em>Some</em> abortions are medically necessary. 
+			</li>
+			<li> 
+				<em>All</em> children deserve to live. 
+			</li>
+			<li> 
+				<em>No</em> abortion supporter deserves a vacation. 
+			</li>
+		</ol>
+	</p>
+
+	<p>
+		One important tool that supports us when working with statements with quantifiers is the use of Venn Diagrams and set representations. Sets help us have a more clear perspective in forming negations and understanding the truth value of statements. Let’s start with the simple statements that use quantities, and then build to a more complicated statement like the one from the previous section, "If abortions are not a federally protected right, then no one will get an abortion." 
+	</p>
+
+	<p>
+		Let's consider the statement that some abortions are medically necessary. The word some is a quantifier. The reference set is the set of all abortions. The set of abortions for medical reasons is what we would consider a subset. Exploring the legitimacy of this subset is how we decide on strategies for negation. Our main strategy is driven by determining if there are abortions in the subset "abortions for medical reasons." A quick web search can help us determine if there are abortions for medical reasons (see <url href="https://www.health.com/news/abortion-medically-necessary">https://www.health.com/news/abortion-medically-necessary</url> as an example), meaning that the set of abortions for medical reasons is not an empty set. This web article discusses that the medical reason may be for both the mother or the unborn fetus. We can use our understanding of the characteristics and membership of the sets to help us think further when working with statements about the sets.
+	</p>
+
+	<figure>
+		<image source="abortion-access/images/subset.JPG">
+			A rectangle representing the set of all abortions with a blue circle contained inside this rectangle. The circle represents abortions needed for medical reasons.
+		</image>
+		<caption>
+			A subset of abortions needed for medical reasons among the set of all abortions.
+		</caption>
+	</figure>
+
+	<p>
+		We can use the membership of the set and subset to help develop strategies for negating statements. As previously stated, negations switch the truth value of a statement. This would also be true for quantified statements, except the change happens by altering the quantity. We established previously that the statement "Some abortions are medically necessary," is a true statement. So we need to think about ways to use quantity and set membership to change the truth value. In this case, our negation would be to find a false statement. Since we know that some abortions are for medical reasons, the most direct negation is to claim that no abortions are medically necessary. We know that this statement is false, as we can produce information about abortions that are medically necessary for the safety of the mother. The statement, "No abortions are medically necessary," would propose that there is not an element in the set abortions for medical reasons.This switches the truth value from the original statement, "Some abortions are medically necessary." 
+	</p>
+	
+	<p>
+		One question that you may have is why the statement, "All abortions are medically necessary," is not a valid negation. It may in fact be a valid negation, but we have to meet some specific criteria for it to be valid. Let’s talk about what needs to happen for the negation with "All abortions are medically necessary," to be valid. The statement implies that all of the abortions in the set of all abortions are also in the set of abortions for medical reasons. Now let's consider our original statement, "Some abortions are medically necessary." It is logically equivalent to the statement, "Not all abortions are medically necessary." The negation of this equivalent statement happens when we state that there are no members in the set of all abortions that are not also in the set of abortions for medical reasons. This is a more complicated process because it is not direct. We created an equivalent statement that was then negated. Typically the more steps that are involved in a process, the more room you have to make errors. Logic is no exception. 
+	</p>
+
+	<p>
+		Let's now consider the statement, "All children deserve to live." This is a common quantified statement that is offered in abortion debates. Let's discuss the sets, and think independently about potential subsets that can exist.
+	</p>
+
+	<figure>
+		<image source="abortion-access/images/children.JPG">
+			A rectangle representing the set of all children with a blue circle contained inside this rectangle. The circle represents children who deserve to live.
+		</image>
+		<caption>
+			A subset of children among all children.
+		</caption>
+	</figure>
+
+	<p> 
+		So, let's take some time to consider this set image. We know that the set of children that deserve to live is a subset of the set of all children. Our goal is to think about if there are any subsets or groups of children that should be excluded from the set of children that deserve to live, but would still be considered part of the set of all children. As an author, I have contemplated the question of if these sets were different for quite a long time, and I continue to come to the conclusion that the sets are the same.
+	</p>
+
+	<p>
+		This equivalence of sets helps give us a strategy for negation. We know that every child is in both the set of all children and the set of children that deserve to live. If we can find a single child that does not belong in the set of children that deserve to live but still belongs to the set of all children, then we can negate the statement with the claim, "At least one child does not deserve to live." It seriously only takes one to negate the statement, but we know that case is not likely to exist. Another equivalent statement that is an option for a negation is the statement, "Some children do not deserve to live." These two statements both claim that there are children that do not belong in the set of children that deserve to live.
+	</p>
+
+	<p>
+		Now, let's consider the statement, "No abortion supporter deserves a vacation." This claim is a bit more complex, so let's start with our sets. We will lay out the sets the way that they are proposed in the statement. 
+	</p>
+	<figure>
+		<image source="abortion-access/images/people.JPG">
+			A rectangle representing the set of all people. A circle contained represents people who support abortions and another disjoint circle represents people who deserve vacations.
+		</image>
+		<caption>
+			Different subsets of people.
+		</caption>
+	</figure>
+
+
+	<p>
+		Notice that there is no overlap shown between the set of people that deserve vacations and the set of people that support abortions. We are starting with a diagram that matches the original claim of the statement. We use this to establish the initial truth value of the statement. Vacations tend to be labeled as something that is a privilege, but really vacations are just a break from work or school (https://www.merriam-webster.com/dictionary/vacation). It appears that everyone deserves a vacation, so the set of all people and the set of people that deserve a vacation are equivalent sets. We also know that people that support abortion are people, who would also need a vacation. This means that the initial claim is false. Let’s think about strategies to work with the statement, so that we can approach negation. Our first step would be to update the set diagram. 
+	</p>
+
+	<figure>
+		<image source="abortion-access/images/support_abortion.JPG">
+			A rectangle representing the set of people who deserve a vacation. Insidet his rectangle is a circle representing people who support abortion rights. 
+		</image>
+		<caption>
+			Different subsets of people.
+		</caption>
+	</figure>
+
+	<p>
+		The most clear path to a negation, which in this case is the creation of a true statement, is to use the set diagram to generate a statement. In this case it will take the form of a statement about all people that support abortion. The statement, “All abortion supporters deserve a vacation.” would be a negation of the original statement, "No abortion supporter deserves a vacation."
+	</p> 
+
+	<p>
+		A more complicated version of a quantified statement is the statement, "If abortions are not federally protected, then no one will get an abortion." This statement is more complicated because of the fact it is a conditional statement. When there is a conditional statement and a quantifier, we can think about combining the diagrams for two separate sets. The first set is related to the condition, and it is split between "Abortion is federally protected," and "Abortion is not federally protected." The set diagram provides the following base.
+	</p>
+
+	<figure>
+		<image source="abortion-access/images/federally.JPG">
+			A rectangle split in half. The left side represents where abortion is federally protected and the right side represents where abortion is not federally protected. </image>
+			<caption>
+				Different subsets of where abortions are protected and not protected.
+			</caption>
+		</figure>
+
+		<p>
+			Now we have a secondary set to think about: people getting abortions. The question that we have to ask ourselves becomes: Will abortions still happen if abortions are not federally protected? In prior sections, we discussed that some abortions are medically necessary. There are also (while often dramatized for television, like Law and Order: SVU (see Season 12, Episode 9: “Gray” as a specific example) scenarios where one partner in a couple will go to desperate lengths to terminate a pregnancy.  A medication is administered to terminate the pregnancy. One issue that was debated during the episode was if the action of the partner was technically an abortion. The court determined that it met the legal definition of an abortion because medical means were used to terminate a pregnancy. We use this example, not only because it is widely available via the internet, but to demonstrate that abortion does not require a medical practitioner. This means that even without clinics and medical practitioners, abortions will still happen. This means that overlaying the second set gives us a diagram that looks something like the set diagram below. 
+		</p>
+
+		<figure>
+			<image source="abortion-access/images/abortion_2.JPG">
+				A rectangle split in half. The left side represents where abortion is federally protected and the right side represents where abortion is not federally protected. On top of both regions is an overlapping rectangle representing people who get an abortion.
+			</image>
+			<caption>
+				Different subsets of where abortions are protected and not protected along with a subset of people who get abortions.
+			</caption>
+		</figure>
+
+		<p>
+			We can see that the set of people who will get an abortion is evenly split over the two scenarios of abortion being federally protected or not being federally protected. This means that when we think about the original statement, “If abortions are not federally protected, then no one will get an abortion,” we can see that this is a false statement as long as the set of people who will get an abortion is not an empty set. We have strong reason to believe that this set is not empty, both from the example from the Law and Order example as well as the case of medical abortions mentioned previously. 
+		</p>		
+	</section>
+
+	<section xml:id="abortion-arguments">
+		<title>Arguments</title>
+		<introduction>
+			<p>
+				Typically we think about an argument as a fight between people. However, a mathematical argument is different. A <term>mathematical argument</term> is a collection of statements called premises and a conclusion. Below is an example of an argument:
+
+				<blockquote>
+					My state made it illegal to get an abortion after 6 weeks gestation. I just found out that I am pregnant and I am 8 weeks pregnant. Therefore, I cannot legally get an abortion in my state. 
+				</blockquote>
+			</p>
+
+			<p>
+				The premises are the first two sentences. The conclusion is the last sentence. Typically, conclusions are identified by such words as ''therefore'', ''thus'', ''hence'', etc.  The goal of this section is to explain how to turn a written argument into a symbolic argument that can be evaluated using truth tables. It should be noted that we may need to be flexible with this translation and there are often many ways to interpret sentences as statements. 
+			</p>
+
+			<p>
+				We begin with the last example: "My state made it illegal to get an abortion after 6 weeks gestation. I just found out that I am pregnant and I am 8 weeks pregnant. Therefore, I cannot legally get an abortion in my state." We can reword this to the following: 
+
+				<blockquote>
+					If I am more than 6 weeks pregnant, it is illegal to get an abortion in my state. I am more than 6 weeks pregnant. Therefore, it is illegal for me to get an abortion in my state.
+				</blockquote>
+			</p>
+
+			<p>
+				We are now ready to identify two main statements: let <m>p</m> represent "I am more than 6 weeks pregnant" and let <m>q</m> represent  "It is illegal to get an abortion in my state".
+			</p>
+
+			<p>
+				Once we have converted the sentences into simple statements connected through our logical operations (if-then statements, and's, or's, negations), we need to address the punctuation in an argument. We do this by taking all of the premises and creating one run-on sentence. In other words, we remove every period and replace it with the word "and". In our example we reduce the argument to two sentences. The first sentence consists of the run-on sentence of premises. The second sentence is the conclusion of the argument. We have: 
+
+				<blockquote>
+					If I am more than 6 weeks pregnant then it is illegal to get an abortion in my state <term>and</term>  I am more than 6 weeks pregnant. Therefore, it is illegal for me to get an abortion in my state.
+				</blockquote>
+
+				The last step needed before we convert the argument into symbolic notation is to turn these two sentences into <term>one</term> "if-then" statement. We do this in the following way: 
+
+				<blockquote>
+					If  (insert run-on sentence consisting of all premises), <term>then</term> (insert conclusion).
+				</blockquote> 
+
+				We may need to be a bit flexible while reading this new one-sentence argument. In this example, it is very strange to read: 
+
+				<blockquote>
+					<term>If</term> If I am more than 6 weeks pregnant then it is illegal to get an abortion in my state and  I am more than 6 weeks pregnant, <term>then</term> it is illegal for me to get an abortion in my state.
+				</blockquote>
+
+				Instead, it is easier to read and understand the following equivalent statement: 
+
+				<blockquote>
+					<term>If</term> it is the case that if I am more than 6 weeks pregnant then it is illegal to get an abortion in my state and I am more than 6 weeks pregnant, <term>then</term> it is illegal for me to get an abortion in my state.
+				</blockquote>
+			</p>
+
+			<p>
+				We are now ready to turn this argument into a symbolic argument. Let $q$ be “I am more than 6 weeks pregnant” and let $p$ be “It is illegal to get an abortion in my state”.  We have the following symbolic argument: 
+
+				<me>
+					[(q\implies p)\wedge q]\implies p
+				</me>
+			</p>
+
+			<p>
+				We generalize this process below:
+				Suppose an argument consists of the premises <m>p_1,~p_2,\dots,p_n</m> and the conclusion <m>c</m>. The corresponding symbolic form of this argument is:
+
+				<me>
+					(p_1\wedge p_2\wedge\dots \wedge p_n)\implies c
+				</me>
+
+				Once an argument has been turned into its symbolic form, we can determine if the argument is valid and/or sound. These concepts are addressed in the next two sections. 
+			</p>
+		</introduction>
+		<subsection xml:id="abortion-valid-arguments">
+			<title>Valid Arguments</title>
+
+			<p>
+				A mathematical argument is <term>valid</term> if it is always true. In other words, the final column of an argument’s truth table will consist of only true values. For the argument presented in the previous section, 
+
+				<me>
+					[(q\implies p)\wedge q]\implies p
+				</me>
+				we see the truth table is: 
+
+				<sage>
+					<input>
+						f = propcalc.formula(&quot; ((q-> p)&amp; q)-> p &quot;)
+						f.truthtable()
+					</input>
+				</sage>
+				making this a valid argument. 
+			</p>
+
+			<example> 
+				<statement>
+					<p>
+						Show that the following argument is not valid. 
+						"If access to abortion is restricted in a state, then the number of abortions in that state will decrease. The number of abortions decreased in that state. Consequently, access to abortion is restricted in that state.""
+					</p>
+				</statement>
+			</example>
+
+			<example> 
+				<statement>
+					<p>
+						Show that the following argument is valid. 
+						"If a state restricts access to abortion, then the number of abortions will decrease in that state. The number of abortions did not decrease in that state. Therefore, the state did not restrict access to abortion.""
+
+					</p>
+				</statement>
+			</example>
+
+			<p>
+				These last two examples highlight that the validity of an argument does not depend on the actual statements being used. Instead validity focuses only on the structure of the argument. This means that an argument can be valid, but may not be sound- a concept discussed in the next example. 
+			</p>.
+		</subsection>
+
+		<subsection xml:id="abortion-sound-arguments">
+			<title>Sound Arguments</title>
+
+			<p>
+				A valid argument is called sound if its premises are true. If a valid argument is not sound, we say that it is unsound.  In the last example, the two premises are
+
+				<ol>
+					<li>
+						If a state restricts access to abortion, then the number of abortions will decrease in that state.  
+					</li>
+					<li> 
+						The number of abortions did not decrease in that state. 
+					</li>
+
+				</ol>
+			</p>
+
+			<p>
+				Both premises would need to be supported by factual data to determine if they are either true or false. However, historically it has been shown that restricting access to abortion does not reduce the number of abortions. Instead, restricting access to abortion reduces the number of safe abortions performed <xref ref="abortion-CNN"/>. Using this historical data, we could conclude that Premise 1 above is false. Thus making this argument unsound. 
+			</p>
+			<p>
+				When a valid argument is sound, this means that the conclusion of the argument can be inferred from true statements. When a valid argument is unsound, this means the conclusion of the argument is being inferred from false statements thus making the actual argument less credible. 
+			</p>
+		</subsection>
+	</section>
+
+
+	<section xml:id="abortion-defs-assumptions-fallacies">
+		<title>Definitions, Assumptions, and Fallacies</title>
+		<introduction>
+			<p>
+				As we navigate arguments there are several special language features that we need to be aware of to help us communicate clearly and effectively. These features are definitions, assumptions, and logical fallacies. These features will be discussed below.
+			</p>
+
+			<p>
+				A <term>definition</term> is a common meaning for a term that is held by a group. For example, if you asked various people to define the term dog, you would get similar answers from almost everyone that you asked. That is because the definition has many commonly experienced attributes such as being a pet or companion. One thing to be mindful about with definitions is that not all groups hold common definitions for the same term. One example would be the definition of abortion held by different groups. Some consider any termination of a pregnancy, no matter the reason, to be an abortion. Other groups consider abortion to be any elective termination of a pregnancy. This slight difference in how the groups define the common term can make discussions between individuals contentious. 
+			</p>
+
+
+			<p>
+				An <term>assumption</term> is a sentence that is accepted in an argument as true. Some assumptions are understood, or what we call tacit assumptions. An example of a tacit assumption would be the mental image that you generate from the sentence, "Those not yet born have been dehumanized, and so many of those born have faced increasing marginalization due to their age, ability, or perceived value". You most likely imagine a fetus and not a robot or rock. That is because we have a tacit assumption that robots cannot be born. This sentence is part of the mission statement of the pro life advocacy group <url href="https://aul.org/mission/">Americans United for Life</url>
+			</p>
+
+			<p>
+				Other assumptions are stated more directly. This means that the assumptions are made explicit. When we make explicit assumptions, we speak them directly. An example of a directly spoken assumption would be the following quote,"We see that criminalization is not as much about the behavior of the individual, but the individual itself and the identities that they hold. We know that Black and Latinx and other folks of color are more likely to be criminalized by our criminal legal system. We know the same thing is true for young people, LGBTQ folks, undocumented communities. So the risks are high for criminalization overall. We are seeing this play out in the reproductive health care space right now and it's going to get worse."-Jamila Perritt, MD, MPH, FACOG—President &amp; CEO of Physicians for Reproductive Health <xref ref="abortion-equity"/>
+			</p>
+
+			<p>
+				This statement directly addresses that specific groups will face potentially punitive consequences when navigating the reproductive health system, if they are able to navigate it at all. Pause for a moment to think about internal and external features that might limit access to reproductive health for certain groups. 
+			</p>
+
+			<p>
+				An assumption can sometimes be indicated by the presence of words like let, suppose, and assume in regular speech and writing. This particular type of language invites a listener or reader to engage with the possibilities that follow from an initial claim that is assumed to be true.It is important to be aware that not all assumptions are true. For social issues this is especially true. Assuming that certain parts of an argument are true, without proper investigation or consideration, can lead to false conclusions. One example of an assumption that can lead to false conclusions is using a non-shared definition.
+			</p>
+
+			<p>
+				For example, the Merriam-Webster Dictionary defines abortion as the "termination of a pregnancy after, accompanied by, resulting in, or closely follow by the death of the embryo or fetus" <xref ref="abortion-def-abortion"/>. However when Catherin Glenn Foster, the President and CEO of Americans United for Life was asked if an abortion occurred in the scenario of a 10-year old rape victim who became pregnant, and terminated the pregnancy, Foster replied that an abortion did not occur because “it would probably impact [the girl’s] life, and so, therefore, it would fall under any exception and would not be an abortion.” Foster later clarified that “If a 10-year old became pregnant as a result of rape and it was threatening her life, then that’s not an abortion”.  <xref ref="abortion-Maddow"/>
+			</p>
+
+			<p>
+				A <term>logical fallacy</term> is a flawed, deceptive, or false argument that can be proven wrong with proper reasoning. Arguments, as we have learned, are an important part of social interactions. This is especially true when dealing with controversial topics. Logical fallacies tend to arise commonly with controversial topics because of the presence of tacit assumptions and unshared definitions. In this section, we are going to learn to identify and refute logical fallacies.
+			</p>
+
+			<p>
+				If you look online, you will see long lists of specific false arguments. It is less important to know the names of the false arguments and have memorized strategies to win arguments than it is to be able to recognize that an argument, in general, is a bad argument. Let’s look at the following case studies. 
+			</p>
+		</introduction>
+
+		<subsection xml:id="abortion-case-study-1">
+			<title>Case Study 1</title>
+			<introduction>
+				<p>
+					In this case study, an <url href="https://abort73.com/abortion/common_objections/">anti-abortion blog</url> discusses supposed fallacies and misinformation about abortion. For this specific case analysis, we are focusing on the section titled “What if the Baby is Deformed?” Read this section carefully, and then we will discuss the argument presented by the author.
+				</p>
+
+
+				<figure>
+					<image source="abortion-access/images/case_study_1.JPG">
+						An image of the argument from abort73.com
+					</image>
+					<caption>
+						A snippet from the website abort73.com with the argument about when babies are deformed.
+					</caption>
+				</figure>
+				<figure>
+					<image source="abortion-access/images/case_study_11.JPG">
+						An image of the continuation of the argument from abort73.com
+					</image>
+					<caption>
+						A snippet from the website abort73.com with the argument about when babies are deformed.
+					</caption>
+				</figure>
+			</introduction>
+
+			<subsubsection xml:id="abortion_case-study-1-argument">
+				<title>Case Study 1: The Argument</title>
+
+				<p>
+					The author of the blog post makes a very decisive claim. The claim that the author is making is that: If a parent is an abortion supporter and a child is diagnosed with an disability before birth, then the parent will abort the child. If the child is diagnosed with a disability before birth and the parent aborts the child, then the parents do not support people with disabilities. Therefore, abortion supporters do not support people with disabilities. We can assign each statement in the following way:
+
+					<ol>
+						<li>
+							<m>p</m>: A parent is an abortion supporter.
+						</li>
+						<li> 
+							<m>q</m>: A child is diagnosed with a disability before birth. 
+						</li>
+						<li> 
+							<m>r</m>: The parent will abort the child. 
+						</li>
+						<li> 
+							<m>s</m>: Aboftion supporters do not support people with disabilities. 
+						</li>
+					</ol>
+
+					This can be represented by the following: <m>[((p\wedge q)\implies r)\wedge ((q\wedge r)\implies s)]\implies(p\implies s)</m>. Use the truth table generator to determine if this is a valid argument.			
+				</p>
+			</subsubsection>
+
+			<subsubsection xml:id="abortion-case-study-1-discussion">
+				<title>Case Study 1: Discussion</title>
+
+				<p>
+					It is clear that the author of the blog post does not support abortion. They also propose that supporters of abortion believe that children with disabilities that are diagnosable during pregnancy should be aborted, and therefore people that support abortion do not support members of the disabled community. One tacit assumption that the author makes is the claim that abortion is not an appropriate treatment for a physical or mental disability. The fallacy happens when the author states that making the choice to abort a child with a diagnosed disability is the same as not being a supporter of the disabled community. This type of fallacy is specifically called an equivocation because the author claims that two different things are in fact the same.
+				</p>
+			</subsubsection>
+
+			<subsubsection xml:id="abortion-case-study-1-Refuting">
+				<title>Case Study 1: Refuting the Argument</title>
+
+				<p>
+					No matter which side of the argument for or against abortion you may fall on, you have an obligation to present an accurate argument. The largest flaw in the argument was the claim that mental disabilities can be diagnosed during pregnancy, which in some cases is true for genetic disorders like Downs Syndrome; however, not all mental disabilities can be diagnosed during pregnancy. One strategy to address this flaw is to look at data. If someone claims that a disability diagnosis justifies getting an abortion, we should check on data about children with disabilities. One place that might give us this information is the <url href="https://www.census.gov/library/publications/2021/acs/acsbr-006.html">US Census, specifically the report on childhood disability</url>. The report shows that nationally, from 2008 to 2019, the percentage of children that were reported as disabled increased during the time period. This is a neutral fact that participants on either side of the abortion debate can use to better defend a position. If someone is anti-abortion, then they can claim that an increase in children with disabilities means that more parents are being educated about options besides abortion and selecting those options for themselves and their unborn child. If someone is an abortion supporter, they can use the increase in children with disabilities to defend themselves against claims that they believe that unborn children with diagnosable birth defects deserve to be terminated. This is one strategy to refute this type of argument.
+				</p>
+
+				<p>
+					Another strategy is to ask specific questions that relate to why you personally have issues with the argument, and why you believe it to contain a fallacy. If you have questions about the diagnosis of mental disability during pregnancy, as an example, asking questions can help clarify meaning for both parties. You can get information about the meaning of mental disability from the other party because perhaps they have a different definition than what you have. This clarification is something that you could not have gained without having a productive discussion with another person. That is why it is a general strategy for exploring and refuting arguments.
+				</p>
+			</subsubsection>
+
+
+		</subsection>
+
+		<subsection xml:id="abortion-case-study-2">
+			<title>Case Study 2</title>
+			<introduction>
+				<p>
+					In this next case study, we examine the argument that “life begins at conception”. Many pro life groups claim that life begins at conception. One such group is <url href="https://www.prolifewi.org/about-us">Pro-Life Wisconsin</url>. On this organization’s  <url href="https://www.prolifewi.org/when-does-human-life-begin">webpage</url>, they write: 
+
+					<figure>
+						<image source="abortion-access/images/case_study_2.JPG">
+							An image of the argument from Pro-Life Wisconsin
+						</image>
+						<caption>
+							A snippet from the Pro-Life Wisconsin's website.
+						</caption>
+					</figure>
+				</p>
+				<p>
+					The argument can be summarized by the following argument:
+					Scientists agree that a human embryo is a human being immediate at conception. If you are a human being then you are alive. Thus, human life begins at conception.  
+
+					<ol>
+						<li> 
+							<m>p</m>: A human embryo is created immediately after fertilization.
+						</li>
+						<li> 
+							<m>q</m>: A human embryo is alive. 
+						</li>
+					</ol>
+
+					This can be represented by the following: <m>(p \wedge q ) \implies q</m>. Use the truth table generator to determine if this is a valid argument.	
+				</p>
+
+				<p>
+					We can see that this argument is valid using a truth table. However, it is not a sound argument. With no definition of “alive” given, this is an example of the fallacy Begging the Question, where a premise of an argument assumes the truth of the conclusion. Another example of begging the question can be found in the article, <term>Familiar flaws in pro-life argument</term>, published in the <url href="https://www.montgomeryadvertiser.com/story/opinion/columnists/2016/04/21/familiar-flaws-pro-life-argument/83307426/">Montgomery Advertiser</url>.
+				</p>
+			</introduction>
+			<subsubsection xml:id="abortion-case-study-2-discussion">
+				<title>Case Study 2: Discussion</title>
+				<p>
+					It turns out that trying to determine when life begins is a very difficult task particularly because there is no agreed upon definition of the word “life”. Nevertheless, since  the US Supreme Court eliminated the federal right to abortion, state legislators have been trying to codify the definition of life oftentimes without input from medical professionals. The codification of “life” would impact abortion rights, birth control, and assisted reproduction <xref ref="abortion-NPR"/>.
+				</p>
+
+				<p>
+					Some common definitions of beginning of life include at conception, with a heartbeat, at first breath, or the ability to live outside of a womb with the help of the latest technology <xref ref="abortion-NPR"/>. It turns out that when more technology is available, the harder this definition becomes. For example, before ultrasounds it was assumed that life began with “quickening”, or when the woman first felt a fetus move. However, this is often before a fetus can survive outside of a womb. Additionally, heart beats can be heard much earlier than feeling a fetus move. For more information regarding this topic, please refer to 
+
+					<ol>
+						<li> 
+							<url href="https://www.wired.com/2015/10/science-cant-say-babys-life-begins/">https://www.wired.com/2015/10/science-cant-say-babys-life-begins/</url>
+						</li>
+						<li> 
+							<url href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7245522/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7245522/</url> 
+						</li>
+						<li> 
+							<url href="https://www.npr.org/sections/health-shots/2022/08/27/1119684376/when-does-life-begin-as-state-laws-define-it-science-politics-and-religion-clash">https://www.npr.org/sections/health-shots/2022/08/27/1119684376/when-does-life-begin-as-state-laws-define-it-science-politics-and-religion-clash</url> 
+						</li>
+					</ol>
+				</p>
+			</subsubsection>
+
+
+		</subsection>
+	</section>
+
+
+	<section xml:id="abortion-solving-for-change">
+		<title>Solving for Change</title>
+		<p>
+			Access to abortion can be a very difficult topic of conversation particularly for people with opposing views. However, whether a conversation is between two people with opposing views or similar views, it is important that we are mindful of how opinions can influence tacit assumptions and fallacies. It is unlikely that you will be able to change the opinions of other people, but being able to provide factual information and state sound, valid arguments that are free of fallacies will help increase awareness of the consequences of restricting or banning access to abortion. One such major consequence is the inequity of abortion access that is felt primarily by low-income individuals. 
+		</p>
+	</section>
+
+	<conclusion xml:id="module-tag-conclusion">
+		<p> Conclusion of module.</p>
+	</conclusion>
+	<reading-questions xml:id="abortion-reflection">
+		<title>Reading Questions</title>
+		<p>
+			Following the 2022 Supreme Court decision, there are many notable arguments regarding abortion rights and access that are being discussed. Below are some topics that merit further investigation: 
+		</p>
+		<exercise> 
+			<p>
+				How do abortion bans disproportionately affect low-income individuals?<url href="https://thehill.com/changing-america/respect/poverty/3548067-abortion-restrictions-will-disproportionately-burden-low-income-americans/">https://thehill.com/changing-america/respect/poverty/3548067-abortion-restrictions-will-disproportionately-burden-low-income-americans/</url> 
+			</p>
+		</exercise>
+		<exercise> 
+			<p>
+				How realistic is a 6-week abortion ban if pregnancy is calculated from a person’s first day of their last menstrual cycle? <url href="https://19thnews.org/2021/09/greg-abbott-six-weeks-pregnancy-abortion/">https://19thnews.org/2021/09/greg-abbott-six-weeks-pregnancy-abortion/</url>
+			</p>
+		</exercise>
+		<exercise> 
+			<p>
+				Can states criminalize the act of crossing state lines to seek an abortion? <url href="https://www.oklahoman.com/story/news/2022/07/16/oklahoma-lawmakers-oppose-bill-on-interstate-travel-for-abortion/65374341007/">https://www.oklahoman.com/story/news/2022/07/16/oklahoma-lawmakers-oppose-bill-on-interstate-travel-for-abortion/65374341007/</url>
+			</p>
+		</exercise>
+		<exercise> 
+			<p>
+				If a person has a miscarriage in a state with a total abortion ban, does the burden of proof fall to this person to verify they miscarried and did not have an abortion? <url href="https://www.bbc.com/news/world-us-canada-59214544">https://www.bbc.com/news/world-us-canada-59214544</url>
+			</p>
+		</exercise>
+		<exercise> 
+			<p>
+				Do abortion bans and restrictions reduce the number of abortions or just limit safe access to abortion? <url href="https://www.cnn.com/2018/03/21/health/abortion-restriction-laws/index.html">https://www.cnn.com/2018/03/21/health/abortion-restriction-laws/index.html</url>
+			</p>
+		</exercise>
+		<exercise> 
+			<p> 
+				How does one value a mother’s life in relation to a fetus’s life?  <url href="https://www.npr.org/sections/health-shots/2022/07/26/1111280165/because-of-texas-abortion-law-her-wanted-pregnancy-became-a-medical-nightmare">https://www.npr.org/sections/health-shots/2022/07/26/1111280165/because-of-texas-abortion-law-her-wanted-pregnancy-became-a-medical-nightmare</url>
+			</p>
+		</exercise>
+		<exercise> 
+			<p>
+				One common issue in abortion debates is a lack of common definitions and how this complicates dialogue. The American legal system prides itself on establishing rigid definitions. Watch an episode of Law and Order (either the original or Special Victims Unit) that deals with the topic of abortion. How are the legal definitions handled? Does everyone always agree with the definitions that are used?  <url href="https://medium.com/the-establishment/law-order-has-a-long-and-ugly-history-of-stigmatizing-abortion-5531eaad9c6e ">https://medium.com/the-establishment/law-order-has-a-long-and-ugly-history-of-stigmatizing-abortion-5531eaad9c6e </url>
+			</p>
+		</exercise>
+	</reading-questions>
+	<exercises xml:id="abortion-exercises">
+		<title>Exercises</title>
+		<exercise> 
+			<p>
+				Identify a definition that your generation holds that can vary from the definition held by a previous generation. This may or may not be related to women’s health. 
+			</p>
+		</exercise>
+		<exercise> 
+			<p>
+				Find an article that presents an opinion about women’s health that differs from your own. Identify the assumptions in the article. Can you find any fallacies within the presented argument? Why or why not?
+			</p>
+		</exercise>
+		<exercise> 
+			<p>
+				Some people believe that taking the morning after pill (a medication that triggers the shedding of the uterine lining in females in order to prevent pregnancy) is a form of abortion. What terms and assumptions would be part of the argument if you were to argue on either side? (Note: You may have to form an argument in order to complete this exercise.)
+			</p>
+		</exercise>
+		<exercise> 
+			<p>
+				A common logical fallacy is called circular reasoning. In circular reasoning the premise and the conclusion state the same idea. Find an example of a circular reasoning fallacy related to women's health and propose a strategy for respectful refutation. 
+			</p>
+		</exercise>
+		<exercise> 
+			<p>Below is a list of common fallacies in everyday arguments. Investigate these arguments and then find an example of this fallacy involving reproductive rights. Explain how this fallacy is used to make a persuasive case.
+
+				<ol>
+					<li> Missing the point </li>
+					<li> Post hoc </li>
+					<li>Slippery slope </li>
+					<li> Weak analogy </li>
+					<li> Appeal to authority </li>
+					<li> Appeal to authority </li>
+					<li>Ad hominem and tu quoque </li>
+					<li> Appeal to pity </li>
+					<li> Appeal to ignorance </li>
+					<li> Straw man </li>
+					<li> Red herring </li>
+					<li> False dichotomy </li>
+					<li> Begging the question </li>
+					<li> Equivocation </li>
+				</ol>
+
+			</p>
+		</exercise>
+	</exercises>
+	<section xml:id="abortion-references">
+		<title>References</title>
+		<biblio xml:id="abortion-def-abortion">
+			Abortion. Merriam-Webster Dictionary. <url href="https://www.merriam-webster.com/dictionary/abortion#:~:text=noun,expulsion%20of%20a%20human%20fetus"/>.
+		</biblio>	
+		<biblio xml:id="abortion-nj">
+			Center for Reporductive Rights. After Roe Fell: Abortion Laws by State. <url href="https://reproductiverights.org/maps/abortion-laws-by-state/"/>.
+		</biblio>			
+
+		<biblio xml:id="abortion-CNN">
+			Nedelman, Michael. Abortion restrictions don't lower rates, report says. CNN. <url href="https://www.cnn.com/2018/03/21/health/abortion-restriction-laws/index.html"/>.
+		</biblio>
+		<biblio xml:id="abortion-politico"> 
+			Messerly, M., Politico, Abortion laws by state: Where abortions are illegal after Roe v. Wade overturned (6/24/2022), <url href="https://www.politico.com/news/2022/06/24/abortion-laws-by-state-roe-v-wade-00037695"/>.
+		</biblio>
+		<biblio xml:id="abortion-mississippi">
+			Mississippi Code 41-41-191.	 <url href="https://law.justia.com/codes/mississippi/2018/title-41/chapter-41/gestational-age-act/section-41-41-191/"/>.
+		</biblio>
+		<biblio xml:id="abortion-open-secrets">
+			Open Secrets. <url href="https://www.opensecrets.org/industries/lobbying.php?cycle=2022&amp;ind=Q14"/>.
+		</biblio>
+		<biblio xml:id="abortion-equity">
+			Prioritizing Equity video series: Reproductive health care as human right. American Medical Association <url href="https://www.ama-assn.org/about/events/prioritizing-equity-video-series-reproductive-health-care-human-right"/>.
+		</biblio>
+		<biblio xml:id="abortion-Maddow">
+			Rachel Maddow Show. MSNBC <url href="https://www.msnbc.com/rachel-maddow-show/maddowblog/right-want-change-definition-abortion-rcna38393"/>.
+		</biblio>
+		<biblio xml:id="abortion-NPR">
+			Varney, Sarah. When does life begin? As state laws define it, science, politics and religion clash. NPR. <url href="https://www.npr.org/sections/health-shots/2022/08/27/1119684376/when-does-life-begin-as-state-laws-define-it-science-politics-and-religion-clash"/>. 
+		</biblio>
+
+	</section>
+</chapter>

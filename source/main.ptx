@@ -8,15 +8,8 @@
 		<xi:include href="front-matter.ptx"/>
 		<xi:include href="abortion-access/abortion-access.xml"/>
 		<xi:include href="environmental-racism/environmental-racism.xml"/>
-		<xi:include href="fake-news/fake-news.xml"/>
-		<xi:include href="gerrymandering/gerrymandering.xml"/>
-		<xi:include href="greenhouse-gas/greenhouse-gas.xml"/>
 		<xi:include href="payday-lending/payday-lending.xml"/>
-		<xi:include href="poverty-as-health-issue/poverty-as-health-issue.xml"/>
-		<xi:include href="racism-in-policing/racism-in-policing.xml"/>
-		<xi:include href="school-discipline/school-discipline.xml"/>
-		<xi:include href="student-loans/student-loans.xml"/>
-		<chapter xml:id="math-for-the-people-references">
+    <chapter xml:id="math-for-the-people-references">
 			<title>References</title>
 			<section xml:id="math-for-the-people-bibliography">
 				<title>Bibliography</title>
@@ -24,7 +17,7 @@
 					MIT Teaching + Learning Lab. Discussion Guidelines. <url href="https://tll.mit.edu/teaching-resources/inclusive-classroom/discussion-guidelines/"/>. Accessed 07-28-22.
 				</biblio>
 			</section>
-		</chapter> 
+    </chapter>
 	</book>
 </pretext>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pretext>
 	<docinfo>
-		<brandlogo url="https://web.stevenson.edu/mbranson/math-for-the-people.html" source="images/Math_Fist.PNG"/>
+		<brandlogo url="https://web.stevenson.edu/mbranson/m4tp/math-for-the-people.html" source="Math_Fist.PNG"/>
 	</docinfo>
 	<book xml:id="math-for-the-people" xmlns:xi="http://www.w3.org/2001/XInclude">
 		<title>Math for the People</title>
